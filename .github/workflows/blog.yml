@@ -33,6 +33,7 @@ jobs:
 
       - name: Escribir el artículo
         env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           if [ -n "${{ inputs.slug }}" ]; then

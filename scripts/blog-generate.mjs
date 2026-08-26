@@ -21,28 +21,32 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BLOG = join(ROOT, 'blog');
 
 // ── llave de API ────────────────────────────────────────────────────────────
-function cargarLlave() {
-  if (process.env.ANTHROPIC_API_KEY?.trim()) return;
-  const candidatos = [
+function cargarEnv() {
+  const archivos = [
+    join(ROOT, '.env.local'),
     join(process.env.HOME || '', 'Projects/adestajo/.env.local'),
     join(process.env.HOME || '', 'Projects/adestajo/.env.vercel.local'),
   ];
-  for (const f of candidatos) {
+  for (const f of archivos) {
     try {
-      const m = readFileSync(f, 'utf8').match(/^ANTHROPIC_API_KEY="?([^"\n]+)"?/m);
-      if (m) {
-        process.env.ANTHROPIC_API_KEY = m[1].trim();
-        return;
+      for (const linea of readFileSync(f, 'utf8').split('\n')) {
+        const m = linea.match(/^\s*([A-Z0-9_]+)\s*=\s*"?([^"\n#]*)"?/);
+        if (!m) continue;
+        const [, clave, valor] = m;
+        if (valor.trim() && !process.env[clave]) process.env[clave] = valor.trim();
       }
     } catch {
       /* siguiente */
     }
   }
 }
-cargarLlave();
+cargarEnv();
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.error('Falta ANTHROPIC_API_KEY. Expórtala o ponla en el entorno de la Action.');
+const HAY_DEEPSEEK = Boolean(process.env.DEEPSEEK_API_KEY?.trim());
+const HAY_CLAUDE = Boolean(process.env.ANTHROPIC_API_KEY?.trim());
+
+if (!HAY_DEEPSEEK && !HAY_CLAUDE) {
+  console.error('Falta DEEPSEEK_API_KEY o ANTHROPIC_API_KEY. Ponla en .env.local o en los secrets de la Action.');
   process.exit(1);
 }
 
@@ -141,11 +145,40 @@ function extraerJson(texto) {
 }
 
 // ── generación ──────────────────────────────────────────────────────────────
-const client = new Anthropic();
 
-async function generar(tema, yaEscritos) {
-  console.log(`→ escribiendo: ${tema.titulo}`);
+/**
+ * DeepSeek primero (mucho más barato), Claude de respaldo. Si DeepSeek falla
+ * o devuelve algo que no es JSON, no se queda el blog sin publicar.
+ */
+async function escribirConDeepSeek(tema, yaEscritos) {
+  const base = (process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com/v1').replace(/\/$/, '');
+  const modelo = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+  const r = await fetch(`${base}/chat/completions`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${process.env.DEEPSEEK_API_KEY.trim()}`,
+    },
+    body: JSON.stringify({
+      model: modelo,
+      max_tokens: 8000,
+      temperature: 0.7,
+      response_format: { type: 'json_object' },
+      messages: [
+        { role: 'system', content: SISTEMA },
+        { role: 'user', content: prompt(tema, yaEscritos) },
+      ],
+    }),
+  });
+  if (!r.ok) throw new Error(`DeepSeek ${r.status}: ${(await r.text()).slice(0, 160)}`);
+  const j = await r.json();
+  const texto = j.choices?.[0]?.message?.content;
+  if (!texto) throw new Error('DeepSeek no devolvió contenido');
+  return { art: extraerJson(texto), modelo: `deepseek/${modelo}` };
+}
 
+async function escribirConClaude(tema, yaEscritos) {
+  const client = new Anthropic();
   // Streaming: el artículo es salida larga y así no se topa con el timeout HTTP.
   const stream = client.beta.messages.stream({
     model: 'claude-opus-5',
@@ -153,26 +186,39 @@ async function generar(tema, yaEscritos) {
     betas: ['server-side-fallback-2026-07-01'],
     fallbacks: 'default',
     thinking: { type: 'adaptive' },
-    system:
-      'Escribes contenido para negocios locales mexicanos. Tu regla número uno es no inventar datos: ' +
-      'si un dato no viene en el contexto que te dan, no lo mencionas. Prefieres un artículo más corto y ' +
-      'verificable que uno largo con relleno. Devuelves siempre JSON válido y nada más.',
+    system: SISTEMA,
     messages: [{ role: 'user', content: prompt(tema, yaEscritos) }],
   });
-
   const msg = await stream.finalMessage();
-
   if (msg.stop_reason === 'refusal') {
     throw new Error(`la API declinó: ${msg.stop_details?.category || 'sin categoría'}`);
   }
+  const texto = msg.content.filter((b) => b.type === 'text').map((b) => b.text).join('');
+  return { art: extraerJson(texto), modelo: msg.model };
+}
 
-  const texto = msg.content
-    .filter((b) => b.type === 'text')
-    .map((b) => b.text)
-    .join('');
+const SISTEMA =
+  'Escribes contenido para negocios locales mexicanos. Tu regla número uno es no inventar datos: ' +
+  'si un dato no viene en el contexto que te dan, no lo mencionas. Prefieres un artículo más corto y ' +
+  'verificable que uno largo con relleno. Devuelves siempre JSON válido y nada más.';
 
-  const art = extraerJson(texto);
+async function generar(tema, yaEscritos) {
+  console.log(`→ escribiendo: ${tema.titulo}`);
 
+  let resultado = null;
+  if (HAY_DEEPSEEK) {
+    try {
+      resultado = await escribirConDeepSeek(tema, yaEscritos);
+    } catch (e) {
+      console.log(`  · DeepSeek falló (${e.message}), me paso a Claude`);
+    }
+  }
+  if (!resultado) {
+    if (!HAY_CLAUDE) throw new Error('DeepSeek falló y no hay llave de Claude de respaldo');
+    resultado = await escribirConClaude(tema, yaEscritos);
+  }
+
+  const { art, modelo } = resultado;
   for (const campo of ['titulo', 'descripcion', 'resumen', 'cuerpo', 'faqs']) {
     if (!art[campo]) throw new Error(`falta el campo "${campo}" en la respuesta`);
   }
@@ -187,14 +233,14 @@ async function generar(tema, yaEscritos) {
     faqs: art.faqs,
     busqueda: tema.busqueda,
     fecha: new Date().toISOString().slice(0, 10),
-    modelo: msg.model,
+    modelo,
   };
 
   mkdirSync(BLOG, { recursive: true });
   writeFileSync(join(BLOG, `${tema.slug}.json`), JSON.stringify(salida, null, 2), 'utf8');
 
   const palabras = art.cuerpo.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
-  console.log(`  ✓ ${palabras} palabras · ${art.faqs.length} preguntas · blog/${tema.slug}.json`);
+  console.log(`  ✓ ${palabras} palabras · ${art.faqs.length} preguntas · ${modelo}`);
   return salida;
 }
 
