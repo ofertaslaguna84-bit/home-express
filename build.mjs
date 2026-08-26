@@ -82,39 +82,27 @@ img{display:block;max-width:100%}
 .btn-nar{background:var(--naranja);color:#fff;box-shadow:0 4px 14px rgba(240,120,24,.3)}
 .btn-out{border:1.5px solid var(--linea);background:#fff;color:var(--marino)}
 
-/* Hero partido: texto de un lado sobre fondo sólido, video del otro.
-   Se probó con el video de fondo y una tarjeta encima del texto y quedaba
-   descuadrado: la tarjeta flotaba a media pantalla y le cortaba el sujeto al
-   video. Partido cuadra, el texto se lee siempre y el video se ve completo
-   en su mitad. En celular se apila: video arriba, texto abajo. */
+/* Hero apilado en TODOS los tamaños: video a todo lo ancho arriba, texto
+   abajo. Es el diseño de celular extendido a escritorio, a petición del
+   dueño. Ventaja real: el video nunca compite con el texto, así que no hace
+   falta velo, tarjeta ni blur en ningún ancho. */
 .hero-video{background:var(--crema);border-bottom:1px solid var(--linea);padding:0}
-.hero-in{display:grid;align-items:stretch;grid-template-columns:1fr}
-/* En pantalla ancha el video sangra hasta la orilla derecha y el texto se
-   alinea con el resto de la página: por eso el padding se calcula del viewport
-   en vez de usar un contenedor centrado. */
-@media(min-width:940px){.hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-.hero-video .cont{padding:30px 22px 40px;display:flex;flex-direction:column;justify-content:center}
-@media(min-width:940px){.hero-video .cont{padding:84px 60px 84px max(24px,calc((100vw - 1180px) / 2))}}
-.hero-media{position:relative;overflow:hidden;background:var(--marino);min-height:260px;order:-1}
-@media(min-width:940px){.hero-media{order:0;min-height:540px}}
+.hero-in{display:flex;flex-direction:column}
+.hero-media{position:relative;overflow:hidden;background:var(--marino);height:min(56vw,300px);order:-1}
+@media(min-width:940px){.hero-media{height:min(40vw,440px)}}
 .hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-video .nota{font-size:13.5px;color:var(--gris)}
+.hero-video .cont{max-width:1180px;margin:0 auto;width:100%;padding:28px 22px 40px}
+@media(min-width:940px){.hero-video .cont{padding:46px 24px 58px;text-align:center;display:flex;flex-direction:column;align-items:center}}
 
-/* hero partido — el texto NUNCA va encima de la foto */
-.hero{background:var(--crema);border-bottom:1px solid var(--linea)}
-.hero-txt{padding:56px 22px 48px;display:flex;flex-direction:column;justify-content:center}
-@media(min-width:940px){.hero-txt{padding:76px 46px 76px 22px}}
-.kicker{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:18px}
-h1{font-size:clamp(31px,5vw,52px);line-height:1.06;font-weight:800;letter-spacing:-.02em;margin-bottom:18px}
+.kicker{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:16px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+@media(min-width:940px){h1{font-size:clamp(38px,4.2vw,54px)}}
 h1 em{font-style:normal;color:var(--naranja);white-space:nowrap}
-.lead{font-size:17px;color:var(--gris);max-width:480px;margin-bottom:26px}
-.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
-.hero-fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 22px 40px}
-@media(min-width:940px){.hero-fotos{padding:0;gap:10px}}
-.hero-fotos img{width:100%;height:100%;object-fit:cover;border-radius:var(--radio)}
-.hero-fotos div:first-child{grid-row:span 2}
-.hero-fotos div{overflow:hidden;border-radius:var(--radio);min-height:150px}
-@media(min-width:940px){.hero-fotos div{min-height:0}}
+.lead{font-size:17px;color:var(--gris);max-width:600px;margin-bottom:24px}
+@media(min-width:940px){.lead{font-size:18px}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+@media(min-width:940px){.hero-cta{justify-content:center}}
+.hero-video .nota{font-size:13.5px;color:var(--gris)}
 
 /* barra de confianza */
 .trust{background:var(--marino);color:#fff;padding:16px 0}
