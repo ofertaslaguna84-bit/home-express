@@ -50,6 +50,8 @@ const IVA_NOTA = marca.preciosMasIva ? ' + IVA' : '';
 const descSemana = Math.round(marca.descuentoSemana * 100);
 const descMes = Math.round(marca.descuentoMes * 100);
 
+const SERVICIOS = marca.serviciosIncluidos ? 'servicios incluidos' : 'sin servicios';
+
 const wa = (texto) => `https://wa.me/${marca.whatsapp}?text=${encodeURIComponent(texto)}`;
 
 // ─────────────────────────────────────────────────────────── estilos
@@ -325,6 +327,7 @@ function tarjeta(c) {
         <div class="p-fila tachado"><span>En Airbnb</span><b>${mxn(air)}</b></div>
         <div class="p-fila directo"><span>Directo aquí</span><b>${mxn(dir)}</b></div>
         <span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>
+        ${c.precioMes ? `<p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">${mxn(c.precioMes)}</strong> <span style="color:#A9A9B8">(${SERVICIOS})</span></p>` : ''}
         <div class="casa-btns">
           <a href="casas/${c.slug}/" class="btn btn-out">Ver casa</a>
           <a href="${wa(`Hola Home Express, me interesa ${c.nombre} (${c.huespedes} personas). ¿Está disponible?`)}" class="btn btn-nar">Reservar</a>
@@ -347,7 +350,7 @@ const FAQS = [
   },
   {
     q: '¿Cuál es la estancia mínima y la máxima?',
-    a: 'La mínima son 2 noches y no hay máxima: rentamos por noche, por semana y por mes, con casas ocupadas por temporadas de hasta 6 meses. El precio publicado es por noche. Entre más larga la estancia, mejor tarifa — para semanas o meses te cotizamos por WhatsApp con tus fechas.',
+    a: `La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de ${mxn(Math.min(...casas.map((x) => x.precioMes)))} a ${mxn(Math.max(...casas.map((x) => x.precioMes)))} según la casa, ${SERVICIOS}. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas.`,
   },
   {
     q: '¿Los precios llevan IVA?',
@@ -666,12 +669,14 @@ function paginaCasa(c) {
           <div class="p-fila tachado"><span>En Airbnb</span><b>${mxn(air)}</b></div>
           <div class="p-fila directo" style="margin-bottom:10px"><span>Directo</span><b>${mxn(dir)}</b></div>
           <span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>
+        ${c.precioMes ? `<p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">${mxn(c.precioMes)}</strong> <span style="color:#A9A9B8">(${SERVICIOS})</span></p>` : ''}
           <div style="margin:18px 0 4px">
             <div class="dato"><span>Huéspedes</span><b>hasta ${c.huespedes}</b></div>
             <div class="dato"><span>Recámaras</span><b>${c.recamaras}</b></div>
             <div class="dato"><span>Camas</span><b>${c.camas}</b></div>
             <div class="dato"><span>Baños</span><b>${c.banos}</b></div>
             <div class="dato"><span>Fin de semana</span><b>${mxn(dirF)}${IVA_NOTA}</b></div>
+            ${c.precioMes ? `<div class="dato"><span>Por mes</span><b>${mxn(c.precioMes)}</b></div>` : ''}
             <div class="dato"><span>Estancia mínima</span><b>2 noches</b></div>
             <div class="dato"><span>Factura</span><b>Sí, CFDI</b></div>
           </div>
@@ -856,7 +861,7 @@ ${marca.nombre} renta ${casas.length} casas propias en ${marca.ciudad}. No es un
 ## Las casas y sus precios
 
 Precios por noche reservando directo${IVA_NOTA}. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
-Solo se publica el precio por noche. Para estancias por semana o por mes hay mejor tarifa, pero se cotiza por WhatsApp: es negociable y no hay precio de estancia larga publicado.
+Se publica el precio por noche y el precio por mes. El mensual está al nivel del mercado de Torreón para casa amueblada de 9 a 12 personas (${SERVICIOS}). La tarifa por semana no se publica: se cotiza por WhatsApp y es negociable.
 
 ${casas
   .map(
@@ -865,6 +870,7 @@ ${casas
 - Capacidad: ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas · ${c.banos} baños
 - Entre semana: ${mxn(precioDirecto(c.baseNoche))} directo (${mxn(precioAirbnb(c.baseNoche))} en Airbnb)
 - Fin de semana: ${mxn(precioDirecto(c.baseFinde))} directo (${mxn(precioAirbnb(c.baseFinde))} en Airbnb)
+- Por mes: ${mxn(c.precioMes)} (${SERVICIOS})
 - Destaca por: ${c.destacados.join(', ')}
 - ${c.resumen}`
   )

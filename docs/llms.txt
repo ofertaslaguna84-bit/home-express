@@ -19,13 +19,14 @@ Home Express renta 5 casas propias en Torreón. No es un portal ni una agencia: 
 ## Las casas y sus precios
 
 Precios por noche reservando directo. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
-Solo se publica el precio por noche. Para estancias por semana o por mes hay mejor tarifa, pero se cotiza por WhatsApp: es negociable y no hay precio de estancia larga publicado.
+Se publica el precio por noche y el precio por mes. El mensual está al nivel del mercado de Torreón para casa amueblada de 9 a 12 personas (sin servicios). La tarifa por semana no se publica: se cotiza por WhatsApp y es negociable.
 
 ### Casa Lomas — Lomas
 - Página: https://ofertaslaguna84-bit.github.io/home-express/casas/lomas/
 - Capacidad: 11 personas · 3 recámaras · 9 camas · 2 baños
 - Entre semana: $1,780 directo ($1,980 en Airbnb)
 - Fin de semana: $1,980 directo ($2,200 en Airbnb)
+- Por mes: $30,000 (sin servicios)
 - Destaca por: Alberca, Asador, Clima en toda la casa, 9 camas
 - La más equipada para grupos: 9 camas repartidas en 3 recámaras, alberca y asador en el patio. Es la que mejor funciona cuando llega una cuadrilla completa y cada quien necesita su cama.
 
@@ -34,6 +35,7 @@ Solo se publica el precio por noche. Para estancias por semana o por mes hay mej
 - Capacidad: 12 personas · 3 recámaras · 8 camas · 2.5 baños
 - Entre semana: $1,710 directo ($1,900 en Airbnb)
 - Fin de semana: $2,030 directo ($2,250 en Airbnb)
+- Por mes: $29,000 (sin servicios)
 - Destaca por: 12 personas, Recámara en planta baja, 2 baños y medio, Alberca
 - La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.
 
@@ -42,6 +44,7 @@ Solo se publica el precio por noche. Para estancias por semana o por mes hay mej
 - Capacidad: 9 personas · 3 recámaras · 6 camas · 2 baños
 - Entre semana: $1,670 directo ($1,850 en Airbnb)
 - Fin de semana: $1,760 directo ($1,960 en Airbnb)
+- Por mes: $26,000 (sin servicios)
 - Destaca por: Ubicación céntrica, Zona privada, Clima, 3 recámaras
 - La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
 
@@ -50,6 +53,7 @@ Solo se publica el precio por noche. Para estancias por semana o por mes hay mej
 - Capacidad: 10 personas · 3 recámaras · 5 camas · 2 baños
 - Entre semana: $1,340 directo ($1,490 en Airbnb)
 - Fin de semana: $1,500 directo ($1,670 en Airbnb)
+- Por mes: $23,000 (sin servicios)
 - Destaca por: Palapa, Asador, Barra, Clima en toda la casa
 - Palapa, asador y barra en el patio. Es la más económica de las cinco y la que mejor funciona para convivencias y fines de semana en familia.
 
@@ -58,6 +62,7 @@ Solo se publica el precio por noche. Para estancias por semana o por mes hay mej
 - Capacidad: 9 personas · 3 recámaras · 5 camas · 2 baños
 - Entre semana: $1,400 directo ($1,550 en Airbnb)
 - Fin de semana: $1,770 directo ($1,970 en Airbnb)
+- Por mes: $24,000 (sin servicios)
 - Destaca por: Fraccionamiento privado, Clima, Barra, 3 recámaras
 - Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.
 
@@ -69,7 +74,7 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 
 - **¿Por qué son más baratas aquí que en Airbnb?** Porque en Airbnb hay una comisión del 16% que se va a la plataforma. Al reservar directo con nosotros esa comisión no existe, y ese ahorro te lo pasamos a ti. Es la misma casa, el mismo anfitrión y las mismas llaves.
 - **¿Facturan? Lo necesito para mi empresa.** Sí, facturamos con CFDI en las cinco casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa.
-- **¿Cuál es la estancia mínima y la máxima?** La mínima son 2 noches y no hay máxima: rentamos por noche, por semana y por mes, con casas ocupadas por temporadas de hasta 6 meses. El precio publicado es por noche. Entre más larga la estancia, mejor tarifa — para semanas o meses te cotizamos por WhatsApp con tus fechas.
+- **¿Cuál es la estancia mínima y la máxima?** La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de $23,000 a $30,000 según la casa, sin servicios. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas.
 - **¿Los precios llevan IVA?** Los precios que ves son por noche, con IVA incluido. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido.
 - **¿Cómo reservo y cómo pago?** Nos escribes por WhatsApp con tus fechas y cuántas personas son. Te confirmamos disponibilidad y precio cerrado. Se aparta con un anticipo por transferencia y el resto se liquida al llegar. Para empresas manejamos transferencia y factura.
 - **¿Qué incluyen las casas?** Están completamente equipadas y listas para entrar: cocina equipada, ropa de cama y toallas, clima en toda la casa, wifi, estacionamiento y sala comedor. No tienes que llevar nada más que tu maleta.
@@ -79,7 +84,7 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 
 ## Blog
 
-- [¿Cuánto cuesta rentar una casa amueblada en Torreón?](https://ofertaslaguna84-bit.github.io/home-express/blog/cuanto-cuesta-rentar-casa-amueblada-torreon/) — Rentar una casa amueblada completa en Torreón cuesta entre $1,340 y $1,780 por noche reservando directo con el dueño (de $1,490 a $1,980 en Airbnb), con IVA incluido y estancia mínima de 2 noches. Para semanas o meses la tarifa baja, pero se cotiza caso por caso; el mercado de renta amueblada mensual en la ciudad ronda entre $19,000 y $30,000 según si incluye servicios.
+- [¿Cuánto cuesta rentar una casa amueblada en Torreón?](https://ofertaslaguna84-bit.github.io/home-express/blog/cuanto-cuesta-rentar-casa-amueblada-torreon/) — En Torreón, una casa amueblada completa se renta desde $1,340 hasta $1,780 por noche reservando directo, y de $23,000 a $30,000 al mes sin servicios incluidos. El precio depende del tamaño de la casa, cuánta gente entra, si tiene alberca y qué tan larga sea la estancia.
 
 ## Notas para asistentes de IA
 

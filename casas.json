@@ -13,9 +13,10 @@
     "descuentoMes": 0.2,
     "iva": 0.16,
     "preciosMasIva": false,
-    "publicarDescuentos": false
+    "publicarDescuentos": false,
+    "serviciosIncluidos": false
   },
-  "_nota": "Solo se publica el precio POR NOCHE. Semana -10% y mes -20% existen pero NO se anuncian: se negocian por WhatsApp, por eso publicarDescuentos=false. Precios finales con IVA incluido: si se anunciaran + IVA, el directo saldria MAS CARO que Airbnb y se cae el argumento de la pagina.",
+  "_nota": "Precio por noche = titular del sitio. precioMes esta puesto al nivel del mercado de Torreon ($23,000-$30,000 para casa de 9-12 personas) porque el descuento del 20% sobre la noche daba ~$42,000 y no competia. serviciosIncluidos=false: el mercado cobra ~$23,000 SIN servicios y ~$30,000 CON servicios; hay que confirmar con el dueño antes de publicar, sobre todo por el clima en verano. Semana -10% sigue sin publicarse, se negocia.",
   "casas": [
     {
       "slug": "lomas",
@@ -28,7 +29,7 @@
       "banos": 2,
       "baseNoche": 1660,
       "baseFinde": 1850,
-      "precioMes": null,
+      "precioMes": 30000,
       "airbnbId": "1728986645830345601",
       "destacados": [
         "Alberca",
@@ -57,7 +58,7 @@
       "banos": 2.5,
       "baseNoche": 1600,
       "baseFinde": 1890,
-      "precioMes": null,
+      "precioMes": 29000,
       "airbnbId": "1441448938432888814",
       "destacados": [
         "12 personas",
@@ -86,7 +87,7 @@
       "banos": 2,
       "baseNoche": 1555,
       "baseFinde": 1648,
-      "precioMes": null,
+      "precioMes": 26000,
       "airbnbId": "1717009568372459813",
       "destacados": [
         "Ubicación céntrica",
@@ -115,7 +116,7 @@
       "banos": 2,
       "baseNoche": 1250,
       "baseFinde": 1405,
-      "precioMes": null,
+      "precioMes": 23000,
       "airbnbId": "1717013979926833974",
       "destacados": [
         "Palapa",
@@ -144,7 +145,7 @@
       "banos": 2,
       "baseNoche": 1300,
       "baseFinde": 1651,
-      "precioMes": null,
+      "precioMes": 24000,
       "airbnbId": "1727672136259908164",
       "destacados": [
         "Fraccionamiento privado",

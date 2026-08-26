@@ -71,11 +71,11 @@ ${casas
 HECHOS QUE SÍ PUEDES USAR:
 - Todas tienen clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas.
 - Estancia mínima 2 noches, sin máximo. Hay estancias de hasta 6 meses.
-- SOLO se publica el precio POR NOCHE. Para semana o mes hay mejor tarifa pero es NEGOCIABLE:
-  nunca publiques un precio ni un porcentaje de descuento por semana o por mes, ni lo calcules.
-  Si el tema lo pide, di que se cotiza por WhatsApp con las fechas.
-- No multipliques el precio por noche por 30 para dar un precio mensual: eso da una cifra
-  irreal que no es lo que se cobra en estancias largas.
+- PRECIOS POR MES (usa estos, no los calcules):
+${casas.map((c) => `  ${c.nombre}: ${mxn(c.precioMes)} al mes, ${marca.serviciosIncluidos ? 'servicios incluidos' : 'sin servicios'}.`).join('\n')}
+- NUNCA multipliques el precio por noche por 30 para dar un mensual: da una cifra irreal.
+  El mensual es mucho más bajo que esa cuenta, y es el de la lista de arriba.
+- La tarifa por SEMANA no se publica: se cotiza por WhatsApp. No inventes porcentajes.
 - Los precios mostrados son finales, con IVA incluido. Al facturar se desglosa el IVA.
 - Facturamos CFDI. Es un diferenciador real: la mayoría de las rentas temporales de la zona no factura.
 - Se reserva por WhatsApp (${marca.whatsappVisible}), con anticipo por transferencia. No hay motor de reservas en línea.
