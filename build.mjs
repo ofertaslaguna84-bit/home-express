@@ -82,22 +82,29 @@ img{display:block;max-width:100%}
 .btn-nar{background:var(--naranja);color:#fff;box-shadow:0 4px 14px rgba(240,120,24,.3)}
 .btn-out{border:1.5px solid var(--linea);background:#fff;color:var(--marino)}
 
-/* hero con video de fondo. El degradado va de izquierda a derecha: el texto
-   queda sobre zona oscura y el video se ve limpio del lado derecho. Uniforme
-   no sirve — apaga el video y deja el texto a medias legible. */
-.hero-video{position:relative;overflow:hidden;background:var(--marino);min-height:520px;display:flex;align-items:center}
-@media(min-width:940px){.hero-video{min-height:600px}}
+/* hero con video de fondo.
+   El velo general es LIGERO para que el video se vea. La legibilidad no la da
+   el velo, la da una tarjeta esmerilada detrás del texto: así se lee sobre
+   cualquier cuadro del video —incluso el cielo blanco— sin apagar la imagen.
+   Un velo parejo y fuerte es lo que arruina estos heros: mata el video y aun
+   así deja el texto a medias. */
+.hero-video{position:relative;overflow:hidden;background:var(--marino);min-height:560px;display:flex;align-items:center}
+@media(min-width:940px){.hero-video{min-height:640px}}
 .hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero-video::after{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(24,24,84,.94) 0%,rgba(24,24,84,.88) 34%,rgba(24,24,84,.55) 62%,rgba(24,24,84,.28) 100%)}
-@media(max-width:939px){.hero-video::after{background:linear-gradient(180deg,rgba(24,24,84,.86) 0%,rgba(24,24,84,.8) 55%,rgba(24,24,84,.92) 100%)}}
+  background:linear-gradient(100deg,rgba(18,18,64,.58) 0%,rgba(18,18,64,.34) 42%,rgba(18,18,64,.06) 72%,rgba(18,18,64,0) 100%)}
+@media(max-width:939px){.hero-video::after{background:linear-gradient(180deg,rgba(18,18,64,.34) 0%,rgba(18,18,64,.2) 45%,rgba(18,18,64,.5) 100%)}}
 .hero-video .w{position:relative;z-index:2;width:100%}
-.hero-video .cont{max-width:560px;padding:56px 0}
+.hero-video .cont{max-width:600px;padding:34px 32px 32px;border-radius:22px;
+  background:rgba(18,18,64,.5);backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%);
+  border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 50px rgba(0,0,0,.3)}
+@media(max-width:939px){.hero-video .cont{padding:26px 22px;border-radius:18px;margin:26px 0}}
 .hero-video h1,.hero-video .lead,.hero-video .kicker{color:#fff}
+.hero-video h1{text-shadow:0 2px 14px rgba(0,0,0,.45)}
 .hero-video h1 em{color:#FFA047}
-.hero-video .lead{color:rgba(255,255,255,.86)}
-.hero-video .kicker{color:#FFA047}
-.hero-video .nota{font-size:13.5px;color:rgba(255,255,255,.8)}
+.hero-video .lead{color:rgba(255,255,255,.94);text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.hero-video .kicker{color:#FFB061}
+.hero-video .nota{font-size:13.5px;color:rgba(255,255,255,.92);text-shadow:0 1px 8px rgba(0,0,0,.4)}
 
 /* hero partido — el texto NUNCA va encima de la foto */
 .hero{background:var(--crema);border-bottom:1px solid var(--linea)}
