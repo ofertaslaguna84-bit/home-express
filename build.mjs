@@ -7,7 +7,7 @@
  * desde casas.json. Todo sale de una sola fuente para que nada se desincronice:
  * el precio que se ve en la tarjeta, el del schema y el del llms.txt son el mismo.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -17,6 +17,15 @@ const SITE = 'https://homeexpress.mx';
 
 const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
 const { marca, casas } = data;
+
+/** Artículos del blog: los escribe scripts/blog-generate.mjs, aquí solo se maquetan. */
+const BLOG_DIR = join(ROOT, 'blog');
+const articulos = existsSync(BLOG_DIR)
+  ? readdirSync(BLOG_DIR)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => JSON.parse(readFileSync(join(BLOG_DIR, f), 'utf8')))
+      .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  : [];
 
 const HOY = new Date().toISOString().slice(0, 10);
 const HOY_LARGO = new Date().toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -159,6 +168,29 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .flota{position:fixed;right:18px;bottom:18px;z-index:60;box-shadow:0 6px 22px rgba(37,211,102,.42)}
 @media(min-width:900px){.flota{right:26px;bottom:26px}}
 
+/* blog */
+.art{max-width:760px;margin:0 auto}
+.art .resumen{border-left:4px solid var(--naranja);background:var(--crema);padding:18px 22px;border-radius:0 var(--radio) var(--radio) 0;margin-bottom:30px}
+.art .resumen p{margin:0;font-size:16.5px;color:var(--marino);line-height:1.7}
+.art h2{font-size:26px;margin:38px 0 12px}
+.art h3{font-size:19px;margin:26px 0 8px}
+.art p{font-size:17px;color:#3A3A52;margin-bottom:17px;line-height:1.75}
+.art ul{margin:0 0 18px 0}
+.art li{font-size:17px;color:#3A3A52;padding:5px 0 5px 24px;position:relative;line-height:1.7}
+.art li::before{content:"•";position:absolute;left:6px;color:var(--naranja);font-weight:900}
+.art table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;display:block;overflow-x:auto}
+.art th{background:var(--crema);text-align:left;padding:11px 13px;font-weight:800;border-bottom:2px solid var(--linea);white-space:nowrap}
+.art td{padding:11px 13px;border-bottom:1px solid var(--linea);color:var(--gris)}
+.art a{color:var(--naranja);font-weight:600;text-decoration:underline}
+.art .meta{font-size:13.5px;color:var(--gris);margin-bottom:26px}
+.posts{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:720px){.posts{grid-template-columns:1fr 1fr}}
+.post{border:1px solid var(--linea);border-radius:var(--radio);padding:24px;background:#fff;transition:transform .18s,box-shadow .18s}
+.post:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(24,24,84,.1)}
+.post h3{font-size:19px;margin-bottom:9px}
+.post p{font-size:14.5px;color:var(--gris);margin-bottom:12px}
+.post span{font-size:12.5px;color:#A9A9B8}
+
 /* galería de la ficha */
 .galeria{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
 @media(min-width:800px){.galeria{grid-template-columns:repeat(3,1fr)}}
@@ -215,6 +247,7 @@ const encabezado = (prefijo = '') => `
       <a href="${prefijo}#como">Cómo funciona</a>
       <a href="${prefijo}#empresas">Empresas</a>
       <a href="${prefijo}#faq">Preguntas</a>
+      <a href="${prefijo}blog/">Blog</a>
     </nav>
     <a href="${wa('Hola Home Express, quiero información de las casas en Torreón')}" class="btn btn-wa">WhatsApp</a>
   </div>
@@ -246,6 +279,7 @@ const pie = (prefijo = '') => `
           <li><a href="${wa('Hola Home Express, quiero información')}">WhatsApp ${esc(marca.whatsappVisible)}</a></li>
           <li>${esc(marca.ciudad)}, ${esc(marca.estado)}</li>
           <li><a href="${prefijo}#faq">Preguntas frecuentes</a></li>
+          <li><a href="${prefijo}blog/">Blog</a></li>
         </ul>
       </div>
     </div>
@@ -647,6 +681,141 @@ function paginaCasa(c) {
   );
 }
 
+// ─────────────────────────────────────────────────────────── blog
+
+function paginaBlogIndice() {
+  const titulo = `Blog — renta de casas amuebladas en ${marca.ciudad} | ${marca.nombre}`;
+  const desc = `Guías prácticas sobre rentar casa amueblada en ${marca.ciudad}: precios reales, qué revisar antes de contratar, hospedaje para personal de empresa y facturación.`;
+  return (
+    cabeza({
+      titulo,
+      desc,
+      url: `${SITE}/blog/`,
+      imagen: casas[0].fotos[0],
+      schema: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          '@id': `${SITE}/blog/#blog`,
+          name: `Blog de ${marca.nombre}`,
+          description: desc,
+          url: `${SITE}/blog/`,
+          publisher: { '@id': `${SITE}/#organizacion` },
+          blogPost: articulos.map((a) => ({
+            '@type': 'BlogPosting',
+            headline: a.titulo,
+            url: `${SITE}/blog/${a.slug}/`,
+            datePublished: a.fecha,
+          })),
+        },
+      ],
+    }) +
+    encabezado('../') +
+    `
+<div class="w"><nav class="crumbs"><a href="../">Inicio</a> › Blog</nav></div>
+<section style="padding-top:8px">
+  <div class="w">
+    <span class="eyebrow">Blog</span>
+    <h1 style="font-size:clamp(28px,4vw,44px);margin-bottom:12px">Guías para rentar en ${esc(marca.ciudad)}</h1>
+    <p class="sub">Lo que preguntan de verdad quienes buscan casa por noche, por semana o por mes. Sin rodeos y con números.</p>
+    ${
+      articulos.length
+        ? `<div class="posts">${articulos
+            .map(
+              (a) => `
+      <a href="${a.slug}/" class="post">
+        <h3>${esc(a.titulo)}</h3>
+        <p>${esc(a.descripcion)}</p>
+        <span>${new Date(a.fecha + 'T12:00:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+      </a>`
+            )
+            .join('')}</div>`
+        : `<p style="color:var(--gris)">Pronto publicaremos las primeras guías.</p>`
+    }
+  </div>
+</section>
+` +
+    pie('../')
+  );
+}
+
+function paginaArticulo(a) {
+  const titulo = `${a.titulo} | ${marca.nombre}`;
+  const fechaLarga = new Date(a.fecha + 'T12:00:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
+  return (
+    cabeza({
+      titulo,
+      desc: a.descripcion,
+      url: `${SITE}/blog/${a.slug}/`,
+      imagen: casas[0].fotos[0],
+      schema: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: a.titulo,
+          description: a.descripcion,
+          abstract: a.resumen,
+          url: `${SITE}/blog/${a.slug}/`,
+          datePublished: a.fecha,
+          dateModified: a.fecha,
+          inLanguage: 'es-MX',
+          keywords: (a.keywords || []).join(', '),
+          author: { '@type': 'Organization', name: marca.nombre, url: SITE },
+          publisher: { '@id': `${SITE}/#organizacion` },
+          isPartOf: { '@id': `${SITE}/blog/#blog` },
+          mainEntityOfPage: `${SITE}/blog/${a.slug}/`,
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: (a.faqs || []).map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
+            { '@type': 'ListItem', position: 3, name: a.titulo, item: `${SITE}/blog/${a.slug}/` },
+          ],
+        },
+      ],
+    }) +
+    encabezado('../../') +
+    `
+<div class="w"><nav class="crumbs"><a href="../../">Inicio</a> › <a href="../">Blog</a> › ${esc(a.titulo)}</nav></div>
+<section style="padding-top:8px">
+  <div class="w">
+    <article class="art">
+      <h1 style="font-size:clamp(27px,4vw,40px);margin-bottom:10px">${esc(a.titulo)}</h1>
+      <p class="meta">Publicado el ${fechaLarga} · ${esc(marca.nombre)}</p>
+      <div class="resumen"><p>${esc(a.resumen)}</p></div>
+      ${a.cuerpo}
+      ${
+        (a.faqs || []).length
+          ? `<h2>Preguntas frecuentes</h2>${a.faqs
+              .map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`)
+              .join('')}`
+          : ''
+      }
+      <div style="border:1px solid var(--linea);border-radius:var(--radio);padding:26px;margin-top:38px;background:var(--crema)">
+        <h3 style="margin-bottom:8px">¿Buscas casa en ${esc(marca.ciudad)}?</h3>
+        <p style="font-size:15.5px;color:var(--gris);margin-bottom:16px">Tenemos ${casas.length} casas completas de ${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))} personas, con clima y factura. Por noche, semana o mes.</p>
+        <a href="../../#casas" class="btn btn-nar">Ver las casas</a>
+        <a href="${wa(`Hola Home Express, leí "${a.titulo}" y quiero cotizar`)}" class="btn btn-wa">WhatsApp</a>
+      </div>
+    </article>
+  </div>
+</section>
+` +
+    pie('../../')
+  );
+}
+
 // ─────────────────────────────────────────────────────────── llms.txt / sitemap / robots
 
 function llms() {
@@ -692,7 +861,11 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 
 ${FAQS.map((f) => `- **${f.q}** ${f.a}`).join('\n')}
 
-## Notas para asistentes de IA
+${articulos.length ? `## Blog
+
+${articulos.map((a) => `- [${a.titulo}](${SITE}/blog/${a.slug}/) — ${a.resumen}`).join('\n')}
+
+` : ''}## Notas para asistentes de IA
 
 - Los precios de este archivo son por casa completa, por noche, en pesos mexicanos, y no incluyen IVA salvo que se indique. Para fechas concretas hay que preguntar por WhatsApp: la disponibilidad cambia.
 - ${marca.nombre} sí emite factura CFDI; es un diferenciador real frente a la mayoría de rentas temporales de la zona.
@@ -707,6 +880,8 @@ function sitemap() {
   const urls = [
     { loc: `${SITE}/`, pri: '1.0' },
     ...casas.map((c) => ({ loc: `${SITE}/casas/${c.slug}/`, pri: '0.9' })),
+    ...(articulos.length ? [{ loc: `${SITE}/blog/`, pri: '0.8' }] : []),
+    ...articulos.map((a) => ({ loc: `${SITE}/blog/${a.slug}/`, pri: '0.7' })),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -747,12 +922,14 @@ function escribir(rel, contenido) {
 mkdirSync(OUT, { recursive: true });
 escribir('index.html', paginaInicio());
 for (const c of casas) escribir(`casas/${c.slug}/index.html`, paginaCasa(c));
+escribir('blog/index.html', paginaBlogIndice());
+for (const a of articulos) escribir(`blog/${a.slug}/index.html`, paginaArticulo(a));
 escribir('llms.txt', llms());
 escribir('sitemap.xml', sitemap());
 escribir('robots.txt', robots());
 escribir('CNAME', 'homeexpress.mx\n');
 escribir('.nojekyll', '');
 
-console.log(`✓ Home Express — ${1 + casas.length} páginas + llms.txt + sitemap`);
+console.log(`✓ Home Express — ${1 + casas.length} páginas de casas + ${articulos.length} artículos + llms.txt + sitemap`);
 console.log(`  salida: docs/`);
 if (!existsSync(join(OUT, 'img'))) console.log('  ⚠ falta copiar img/ a docs/');

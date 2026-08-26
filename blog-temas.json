@@ -1,0 +1,61 @@
+{
+  "_nota": "Temas sacados de búsquedas reales de Google (autocompletar, agosto 2026). Los que NO traen demanda —'hospedaje corporativo', 'renta corporativa', 'alojamiento empresas'— se dejaron fuera a propósito: nadie los busca así.",
+  "temas": [
+    {
+      "slug": "cuanto-cuesta-rentar-casa-amueblada-torreon",
+      "titulo": "¿Cuánto cuesta rentar una casa amueblada en Torreón?",
+      "busqueda": "casas amuebladas en renta torreon",
+      "intencion": "Alguien comparando precios antes de decidir. Quiere números concretos, no rangos vagos.",
+      "angulo": "Precios reales por noche, por semana y por mes, con la diferencia entre casa amueblada por temporada y renta tradicional de un año. Incluir qué cambia el precio (número de personas, temporada, si incluye servicios)."
+    },
+    {
+      "slug": "casa-o-hotel-para-personal-de-empresa",
+      "titulo": "¿Casa o hotel para hospedar al personal de tu empresa en Torreón?",
+      "busqueda": "hospedaje para trabajadores",
+      "intencion": "Alguien de compras o recursos humanos que tiene que hospedar una cuadrilla y está haciendo cuentas.",
+      "angulo": "Comparación de costo real para 10 personas: hotel contra casa completa. Incluir el ahorro de cocina, la factura, y por qué el precio por casa gana al precio por persona."
+    },
+    {
+      "slug": "renta-casa-por-mes-torreon-guia",
+      "titulo": "Rentar casa por mes en Torreón: cómo funciona y cuánto cuesta",
+      "busqueda": "renta casa amueblada por mes",
+      "intencion": "Alguien que llega a Torreón por un proyecto de varios meses y no quiere hotel ni contrato de un año.",
+      "angulo": "El punto medio entre hotel y contrato anual. Qué pedir, qué incluye normalmente, cómo se maneja el depósito y la factura, y por qué conviene contra un contrato de arrendamiento tradicional."
+    },
+    {
+      "slug": "airbnb-torreon-vs-renta-directa",
+      "titulo": "Airbnb en Torreón vs. rentar directo: cuál sale más barato",
+      "busqueda": "airbnb torreon precios",
+      "intencion": "Alguien que ya buscó en Airbnb y quiere saber si hay forma de pagar menos.",
+      "angulo": "Explicar la comisión de plataforma sin atacar a Airbnb, y por qué reservar directo con el mismo anfitrión sale menos. Ser honesto con lo que sí da Airbnb (protección de pago, reseñas) y cómo se cubre eso al reservar directo."
+    },
+    {
+      "slug": "que-necesito-para-rentar-casa-temporal-factura",
+      "titulo": "Qué necesitas para rentar una casa temporal con factura",
+      "busqueda": "renta casa amueblada torreon factura",
+      "intencion": "Alguien de una empresa que necesita comprobar el gasto y no sabe si le van a poder facturar.",
+      "angulo": "Requisitos concretos: datos fiscales, contrato, depósito, identificación. Explicar por qué muchas rentas temporales no facturan y qué pedir para no quedarse sin comprobante."
+    },
+    {
+      "slug": "casa-para-grupo-grande-torreon",
+      "titulo": "Dónde quedarse en Torreón si son 10 o 12 personas",
+      "busqueda": "airbnb torreon alberca",
+      "intencion": "Familia o grupo de amigos organizando un viaje o una reunión.",
+      "angulo": "Qué revisar cuando son muchos: camas por persona (no solo capacidad), número de baños, si hay alberca o asador, y estacionamiento. El error clásico de rentar por capacidad anunciada sin ver cuántas camas hay."
+    },
+    {
+      "slug": "zonas-donde-hospedarse-torreon",
+      "titulo": "En qué zona de Torreón conviene hospedarse según a qué vengas",
+      "busqueda": "casas en renta en torreon",
+      "intencion": "Alguien que no conoce la ciudad y no sabe dónde le conviene quedarse.",
+      "angulo": "Guía por motivo del viaje: zona industrial y periférico, aeropuerto, centro, Galerías. Tiempos de traslado reales entre zonas y qué conviene según si vienes a planta, a oficina o de paseo."
+    },
+    {
+      "slug": "checklist-antes-de-rentar-casa-temporal",
+      "titulo": "10 cosas que revisar antes de rentar una casa temporal",
+      "busqueda": "casa amueblada torreon",
+      "intencion": "Alguien que ya casi decide pero tiene miedo de que le vean la cara.",
+      "angulo": "Lista práctica: contrato por escrito, qué incluye exactamente, depósito y cómo se devuelve, quién paga los servicios, política de cancelación, y cómo confirmar que el anfitrión es real."
+    }
+  ]
+}

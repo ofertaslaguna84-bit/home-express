@@ -147,6 +147,29 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .flota{position:fixed;right:18px;bottom:18px;z-index:60;box-shadow:0 6px 22px rgba(37,211,102,.42)}
 @media(min-width:900px){.flota{right:26px;bottom:26px}}
 
+/* blog */
+.art{max-width:760px;margin:0 auto}
+.art .resumen{border-left:4px solid var(--naranja);background:var(--crema);padding:18px 22px;border-radius:0 var(--radio) var(--radio) 0;margin-bottom:30px}
+.art .resumen p{margin:0;font-size:16.5px;color:var(--marino);line-height:1.7}
+.art h2{font-size:26px;margin:38px 0 12px}
+.art h3{font-size:19px;margin:26px 0 8px}
+.art p{font-size:17px;color:#3A3A52;margin-bottom:17px;line-height:1.75}
+.art ul{margin:0 0 18px 0}
+.art li{font-size:17px;color:#3A3A52;padding:5px 0 5px 24px;position:relative;line-height:1.7}
+.art li::before{content:"•";position:absolute;left:6px;color:var(--naranja);font-weight:900}
+.art table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;display:block;overflow-x:auto}
+.art th{background:var(--crema);text-align:left;padding:11px 13px;font-weight:800;border-bottom:2px solid var(--linea);white-space:nowrap}
+.art td{padding:11px 13px;border-bottom:1px solid var(--linea);color:var(--gris)}
+.art a{color:var(--naranja);font-weight:600;text-decoration:underline}
+.art .meta{font-size:13.5px;color:var(--gris);margin-bottom:26px}
+.posts{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:720px){.posts{grid-template-columns:1fr 1fr}}
+.post{border:1px solid var(--linea);border-radius:var(--radio);padding:24px;background:#fff;transition:transform .18s,box-shadow .18s}
+.post:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(24,24,84,.1)}
+.post h3{font-size:19px;margin-bottom:9px}
+.post p{font-size:14.5px;color:var(--gris);margin-bottom:12px}
+.post span{font-size:12.5px;color:#A9A9B8}
+
 /* galería de la ficha */
 .galeria{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
 @media(min-width:800px){.galeria{grid-template-columns:repeat(3,1fr)}}
@@ -175,6 +198,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
       <a href="../../#como">Cómo funciona</a>
       <a href="../../#empresas">Empresas</a>
       <a href="../../#faq">Preguntas</a>
+      <a href="../../blog/">Blog</a>
     </nav>
     <a href="https://wa.me/5218712500434?text=Hola%20Home%20Express%2C%20quiero%20informaci%C3%B3n%20de%20las%20casas%20en%20Torre%C3%B3n" class="btn btn-wa">WhatsApp</a>
   </div>
@@ -340,6 +364,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
           <li><a href="https://wa.me/5218712500434?text=Hola%20Home%20Express%2C%20quiero%20informaci%C3%B3n">WhatsApp 871 250 0434</a></li>
           <li>Torreón, Coahuila</li>
           <li><a href="../../#faq">Preguntas frecuentes</a></li>
+          <li><a href="../../blog/">Blog</a></li>
         </ul>
       </div>
     </div>
