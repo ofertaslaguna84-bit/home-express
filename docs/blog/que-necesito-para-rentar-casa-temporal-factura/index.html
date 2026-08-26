@@ -57,19 +57,24 @@ img{display:block;max-width:100%}
 @media(min-width:940px){.hero-video{min-height:640px}}
 .hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero-video::after{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(18,18,64,.58) 0%,rgba(18,18,64,.34) 42%,rgba(18,18,64,.06) 72%,rgba(18,18,64,0) 100%)}
-@media(max-width:939px){.hero-video::after{background:linear-gradient(180deg,rgba(18,18,64,.34) 0%,rgba(18,18,64,.2) 45%,rgba(18,18,64,.5) 100%)}}
+  background:linear-gradient(100deg,rgba(18,18,64,.34) 0%,rgba(18,18,64,.16) 45%,rgba(18,18,64,0) 75%)}
+@media(max-width:939px){.hero-video::after{background:linear-gradient(180deg,rgba(18,18,64,.1) 0%,rgba(18,18,64,.25) 34%,rgba(18,18,64,.72) 100%)}}
 .hero-video .w{position:relative;z-index:2;width:100%}
 .hero-video .cont{max-width:600px;padding:34px 32px 32px;border-radius:22px;
-  background:rgba(18,18,64,.5);backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%);
-  border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 50px rgba(0,0,0,.3)}
-@media(max-width:939px){.hero-video .cont{padding:26px 22px;border-radius:18px;margin:26px 0}}
+  background:rgba(18,18,64,.24);backdrop-filter:blur(7px) saturate(115%);-webkit-backdrop-filter:blur(7px) saturate(115%);
+  border:1px solid rgba(255,255,255,.1)}
+/* En celular la tarjeta tapaba el video completo: ahí no hay tarjeta, la
+   legibilidad la carga la sombra del texto y un degradado inferior. */
+@media(max-width:939px){
+  .hero-video{min-height:auto}
+  .hero-video .cont{padding:26px 0 30px;border:0;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;border-radius:0}
+}
 .hero-video h1,.hero-video .lead,.hero-video .kicker{color:#fff}
-.hero-video h1{text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.hero-video h1{text-shadow:0 2px 6px rgba(0,0,0,.85),0 4px 22px rgba(0,0,0,.6)}
 .hero-video h1 em{color:#FFA047}
-.hero-video .lead{color:rgba(255,255,255,.94);text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.hero-video .lead{color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 14px rgba(0,0,0,.6)}
 .hero-video .kicker{color:#FFB061}
-.hero-video .nota{font-size:13.5px;color:rgba(255,255,255,.92);text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.hero-video .nota{font-size:13.5px;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9)}
 
 /* hero partido — el texto NUNCA va encima de la foto */
 .hero{background:var(--crema);border-bottom:1px solid var(--linea)}
@@ -168,8 +173,10 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .pie-bajo{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:20px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 
 /* botón flotante de whatsapp */
-.flota{position:fixed;right:18px;bottom:18px;z-index:60;box-shadow:0 6px 22px rgba(37,211,102,.42)}
-@media(min-width:900px){.flota{right:26px;bottom:26px}}
+.flota{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;padding:0;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.45)}
+.flota svg{width:30px;height:30px;fill:#fff}
+@media(min-width:900px){.flota{right:24px;bottom:24px;width:60px;height:60px}.flota svg{width:32px;height:32px}}
 
 /* blog */
 .art{max-width:760px;margin:0 auto}
@@ -332,5 +339,5 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
     </div>
   </div>
 </footer>
-<a href="https://wa.me/528701484216?text=Hola%20Home%20Express%2C%20quiero%20informaci%C3%B3n%20de%20las%20casas" class="btn btn-wa flota" aria-label="Escribir por WhatsApp">💬 WhatsApp</a>
+<a href="https://wa.me/528701484216?text=Hola%20Home%20Express%2C%20quiero%20informaci%C3%B3n%20de%20las%20casas" class="btn btn-wa flota" aria-label="Escribir por WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.06 24l1.68-6.16A11.87 11.87 0 010 11.9C0 5.34 5.34 0 11.9 0a11.82 11.82 0 018.42 3.49A11.82 11.82 0 0123.8 11.9c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zm6.6-3.8l.36.22a9.87 9.87 0 005.03 1.38h.01c5.45 0 9.89-4.43 9.89-9.89a9.83 9.83 0 00-2.9-6.99 9.82 9.82 0 00-6.99-2.9c-5.46 0-9.9 4.44-9.9 9.89a9.86 9.86 0 001.51 5.26l.24.38-1 3.65 3.75-.99zm11.15-5.6c-.07-.13-.28-.2-.58-.35-.3-.15-1.77-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.61-.92-2.2-.24-.59-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41z"/></svg></a>
 </body></html>
