@@ -47,34 +47,20 @@ img{display:block;max-width:100%}
 .btn-nar{background:var(--naranja);color:#fff;box-shadow:0 4px 14px rgba(240,120,24,.3)}
 .btn-out{border:1.5px solid var(--linea);background:#fff;color:var(--marino)}
 
-/* hero con video de fondo.
-   El velo general es LIGERO para que el video se vea. La legibilidad no la da
-   el velo, la da una tarjeta esmerilada detrás del texto: así se lee sobre
-   cualquier cuadro del video —incluso el cielo blanco— sin apagar la imagen.
-   Un velo parejo y fuerte es lo que arruina estos heros: mata el video y aun
-   así deja el texto a medias. */
-.hero-video{position:relative;overflow:hidden;background:var(--marino);min-height:560px;display:flex;align-items:center}
-@media(min-width:940px){.hero-video{min-height:640px}}
-.hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.hero-video::after{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(18,18,64,.34) 0%,rgba(18,18,64,.16) 45%,rgba(18,18,64,0) 75%)}
-@media(max-width:939px){.hero-video::after{background:linear-gradient(180deg,rgba(18,18,64,.1) 0%,rgba(18,18,64,.25) 34%,rgba(18,18,64,.72) 100%)}}
-.hero-video .w{position:relative;z-index:2;width:100%}
-.hero-video .cont{max-width:600px;padding:34px 32px 32px;border-radius:22px;
-  background:rgba(18,18,64,.24);backdrop-filter:blur(7px) saturate(115%);-webkit-backdrop-filter:blur(7px) saturate(115%);
-  border:1px solid rgba(255,255,255,.1)}
-/* En celular la tarjeta tapaba el video completo: ahí no hay tarjeta, la
-   legibilidad la carga la sombra del texto y un degradado inferior. */
-@media(max-width:939px){
-  .hero-video{min-height:auto}
-  .hero-video .cont{padding:26px 0 30px;border:0;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;border-radius:0}
-}
-.hero-video h1,.hero-video .lead,.hero-video .kicker{color:#fff}
-.hero-video h1{text-shadow:0 2px 6px rgba(0,0,0,.85),0 4px 22px rgba(0,0,0,.6)}
-.hero-video h1 em{color:#FFA047}
-.hero-video .lead{color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 14px rgba(0,0,0,.6)}
-.hero-video .kicker{color:#FFB061}
-.hero-video .nota{font-size:13.5px;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9)}
+/* Hero partido: texto de un lado sobre fondo sólido, video del otro.
+   Se probó con el video de fondo y una tarjeta encima del texto y quedaba
+   descuadrado: la tarjeta flotaba a media pantalla y le cortaba el sujeto al
+   video. Partido cuadra, el texto se lee siempre y el video se ve completo
+   en su mitad. En celular se apila: video arriba, texto abajo. */
+.hero-video{background:var(--crema);border-bottom:1px solid var(--linea);padding:0}
+.hero-in{display:grid;max-width:1180px;margin:0 auto;align-items:stretch;grid-template-columns:1fr}
+@media(min-width:940px){.hero-in{grid-template-columns:1.05fr 1fr}}
+.hero-video .cont{padding:30px 22px 40px;display:flex;flex-direction:column;justify-content:center}
+@media(min-width:940px){.hero-video .cont{padding:80px 48px 80px 22px}}
+.hero-media{position:relative;overflow:hidden;background:var(--marino);min-height:260px;order:-1}
+@media(min-width:940px){.hero-media{order:0;min-height:520px;border-radius:0 0 0 26px}}
+.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-video .nota{font-size:13.5px;color:var(--gris)}
 
 /* hero partido — el texto NUNCA va encima de la foto */
 .hero{background:var(--crema);border-bottom:1px solid var(--linea)}
@@ -84,7 +70,7 @@ img{display:block;max-width:100%}
 @media(min-width:940px){.hero-txt{padding:76px 46px 76px 22px}}
 .kicker{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:18px}
 h1{font-size:clamp(31px,5vw,52px);line-height:1.06;font-weight:800;letter-spacing:-.02em;margin-bottom:18px}
-h1 em{font-style:normal;color:var(--naranja)}
+h1 em{font-style:normal;color:var(--naranja);white-space:nowrap}
 .lead{font-size:17px;color:var(--gris);max-width:480px;margin-bottom:26px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
 .hero-fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 22px 40px}
