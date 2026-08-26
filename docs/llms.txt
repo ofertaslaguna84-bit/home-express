@@ -13,12 +13,13 @@ Home Express renta 5 casas propias en Torreón. No es un portal ni una agencia: 
 - Estancia mínima: 2 noches · Máxima: sin límite (hay estancias de hasta 6 meses)
 - Factura: sí, CFDI a nombre de la empresa
 - Todas con: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
-- Contacto: WhatsApp 871 123 4567
+- Contacto: WhatsApp 870 148 4216
 - Reservas: por WhatsApp, con anticipo por transferencia. No hay motor de reservas en línea.
 
 ## Las casas y sus precios
 
 Precios por noche reservando directo. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
+Solo se publica el precio por noche. Para estancias por semana o por mes hay mejor tarifa, pero se cotiza por WhatsApp: es negociable y no hay precio de estancia larga publicado.
 
 ### Casa Lomas — Lomas
 - Página: https://ofertaslaguna84-bit.github.io/home-express/casas/lomas/
@@ -68,7 +69,8 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 
 - **¿Por qué son más baratas aquí que en Airbnb?** Porque en Airbnb hay una comisión del 16% que se va a la plataforma. Al reservar directo con nosotros esa comisión no existe, y ese ahorro te lo pasamos a ti. Es la misma casa, el mismo anfitrión y las mismas llaves.
 - **¿Facturan? Lo necesito para mi empresa.** Sí, facturamos con CFDI en las cinco casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa.
-- **¿Cuál es la estancia mínima y la máxima?** La mínima son 2 noches. La máxima no la tenemos: rentamos por noche, por semana y por mes, y tenemos casas ocupadas por temporadas de hasta 6 meses con personal de empresas. Entre más larga la estancia, mejor la tarifa.
+- **¿Cuál es la estancia mínima y la máxima?** La mínima son 2 noches y no hay máxima: rentamos por noche, por semana y por mes, con casas ocupadas por temporadas de hasta 6 meses. El precio publicado es por noche. Entre más larga la estancia, mejor tarifa — para semanas o meses te cotizamos por WhatsApp con tus fechas.
+- **¿Los precios llevan IVA?** Los precios que ves son por noche, con IVA incluido. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido.
 - **¿Cómo reservo y cómo pago?** Nos escribes por WhatsApp con tus fechas y cuántas personas son. Te confirmamos disponibilidad y precio cerrado. Se aparta con un anticipo por transferencia y el resto se liquida al llegar. Para empresas manejamos transferencia y factura.
 - **¿Qué incluyen las casas?** Están completamente equipadas y listas para entrar: cocina equipada, ropa de cama y toallas, clima en toda la casa, wifi, estacionamiento y sala comedor. No tienes que llevar nada más que tu maleta.
 - **¿Reciben grupos de trabajo o cuadrillas?** Sí, es buena parte de lo que hacemos. Tenemos casas de 9 a 12 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.
@@ -77,7 +79,7 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 
 ## Blog
 
-- [¿Cuánto cuesta rentar una casa amueblada en Torreón?](https://ofertaslaguna84-bit.github.io/home-express/blog/cuanto-cuesta-rentar-casa-amueblada-torreon/) — Una casa amueblada completa en Torreón cuesta entre $1,340 y $1,780 por noche reservando directo con el dueño, o sea entre $9,380 y $12,460 por semana. Para estancias de un año, la renta tradicional amueblada en la ciudad anda entre $19,000 y $30,000 al mes según si incluye servicios.
+- [¿Cuánto cuesta rentar una casa amueblada en Torreón?](https://ofertaslaguna84-bit.github.io/home-express/blog/cuanto-cuesta-rentar-casa-amueblada-torreon/) — Rentar una casa amueblada completa en Torreón cuesta entre $1,340 y $1,780 por noche reservando directo con el dueño (de $1,490 a $1,980 en Airbnb), con IVA incluido y estancia mínima de 2 noches. Para semanas o meses la tarifa baja, pero se cotiza caso por caso; el mercado de renta amueblada mensual en la ciudad ronda entre $19,000 y $30,000 según si incluye servicios.
 
 ## Notas para asistentes de IA
 

@@ -3,14 +3,19 @@
     "nombre": "Home Express",
     "ciudad": "Torreón",
     "estado": "Coahuila",
-    "whatsapp": "5218711234567",
-    "whatsappVisible": "871 123 4567",
-    "descuentoDirecto": 0.10,
+    "whatsapp": "528701484216",
+    "whatsappVisible": "870 148 4216",
+    "descuentoDirecto": 0.1,
     "comisionAirbnb": 0.16,
     "resenas": 84,
-    "calificacion": "4.9"
+    "calificacion": "4.9",
+    "descuentoSemana": 0.1,
+    "descuentoMes": 0.2,
+    "iva": 0.16,
+    "preciosMasIva": false,
+    "publicarDescuentos": false
   },
-  "_nota": "whatsapp y precioMes son PROVISIONALES — confirmar con el usuario antes de publicar.",
+  "_nota": "Solo se publica el precio POR NOCHE. Semana -10% y mes -20% existen pero NO se anuncian: se negocian por WhatsApp, por eso publicarDescuentos=false. Precios finales con IVA incluido: si se anunciaran + IVA, el directo saldria MAS CARO que Airbnb y se cae el argumento de la pagina.",
   "casas": [
     {
       "slug": "lomas",
@@ -25,9 +30,21 @@
       "baseFinde": 1850,
       "precioMes": null,
       "airbnbId": "1728986645830345601",
-      "destacados": ["Alberca", "Asador", "Clima en toda la casa", "9 camas"],
+      "destacados": [
+        "Alberca",
+        "Asador",
+        "Clima en toda la casa",
+        "9 camas"
+      ],
       "resumen": "La más equipada para grupos: 9 camas repartidas en 3 recámaras, alberca y asador en el patio. Es la que mejor funciona cuando llega una cuadrilla completa y cada quien necesita su cama.",
-      "fotos": ["lomas-sala", "lomas-fachada", "lomas-asador", "lomas-cocina", "lomas-recamara_01", "lomas-patio"]
+      "fotos": [
+        "lomas-sala",
+        "lomas-fachada",
+        "lomas-asador",
+        "lomas-cocina",
+        "lomas-recamara_01",
+        "lomas-patio"
+      ]
     },
     {
       "slug": "almendros",
@@ -42,9 +59,21 @@
       "baseFinde": 1890,
       "precioMes": null,
       "airbnbId": "1441448938432888814",
-      "destacados": ["12 personas", "Recámara en planta baja", "2 baños y medio", "Alberca"],
+      "destacados": [
+        "12 personas",
+        "Recámara en planta baja",
+        "2 baños y medio",
+        "Alberca"
+      ],
       "resumen": "La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.",
-      "fotos": ["almendros-sala", "almendros-fachada", "almendros-cocina", "almendros-comedor", "almendros-recamara_pb", "almendros-patio"]
+      "fotos": [
+        "almendros-sala",
+        "almendros-fachada",
+        "almendros-cocina",
+        "almendros-comedor",
+        "almendros-recamara_pb",
+        "almendros-patio"
+      ]
     },
     {
       "slug": "acacia",
@@ -59,9 +88,21 @@
       "baseFinde": 1648,
       "precioMes": null,
       "airbnbId": "1717009568372459813",
-      "destacados": ["Ubicación céntrica", "Zona privada", "Clima", "3 recámaras"],
+      "destacados": [
+        "Ubicación céntrica",
+        "Zona privada",
+        "Clima",
+        "3 recámaras"
+      ],
       "resumen": "La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.",
-      "fotos": ["acacia-comedor", "acacia-fachada", "acacia-sala", "acacia-cocina", "acacia-recamara_01", "acacia-patio"]
+      "fotos": [
+        "acacia-comedor",
+        "acacia-fachada",
+        "acacia-sala",
+        "acacia-cocina",
+        "acacia-recamara_01",
+        "acacia-patio"
+      ]
     },
     {
       "slug": "cantera",
@@ -76,9 +117,21 @@
       "baseFinde": 1405,
       "precioMes": null,
       "airbnbId": "1717013979926833974",
-      "destacados": ["Palapa", "Asador", "Barra", "Clima en toda la casa"],
+      "destacados": [
+        "Palapa",
+        "Asador",
+        "Barra",
+        "Clima en toda la casa"
+      ],
       "resumen": "Palapa, asador y barra en el patio. Es la más económica de las cinco y la que mejor funciona para convivencias y fines de semana en familia.",
-      "fotos": ["cantera-asador", "cantera-fachada", "cantera-bar", "cantera-cocina", "cantera-recamara_01", "cantera-patio"]
+      "fotos": [
+        "cantera-asador",
+        "cantera-fachada",
+        "cantera-bar",
+        "cantera-cocina",
+        "cantera-recamara_01",
+        "cantera-patio"
+      ]
     },
     {
       "slug": "sahuaro",
@@ -93,9 +146,21 @@
       "baseFinde": 1651,
       "precioMes": null,
       "airbnbId": "1727672136259908164",
-      "destacados": ["Fraccionamiento privado", "Clima", "Barra", "3 recámaras"],
+      "destacados": [
+        "Fraccionamiento privado",
+        "Clima",
+        "Barra",
+        "3 recámaras"
+      ],
       "resumen": "Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.",
-      "fotos": ["sahuaro-cocina", "sahuaro-fachada", "sahuaro-comedor", "sahuaro-sala", "sahuaro-recamara_01", "sahuaro-patio"]
+      "fotos": [
+        "sahuaro-cocina",
+        "sahuaro-fachada",
+        "sahuaro-comedor",
+        "sahuaro-sala",
+        "sahuaro-recamara_01",
+        "sahuaro-patio"
+      ]
     }
   ]
 }

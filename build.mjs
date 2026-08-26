@@ -45,6 +45,11 @@ const precioAirbnb = (base) => Math.round(base / (1 - marca.comisionAirbnb) / 10
 /** Precio directo: el descuento sale de la comisión que Airbnb ya no se lleva. */
 const precioDirecto = (base) => Math.round((precioAirbnb(base) * (1 - marca.descuentoDirecto)) / 10) * 10;
 
+const IVA_NOTA = marca.preciosMasIva ? ' + IVA' : '';
+/** Semana y mes se anuncian como DESCUENTO, no como precio cerrado: el precio final se negocia. */
+const descSemana = Math.round(marca.descuentoSemana * 100);
+const descMes = Math.round(marca.descuentoMes * 100);
+
 const wa = (texto) => `https://wa.me/${marca.whatsapp}?text=${encodeURIComponent(texto)}`;
 
 // ─────────────────────────────────────────────────────────── estilos
@@ -342,7 +347,11 @@ const FAQS = [
   },
   {
     q: '¿Cuál es la estancia mínima y la máxima?',
-    a: 'La mínima son 2 noches. La máxima no la tenemos: rentamos por noche, por semana y por mes, y tenemos casas ocupadas por temporadas de hasta 6 meses con personal de empresas. Entre más larga la estancia, mejor la tarifa.',
+    a: 'La mínima son 2 noches y no hay máxima: rentamos por noche, por semana y por mes, con casas ocupadas por temporadas de hasta 6 meses. El precio publicado es por noche. Entre más larga la estancia, mejor tarifa — para semanas o meses te cotizamos por WhatsApp con tus fechas.',
+  },
+  {
+    q: '¿Los precios llevan IVA?',
+    a: `Los precios que ves son por noche${marca.preciosMasIva ? ' más IVA' : ', con IVA incluido'}. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido.`,
   },
   {
     q: '¿Cómo reservo y cómo pago?',
@@ -662,12 +671,12 @@ function paginaCasa(c) {
             <div class="dato"><span>Recámaras</span><b>${c.recamaras}</b></div>
             <div class="dato"><span>Camas</span><b>${c.camas}</b></div>
             <div class="dato"><span>Baños</span><b>${c.banos}</b></div>
-            <div class="dato"><span>Fin de semana</span><b>${mxn(dirF)}</b></div>
+            <div class="dato"><span>Fin de semana</span><b>${mxn(dirF)}${IVA_NOTA}</b></div>
             <div class="dato"><span>Estancia mínima</span><b>2 noches</b></div>
             <div class="dato"><span>Factura</span><b>Sí, CFDI</b></div>
           </div>
           <a href="${wa(`Hola Home Express, quiero reservar ${c.nombre} (${c.huespedes} personas). Mis fechas son:`)}" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:14px">Reservar por WhatsApp</a>
-          <p style="font-size:12.5px;color:var(--gris);text-align:center;margin-top:10px">Te contestamos con precio cerrado</p>
+          <p style="font-size:12.5px;color:var(--gris);text-align:center;margin-top:10px">Precios${IVA_NOTA}. El de estancias largas se cotiza.</p>
         </div>
       </aside>
     </div>
@@ -846,7 +855,8 @@ ${marca.nombre} renta ${casas.length} casas propias en ${marca.ciudad}. No es un
 
 ## Las casas y sus precios
 
-Precios por noche reservando directo. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
+Precios por noche reservando directo${IVA_NOTA}. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
+Solo se publica el precio por noche. Para estancias por semana o por mes hay mejor tarifa, pero se cotiza por WhatsApp: es negociable y no hay precio de estancia larga publicado.
 
 ${casas
   .map(
