@@ -82,6 +82,23 @@ img{display:block;max-width:100%}
 .btn-nar{background:var(--naranja);color:#fff;box-shadow:0 4px 14px rgba(240,120,24,.3)}
 .btn-out{border:1.5px solid var(--linea);background:#fff;color:var(--marino)}
 
+/* hero con video de fondo. El degradado va de izquierda a derecha: el texto
+   queda sobre zona oscura y el video se ve limpio del lado derecho. Uniforme
+   no sirve — apaga el video y deja el texto a medias legible. */
+.hero-video{position:relative;overflow:hidden;background:var(--marino);min-height:520px;display:flex;align-items:center}
+@media(min-width:940px){.hero-video{min-height:600px}}
+.hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-video::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,rgba(24,24,84,.94) 0%,rgba(24,24,84,.88) 34%,rgba(24,24,84,.55) 62%,rgba(24,24,84,.28) 100%)}
+@media(max-width:939px){.hero-video::after{background:linear-gradient(180deg,rgba(24,24,84,.86) 0%,rgba(24,24,84,.8) 55%,rgba(24,24,84,.92) 100%)}}
+.hero-video .w{position:relative;z-index:2;width:100%}
+.hero-video .cont{max-width:560px;padding:56px 0}
+.hero-video h1,.hero-video .lead,.hero-video .kicker{color:#fff}
+.hero-video h1 em{color:#FFA047}
+.hero-video .lead{color:rgba(255,255,255,.86)}
+.hero-video .kicker{color:#FFA047}
+.hero-video .nota{font-size:13.5px;color:rgba(255,255,255,.8)}
+
 /* hero partido — el texto NUNCA va encima de la foto */
 .hero{background:var(--crema);border-bottom:1px solid var(--linea)}
 .hero-in{display:grid;gap:0;max-width:1180px;margin:0 auto;align-items:stretch}
@@ -458,9 +475,13 @@ function paginaInicio() {
     }) +
     encabezado() +
     `
-<section class="hero">
-  <div class="hero-in">
-    <div class="hero-txt">
+<section class="hero-video">
+  <video autoplay muted loop playsinline preload="metadata" poster="${'' }video/poster.jpg" aria-hidden="true">
+    <source src="${''}video/torreon.webm" type="video/webm">
+    <source src="${''}video/torreon.mp4" type="video/mp4">
+  </video>
+  <div class="w">
+    <div class="cont">
       <span class="kicker">● ${casas.length} casas en ${esc(marca.ciudad)}, ${esc(marca.estado)}</span>
       <h1>Casas completas,<br>listas para <em>entrar hoy</em>.</h1>
       <p class="lead">De 9 a 12 personas. Equipadas, con clima y con factura. Desde 2 noches hasta 6 meses — y más baratas que en Airbnb, porque aquí no hay comisión de por medio.</p>
@@ -468,12 +489,7 @@ function paginaInicio() {
         <a href="#casas" class="btn btn-nar">Ver las ${casas.length} casas</a>
         <a href="${wa('Hola Home Express, quiero cotizar una casa en Torreón')}" class="btn btn-wa">Cotizar por WhatsApp</a>
       </div>
-      <p style="font-size:13.5px;color:var(--gris)">⭐ ${marca.calificacion} con ${marca.resenas} reseñas como anfitrión en Airbnb</p>
-    </div>
-    <div class="hero-fotos">
-      <div><img src="img/${casas[0].fotos[0]}.jpg" alt="Casa amueblada en renta en Torreón" width="800" height="1000"></div>
-      <div><img src="img/${casas[1].fotos[0]}.jpg" alt="Sala de casa en renta en Torreón" loading="lazy" width="800" height="1000"></div>
-      <div><img src="img/${casas[3].fotos[0]}.jpg" alt="Asador y palapa en casa de Torreón" loading="lazy" width="800" height="1000"></div>
+      <p class="nota">⭐ ${marca.calificacion} con ${marca.resenas} reseñas como anfitrión en Airbnb</p>
     </div>
   </div>
 </section>
