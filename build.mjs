@@ -13,7 +13,14 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'docs'); // GitHub Pages sirve desde /docs
-const SITE = 'https://homeexpress.mx';
+/**
+ * Dominio del sitio. Mientras no exista homeexpress.mx se publica en la URL de
+ * GitHub Pages, y los canonical/sitemap/llms apuntan ahí para que no queden
+ * señalando a un dominio que no responde.
+ * Al comprar el dominio: SITIO=https://homeexpress.mx node build.mjs
+ */
+const SITE = (process.env.SITIO || 'https://ofertaslaguna84-bit.github.io/home-express').replace(/\/$/, '');
+const USA_DOMINIO_PROPIO = SITE.includes('homeexpress.mx');
 
 const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
 const { marca, casas } = data;
@@ -927,7 +934,7 @@ for (const a of articulos) escribir(`blog/${a.slug}/index.html`, paginaArticulo(
 escribir('llms.txt', llms());
 escribir('sitemap.xml', sitemap());
 escribir('robots.txt', robots());
-escribir('CNAME', 'homeexpress.mx\n');
+if (USA_DOMINIO_PROPIO) escribir('CNAME', 'homeexpress.mx\n');
 escribir('.nojekyll', '');
 
 console.log(`✓ Home Express — ${1 + casas.length} páginas de casas + ${articulos.length} artículos + llms.txt + sitemap`);

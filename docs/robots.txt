@@ -13,7 +13,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://homeexpress.mx/sitemap.xml
+Sitemap: https://ofertaslaguna84-bit.github.io/home-express/sitemap.xml
 
 # Índice para asistentes de IA
-# https://homeexpress.mx/llms.txt
+# https://ofertaslaguna84-bit.github.io/home-express/llms.txt
