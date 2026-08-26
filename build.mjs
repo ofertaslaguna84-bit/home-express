@@ -88,19 +88,20 @@ img{display:block;max-width:100%}
    video. Partido cuadra, el texto se lee siempre y el video se ve completo
    en su mitad. En celular se apila: video arriba, texto abajo. */
 .hero-video{background:var(--crema);border-bottom:1px solid var(--linea);padding:0}
-.hero-in{display:grid;max-width:1180px;margin:0 auto;align-items:stretch;grid-template-columns:1fr}
-@media(min-width:940px){.hero-in{grid-template-columns:1.05fr 1fr}}
+.hero-in{display:grid;align-items:stretch;grid-template-columns:1fr}
+/* En pantalla ancha el video sangra hasta la orilla derecha y el texto se
+   alinea con el resto de la página: por eso el padding se calcula del viewport
+   en vez de usar un contenedor centrado. */
+@media(min-width:940px){.hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .hero-video .cont{padding:30px 22px 40px;display:flex;flex-direction:column;justify-content:center}
-@media(min-width:940px){.hero-video .cont{padding:80px 48px 80px 22px}}
+@media(min-width:940px){.hero-video .cont{padding:84px 60px 84px max(24px,calc((100vw - 1180px) / 2))}}
 .hero-media{position:relative;overflow:hidden;background:var(--marino);min-height:260px;order:-1}
-@media(min-width:940px){.hero-media{order:0;min-height:520px;border-radius:0 0 0 26px}}
+@media(min-width:940px){.hero-media{order:0;min-height:540px}}
 .hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero-video .nota{font-size:13.5px;color:var(--gris)}
 
 /* hero partido — el texto NUNCA va encima de la foto */
 .hero{background:var(--crema);border-bottom:1px solid var(--linea)}
-.hero-in{display:grid;gap:0;max-width:1180px;margin:0 auto;align-items:stretch}
-@media(min-width:940px){.hero-in{grid-template-columns:1fr 1fr}}
 .hero-txt{padding:56px 22px 48px;display:flex;flex-direction:column;justify-content:center}
 @media(min-width:940px){.hero-txt{padding:76px 46px 76px 22px}}
 .kicker{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:18px}
