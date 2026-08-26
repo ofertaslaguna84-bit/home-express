@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Los buscadores de IA son bienvenidos
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://homeexpress.mx/sitemap.xml
+
+# Índice para asistentes de IA
+# https://homeexpress.mx/llms.txt
