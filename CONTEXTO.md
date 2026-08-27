@@ -1,6 +1,6 @@
 # Home Express — contexto para responder clientes
 
-> Documento generado desde los datos reales del negocio. Última actualización: 26 de agosto de 2026.
+> Documento generado desde los datos reales del negocio. Última actualización: 27 de agosto de 2026.
 > Si cambian precios o casas: `node scripts/generar-contexto.mjs`
 
 ## Qué es el negocio
@@ -17,13 +17,13 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 ## Comparación rápida
 
-| Casa | Personas | Recámaras | Camas | Baños | Por noche | Por mes | Por persona/noche |
+| Casa | Personas | Recámaras | Camas | Baños | Por noche | Mes sin serv. | Mes con serv. |
 |---|---|---|---|---|---|---|---|
-| **Lomas** | 11 | 3 | 9 | 2 | $1,780 | $30,000 | $162 |
-| **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $29,000 | $143 |
-| **Acacias** | 9 | 3 | 6 | 2 | $1,670 | $26,000 | $186 |
-| **Sahuaro** | 9 | 3 | 5 | 2 | $1,400 | $24,000 | $156 |
-| **Cantera** | 10 | 3 | 5 | 2 | $1,340 | $23,000 | $134 |
+| **Lomas** | 11 | 3 | 9 | 2 | $1,780 | $32,000 | $35,000 |
+| **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
+| **Acacias** | 9 | 3 | 6 | 2 | $1,670 | $30,000 | $33,000 |
+| **Sahuaro** | 9 | 3 | 5 | 2 | $1,400 | $29,000 | $32,000 |
+| **Cantera** | 10 | 3 | 5 | 2 | $1,340 | $27,000 | $30,000 |
 
 **Cómo elegir rápido:**
 - **Grupo grande con cada quien su cama** → Lomas (mejor proporción camas/persona)
@@ -42,7 +42,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 - **Capacidad:** 11 personas · 3 recámaras · 9 camas · 2 baños
 - **Precio por noche:** $1,780 entre semana · $1,980 fin de semana
 - **En Airbnb cuesta:** $1,980 — o sea que directo se ahorra $200 por noche
-- **Por mes:** $30,000 (sin servicios)
+- **Por mes:** $32,000 sin servicios · $35,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Alberca, Asador, Clima en toda la casa, 9 camas
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/lomas/
 
@@ -53,7 +53,7 @@ La más equipada para grupos: 9 camas repartidas en 3 recámaras, alberca y asad
 - **Capacidad:** 12 personas · 3 recámaras · 8 camas · 2.5 baños
 - **Precio por noche:** $1,710 entre semana · $2,030 fin de semana
 - **En Airbnb cuesta:** $1,900 — o sea que directo se ahorra $190 por noche
-- **Por mes:** $29,000 (sin servicios)
+- **Por mes:** $33,000 sin servicios · $36,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** 12 personas, Recámara en planta baja, 2 baños y medio, Alberca
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/almendros/
 
@@ -64,7 +64,7 @@ La de mayor capacidad y la única con recámara en planta baja, sin escaleras. D
 - **Capacidad:** 9 personas · 3 recámaras · 6 camas · 2 baños
 - **Precio por noche:** $1,670 entre semana · $1,760 fin de semana
 - **En Airbnb cuesta:** $1,850 — o sea que directo se ahorra $180 por noche
-- **Por mes:** $26,000 (sin servicios)
+- **Por mes:** $30,000 sin servicios · $33,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Ubicación céntrica, Zona privada, Clima, 3 recámaras
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/acacia/
 
@@ -75,7 +75,7 @@ La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden qui
 - **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2 baños
 - **Precio por noche:** $1,340 entre semana · $1,500 fin de semana
 - **En Airbnb cuesta:** $1,490 — o sea que directo se ahorra $150 por noche
-- **Por mes:** $23,000 (sin servicios)
+- **Por mes:** $27,000 sin servicios · $30,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Palapa, Asador, Barra, Clima en toda la casa
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/cantera/
 
@@ -86,7 +86,7 @@ Palapa, asador y barra en el patio. Es la más económica de las cinco y la que 
 - **Capacidad:** 9 personas · 3 recámaras · 5 camas · 2 baños
 - **Precio por noche:** $1,400 entre semana · $1,770 fin de semana
 - **En Airbnb cuesta:** $1,550 — o sea que directo se ahorra $150 por noche
-- **Por mes:** $24,000 (sin servicios)
+- **Por mes:** $29,000 sin servicios · $32,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Fraccionamiento privado, Clima, Barra, 3 recámaras
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/sahuaro/
 
@@ -100,7 +100,9 @@ Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, bue
 - **Precios:** los publicados son **por noche, finales, con IVA incluido**.
 - **Semana y mes:** hay mejor tarifa pero **no se publica** — se cotiza y es **negociable**.
   Referencias internas: semana 10% menos, mes 20% menos sobre la noche;
-  para estancias largas se usa el precio mensual de la tabla, que está al nivel del mercado.
+  para estancias largas se usa el precio mensual de la tabla. El mensual tiene dos
+  niveles: **sin servicios** y **con servicios** (agua, luz, gas e internet), $3,000
+  de diferencia en todas las casas.
 - **Factura:** sí, CFDI a nombre de la empresa. Es el diferenciador más fuerte: la
   mayoría de las rentas temporales de Torreón no factura.
 - **Se aparta con anticipo** por transferencia; el resto se liquida al llegar.
@@ -218,6 +220,3 @@ Lo que sí se busca: "casas amuebladas en renta torreon", "airbnb torreon",
 - [ ] **Ajustar precios de Airbnb** antes del 15 de septiembre de 2026.
 - [ ] **Fotos**: las actuales son capturas de un video, verticales y con algo de
       movimiento. Una sesión horizontal con luz de mañana cambiaría el sitio de nivel.
-- [ ] **Definir si el precio mensual incluye servicios.** Ahorita dice que no.
-      El mercado cobra ~$23,000 sin servicios y ~$30,000 con servicios: son
-      $7,000 de diferencia y con el clima de Torreón en verano no es menor.

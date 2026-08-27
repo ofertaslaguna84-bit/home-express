@@ -50,14 +50,14 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 ## Comparación rápida
 
-| Casa | Personas | Recámaras | Camas | Baños | Por noche | Por mes | Por persona/noche |
+| Casa | Personas | Recámaras | Camas | Baños | Por noche | Mes sin serv. | Mes con serv. |
 |---|---|---|---|---|---|---|---|
 ${casas
   .slice()
   .sort((a, b) => b.baseNoche - a.baseNoche)
   .map(
     (c) =>
-      `| **${c.zona}** | ${c.huespedes} | ${c.recamaras} | ${c.camas} | ${c.banos} | ${mxn(dir(c.baseNoche))} | ${mxn(c.precioMes)} | ${mxn(porPersona(c))} |`
+      `| **${c.zona}** | ${c.huespedes} | ${c.recamaras} | ${c.camas} | ${c.banos} | ${mxn(dir(c.baseNoche))} | ${mxn(c.precioMesSinServicios)} | ${mxn(c.precioMesConServicios)} |`
   )
   .join('\n')}
 
@@ -80,7 +80,7 @@ ${casas
 - **Capacidad:** ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas · ${c.banos} baños
 - **Precio por noche:** ${mxn(dir(c.baseNoche))} entre semana · ${mxn(dir(c.baseFinde))} fin de semana
 - **En Airbnb cuesta:** ${mxn(air(c.baseNoche))} — o sea que directo se ahorra ${mxn(air(c.baseNoche) - dir(c.baseNoche))} por noche
-- **Por mes:** ${mxn(c.precioMes)} (${marca.serviciosIncluidos ? 'servicios incluidos' : 'sin servicios'})
+- **Por mes:** ${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas, internet)
 - **Destaca por:** ${c.destacados.join(', ')}
 - **Ficha:** ${SITIO}/casas/${c.slug}/
 
@@ -96,7 +96,9 @@ ${c.resumen}`
 - **Precios:** los publicados son **por noche, finales, con IVA incluido**.
 - **Semana y mes:** hay mejor tarifa pero **no se publica** — se cotiza y es **negociable**.
   Referencias internas: semana ${Math.round(marca.descuentoSemana * 100)}% menos, mes ${Math.round(marca.descuentoMes * 100)}% menos sobre la noche;
-  para estancias largas se usa el precio mensual de la tabla, que está al nivel del mercado.
+  para estancias largas se usa el precio mensual de la tabla. El mensual tiene dos
+  niveles: **sin servicios** y **con servicios** (agua, luz, gas e internet), $3,000
+  de diferencia en todas las casas.
 - **Factura:** sí, CFDI a nombre de la empresa. Es el diferenciador más fuerte: la
   mayoría de las rentas temporales de Torreón no factura.
 - **Se aparta con anticipo** por transferencia; el resto se liquida al llegar.
@@ -214,9 +216,6 @@ Lo que sí se busca: "casas amuebladas en renta torreon", "airbnb torreon",
 - [ ] **Ajustar precios de Airbnb** antes del 15 de septiembre de 2026.
 - [ ] **Fotos**: las actuales son capturas de un video, verticales y con algo de
       movimiento. Una sesión horizontal con luz de mañana cambiaría el sitio de nivel.
-- [ ] **Definir si el precio mensual incluye servicios.** Ahorita dice que no.
-      El mercado cobra ~$23,000 sin servicios y ~$30,000 con servicios: son
-      $7,000 de diferencia y con el clima de Torreón en verano no es menor.
 `;
 
 writeFileSync(join(ROOT, 'CONTEXTO.md'), md, 'utf8');
