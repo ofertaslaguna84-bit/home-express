@@ -15,7 +15,7 @@
     "preciosMasIva": false,
     "publicarDescuentos": false
   },
-  "_nota": "Precio por noche = titular. Mensual con DOS niveles: sin servicios y con servicios (agua, luz, gas, internet), diferencia de $3,000 en todas. Precios dados por el dueño el 27 de agosto de 2026, arriba del rango de mercado que se investigó ($23,000-$30,000): es su decisión de precio, no un cálculo. La tarifa por semana sigue sin publicarse.",
+  "_nota": "Precio por noche = titular. Mensual con DOS niveles: sin servicios y con servicios (agua, luz, gas, internet), diferencia de $3,000 en todas. Precios dados por el dueño el 27 de agosto de 2026, arriba del rango de mercado que se investigó ($23,000-$30,000): es su decisión de precio, no un cálculo. La tarifa por semana sigue sin publicarse. Capacidades confirmadas por el dueño el 27 ago 2026: Acacias y Sahuaro son 11 personas (Airbnb las tenia en 9 y el titulo decia 10px: hay que corregirlo alla). Todas tienen 2.5 banos.",
   "casas": [
     {
       "slug": "lomas",
@@ -25,7 +25,7 @@
       "huespedes": 11,
       "recamaras": 3,
       "camas": 9,
-      "banos": 2,
+      "banos": 2.5,
       "baseNoche": 1660,
       "baseFinde": 1850,
       "precioMes": 32000,
@@ -82,12 +82,12 @@
     {
       "slug": "acacia",
       "nombre": "Casa Acacias",
-      "titulo": "Casa céntrica en zona privada para 9 personas",
+      "titulo": "Casa céntrica en zona privada para 11 personas",
       "zona": "Acacias",
-      "huespedes": 9,
+      "huespedes": 11,
       "recamaras": 3,
       "camas": 6,
-      "banos": 2,
+      "banos": 2.5,
       "baseNoche": 1555,
       "baseFinde": 1648,
       "precioMes": 30000,
@@ -96,7 +96,7 @@
         "Ubicación céntrica",
         "Zona privada",
         "Clima",
-        "3 recámaras"
+        "11 personas"
       ],
       "resumen": "La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.",
       "fotos": [
@@ -118,7 +118,7 @@
       "huespedes": 10,
       "recamaras": 3,
       "camas": 5,
-      "banos": 2,
+      "banos": 2.5,
       "baseNoche": 1250,
       "baseFinde": 1405,
       "precioMes": 27000,
@@ -144,12 +144,12 @@
     {
       "slug": "sahuaro",
       "nombre": "Casa Sahuaro",
-      "titulo": "Casa completa en fraccionamiento privado para 9 personas",
+      "titulo": "Casa completa en fraccionamiento privado para 11 personas",
       "zona": "Sahuaro",
-      "huespedes": 9,
+      "huespedes": 11,
       "recamaras": 3,
       "camas": 5,
-      "banos": 2,
+      "banos": 2.5,
       "baseNoche": 1300,
       "baseFinde": 1651,
       "precioMes": 29000,
@@ -157,7 +157,7 @@
       "destacados": [
         "Fraccionamiento privado",
         "Clima",
-        "Barra",
+        "11 personas",
         "3 recámaras"
       ],
       "resumen": "Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.",

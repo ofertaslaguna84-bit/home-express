@@ -19,11 +19,11 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 | Casa | Personas | Recámaras | Camas | Baños | Por noche | Mes sin serv. | Mes con serv. |
 |---|---|---|---|---|---|---|---|
-| **Lomas** | 11 | 3 | 9 | 2 | $1,780 | $32,000 | $35,000 |
+| **Lomas** | 11 | 3 | 9 | 2.5 | $1,780 | $32,000 | $35,000 |
 | **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
-| **Acacias** | 9 | 3 | 6 | 2 | $1,670 | $30,000 | $33,000 |
-| **Sahuaro** | 9 | 3 | 5 | 2 | $1,400 | $29,000 | $32,000 |
-| **Cantera** | 10 | 3 | 5 | 2 | $1,340 | $27,000 | $30,000 |
+| **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $30,000 | $33,000 |
+| **Sahuaro** | 11 | 3 | 5 | 2.5 | $1,400 | $29,000 | $32,000 |
+| **Cantera** | 10 | 3 | 5 | 2.5 | $1,340 | $27,000 | $30,000 |
 
 **Cómo elegir rápido:**
 - **Grupo grande con cada quien su cama** → Lomas (mejor proporción camas/persona)
@@ -39,7 +39,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 ### Lomas — Casa Lomas
 
-- **Capacidad:** 11 personas · 3 recámaras · 9 camas · 2 baños
+- **Capacidad:** 11 personas · 3 recámaras · 9 camas · 2.5 baños
 - **Precio por noche:** $1,780 entre semana · $1,980 fin de semana
 - **En Airbnb cuesta:** $1,980 — o sea que directo se ahorra $200 por noche
 - **Por mes:** $32,000 sin servicios · $35,000 con servicios (agua, luz, gas, internet)
@@ -61,18 +61,18 @@ La de mayor capacidad y la única con recámara en planta baja, sin escaleras. D
 
 ### Acacias — Casa Acacias
 
-- **Capacidad:** 9 personas · 3 recámaras · 6 camas · 2 baños
+- **Capacidad:** 11 personas · 3 recámaras · 6 camas · 2.5 baños
 - **Precio por noche:** $1,670 entre semana · $1,760 fin de semana
 - **En Airbnb cuesta:** $1,850 — o sea que directo se ahorra $180 por noche
 - **Por mes:** $30,000 sin servicios · $33,000 con servicios (agua, luz, gas, internet)
-- **Destaca por:** Ubicación céntrica, Zona privada, Clima, 3 recámaras
+- **Destaca por:** Ubicación céntrica, Zona privada, Clima, 11 personas
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/acacia/
 
 La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
 
 ### Cantera — Casa Cantera
 
-- **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2 baños
+- **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - **Precio por noche:** $1,340 entre semana · $1,500 fin de semana
 - **En Airbnb cuesta:** $1,490 — o sea que directo se ahorra $150 por noche
 - **Por mes:** $27,000 sin servicios · $30,000 con servicios (agua, luz, gas, internet)
@@ -83,11 +83,11 @@ Palapa, asador y barra en el patio. Es la más económica de las cinco y la que 
 
 ### Sahuaro — Casa Sahuaro
 
-- **Capacidad:** 9 personas · 3 recámaras · 5 camas · 2 baños
+- **Capacidad:** 11 personas · 3 recámaras · 5 camas · 2.5 baños
 - **Precio por noche:** $1,400 entre semana · $1,770 fin de semana
 - **En Airbnb cuesta:** $1,550 — o sea que directo se ahorra $150 por noche
 - **Por mes:** $29,000 sin servicios · $32,000 con servicios (agua, luz, gas, internet)
-- **Destaca por:** Fraccionamiento privado, Clima, Barra, 3 recámaras
+- **Destaca por:** Fraccionamiento privado, Clima, 11 personas, 3 recámaras
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/sahuaro/
 
 Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.

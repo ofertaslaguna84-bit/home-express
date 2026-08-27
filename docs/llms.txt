@@ -9,7 +9,7 @@ Home Express renta 5 casas propias en Torreón. No es un portal ni una agencia: 
 - Sitio: https://ofertaslaguna84-bit.github.io/home-express
 - Ciudad: Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo)
 - Casas disponibles: 5
-- Capacidad: de 9 a 12 personas por casa
+- Capacidad: de 10 a 12 personas por casa
 - Estancia mínima: 2 noches · Máxima: sin límite (hay estancias de hasta 6 meses)
 - Factura: sí, CFDI a nombre de la empresa
 - Todas con: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
@@ -23,7 +23,7 @@ Se publica el precio por noche y el precio por mes, este último en dos niveles:
 
 ### Casa Lomas — Lomas
 - Página: https://ofertaslaguna84-bit.github.io/home-express/casas/lomas/
-- Capacidad: 11 personas · 3 recámaras · 9 camas · 2 baños
+- Capacidad: 11 personas · 3 recámaras · 9 camas · 2.5 baños
 - Entre semana: $1,780 directo ($1,980 en Airbnb)
 - Fin de semana: $1,980 directo ($2,200 en Airbnb)
 - Por mes: $32,000 sin servicios · $35,000 con servicios (agua, luz, gas e internet)
@@ -41,16 +41,16 @@ Se publica el precio por noche y el precio por mes, este último en dos niveles:
 
 ### Casa Acacias — Acacias
 - Página: https://ofertaslaguna84-bit.github.io/home-express/casas/acacia/
-- Capacidad: 9 personas · 3 recámaras · 6 camas · 2 baños
+- Capacidad: 11 personas · 3 recámaras · 6 camas · 2.5 baños
 - Entre semana: $1,670 directo ($1,850 en Airbnb)
 - Fin de semana: $1,760 directo ($1,960 en Airbnb)
 - Por mes: $30,000 sin servicios · $33,000 con servicios (agua, luz, gas e internet)
-- Destaca por: Ubicación céntrica, Zona privada, Clima, 3 recámaras
+- Destaca por: Ubicación céntrica, Zona privada, Clima, 11 personas
 - La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
 
 ### Casa Cantera — Cantera
 - Página: https://ofertaslaguna84-bit.github.io/home-express/casas/cantera/
-- Capacidad: 10 personas · 3 recámaras · 5 camas · 2 baños
+- Capacidad: 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - Entre semana: $1,340 directo ($1,490 en Airbnb)
 - Fin de semana: $1,500 directo ($1,670 en Airbnb)
 - Por mes: $27,000 sin servicios · $30,000 con servicios (agua, luz, gas e internet)
@@ -59,11 +59,11 @@ Se publica el precio por noche y el precio por mes, este último en dos niveles:
 
 ### Casa Sahuaro — Sahuaro
 - Página: https://ofertaslaguna84-bit.github.io/home-express/casas/sahuaro/
-- Capacidad: 9 personas · 3 recámaras · 5 camas · 2 baños
+- Capacidad: 11 personas · 3 recámaras · 5 camas · 2.5 baños
 - Entre semana: $1,400 directo ($1,550 en Airbnb)
 - Fin de semana: $1,770 directo ($1,970 en Airbnb)
 - Por mes: $29,000 sin servicios · $32,000 con servicios (agua, luz, gas e internet)
-- Destaca por: Fraccionamiento privado, Clima, Barra, 3 recámaras
+- Destaca por: Fraccionamiento privado, Clima, 11 personas, 3 recámaras
 - Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.
 
 ## Para empresas
