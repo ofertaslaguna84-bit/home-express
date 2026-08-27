@@ -13,7 +13,8 @@
     "descuentoMes": 0.2,
     "iva": 0.16,
     "preciosMasIva": false,
-    "publicarDescuentos": false
+    "publicarDescuentos": false,
+    "comisionAsesor": 0.1
   },
   "_nota": "Precio por noche = titular. Mensual con DOS niveles: sin servicios y con servicios (agua, luz, gas, internet), diferencia de $3,000 en todas. Precios dados por el dueño el 27 de agosto de 2026, arriba del rango de mercado que se investigó ($23,000-$30,000): es su decisión de precio, no un cálculo. La tarifa por semana sigue sin publicarse. Capacidades confirmadas por el dueño el 27 ago 2026: Acacias y Sahuaro son 11 personas (Airbnb las tenia en 9 y el titulo decia 10px: hay que corregirlo alla). Todas tienen 2.5 banos.",
   "casas": [

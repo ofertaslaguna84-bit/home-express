@@ -726,6 +726,217 @@ function paginaCasa(c) {
   );
 }
 
+// ─────────────────────────────────────────────────────────── asesores inmobiliarios
+
+/** Comisión que se paga al asesor que manda al cliente. */
+const COM = marca.comisionAsesor;
+const comisionDe = (monto) => Math.round((monto * COM) / 50) * 50;
+
+const FAQS_ASESOR = [
+  {
+    q: '¿Cuándo me pagan la comisión?',
+    a: 'Al día siguiente de que el cliente entra a la casa y ya liquidó. No esperas a que termine la estancia ni a fin de mes. Se paga por transferencia.',
+  },
+  {
+    q: '¿Cómo saben que el cliente es mío?',
+    a: 'Nos lo presentas por WhatsApp con su nombre y teléfono, o le pasas tu clave de asesor. Con eso queda registrado a tu nombre desde el primer mensaje. Si el cliente llega solo y luego dice que tú se lo recomendaste, lo respetamos: preferimos pagar de más a quemar la relación contigo.',
+  },
+  {
+    q: '¿Y si el cliente renta otra vez después?',
+    a: 'Si renueva o vuelve dentro de los 12 meses siguientes, te pagamos la comisión otra vez. El cliente sigue siendo tuyo.',
+  },
+  {
+    q: '¿Tengo que hacer el papeleo o cobrar?',
+    a: 'No. Nosotros cotizamos, hacemos el contrato, cobramos y facturamos. Tú solo nos presentas al cliente. Si quieres estar en la plática, adelante; si no, nosotros la llevamos y te avisamos cómo va.',
+  },
+  {
+    q: '¿Me compite con mi negocio de venta o renta anual?',
+    a: 'Al contrario: es para el hueco que hoy no puedes atender. El que vendió su casa y le faltan 3 meses para entregar la nueva, el que llega a Torreón por un proyecto, la familia en obra. Ese cliente hoy se te va al hotel y no ganas nada. Y cuando termine su estancia sigue siendo tu prospecto para comprar.',
+  },
+  {
+    q: '¿Cuánto tardan en contestarle a mi cliente?',
+    a: 'El mismo día. Sabemos que si tardamos quedas mal tú, no nosotros. Si en 2 horas no le contestamos a tu cliente, márcanos y lo resolvemos.',
+  },
+];
+
+function paginaAsesores() {
+  const titulo = `Programa para asesores inmobiliarios | ${marca.nombre}`;
+  const desc = `Gana ${Math.round(COM * 100)}% de comisión mandándonos clientes que necesitan casa amueblada en Torreón. Nosotros cotizamos, cobramos y facturamos. Tú solo presentas.`;
+  const maxMes = Math.max(...casas.map((c) => c.precioMesConServicios));
+
+  return (
+    cabeza({
+      titulo,
+      desc,
+      url: `${SITE}/asesores/`,
+      imagen: casas[0].fotos[0],
+      schema: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          url: `${SITE}/asesores/`,
+          name: titulo,
+          description: desc,
+          inLanguage: 'es-MX',
+          isPartOf: { '@id': `${SITE}/#organizacion` },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: FAQS_ASESOR.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        },
+      ],
+    }) +
+    encabezado('../') +
+    `
+<section class="hero-video">
+  <div class="hero-in">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline preload="metadata" poster="../video/poster.jpg" aria-hidden="true">
+        <source src="../video/torreon.webm" type="video/webm">
+        <source src="../video/torreon.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="cont">
+      <span class="kicker">● Para asesores inmobiliarios de La Laguna</span>
+      <h1>Ese cliente que<br>no puedes atender,<br><em>te puede pagar</em>.</h1>
+      <p class="lead">Mándanos a quien necesita casa amueblada por semanas o meses en Torreón. Nosotros cotizamos, cobramos y facturamos. Tú ganas ${Math.round(COM * 100)}% de comisión.</p>
+      <div class="hero-cta">
+        <a href="${wa('Hola, soy asesor inmobiliario y quiero información del programa de comisiones')}" class="btn btn-wa">Quiero entrarle</a>
+        <a href="#cuanto" class="btn btn-out">Ver cuánto gano</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+${barraConfianza()}
+
+<section>
+  <div class="w">
+    <span class="eyebrow">El hueco</span>
+    <h2>Ya tienes a estos clientes. Hoy no ganas nada con ellos.</h2>
+    <p class="sub">Son los que llegan a tu oficina, no encajan en venta ni en renta anual, y se te van al hotel o a buscar solos.</p>
+    <div class="pasos">
+      <div class="paso"><h3>Vendió y todavía no entrega</h3><p>Cerró la venta de su casa pero la nueva no está lista. Necesita dónde vivir 2 o 3 meses con sus muebles guardados. Hoy se va al hotel y quema presupuesto.</p></div>
+      <div class="paso"><h3>Llega de fuera</h3><p>Lo transfirieron a Torreón, viene por un proyecto o anda buscando dónde comprar. Necesita base mientras decide, y no va a firmar contrato de un año sin conocer la ciudad.</p></div>
+      <div class="paso"><h3>Está en obra</h3><p>Remodelación grande o ampliación. La familia no puede vivir ahí tres meses. Ese cliente ya lo tienes y ese problema hoy no se lo resuelves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cuanto" class="sec-crema">
+  <div class="w">
+    <span class="eyebrow">Cuánto ganas</span>
+    <h2>${Math.round(COM * 100)}% de la renta, por cada cliente</h2>
+    <p class="sub">Sin tope, sin meta y sin exclusividad. Si el cliente renueva o regresa dentro de 12 meses, te volvemos a pagar.</p>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:15.5px;background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra)">
+        <thead>
+          <tr style="background:var(--marino);color:#fff">
+            <th style="text-align:left;padding:15px 18px;font-weight:800">Si tu cliente renta…</th>
+            <th style="text-align:right;padding:15px 18px;font-weight:800">Él paga</th>
+            <th style="text-align:right;padding:15px 18px;font-weight:800;color:#FFA047">Tú ganas</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${casas
+            .slice()
+            .sort((a, b) => b.precioMesConServicios - a.precioMesConServicios)
+            .map(
+              (c) => `<tr style="border-bottom:1px solid var(--linea)">
+            <td style="padding:14px 18px"><strong>${esc(c.zona)}</strong> un mes <span style="color:var(--gris)">· ${c.huespedes} personas</span></td>
+            <td style="padding:14px 18px;text-align:right;color:var(--gris)">${mxn(c.precioMesConServicios)}</td>
+            <td style="padding:14px 18px;text-align:right;font-weight:900;color:var(--naranja);font-size:19px">${mxn(comisionDe(c.precioMesConServicios))}</td>
+          </tr>`
+            )
+            .join('\n          ')}
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:22px;font-size:16.5px;color:var(--gris);max-width:640px">
+      Un asesor que nos mande <strong style="color:var(--marino)">dos clientes de estancia larga al mes</strong> se lleva alrededor de <strong style="color:var(--naranja)">${mxn(comisionDe(maxMes) * 2)} mensuales</strong> por presentarlos. Nada más por la presentación.
+    </p>
+    <p style="margin-top:14px;font-size:14.5px;color:var(--gris)">También aplica en estancias por noche y por semana, sobre el total de la reserva.</p>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <span class="eyebrow">Cómo funciona</span>
+    <h2>Tú presentas. Nosotros hacemos todo lo demás.</h2>
+    <div class="pasos">
+      <div class="paso"><h3>Nos lo presentas</h3><p>Por WhatsApp nos pasas su nombre y teléfono, o le das tu clave de asesor. Desde ese momento el cliente queda registrado a tu nombre.</p></div>
+      <div class="paso"><h3>Nosotros cerramos</h3><p>Le cotizamos el mismo día, le mandamos fotos, hacemos el contrato, cobramos y facturamos. Tú no ves papeleo ni cobranza.</p></div>
+      <div class="paso"><h3>Te pagamos</h3><p>Al día siguiente de que el cliente entra y liquida, te transferimos tu ${Math.round(COM * 100)}%. No esperas a fin de mes ni a que termine la estancia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-crema">
+  <div class="w">
+    <span class="eyebrow">Con qué trabajas</span>
+    <h2>${casas.length} casas propias en Torreón</h2>
+    <p class="sub">De ${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))} personas. Todas con clima, cocina equipada y wifi. Nosotros somos los dueños: no hay intermediario que atrase la respuesta.</p>
+    <div class="casas">
+      ${casas.map((c) => tarjeta(c).replace(/href="casas\//g, 'href="../casas/').replace(/src="img\//g, 'src="../img/')).join('\n')}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <span class="eyebrow">Por qué con nosotros</span>
+    <h2>Lo que le vas a poder prometer a tu cliente</h2>
+    <div class="vs">
+      <div class="vs-card destacado">
+        <h3>Con Home Express</h3>
+        <ul>
+          <li><strong>Factura CFDI</strong> — la mayoría de las rentas temporales de Torreón no factura, y para empresa eso decide</li>
+          <li><strong>${marca.calificacion} con ${marca.resenas} reseñas</strong> como anfitrión en Airbnb: no somos un desconocido</li>
+          <li><strong>Casas propias</strong>, no somos portal ni intermediario</li>
+          <li><strong>Contrato por escrito</strong> y depósito en garantía</li>
+          <li>Desde 2 noches hasta 6 meses, sin contrato de un año</li>
+          <li>Entra el mismo día: amuebladas y listas</li>
+        </ul>
+      </div>
+      <div class="vs-card gris">
+        <h3>Lo que hoy le ofreces</h3>
+        <ul>
+          <li>Hotel, que sale más caro y sin cocina</li>
+          <li>Renta anual, que no le sirve por 3 meses</li>
+          <li>Buscar por su cuenta en portales</li>
+          <li>Sin factura para su empresa</li>
+          <li>Y tú no ganas nada en ninguna</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-crema">
+  <div class="w">
+    <span class="eyebrow">Preguntas</span>
+    <h2>Lo que preguntan los asesores</h2>
+    <div style="max-width:860px;margin-top:24px">
+      ${FAQS_ASESOR.map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`).join('\n      ')}
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>¿Le entramos?</h2>
+  <p>Escríbenos y te damos tu clave de asesor hoy mismo. Sin contrato, sin cuota y sin exclusividad.</p>
+  <a href="${wa('Hola, soy asesor inmobiliario y quiero mi clave para mandarles clientes')}" class="btn btn-wa" style="font-size:16px;padding:15px 30px">Quiero mi clave de asesor</a>
+</section>
+` +
+    pie('../')
+  );
+}
+
 // ─────────────────────────────────────────────────────────── blog
 
 function paginaBlogIndice() {
@@ -927,6 +1138,7 @@ function sitemap() {
   const urls = [
     { loc: `${SITE}/`, pri: '1.0' },
     ...casas.map((c) => ({ loc: `${SITE}/casas/${c.slug}/`, pri: '0.9' })),
+    { loc: `${SITE}/asesores/`, pri: '0.8' },
     ...(articulos.length ? [{ loc: `${SITE}/blog/`, pri: '0.8' }] : []),
     ...articulos.map((a) => ({ loc: `${SITE}/blog/${a.slug}/`, pri: '0.7' })),
   ];
@@ -969,6 +1181,7 @@ function escribir(rel, contenido) {
 mkdirSync(OUT, { recursive: true });
 escribir('index.html', paginaInicio());
 for (const c of casas) escribir(`casas/${c.slug}/index.html`, paginaCasa(c));
+escribir('asesores/index.html', paginaAsesores());
 escribir('blog/index.html', paginaBlogIndice());
 for (const a of articulos) escribir(`blog/${a.slug}/index.html`, paginaArticulo(a));
 escribir('llms.txt', llms());
