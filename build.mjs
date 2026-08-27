@@ -735,7 +735,7 @@ const comisionDe = (monto) => Math.round((monto * COM) / 50) * 50;
 const FAQS_ASESOR = [
   {
     q: '¿Cuándo me pagan la comisión?',
-    a: 'Al día siguiente de que el cliente entra a la casa y ya liquidó. No esperas a que termine la estancia ni a fin de mes. Se paga por transferencia.',
+    a: `Al día siguiente de que el cliente entra a la casa y ya liquidó. No esperas a que termine la estancia ni a fin de mes. Se paga por transferencia, sobre el ${Math.round(COM * 100)}% del total que pagó.`,
   },
   {
     q: '¿Cómo saben que el cliente es mío?',
@@ -831,8 +831,19 @@ ${barraConfianza()}
 <section id="cuanto" class="sec-crema">
   <div class="w">
     <span class="eyebrow">Cuánto ganas</span>
-    <h2>${Math.round(COM * 100)}% de la renta, por cada cliente</h2>
-    <p class="sub">Sin tope, sin meta y sin exclusividad. Si el cliente renueva o regresa dentro de 12 meses, te volvemos a pagar.</p>
+    <h2>${Math.round(COM * 100)}% del total de la reserva</h2>
+    <p class="sub">Sobre el total que paga el cliente, sea por noche, por semana o por mes. Sin tope, sin meta y sin exclusividad. Si renueva o regresa dentro de 12 meses, te volvemos a pagar.</p>
+
+    <div style="background:#fff;border:2px solid var(--naranja);border-radius:var(--radio);padding:26px 28px;max-width:620px;margin-bottom:34px">
+      <p style="font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--naranja);margin-bottom:12px">Así se calcula</p>
+      <p style="font-size:17px;color:var(--gris);line-height:1.8;margin:0">
+        La casa se renta en <strong style="color:var(--marino)">$1,200 la noche</strong>.<br>
+        Tu cliente se queda <strong style="color:var(--marino)">20 noches</strong> → paga $24,000.<br>
+        <span style="display:inline-block;margin-top:10px;font-size:22px;font-weight:900;color:var(--naranja)">Tú ganas $2,400.</span>
+      </p>
+    </div>
+
+    <h3 style="font-size:21px;margin-bottom:14px">Con nuestras casas, por estancia de un mes</h3>
     <div style="overflow-x:auto">
       <table style="width:100%;border-collapse:collapse;font-size:15.5px;background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra)">
         <thead>
@@ -857,10 +868,39 @@ ${barraConfianza()}
         </tbody>
       </table>
     </div>
-    <p style="margin-top:22px;font-size:16.5px;color:var(--gris);max-width:640px">
-      Un asesor que nos mande <strong style="color:var(--marino)">dos clientes de estancia larga al mes</strong> se lleva alrededor de <strong style="color:var(--naranja)">${mxn(comisionDe(maxMes) * 2)} mensuales</strong> por presentarlos. Nada más por la presentación.
+
+    <h3 style="font-size:21px;margin:32px 0 14px">Y por estancias cortas</h3>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:15.5px;background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra)">
+        <thead>
+          <tr style="background:var(--marino);color:#fff">
+            <th style="text-align:left;padding:15px 18px;font-weight:800">Estancia</th>
+            <th style="text-align:right;padding:15px 18px;font-weight:800">El cliente paga</th>
+            <th style="text-align:right;padding:15px 18px;font-weight:800;color:#FFA047">Tú ganas</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${[
+            ['1 semana en Cantera', precioDirecto(casas.find((c) => c.slug === 'cantera').baseNoche) * 7],
+            ['2 semanas en Acacias', precioDirecto(casas.find((c) => c.slug === 'acacia').baseNoche) * 14],
+            ['20 noches en Lomas', precioDirecto(casas.find((c) => c.slug === 'lomas').baseNoche) * 20],
+          ]
+            .map(
+              ([etiqueta, total]) => `<tr style="border-bottom:1px solid var(--linea)">
+            <td style="padding:14px 18px"><strong>${etiqueta}</strong></td>
+            <td style="padding:14px 18px;text-align:right;color:var(--gris)">${mxn(Math.round(total))}</td>
+            <td style="padding:14px 18px;text-align:right;font-weight:900;color:var(--naranja);font-size:19px">${mxn(comisionDe(total))}</td>
+          </tr>`
+            )
+            .join('\n          ')}
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;font-size:14px;color:var(--gris)">Los montos de estancias cortas son antes del descuento por semana o mes, que se negocia con el cliente. La comisión siempre es sobre lo que él termina pagando.</p>
+
+    <p style="margin-top:26px;font-size:16.5px;color:var(--gris);max-width:640px">
+      Un asesor que nos mande <strong style="color:var(--marino)">dos clientes de estancia larga al mes</strong> se lleva alrededor de <strong style="color:var(--naranja)">${mxn(comisionDe(Math.max(...casas.map((c) => c.precioMesConServicios))) * 2)} mensuales</strong> por presentarlos. Nada más por la presentación.
     </p>
-    <p style="margin-top:14px;font-size:14.5px;color:var(--gris)">También aplica en estancias por noche y por semana, sobre el total de la reserva.</p>
   </div>
 </section>
 
