@@ -1,4 +1,4 @@
-# Home Express
+# Hostalia (antes Home Express)
 
 Sitio de renta de casas amuebladas en Torreón, Coahuila. Cinco casas propias,
 por noche / semana / mes, con factura.

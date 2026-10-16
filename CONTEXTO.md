@@ -1,11 +1,11 @@
-# Home Express — contexto para responder clientes
+# Hostalia — contexto para responder clientes
 
-> Documento generado desde los datos reales del negocio. Última actualización: 27 de agosto de 2026.
+> Documento generado desde los datos reales del negocio. Última actualización: 16 de octubre de 2026.
 > Si cambian precios o casas: `node scripts/generar-contexto.mjs`
 
 ## Qué es el negocio
 
-Home Express renta 5 casas **propias** amuebladas en Torreón, Coahuila.
+Hostalia renta 4 casas **propias** amuebladas en Torreón, Coahuila.
 No es portal ni intermediario: son casas del mismo dueño, que también las publica
 en Airbnb con 84 reseñas y 4.9 de calificación.
 Reservando directo sale más barato porque no se paga la comisión de plataforma.
@@ -19,40 +19,39 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 | Casa | Personas | Recámaras | Camas | Baños | Por noche | Mes sin serv. | Mes con serv. |
 |---|---|---|---|---|---|---|---|
-| **Lomas** | 11 | 3 | 9 | 2.5 | $1,780 | $32,000 | $35,000 |
+| **Viñedos** | 10 | 3 | 5 | 2.5 | $1,740 | se cotiza | se cotiza |
 | **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
 | **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $30,000 | $33,000 |
-| **Sahuaro** | 11 | 3 | 5 | 2.5 | $1,400 | $29,000 | $32,000 |
 | **Cantera** | 10 | 3 | 5 | 2.5 | $1,340 | $27,000 | $30,000 |
 
 **Cómo elegir rápido:**
-- **Grupo grande con cada quien su cama** → Lomas (mejor proporción camas/persona)
+- **Grupo grande con cada quien su cama** → Almendros (mejor proporción camas/persona)
 - **Más personas** → Almendros (12 personas)
 - **Más económica** → Cantera
 - **Quien no puede subir escaleras** → Almendros (recámara en planta baja)
-- **Convivencia / fin de semana** → Cantera (palapa, asador, barra) o Lomas (alberca, asador)
+- **Convivencia / fin de semana** → Cantera (palapa, asador, barra) o Almendros (alberca)
 - **Viaje de trabajo al centro** → Acacias (céntrica)
 
 ---
 
 ## Cada casa a detalle
 
-### Lomas — Casa Lomas
+### Viñedos — Casa Leones
 
-- **Capacidad:** 11 personas · 3 recámaras · 9 camas · 2.5 baños
-- **Precio por noche:** $1,780 entre semana · $1,980 fin de semana
-- **En Airbnb cuesta:** $1,980 — o sea que directo se ahorra $200 por noche
-- **Por mes:** $32,000 sin servicios · $35,000 con servicios (agua, luz, gas, internet)
-- **Destaca por:** Alberca, Asador, Clima en toda la casa, 9 camas
-- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/lomas/
+- **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
+- **Precio por noche:** $1,740 entre semana · $1,740 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Alberca y asador, Lavadora y secadora, Clima en toda la casa, Patio con pasto
+- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/leones/
 
-La más equipada para grupos: 9 camas repartidas en 3 recámaras, alberca y asador en el patio. Es la que mejor funciona cuando llega una cuadrilla completa y cada quien necesita su cama.
+En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.
 
 ### Almendros — Casa Almendros
 
 - **Capacidad:** 12 personas · 3 recámaras · 8 camas · 2.5 baños
 - **Precio por noche:** $1,710 entre semana · $2,030 fin de semana
-- **En Airbnb cuesta:** $1,900 — o sea que directo se ahorra $190 por noche
+- **En Airbnb:** cuesta $1,900 — o sea que directo se ahorra $190 por noche
 - **Por mes:** $33,000 sin servicios · $36,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** 12 personas, Recámara en planta baja, 2 baños y medio, Alberca
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/almendros/
@@ -63,7 +62,7 @@ La de mayor capacidad y la única con recámara en planta baja, sin escaleras. D
 
 - **Capacidad:** 11 personas · 3 recámaras · 6 camas · 2.5 baños
 - **Precio por noche:** $1,670 entre semana · $1,760 fin de semana
-- **En Airbnb cuesta:** $1,850 — o sea que directo se ahorra $180 por noche
+- **En Airbnb:** cuesta $1,850 — o sea que directo se ahorra $180 por noche
 - **Por mes:** $30,000 sin servicios · $33,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Ubicación céntrica, Zona privada, Clima, 11 personas
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/acacia/
@@ -74,23 +73,12 @@ La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden qui
 
 - **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - **Precio por noche:** $1,340 entre semana · $1,500 fin de semana
-- **En Airbnb cuesta:** $1,490 — o sea que directo se ahorra $150 por noche
+- **En Airbnb:** cuesta $1,490 — o sea que directo se ahorra $150 por noche
 - **Por mes:** $27,000 sin servicios · $30,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Palapa, Asador, Barra, Clima en toda la casa
 - **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/cantera/
 
-Palapa, asador y barra en el patio. Es la más económica de las cinco y la que mejor funciona para convivencias y fines de semana en familia.
-
-### Sahuaro — Casa Sahuaro
-
-- **Capacidad:** 11 personas · 3 recámaras · 5 camas · 2.5 baños
-- **Precio por noche:** $1,400 entre semana · $1,770 fin de semana
-- **En Airbnb cuesta:** $1,550 — o sea que directo se ahorra $150 por noche
-- **Por mes:** $29,000 sin servicios · $32,000 con servicios (agua, luz, gas, internet)
-- **Destaca por:** Fraccionamiento privado, Clima, 11 personas, 3 recámaras
-- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/sahuaro/
-
-Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.
+Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.
 
 ---
 
@@ -164,7 +152,7 @@ calendario de Airbnb). El sitio calcula solo:
 
 **Decisiones de diseño que NO hay que deshacer:**
 - Los precios se muestran **finales, con IVA incluido**, no "+ IVA". Con "+ IVA" el
-  precio directo quedaba por encima del de Airbnb en las cinco casas y se caía el
+  precio directo quedaba por encima del de Airbnb en todas las casas y se caía el
   único argumento del sitio.
 - En escritorio el video es fondo de todo el hero con el texto encima; en celular
   se apila (video arriba, texto abajo) porque ahí el texto encima tapaba el video.
@@ -214,8 +202,8 @@ Lo que sí se busca: "casas amuebladas en renta torreon", "airbnb torreon",
 
 ## Pendientes
 
-- [ ] **Dominio homeexpress.mx** — está libre, hay que comprarlo (~$450-700/año).
-      Al comprarlo: `SITIO=https://homeexpress.mx node build.mjs`
+- [ ] **Dominio** — ya no se usa homeexpress.mx (el negocio ahora se llama Hostalia); falta escoger y comprar el dominio nuevo.
+      Al comprarlo: `SITIO=https://<dominio> node build.mjs`
 - [ ] **Secret `DEEPSEEK_API_KEY`** en el repo para que el blog corra solo.
 - [ ] **Ajustar precios de Airbnb** antes del 15 de septiembre de 2026.
 - [ ] **Fotos**: las actuales son capturas de un video, verticales y con algo de

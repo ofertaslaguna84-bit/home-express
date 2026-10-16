@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Home Express — generador del sitio estático.
+ * Hostalia (antes Home Express) — generador del sitio estático.
  * Ejecutar: node build.mjs
  *
  * Genera index.html, una página por casa, sitemap.xml, robots.txt y llms.txt
@@ -14,13 +14,13 @@ import { fileURLToPath } from 'node:url';
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'docs'); // GitHub Pages sirve desde /docs
 /**
- * Dominio del sitio. Mientras no exista homeexpress.mx se publica en la URL de
+ * Dominio del sitio. Mientras no haya dominio propio se publica en la URL de
  * GitHub Pages, y los canonical/sitemap/llms apuntan ahí para que no queden
  * señalando a un dominio que no responde.
- * Al comprar el dominio: SITIO=https://homeexpress.mx node build.mjs
+ * Al comprar el dominio: SITIO=https://<dominio> node build.mjs
  */
 const SITE = (process.env.SITIO || 'https://ofertaslaguna84-bit.github.io/home-express').replace(/\/$/, '');
-const USA_DOMINIO_PROPIO = SITE.includes('homeexpress.mx');
+const USA_DOMINIO_PROPIO = !SITE.includes('github.io');
 
 const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
 const { marca, casas } = data;
@@ -44,11 +44,20 @@ const mxn = (n) => `$${Number(n).toLocaleString('es-MX')}`;
 const precioAirbnb = (base) => Math.round(base / (1 - marca.comisionAirbnb) / 10) * 10;
 /** Precio directo: el descuento sale de la comisión que Airbnb ya no se lleva. */
 const precioDirecto = (base) => Math.round((precioAirbnb(base) * (1 - marca.descuentoDirecto)) / 10) * 10;
+/** Casas que no están en Airbnb (sin airbnbId) traen su precio directo en precioNoche/precioFinde y no se comparan. */
+const enAirbnb = (c) => Boolean(c.airbnbId);
+const noche = (c) => (enAirbnb(c) ? precioDirecto(c.baseNoche) : c.precioNoche);
+const finde = (c) => (enAirbnb(c) ? precioDirecto(c.baseFinde) : c.precioFinde);
+/** Solo las casas con precio por mes publicado entran en rangos y tablas mensuales. */
+const conMes = casas.filter((c) => c.precioMesSinServicios);
 
 const IVA_NOTA = marca.preciosMasIva ? ' + IVA' : '';
 /** Semana y mes se anuncian como DESCUENTO, no como precio cerrado: el precio final se negocia. */
 const descSemana = Math.round(marca.descuentoSemana * 100);
 const descMes = Math.round(marca.descuentoMes * 100);
+
+/** Rango de personas, sale de casas.json para que cambie solo al agregar o quitar casas. */
+const PERSONAS = `${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))}`;
 
 const wa = (texto) => `https://wa.me/${marca.whatsapp}?text=${encodeURIComponent(texto)}`;
 
@@ -57,9 +66,9 @@ const wa = (texto) => `https://wa.me/${marca.whatsapp}?text=${encodeURIComponent
 const CSS = `
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --naranja:#F07818; --naranja-osc:#E05A14; --marino:#181854; --marino-claro:#2A2A6E;
-  --crema:#FBF8F4; --gris:#6B6B7B; --linea:#E8E4DE; --blanco:#fff;
-  --radio:16px; --sombra:0 2px 20px rgba(24,24,84,.07);
+  --azul:#1F5BFF; --azul-osc:#1546D6; --verde:#009473; --marino:#14213D; --marino-claro:#22345A;
+  --crema:#F7F5F1; --gris:#5B6577; --linea:#E8E4DE; --blanco:#fff;
+  --radio:16px; --sombra:0 2px 20px rgba(20,33,61,.07);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--marino);line-height:1.6;background:var(--blanco);-webkit-font-smoothing:antialiased}
@@ -70,14 +79,14 @@ img{display:block;max-width:100%}
 /* encabezado */
 .hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1180px;margin:0 auto;padding:12px 22px}
-.logo{height:44px;width:auto}
+.logo{height:54px;width:auto}
 .nav{display:none;gap:26px;font-size:14.5px;font-weight:600}
 @media(min-width:900px){.nav{display:flex}}
-.nav a:hover{color:var(--naranja)}
+.nav a:hover{color:var(--azul)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14.5px;transition:transform .15s,box-shadow .15s;border:none;cursor:pointer}
 .btn:hover{transform:translateY(-1px)}
 .btn-wa{background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.32)}
-.btn-nar{background:var(--naranja);color:#fff;box-shadow:0 4px 14px rgba(240,120,24,.3)}
+.btn-nar{background:var(--azul);color:#fff;box-shadow:0 4px 14px rgba(31,91,255,.3)}
 .btn-out{border:1.5px solid var(--linea);background:#fff;color:var(--marino)}
 
 /* Hero con dos comportamientos, a petición del dueño:
@@ -98,23 +107,23 @@ img{display:block;max-width:100%}
   .hero-in{display:block;min-height:min(72vh,620px)}
   .hero-media{position:absolute;inset:0;height:100%;order:0}
   .hero-media::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(100deg,rgba(14,14,52,.86) 0%,rgba(14,14,52,.66) 34%,rgba(14,14,52,.28) 62%,rgba(14,14,52,.05) 88%)}
+    background:linear-gradient(100deg,rgba(11,19,38,.86) 0%,rgba(11,19,38,.66) 34%,rgba(11,19,38,.28) 62%,rgba(11,19,38,.05) 88%)}
   /* max-width + padding calculado se sumaban y el texto quedaba indentado el
      doble que el resto de las secciones. En escritorio manda el padding. */
   .hero-video .cont{position:relative;z-index:2;background:none;max-width:none;margin:0;
     min-height:min(72vh,620px);display:flex;flex-direction:column;justify-content:center;
     padding:70px 24px 70px max(24px,calc((100vw - 1180px) / 2));align-items:flex-start;text-align:left}
   .hero-video h1{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.5)}
-  .hero-video h1 em{color:#FFA047}
+  .hero-video h1 em{color:#5BE0B5}
   .hero-video .lead{color:rgba(255,255,255,.95);text-shadow:0 1px 8px rgba(0,0,0,.55)}
-  .hero-video .kicker{color:#FFB061}
+  .hero-video .kicker{color:#9DB8FF}
   .hero-video .nota{color:rgba(255,255,255,.9);text-shadow:0 1px 6px rgba(0,0,0,.5)}
 }
 
-.kicker{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:16px}
+.kicker{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:16px}
 h1{font-size:clamp(30px,5vw,50px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
 @media(min-width:940px){h1{font-size:clamp(40px,4.4vw,58px)}}
-h1 em{font-style:normal;color:var(--naranja);white-space:nowrap}
+h1 em{font-style:normal;color:var(--azul);white-space:nowrap}
 .lead{font-size:17px;color:var(--gris);max-width:560px;margin-bottom:24px}
 @media(min-width:940px){.lead{font-size:18.5px}}
 .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
@@ -124,12 +133,12 @@ h1 em{font-style:normal;color:var(--naranja);white-space:nowrap}
 .trust{background:var(--marino);color:#fff;padding:16px 0}
 .trust-in{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;font-size:13.5px;font-weight:600}
 .trust span{display:inline-flex;align-items:center;gap:8px;opacity:.95}
-.trust b{color:var(--naranja)}
+.trust b{color:var(--azul)}
 
 /* secciones */
 section{padding:64px 0}
 .sec-crema{background:var(--crema)}
-.eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:10px}
+.eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:10px}
 h2{font-size:clamp(25px,3.4vw,38px);line-height:1.14;font-weight:800;letter-spacing:-.015em;margin-bottom:14px}
 h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .sub{font-size:16.5px;color:var(--gris);max-width:620px;margin-bottom:38px}
@@ -137,10 +146,10 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 /* tarjetas de casa */
 .casas{display:grid;gap:26px;grid-template-columns:1fr}
 @media(min-width:720px){.casas{grid-template-columns:1fr 1fr}}
-@media(min-width:1060px){.casas{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1060px){.casas{grid-template-columns:repeat(4,1fr);gap:20px}}
 .casa{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
-.casa:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(24,24,84,.1)}
-.casa-foto{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--crema)}
+.casa:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
+.casa-foto{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--crema)}
 .casa-foto img{width:100%;height:100%;object-fit:cover}
 .badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.95);color:var(--marino);font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
 .casa-cuerpo{padding:20px;display:flex;flex-direction:column;flex:1}
@@ -149,10 +158,10 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .casa p{font-size:14.5px;color:var(--gris);margin-bottom:16px;flex:1}
 .precio-box{border-top:1px solid var(--linea);padding-top:14px;margin-top:auto}
 .p-fila{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;margin-bottom:5px}
-.p-fila.tachado{color:#A9A9B8}
+.p-fila.tachado{color:#A7AEBD}
 .p-fila.tachado b{text-decoration:line-through;font-weight:600}
 .p-fila.directo{font-size:15px;font-weight:800;color:var(--marino)}
-.p-fila.directo b{font-size:24px;color:var(--naranja)}
+.p-fila.directo b{font-size:24px;color:var(--verde)}
 .ahorro{display:inline-block;background:#EAF9EF;color:#1B8A4B;font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:999px;margin-top:8px}
 .casa-btns{display:flex;gap:8px;margin-top:15px}
 .casa-btns .btn{flex:1;justify-content:center;padding:11px 12px;font-size:13.5px}
@@ -161,25 +170,25 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .pasos{display:grid;gap:26px;grid-template-columns:1fr;counter-reset:p}
 @media(min-width:760px){.pasos{grid-template-columns:repeat(3,1fr)}}
 .paso{position:relative;padding-top:52px}
-.paso::before{counter-increment:p;content:counter(p);position:absolute;top:0;left:0;width:38px;height:38px;border-radius:50%;background:var(--naranja);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:17px}
+.paso::before{counter-increment:p;content:counter(p);position:absolute;top:0;left:0;width:38px;height:38px;border-radius:50%;background:var(--azul);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:17px}
 .paso p{color:var(--gris);font-size:15px}
 
 /* comparativa */
 .vs{display:grid;gap:18px;grid-template-columns:1fr;max-width:820px}
 @media(min-width:700px){.vs{grid-template-columns:1fr 1fr}}
 .vs-card{border:1px solid var(--linea);border-radius:var(--radio);padding:26px;background:#fff}
-.vs-card.destacado{border:2px solid var(--naranja);box-shadow:0 8px 30px rgba(240,120,24,.14)}
+.vs-card.destacado{border:2px solid var(--azul);box-shadow:0 8px 30px rgba(31,91,255,.14)}
 .vs-card h3{margin-bottom:16px}
 .vs-card ul{list-style:none}
 .vs-card li{font-size:14.5px;color:var(--gris);padding:7px 0 7px 26px;position:relative}
-.vs-card li::before{content:"✓";position:absolute;left:0;color:var(--naranja);font-weight:900}
-.vs-card.gris li::before{content:"—";color:#C4C4CE}
+.vs-card li::before{content:"✓";position:absolute;left:0;color:var(--verde);font-weight:900}
+.vs-card.gris li::before{content:"—";color:#C3C8D2}
 
 /* faq */
 .faq{border-bottom:1px solid var(--linea)}
 .faq summary{cursor:pointer;font-weight:700;font-size:16px;padding:19px 0;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--naranja);font-weight:800;font-size:22px;line-height:1}
+.faq summary::after{content:"+";color:var(--azul);font-weight:800;font-size:22px;line-height:1}
 .faq[open] summary::after{content:"–"}
 .faq-a p{color:var(--gris);font-size:15.5px;padding-bottom:19px;max-width:760px}
 
@@ -193,7 +202,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .pie-in{display:grid;gap:26px;grid-template-columns:1fr}
 @media(min-width:740px){.pie-in{grid-template-columns:2fr 1fr 1fr}}
 .pie h4{color:#fff;font-size:14px;font-weight:800;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
-.pie a:hover{color:var(--naranja)}
+.pie a:hover{color:var(--azul)}
 .pie ul{list-style:none}
 .pie li{padding:4px 0}
 .pie-bajo{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:20px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
@@ -206,26 +215,26 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 
 /* blog */
 .art{max-width:760px;margin:0 auto}
-.art .resumen{border-left:4px solid var(--naranja);background:var(--crema);padding:18px 22px;border-radius:0 var(--radio) var(--radio) 0;margin-bottom:30px}
+.art .resumen{border-left:4px solid var(--azul);background:var(--crema);padding:18px 22px;border-radius:0 var(--radio) var(--radio) 0;margin-bottom:30px}
 .art .resumen p{margin:0;font-size:16.5px;color:var(--marino);line-height:1.7}
 .art h2{font-size:26px;margin:38px 0 12px}
 .art h3{font-size:19px;margin:26px 0 8px}
-.art p{font-size:17px;color:#3A3A52;margin-bottom:17px;line-height:1.75}
+.art p{font-size:17px;color:#36405A;margin-bottom:17px;line-height:1.75}
 .art ul{margin:0 0 18px 0}
-.art li{font-size:17px;color:#3A3A52;padding:5px 0 5px 24px;position:relative;line-height:1.7}
-.art li::before{content:"•";position:absolute;left:6px;color:var(--naranja);font-weight:900}
+.art li{font-size:17px;color:#36405A;padding:5px 0 5px 24px;position:relative;line-height:1.7}
+.art li::before{content:"•";position:absolute;left:6px;color:var(--azul);font-weight:900}
 .art table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;display:block;overflow-x:auto}
 .art th{background:var(--crema);text-align:left;padding:11px 13px;font-weight:800;border-bottom:2px solid var(--linea);white-space:nowrap}
 .art td{padding:11px 13px;border-bottom:1px solid var(--linea);color:var(--gris)}
-.art a{color:var(--naranja);font-weight:600;text-decoration:underline}
+.art a{color:var(--azul);font-weight:600;text-decoration:underline}
 .art .meta{font-size:13.5px;color:var(--gris);margin-bottom:26px}
 .posts{display:grid;gap:22px;grid-template-columns:1fr}
 @media(min-width:720px){.posts{grid-template-columns:1fr 1fr}}
 .post{border:1px solid var(--linea);border-radius:var(--radio);padding:24px;background:#fff;transition:transform .18s,box-shadow .18s}
-.post:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(24,24,84,.1)}
+.post:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
 .post h3{font-size:19px;margin-bottom:9px}
 .post p{font-size:14.5px;color:var(--gris);margin-bottom:12px}
-.post span{font-size:12.5px;color:#A9A9B8}
+.post span{font-size:12.5px;color:#A7AEBD}
 
 /* galería de la ficha */
 .galeria{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
@@ -233,7 +242,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .galeria div{aspect-ratio:4/5;overflow:hidden;border-radius:var(--radio);background:var(--crema)}
 .galeria img{width:100%;height:100%;object-fit:cover}
 .crumbs{font-size:13px;color:var(--gris);padding:16px 0}
-.crumbs a{color:var(--naranja);font-weight:600}
+.crumbs a{color:var(--azul);font-weight:600}
 .ficha{display:grid;gap:38px;grid-template-columns:1fr}
 @media(min-width:940px){.ficha{grid-template-columns:1.6fr 1fr;align-items:start}}
 .panel{border:1px solid var(--linea);border-radius:var(--radio);padding:24px;background:#fff;box-shadow:var(--sombra);position:sticky;top:88px}
@@ -262,7 +271,7 @@ function cabeza({ titulo, desc, url, imagen, schema }) {
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${SITE}/img/${imagen}.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#181854">
+<meta name="theme-color" content="#14213D">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -285,7 +294,7 @@ const encabezado = (prefijo = '') => `
       <a href="${prefijo}#faq">Preguntas</a>
       <a href="${prefijo}blog/">Blog</a>
     </nav>
-    <a href="${wa('Hola Home Express, quiero información de las casas en Torreón')}" class="btn btn-wa">WhatsApp</a>
+    <a href="${wa('Hola Hostalia, quiero información de las casas en Torreón')}" class="btn btn-wa">WhatsApp</a>
   </div>
 </header>`;
 
@@ -294,7 +303,7 @@ const barraConfianza = () => `
   <span>⭐ <b>${marca.calificacion}</b> · ${marca.resenas} reseñas en Airbnb</span>
   <span>🧾 <b>Facturamos</b> — CFDI para tu empresa</span>
   <span>🗓️ Desde <b>2 noches</b> hasta <b>6 meses</b></span>
-  <span>❄️ <b>Clima</b> en las 5 casas</span>
+  <span>❄️ <b>Clima</b> en todas las casas</span>
 </div></div></div>`;
 
 const pie = (prefijo = '') => `
@@ -312,7 +321,7 @@ const pie = (prefijo = '') => `
       <div>
         <h4>Contacto</h4>
         <ul>
-          <li><a href="${wa('Hola Home Express, quiero información')}">WhatsApp ${esc(marca.whatsappVisible)}</a></li>
+          <li><a href="${wa('Hola Hostalia, quiero información')}">WhatsApp ${esc(marca.whatsappVisible)}</a></li>
           <li>${esc(marca.ciudad)}, ${esc(marca.estado)}</li>
           <li><a href="${prefijo}#faq">Preguntas frecuentes</a></li>
           <li><a href="${prefijo}blog/">Blog</a></li>
@@ -325,16 +334,16 @@ const pie = (prefijo = '') => `
     </div>
   </div>
 </footer>
-<a href="${wa('Hola Home Express, quiero información de las casas')}" class="btn btn-wa flota" aria-label="Escribir por WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.06 24l1.68-6.16A11.87 11.87 0 010 11.9C0 5.34 5.34 0 11.9 0a11.82 11.82 0 018.42 3.49A11.82 11.82 0 0123.8 11.9c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zm6.6-3.8l.36.22a9.87 9.87 0 005.03 1.38h.01c5.45 0 9.89-4.43 9.89-9.89a9.83 9.83 0 00-2.9-6.99 9.82 9.82 0 00-6.99-2.9c-5.46 0-9.9 4.44-9.9 9.89a9.86 9.86 0 001.51 5.26l.24.38-1 3.65 3.75-.99zm11.15-5.6c-.07-.13-.28-.2-.58-.35-.3-.15-1.77-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.61-.92-2.2-.24-.59-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41z"/></svg></a>
+<a href="${wa('Hola Hostalia, quiero información de las casas')}" class="btn btn-wa flota" aria-label="Escribir por WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.06 24l1.68-6.16A11.87 11.87 0 010 11.9C0 5.34 5.34 0 11.9 0a11.82 11.82 0 018.42 3.49A11.82 11.82 0 0123.8 11.9c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zm6.6-3.8l.36.22a9.87 9.87 0 005.03 1.38h.01c5.45 0 9.89-4.43 9.89-9.89a9.83 9.83 0 00-2.9-6.99 9.82 9.82 0 00-6.99-2.9c-5.46 0-9.9 4.44-9.9 9.89a9.86 9.86 0 001.51 5.26l.24.38-1 3.65 3.75-.99zm11.15-5.6c-.07-.13-.28-.2-.58-.35-.3-.15-1.77-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.61-.92-2.2-.24-.59-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41z"/></svg></a>
 </body></html>`;
 
 function tarjeta(c) {
-  const air = precioAirbnb(c.baseNoche);
-  const dir = precioDirecto(c.baseNoche);
+  const air = enAirbnb(c) ? precioAirbnb(c.baseNoche) : null;
+  const dir = noche(c);
   return `
   <article class="casa">
     <a href="casas/${c.slug}/" class="casa-foto">
-      <img src="img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)} en ${esc(c.zona)}, Torreón" loading="lazy" width="800" height="1000">
+      <img src="img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)} en ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="900">
       <span class="badge">${c.huespedes} personas</span>
     </a>
     <div class="casa-cuerpo">
@@ -346,13 +355,13 @@ function tarjeta(c) {
       </div>
       <p>${esc(c.resumen)}</p>
       <div class="precio-box">
-        <div class="p-fila tachado"><span>En Airbnb</span><b>${mxn(air)}</b></div>
-        <div class="p-fila directo"><span>Directo aquí</span><b>${mxn(dir)}</b></div>
-        <span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>
+        ${air ? `<div class="p-fila tachado"><span>En Airbnb</span><b>${mxn(air)}</b></div>` : ''}
+        <div class="p-fila directo"><span>${air ? 'Directo aquí' : 'Por noche'}</span><b>${mxn(dir)}</b></div>
+        ${air ? `<span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>` : ''}
         ${c.precioMesSinServicios ? `<p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">${mxn(c.precioMesSinServicios)}</strong> sin servicios · <strong style="color:var(--marino)">${mxn(c.precioMesConServicios)}</strong> con servicios</p>` : ''}
         <div class="casa-btns">
           <a href="casas/${c.slug}/" class="btn btn-out">Ver casa</a>
-          <a href="${wa(`Hola Home Express, me interesa ${c.nombre} (${c.huespedes} personas). ¿Está disponible?`)}" class="btn btn-nar">Reservar</a>
+          <a href="${wa(`Hola Hostalia, me interesa ${c.nombre} (${c.huespedes} personas). ¿Está disponible?`)}" class="btn btn-nar">Reservar</a>
         </div>
       </div>
     </div>
@@ -368,11 +377,11 @@ const FAQS = [
   },
   {
     q: '¿Facturan? Lo necesito para mi empresa.',
-    a: 'Sí, facturamos con CFDI en las cinco casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa.',
+    a: 'Sí, facturamos con CFDI en todas las casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa.',
   },
   {
     q: '¿Cuál es la estancia mínima y la máxima?',
-    a: `La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de ${mxn(Math.min(...casas.map((x) => x.precioMesSinServicios)))} a ${mxn(Math.max(...casas.map((x) => x.precioMesConServicios)))} según la casa y si incluye servicios (agua, luz, gas e internet), que suben ${mxn(3000)}. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas.`,
+    a: `La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de ${mxn(Math.min(...conMes.map((x) => x.precioMesSinServicios)))} a ${mxn(Math.max(...conMes.map((x) => x.precioMesConServicios)))} según la casa y si incluye servicios (agua, luz, gas e internet), que suben ${mxn(3000)}. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas.`,
   },
   {
     q: '¿Los precios llevan IVA?',
@@ -388,11 +397,11 @@ const FAQS = [
   },
   {
     q: '¿Reciben grupos de trabajo o cuadrillas?',
-    a: 'Sí, es buena parte de lo que hacemos. Tenemos casas de 9 a 12 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.',
+    a: `Sí, es buena parte de lo que hacemos. Tenemos casas de ${PERSONAS} personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.`,
   },
   {
     q: '¿Dónde están ubicadas?',
-    a: `Las cinco están en ${marca.ciudad}, ${marca.estado}: Lomas, Almendros, Acacias, Cantera y Sahuaro. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.`,
+    a: `Todas están en ${marca.ciudad}, ${marca.estado}: ${casas.map((c) => c.zona).join(', ').replace(/, ([^,]*)$/, ' y $1')}. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.`,
   },
   {
     q: '¿Se puede ver la casa antes de reservar?',
@@ -423,7 +432,7 @@ const orgSchema = () => ({
   url: SITE,
   logo: `${SITE}/img/logo.png`,
   image: `${SITE}/img/${casas[0].fotos[0]}.jpg`,
-  description: `Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}. Por noche, semana o mes, con factura. De 9 a 12 personas.`,
+  description: `Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}. Por noche, semana o mes, con factura. De ${PERSONAS} personas.`,
   telephone: `+${marca.whatsapp}`,
   priceRange: '$$',
   address: { '@type': 'PostalAddress', addressLocality: marca.ciudad, addressRegion: marca.estado, addressCountry: 'MX' },
@@ -445,7 +454,7 @@ const orgSchema = () => ({
 
 function paginaInicio() {
   const titulo = `Casas amuebladas en renta en Torreón — por noche, semana o mes | ${marca.nombre}`;
-  const desc = `5 casas completas y equipadas en Torreón para 9 a 12 personas. Desde 2 noches hasta 6 meses. Facturamos. Más baratas que en Airbnb — reserva directo por WhatsApp.`;
+  const desc = `${casas.length} casas completas y equipadas en Torreón para ${PERSONAS} personas. Desde 2 noches hasta 6 meses. Facturamos. Más baratas que en Airbnb — reserva directo por WhatsApp.`;
 
   return (
     cabeza({
@@ -485,10 +494,10 @@ function paginaInicio() {
     <div class="cont">
       <span class="kicker">● ${casas.length} casas en ${esc(marca.ciudad)}, ${esc(marca.estado)}</span>
       <h1>Casas completas,<br>listas para <em>entrar hoy</em>.</h1>
-      <p class="lead">De 9 a 12 personas, con clima y con factura. Desde 2 noches hasta 6 meses, y más baratas que en Airbnb.</p>
+      <p class="lead">De ${PERSONAS} personas, con clima y con factura. Desde 2 noches hasta 6 meses, y más baratas que en Airbnb.</p>
       <div class="hero-cta">
         <a href="#casas" class="btn btn-nar">Ver las ${casas.length} casas</a>
-        <a href="${wa('Hola Home Express, quiero cotizar una casa en Torreón')}" class="btn btn-wa">Cotizar por WhatsApp</a>
+        <a href="${wa('Hola Hostalia, quiero cotizar una casa en Torreón')}" class="btn btn-wa">Cotizar por WhatsApp</a>
       </div>
       <p class="nota">⭐ ${marca.calificacion} con ${marca.resenas} reseñas como anfitrión en Airbnb</p>
     </div>
@@ -544,7 +553,7 @@ ${barraConfianza()}
         </ul>
       </div>
       <div class="vs-card destacado">
-        <h3>Una casa Home Express</h3>
+        <h3>Una casa de Hostalia</h3>
         <ul>
           <li>Todo el equipo bajo el mismo techo</li>
           <li>Cocina equipada: comen en casa y bajan gastos</li>
@@ -555,7 +564,7 @@ ${barraConfianza()}
         </ul>
       </div>
     </div>
-    <p style="margin-top:26px"><a href="${wa('Hola Home Express, necesito hospedaje para personal de mi empresa en Torreón. ¿Me pasan precios por mes y con factura?')}" class="btn btn-nar">Cotizar para mi empresa</a></p>
+    <p style="margin-top:26px"><a href="${wa('Hola Hostalia, necesito hospedaje para personal de mi empresa en Torreón. ¿Me pasan precios por mes y con factura?')}" class="btn btn-nar">Cotizar para mi empresa</a></p>
   </div>
 </section>
 
@@ -572,7 +581,7 @@ ${barraConfianza()}
 <section class="cta">
   <h2>¿Qué fechas necesitas?</h2>
   <p>Te decimos disponibilidad y precio cerrado en el momento. Sin compromiso.</p>
-  <a href="${wa('Hola Home Express, quiero cotizar. Mis fechas son:')}" class="btn btn-wa" style="font-size:16px;padding:15px 30px">Escribir por WhatsApp</a>
+  <a href="${wa('Hola Hostalia, quiero cotizar. Mis fechas son:')}" class="btn btn-wa" style="font-size:16px;padding:15px 30px">Escribir por WhatsApp</a>
 </section>
 ` +
     pie()
@@ -582,17 +591,17 @@ ${barraConfianza()}
 // ─────────────────────────────────────────────────────────── ficha de casa
 
 function paginaCasa(c) {
-  const air = precioAirbnb(c.baseNoche);
-  const dir = precioDirecto(c.baseNoche);
-  const airF = precioAirbnb(c.baseFinde);
-  const dirF = precioDirecto(c.baseFinde);
+  const air = enAirbnb(c) ? precioAirbnb(c.baseNoche) : null;
+  const dir = noche(c);
+  const airF = enAirbnb(c) ? precioAirbnb(c.baseFinde) : null;
+  const dirF = finde(c);
   const titulo = `${c.nombre} — ${c.titulo} en Torreón | ${marca.nombre}`;
   const desc = `${c.resumen} ${c.recamaras} recámaras, ${c.camas} camas, ${c.banos} baños. Desde ${mxn(dir)} la noche reservando directo. Facturamos.`;
 
   const faqsCasa = [
     {
       q: `¿Cuánto cuesta ${c.nombre} por noche?`,
-      a: `Entre semana ${mxn(dir)} y en fin de semana ${mxn(dirF)}, reservando directo con nosotros. En Airbnb la misma casa sale en ${mxn(air)} y ${mxn(airF)}. Para estancias de una semana o más el precio baja: pregúntanos por WhatsApp.`,
+      a: `Entre semana ${mxn(dir)} y en fin de semana ${mxn(dirF)}, reservando directo con nosotros.${air ? ` En Airbnb la misma casa sale en ${mxn(air)} y ${mxn(airF)}.` : ''} Para estancias de una semana o más el precio baja: pregúntanos por WhatsApp.`,
     },
     {
       q: `¿Cuántas personas caben en ${c.nombre}?`,
@@ -625,7 +634,7 @@ function paginaCasa(c) {
           provider: { '@id': `${SITE}/#organizacion` },
           potentialAction: {
             '@type': 'ReserveAction',
-            target: wa(`Hola Home Express, quiero reservar ${c.nombre}`),
+            target: wa(`Hola Hostalia, quiero reservar ${c.nombre}`),
           },
         },
         {
@@ -689,9 +698,9 @@ function paginaCasa(c) {
 
       <aside>
         <div class="panel">
-          <div class="p-fila tachado"><span>En Airbnb</span><b>${mxn(air)}</b></div>
-          <div class="p-fila directo" style="margin-bottom:10px"><span>Directo</span><b>${mxn(dir)}</b></div>
-          <span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>
+          ${air ? `<div class="p-fila tachado"><span>En Airbnb</span><b>${mxn(air)}</b></div>` : ''}
+          <div class="p-fila directo" style="margin-bottom:10px"><span>${air ? 'Directo' : 'Por noche'}</span><b>${mxn(dir)}</b></div>
+          ${air ? `<span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>` : ''}
         ${c.precioMesSinServicios ? `<p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">${mxn(c.precioMesSinServicios)}</strong> sin servicios · <strong style="color:var(--marino)">${mxn(c.precioMesConServicios)}</strong> con servicios</p>` : ''}
           <div style="margin:18px 0 4px">
             <div class="dato"><span>Huéspedes</span><b>hasta ${c.huespedes}</b></div>
@@ -704,7 +713,7 @@ function paginaCasa(c) {
             <div class="dato"><span>Estancia mínima</span><b>2 noches</b></div>
             <div class="dato"><span>Factura</span><b>Sí, CFDI</b></div>
           </div>
-          <a href="${wa(`Hola Home Express, quiero reservar ${c.nombre} (${c.huespedes} personas). Mis fechas son:`)}" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:14px">Reservar por WhatsApp</a>
+          <a href="${wa(`Hola Hostalia, quiero reservar ${c.nombre} (${c.huespedes} personas). Mis fechas son:`)}" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:14px">Reservar por WhatsApp</a>
           <p style="font-size:12.5px;color:var(--gris);text-align:center;margin-top:10px">Precios${IVA_NOTA}. El de estancias largas se cotiza.</p>
         </div>
       </aside>
@@ -762,7 +771,7 @@ const FAQS_ASESOR = [
 function paginaAsesores() {
   const titulo = `Programa para asesores inmobiliarios | ${marca.nombre}`;
   const desc = `Gana ${Math.round(COM * 100)}% de comisión mandándonos clientes que necesitan casa amueblada en Torreón. Nosotros cotizamos, cobramos y facturamos. Tú solo presentas.`;
-  const maxMes = Math.max(...casas.map((c) => c.precioMesConServicios));
+  const maxMes = Math.max(...conMes.map((c) => c.precioMesConServicios));
 
   return (
     cabeza({
@@ -834,12 +843,12 @@ ${barraConfianza()}
     <h2>${Math.round(COM * 100)}% del total de la reserva</h2>
     <p class="sub">Sobre el total que paga el cliente, sea por noche, por semana o por mes. Sin tope, sin meta y sin exclusividad. Si renueva o regresa dentro de 12 meses, te volvemos a pagar.</p>
 
-    <div style="background:#fff;border:2px solid var(--naranja);border-radius:var(--radio);padding:26px 28px;max-width:620px;margin-bottom:34px">
-      <p style="font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--naranja);margin-bottom:12px">Así se calcula</p>
+    <div style="background:#fff;border:2px solid var(--azul);border-radius:var(--radio);padding:26px 28px;max-width:620px;margin-bottom:34px">
+      <p style="font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);margin-bottom:12px">Así se calcula</p>
       <p style="font-size:17px;color:var(--gris);line-height:1.8;margin:0">
         La casa se renta en <strong style="color:var(--marino)">$1,200 la noche</strong>.<br>
         Tu cliente se queda <strong style="color:var(--marino)">20 noches</strong> → paga $24,000.<br>
-        <span style="display:inline-block;margin-top:10px;font-size:22px;font-weight:900;color:var(--naranja)">Tú ganas $2,400.</span>
+        <span style="display:inline-block;margin-top:10px;font-size:22px;font-weight:900;color:var(--azul)">Tú ganas $2,400.</span>
       </p>
     </div>
 
@@ -850,18 +859,18 @@ ${barraConfianza()}
           <tr style="background:var(--marino);color:#fff">
             <th style="text-align:left;padding:15px 18px;font-weight:800">Si tu cliente renta…</th>
             <th style="text-align:right;padding:15px 18px;font-weight:800">Él paga</th>
-            <th style="text-align:right;padding:15px 18px;font-weight:800;color:#FFA047">Tú ganas</th>
+            <th style="text-align:right;padding:15px 18px;font-weight:800;color:#5BE0B5">Tú ganas</th>
           </tr>
         </thead>
         <tbody>
-          ${casas
+          ${conMes
             .slice()
             .sort((a, b) => b.precioMesConServicios - a.precioMesConServicios)
             .map(
               (c) => `<tr style="border-bottom:1px solid var(--linea)">
             <td style="padding:14px 18px"><strong>${esc(c.zona)}</strong> un mes <span style="color:var(--gris)">· ${c.huespedes} personas</span></td>
             <td style="padding:14px 18px;text-align:right;color:var(--gris)">${mxn(c.precioMesConServicios)}</td>
-            <td style="padding:14px 18px;text-align:right;font-weight:900;color:var(--naranja);font-size:19px">${mxn(comisionDe(c.precioMesConServicios))}</td>
+            <td style="padding:14px 18px;text-align:right;font-weight:900;color:var(--azul);font-size:19px">${mxn(comisionDe(c.precioMesConServicios))}</td>
           </tr>`
             )
             .join('\n          ')}
@@ -876,20 +885,20 @@ ${barraConfianza()}
           <tr style="background:var(--marino);color:#fff">
             <th style="text-align:left;padding:15px 18px;font-weight:800">Estancia</th>
             <th style="text-align:right;padding:15px 18px;font-weight:800">El cliente paga</th>
-            <th style="text-align:right;padding:15px 18px;font-weight:800;color:#FFA047">Tú ganas</th>
+            <th style="text-align:right;padding:15px 18px;font-weight:800;color:#5BE0B5">Tú ganas</th>
           </tr>
         </thead>
         <tbody>
           ${[
             ['1 semana en Cantera', precioDirecto(casas.find((c) => c.slug === 'cantera').baseNoche) * 7],
             ['2 semanas en Acacias', precioDirecto(casas.find((c) => c.slug === 'acacia').baseNoche) * 14],
-            ['20 noches en Lomas', precioDirecto(casas.find((c) => c.slug === 'lomas').baseNoche) * 20],
+            ['20 noches en Almendros', precioDirecto(casas.find((c) => c.slug === 'almendros').baseNoche) * 20],
           ]
             .map(
               ([etiqueta, total]) => `<tr style="border-bottom:1px solid var(--linea)">
             <td style="padding:14px 18px"><strong>${etiqueta}</strong></td>
             <td style="padding:14px 18px;text-align:right;color:var(--gris)">${mxn(Math.round(total))}</td>
-            <td style="padding:14px 18px;text-align:right;font-weight:900;color:var(--naranja);font-size:19px">${mxn(comisionDe(total))}</td>
+            <td style="padding:14px 18px;text-align:right;font-weight:900;color:var(--azul);font-size:19px">${mxn(comisionDe(total))}</td>
           </tr>`
             )
             .join('\n          ')}
@@ -899,7 +908,7 @@ ${barraConfianza()}
     <p style="margin-top:14px;font-size:14px;color:var(--gris)">Los montos de estancias cortas son antes del descuento por semana o mes, que se negocia con el cliente. La comisión siempre es sobre lo que él termina pagando.</p>
 
     <p style="margin-top:26px;font-size:16.5px;color:var(--gris);max-width:640px">
-      Un asesor que nos mande <strong style="color:var(--marino)">dos clientes de estancia larga al mes</strong> se lleva alrededor de <strong style="color:var(--naranja)">${mxn(comisionDe(Math.max(...casas.map((c) => c.precioMesConServicios))) * 2)} mensuales</strong> por presentarlos. Nada más por la presentación.
+      Un asesor que nos mande <strong style="color:var(--marino)">dos clientes de estancia larga al mes</strong> se lleva alrededor de <strong style="color:var(--azul)">${mxn(comisionDe(Math.max(...casas.map((c) => c.precioMesConServicios))) * 2)} mensuales</strong> por presentarlos. Nada más por la presentación.
     </p>
   </div>
 </section>
@@ -933,7 +942,7 @@ ${barraConfianza()}
     <h2>Lo que le vas a poder prometer a tu cliente</h2>
     <div class="vs">
       <div class="vs-card destacado">
-        <h3>Con Home Express</h3>
+        <h3>Con Hostalia</h3>
         <ul>
           <li><strong>Factura CFDI</strong> — la mayoría de las rentas temporales de Torreón no factura, y para empresa eso decide</li>
           <li><strong>${marca.calificacion} con ${marca.resenas} reseñas</strong> como anfitrión en Airbnb: no somos un desconocido</li>
@@ -1102,7 +1111,7 @@ function paginaArticulo(a) {
         <h3 style="margin-bottom:8px">¿Buscas casa en ${esc(marca.ciudad)}?</h3>
         <p style="font-size:15.5px;color:var(--gris);margin-bottom:16px">Tenemos ${casas.length} casas completas de ${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))} personas, con clima y factura. Por noche, semana o mes.</p>
         <a href="../../#casas" class="btn btn-nar">Ver las casas</a>
-        <a href="${wa(`Hola Home Express, leí "${a.titulo}" y quiero cotizar`)}" class="btn btn-wa">WhatsApp</a>
+        <a href="${wa(`Hola Hostalia, leí "${a.titulo}" y quiero cotizar`)}" class="btn btn-wa">WhatsApp</a>
       </div>
     </article>
   </div>
@@ -1117,7 +1126,7 @@ function paginaArticulo(a) {
 function llms() {
   return `# ${marca.nombre}
 
-> Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}, México. Por noche, por semana y por mes. De 9 a 12 personas. Con factura (CFDI).
+> Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}, México. Por noche, por semana y por mes. De ${PERSONAS} personas. Con factura (CFDI).
 
 ${marca.nombre} renta ${casas.length} casas propias en ${marca.ciudad}. No es un portal ni una agencia: son casas del mismo dueño, que también las publica en Airbnb con ${marca.resenas} reseñas y ${marca.calificacion} de calificación. Reservando directo el precio es menor porque no hay comisión de plataforma.
 
@@ -1143,9 +1152,9 @@ ${casas
     (c) => `### ${c.nombre} — ${c.zona}
 - Página: ${SITE}/casas/${c.slug}/
 - Capacidad: ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas · ${c.banos} baños
-- Entre semana: ${mxn(precioDirecto(c.baseNoche))} directo (${mxn(precioAirbnb(c.baseNoche))} en Airbnb)
-- Fin de semana: ${mxn(precioDirecto(c.baseFinde))} directo (${mxn(precioAirbnb(c.baseFinde))} en Airbnb)
-- Por mes: ${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas e internet)
+- Entre semana: ${mxn(noche(c))} directo${enAirbnb(c) ? ` (${mxn(precioAirbnb(c.baseNoche))} en Airbnb)` : ''}
+- Fin de semana: ${mxn(finde(c))} directo${enAirbnb(c) ? ` (${mxn(precioAirbnb(c.baseFinde))} en Airbnb)` : ''}
+- Por mes: ${c.precioMesSinServicios ? `${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas e internet)` : 'se cotiza por WhatsApp'}
 - Destaca por: ${c.destacados.join(', ')}
 - ${c.resumen}`
   )
@@ -1227,9 +1236,9 @@ for (const a of articulos) escribir(`blog/${a.slug}/index.html`, paginaArticulo(
 escribir('llms.txt', llms());
 escribir('sitemap.xml', sitemap());
 escribir('robots.txt', robots());
-if (USA_DOMINIO_PROPIO) escribir('CNAME', 'homeexpress.mx\n');
+if (USA_DOMINIO_PROPIO) escribir('CNAME', `${new URL(SITE).host}\n`);
 escribir('.nojekyll', '');
 
-console.log(`✓ Home Express — ${1 + casas.length} páginas de casas + ${articulos.length} artículos + llms.txt + sitemap`);
+console.log(`✓ Hostalia — ${1 + casas.length} páginas de casas + ${articulos.length} artículos + llms.txt + sitemap`);
 console.log(`  salida: docs/`);
 if (!existsSync(join(OUT, 'img'))) console.log('  ⚠ falta copiar img/ a docs/');

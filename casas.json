@@ -1,6 +1,6 @@
 {
   "marca": {
-    "nombre": "Home Express",
+    "nombre": "Hostalia",
     "ciudad": "Torreón",
     "estado": "Coahuila",
     "whatsapp": "528701484216",
@@ -19,35 +19,31 @@
   "_nota": "Precio por noche = titular. Mensual con DOS niveles: sin servicios y con servicios (agua, luz, gas, internet), diferencia de $3,000 en todas. Precios dados por el dueño el 27 de agosto de 2026, arriba del rango de mercado que se investigó ($23,000-$30,000): es su decisión de precio, no un cálculo. La tarifa por semana sigue sin publicarse. Capacidades confirmadas por el dueño el 27 ago 2026: Acacias y Sahuaro son 11 personas (Airbnb las tenia en 9 y el titulo decia 10px: hay que corregirlo alla). Todas tienen 2.5 banos.",
   "casas": [
     {
-      "slug": "lomas",
-      "nombre": "Casa Lomas",
-      "titulo": "Casa con alberca y asador para 11 personas",
-      "zona": "Lomas",
-      "huespedes": 11,
+      "slug": "leones",
+      "nombre": "Casa Leones",
+      "titulo": "Casa para 10 personas con alberca y asador en Viñedos",
+      "zona": "Viñedos",
+      "huespedes": 10,
       "recamaras": 3,
-      "camas": 9,
+      "camas": 5,
       "banos": 2.5,
-      "baseNoche": 1660,
-      "baseFinde": 1850,
-      "precioMes": 32000,
-      "airbnbId": "1728986645830345601",
+      "precioNoche": 1740,
+      "precioFinde": 1740,
       "destacados": [
-        "Alberca",
-        "Asador",
+        "Alberca y asador",
+        "Lavadora y secadora",
         "Clima en toda la casa",
-        "9 camas"
+        "Patio con pasto"
       ],
-      "resumen": "La más equipada para grupos: 9 camas repartidas en 3 recámaras, alberca y asador en el patio. Es la que mejor funciona cuando llega una cuadrilla completa y cada quien necesita su cama.",
+      "resumen": "En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.",
       "fotos": [
-        "lomas-sala",
-        "lomas-fachada",
-        "lomas-asador",
-        "lomas-cocina",
-        "lomas-recamara_01",
-        "lomas-patio"
-      ],
-      "precioMesSinServicios": 32000,
-      "precioMesConServicios": 35000
+        "leones-portada",
+        "leones-sala",
+        "leones-comedor",
+        "leones-recamara_01",
+        "leones-recamara_02",
+        "leones-asador"
+      ]
     },
     {
       "slug": "almendros",
@@ -70,10 +66,10 @@
       ],
       "resumen": "La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.",
       "fotos": [
+        "almendros-portada",
         "almendros-sala",
         "almendros-fachada",
         "almendros-cocina",
-        "almendros-comedor",
         "almendros-recamara_pb",
         "almendros-patio"
       ],
@@ -101,12 +97,12 @@
       ],
       "resumen": "La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.",
       "fotos": [
+        "acacia-portada",
         "acacia-comedor",
         "acacia-fachada",
         "acacia-sala",
         "acacia-cocina",
-        "acacia-recamara_01",
-        "acacia-patio"
+        "acacia-recamara_01"
       ],
       "precioMesSinServicios": 30000,
       "precioMesConServicios": 33000
@@ -130,48 +126,17 @@
         "Barra",
         "Clima en toda la casa"
       ],
-      "resumen": "Palapa, asador y barra en el patio. Es la más económica de las cinco y la que mejor funciona para convivencias y fines de semana en familia.",
+      "resumen": "Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.",
       "fotos": [
+        "cantera-portada",
         "cantera-asador",
         "cantera-fachada",
-        "cantera-bar",
         "cantera-cocina",
         "cantera-recamara_01",
         "cantera-patio"
       ],
       "precioMesSinServicios": 27000,
       "precioMesConServicios": 30000
-    },
-    {
-      "slug": "sahuaro",
-      "nombre": "Casa Sahuaro",
-      "titulo": "Casa completa en fraccionamiento privado para 11 personas",
-      "zona": "Sahuaro",
-      "huespedes": 11,
-      "recamaras": 3,
-      "camas": 5,
-      "banos": 2.5,
-      "baseNoche": 1300,
-      "baseFinde": 1651,
-      "precioMes": 29000,
-      "airbnbId": "1727672136259908164",
-      "destacados": [
-        "Fraccionamiento privado",
-        "Clima",
-        "11 personas",
-        "3 recámaras"
-      ],
-      "resumen": "Dentro de fraccionamiento privado con acceso controlado. Tranquila y segura, buena opción para estancias largas de personal que se queda semanas.",
-      "fotos": [
-        "sahuaro-cocina",
-        "sahuaro-fachada",
-        "sahuaro-comedor",
-        "sahuaro-sala",
-        "sahuaro-recamara_01",
-        "sahuaro-patio"
-      ],
-      "precioMesSinServicios": 29000,
-      "precioMesConServicios": 32000
     }
   ]
 }

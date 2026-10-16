@@ -19,7 +19,11 @@ const SITIO = 'https://ofertaslaguna84-bit.github.io/home-express';
 const mxn = (n) => `$${Number(n).toLocaleString('es-MX')}`;
 const air = (b) => Math.round(b / (1 - marca.comisionAirbnb) / 10) * 10;
 const dir = (b) => Math.round((air(b) * (1 - marca.descuentoDirecto)) / 10) * 10;
-const porPersona = (c) => Math.round(dir(c.baseNoche) / c.huespedes);
+/** Casas sin Airbnb (sin airbnbId) traen precioNoche/precioFinde directos. */
+const noche = (c) => (c.airbnbId ? dir(c.baseNoche) : c.precioNoche);
+const finde = (c) => (c.airbnbId ? dir(c.baseFinde) : c.precioFinde);
+const mes = (n) => (n ? mxn(n) : 'se cotiza');
+const porPersona = (c) => Math.round(noche(c) / c.huespedes);
 
 const articulosCount = (() => {
   try {
@@ -54,19 +58,19 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 |---|---|---|---|---|---|---|---|
 ${casas
   .slice()
-  .sort((a, b) => b.baseNoche - a.baseNoche)
+  .sort((a, b) => noche(b) - noche(a))
   .map(
     (c) =>
-      `| **${c.zona}** | ${c.huespedes} | ${c.recamaras} | ${c.camas} | ${c.banos} | ${mxn(dir(c.baseNoche))} | ${mxn(c.precioMesSinServicios)} | ${mxn(c.precioMesConServicios)} |`
+      `| **${c.zona}** | ${c.huespedes} | ${c.recamaras} | ${c.camas} | ${c.banos} | ${mxn(noche(c))} | ${mes(c.precioMesSinServicios)} | ${mes(c.precioMesConServicios)} |`
   )
   .join('\n')}
 
 **Cómo elegir rápido:**
 - **Grupo grande con cada quien su cama** → ${casas.reduce((a, b) => (a.camas / a.huespedes > b.camas / b.huespedes ? a : b)).zona} (mejor proporción camas/persona)
 - **Más personas** → ${casas.reduce((a, b) => (a.huespedes > b.huespedes ? a : b)).zona} (${Math.max(...casas.map((c) => c.huespedes))} personas)
-- **Más económica** → ${casas.reduce((a, b) => (a.baseNoche < b.baseNoche ? a : b)).zona}
+- **Más económica** → ${casas.reduce((a, b) => (noche(a) < noche(b) ? a : b)).zona}
 - **Quien no puede subir escaleras** → Almendros (recámara en planta baja)
-- **Convivencia / fin de semana** → Cantera (palapa, asador, barra) o Lomas (alberca, asador)
+- **Convivencia / fin de semana** → Cantera (palapa, asador, barra) o Almendros (alberca)
 - **Viaje de trabajo al centro** → Acacias (céntrica)
 
 ---
@@ -78,9 +82,9 @@ ${casas
     (c) => `### ${c.zona} — ${c.nombre}
 
 - **Capacidad:** ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas · ${c.banos} baños
-- **Precio por noche:** ${mxn(dir(c.baseNoche))} entre semana · ${mxn(dir(c.baseFinde))} fin de semana
-- **En Airbnb cuesta:** ${mxn(air(c.baseNoche))} — o sea que directo se ahorra ${mxn(air(c.baseNoche) - dir(c.baseNoche))} por noche
-- **Por mes:** ${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas, internet)
+- **Precio por noche:** ${mxn(noche(c))} entre semana · ${mxn(finde(c))} fin de semana
+- **En Airbnb:** ${c.airbnbId ? `cuesta ${mxn(air(c.baseNoche))} — o sea que directo se ahorra ${mxn(air(c.baseNoche) - dir(c.baseNoche))} por noche` : 'no está publicada; solo se renta directo'}
+- **Por mes:** ${c.precioMesSinServicios ? `${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas, internet)` : 'se cotiza por WhatsApp'}
 - **Destaca por:** ${c.destacados.join(', ')}
 - **Ficha:** ${SITIO}/casas/${c.slug}/
 
@@ -160,7 +164,7 @@ calendario de Airbnb). El sitio calcula solo:
 
 **Decisiones de diseño que NO hay que deshacer:**
 - Los precios se muestran **finales, con IVA incluido**, no "+ IVA". Con "+ IVA" el
-  precio directo quedaba por encima del de Airbnb en las cinco casas y se caía el
+  precio directo quedaba por encima del de Airbnb en todas las casas y se caía el
   único argumento del sitio.
 - En escritorio el video es fondo de todo el hero con el texto encima; en celular
   se apila (video arriba, texto abajo) porque ahí el texto encima tapaba el video.
@@ -210,8 +214,8 @@ Lo que sí se busca: "casas amuebladas en renta torreon", "airbnb torreon",
 
 ## Pendientes
 
-- [ ] **Dominio homeexpress.mx** — está libre, hay que comprarlo (~$450-700/año).
-      Al comprarlo: \`SITIO=https://homeexpress.mx node build.mjs\`
+- [ ] **Dominio** — ya no se usa homeexpress.mx (el negocio ahora se llama Hostalia); falta escoger y comprar el dominio nuevo.
+      Al comprarlo: \`SITIO=https://<dominio> node build.mjs\`
 - [ ] **Secret \`DEEPSEEK_API_KEY\`** en el repo para que el blog corra solo.
 - [ ] **Ajustar precios de Airbnb** antes del 15 de septiembre de 2026.
 - [ ] **Fotos**: las actuales son capturas de un video, verticales y con algo de
