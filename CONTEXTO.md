@@ -11,7 +11,7 @@ en Airbnb con 84 reseñas y 4.9 de calificación.
 Reservando directo sale más barato porque no se paga la comisión de plataforma.
 
 **Sitio:** https://hostalia.com.mx
-**WhatsApp:** 870 148 4216
+**WhatsApp:** 871 263 8082
 
 ---
 
