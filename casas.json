@@ -193,5 +193,55 @@
       "precioMesSinServicios": 27000,
       "precioMesConServicios": 30000
     }
+  ],
+  "clientes": [
+    {
+      "nombre": "Pemex",
+      "logo": "pemex.svg"
+    },
+    {
+      "nombre": "Cemex",
+      "logo": "cemex.svg"
+    },
+    {
+      "nombre": "Caterpillar",
+      "logo": "caterpillar.svg"
+    },
+    {
+      "nombre": "John Deere",
+      "logo": "johndeere.svg"
+    },
+    {
+      "nombre": "Grupo Lala",
+      "logo": "lala.svg"
+    },
+    {
+      "nombre": "Sigma Alimentos",
+      "logo": "sigma.png"
+    },
+    {
+      "nombre": "Truper",
+      "logo": "truper.svg"
+    },
+    {
+      "nombre": "Lincoln Electric",
+      "logo": "lincoln.png"
+    },
+    {
+      "nombre": "Sumitomo Electric",
+      "logo": "sumitomo.svg"
+    },
+    {
+      "nombre": "Essex",
+      "logo": "essex.svg"
+    },
+    {
+      "nombre": "Yura",
+      "logo": "yura.png"
+    },
+    {
+      "nombre": "Chilchota",
+      "logo": "chilchota.png"
+    }
   ]
 }
