@@ -66,10 +66,10 @@ En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industri
 - **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
 - **En Airbnb:** no está publicada; solo se renta directo
 - **Por mes:** se cotiza por WhatsApp
-- **Destaca por:** 12 personas, 7 camas, Cocina con barra de granito, Clima
+- **Destaca por:** 12 personas, 7 camas, Cerca de Mieleras y Ferropuerto, Junto a Blvd. Revolución, Ideal para cuadrillas de trabajo
 - **Ficha:** https://hostalia.com.mx/casas/provitec/
 
-Para grupos grandes: 12 personas en 3 recámaras con 7 camas, sala amplia y cocina equipada con barra de granito.
+Pensada para cuadrillas y personal de planta: 12 personas en 3 recámaras con 7 camas. Está en Provitec, junto al Blvd. Revolución por el Colegio Cervantes, del lado oriente de Torreón: cerca de la zona industrial de Montebello y con salida directa a la carretera a Mieleras, donde están el Parque Industrial Ferropuerto (Caterpillar, John Deere, Lincoln Electric, Essex, Yura) y los parques nuevos de la zona. Sala amplia y cocina equipada con barra de granito. Facturamos.
 
 ### Almendros — Casa Almendros
 

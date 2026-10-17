@@ -75,7 +75,7 @@
     {
       "slug": "provitec",
       "nombre": "Casa Provitec",
-      "titulo": "Casa para 12 personas en Provitec",
+      "titulo": "Casa para 12 personas cerca de la zona industrial de Mieleras",
       "zona": "Provitec",
       "huespedes": 12,
       "recamaras": 3,
@@ -83,12 +83,12 @@
       "precioNoche": 1750,
       "precioFinde": 1750,
       "destacados": [
-        "12 personas",
-        "7 camas",
-        "Cocina con barra de granito",
-        "Clima"
+        "12 personas, 7 camas",
+        "Cerca de Mieleras y Ferropuerto",
+        "Junto a Blvd. Revolución",
+        "Ideal para cuadrillas de trabajo"
       ],
-      "resumen": "Para grupos grandes: 12 personas en 3 recámaras con 7 camas, sala amplia y cocina equipada con barra de granito.",
+      "resumen": "Pensada para cuadrillas y personal de planta: 12 personas en 3 recámaras con 7 camas. Está en Provitec, junto al Blvd. Revolución por el Colegio Cervantes, del lado oriente de Torreón: cerca de la zona industrial de Montebello y con salida directa a la carretera a Mieleras, donde están el Parque Industrial Ferropuerto (Caterpillar, John Deere, Lincoln Electric, Essex, Yura) y los parques nuevos de la zona. Sala amplia y cocina equipada con barra de granito. Facturamos.",
       "fotos": [
         "provitec-portada",
         "provitec-sala",
