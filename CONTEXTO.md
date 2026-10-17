@@ -21,7 +21,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 |---|---|---|---|---|---|---|---|
 | **Viñedos** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
 | **Zona Galerías** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
-| **Provitec** | 12 | 3 | 7 | — | $1,750 | se cotiza | se cotiza |
+| **Provitec** | 12 | 4 | 7 | — | $1,750 | se cotiza | se cotiza |
 | **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
 | **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $30,000 | $33,000 |
 | **Cantera** | 10 | 3 | 5 | 2.5 | $1,340 | $27,000 | $30,000 |
@@ -62,14 +62,14 @@ En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industri
 
 ### Provitec — Casa Provitec
 
-- **Capacidad:** 12 personas · 3 recámaras · 7 camas
+- **Capacidad:** 12 personas · 4 recámaras · 7 camas
 - **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
 - **En Airbnb:** no está publicada; solo se renta directo
 - **Por mes:** se cotiza por WhatsApp
 - **Destaca por:** 12 personas, 7 camas, Cerca de Mieleras y Ferropuerto, Junto a Blvd. Revolución, Ideal para cuadrillas de trabajo
 - **Ficha:** https://hostalia.com.mx/casas/provitec/
 
-Para cuadrillas y personal de planta: 12 personas en 3 recámaras con 7 camas. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.
+Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.
 
 ### Almendros — Casa Almendros
 
