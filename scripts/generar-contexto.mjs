@@ -61,7 +61,7 @@ ${casas
   .sort((a, b) => noche(b) - noche(a))
   .map(
     (c) =>
-      `| **${c.zona}** | ${c.huespedes} | ${c.recamaras} | ${c.camas} | ${c.banos} | ${mxn(noche(c))} | ${mes(c.precioMesSinServicios)} | ${mes(c.precioMesConServicios)} |`
+      `| **${c.zona}** | ${c.huespedes} | ${c.recamaras} | ${c.camas} | ${c.banos ?? '—'} | ${mxn(noche(c))} | ${mes(c.precioMesSinServicios)} | ${mes(c.precioMesConServicios)} |`
   )
   .join('\n')}
 
@@ -81,7 +81,7 @@ ${casas
   .map(
     (c) => `### ${c.zona} — ${c.nombre}
 
-- **Capacidad:** ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas · ${c.banos} baños
+- **Capacidad:** ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas${c.banos ? ` · ${c.banos} baños` : ''}
 - **Precio por noche:** ${mxn(noche(c))} entre semana · ${mxn(finde(c))} fin de semana
 - **En Airbnb:** ${c.airbnbId ? `cuesta ${mxn(air(c.baseNoche))} — o sea que directo se ahorra ${mxn(air(c.baseNoche) - dir(c.baseNoche))} por noche` : 'no está publicada; solo se renta directo'}
 - **Por mes:** ${c.precioMesSinServicios ? `${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas, internet)` : 'se cotiza por WhatsApp'}

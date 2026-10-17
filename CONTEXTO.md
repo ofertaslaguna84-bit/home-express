@@ -5,7 +5,7 @@
 
 ## Qué es el negocio
 
-Hostalia renta 5 casas **propias** amuebladas en Torreón, Coahuila.
+Hostalia renta 6 casas **propias** amuebladas en Torreón, Coahuila.
 No es portal ni intermediario: son casas del mismo dueño, que también las publica
 en Airbnb con 84 reseñas y 4.9 de calificación.
 Reservando directo sale más barato porque no se paga la comisión de plataforma.
@@ -19,8 +19,9 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 | Casa | Personas | Recámaras | Camas | Baños | Por noche | Mes sin serv. | Mes con serv. |
 |---|---|---|---|---|---|---|---|
-| **Zona Galerías** | 10 | 3 | 5 | 2.5 | $1,900 | se cotiza | se cotiza |
-| **Viñedos** | 10 | 3 | 5 | 2.5 | $1,740 | se cotiza | se cotiza |
+| **Viñedos** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
+| **Zona Galerías** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
+| **Provitec** | 12 | 3 | 7 | — | $1,750 | se cotiza | se cotiza |
 | **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
 | **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $30,000 | $33,000 |
 | **Cantera** | 10 | 3 | 5 | 2.5 | $1,340 | $27,000 | $30,000 |
@@ -40,7 +41,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 ### Viñedos — Casa Leones
 
 - **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
-- **Precio por noche:** $1,740 entre semana · $1,740 fin de semana
+- **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
 - **En Airbnb:** no está publicada; solo se renta directo
 - **Por mes:** se cotiza por WhatsApp
 - **Destaca por:** Alberca y asador, Lavadora y secadora, Clima en toda la casa, Patio con pasto
@@ -51,13 +52,24 @@ En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavado
 ### Zona Galerías — Casa Linces
 
 - **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
-- **Precio por noche:** $1,900 entre semana · $1,900 fin de semana
+- **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
 - **En Airbnb:** no está publicada; solo se renta directo
 - **Por mes:** se cotiza por WhatsApp
 - **Destaca por:** Alberca del fraccionamiento, Privada con seguridad, Clima, lavadora y secadora, Cochera para 2 autos
 - **Ficha:** https://hostalia.com.mx/casas/linces/
 
 En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento.
+
+### Provitec — Casa Provitec
+
+- **Capacidad:** 12 personas · 3 recámaras · 7 camas
+- **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** 12 personas, 7 camas, Cocina con barra de granito, Clima
+- **Ficha:** https://hostalia.com.mx/casas/provitec/
+
+Para grupos grandes: 12 personas en 3 recámaras con 7 camas, sala amplia y cocina equipada con barra de granito.
 
 ### Almendros — Casa Almendros
 

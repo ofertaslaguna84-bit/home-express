@@ -27,8 +27,8 @@
       "recamaras": 3,
       "camas": 5,
       "banos": 2.5,
-      "precioNoche": 1740,
-      "precioFinde": 1740,
+      "precioNoche": 1750,
+      "precioFinde": 1750,
       "destacados": [
         "Alberca y asador",
         "Lavadora y secadora",
@@ -54,8 +54,8 @@
       "recamaras": 3,
       "camas": 5,
       "banos": 2.5,
-      "precioNoche": 1900,
-      "precioFinde": 1900,
+      "precioNoche": 1750,
+      "precioFinde": 1750,
       "destacados": [
         "Alberca del fraccionamiento",
         "Privada con seguridad",
@@ -70,6 +70,33 @@
         "linces-recamara_01",
         "linces-alberca",
         "linces-fachada"
+      ]
+    },
+    {
+      "slug": "provitec",
+      "nombre": "Casa Provitec",
+      "titulo": "Casa para 12 personas en Provitec",
+      "zona": "Provitec",
+      "huespedes": 12,
+      "recamaras": 3,
+      "camas": 7,
+      "precioNoche": 1750,
+      "precioFinde": 1750,
+      "destacados": [
+        "12 personas",
+        "7 camas",
+        "Cocina con barra de granito",
+        "Clima"
+      ],
+      "resumen": "Para grupos grandes: 12 personas en 3 recámaras con 7 camas, sala amplia y cocina equipada con barra de granito.",
+      "fotos": [
+        "provitec-portada",
+        "provitec-sala",
+        "provitec-cocina",
+        "provitec-recamara_01",
+        "provitec-recamara_02",
+        "provitec-recamara_03",
+        "provitec-recamara_04"
       ]
     },
     {

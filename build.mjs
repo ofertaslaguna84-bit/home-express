@@ -349,7 +349,7 @@ function tarjeta(c) {
       <div class="casa-specs">
         <span class="spec">${c.recamaras} recámaras</span>
         <span class="spec">${c.camas} camas</span>
-        <span class="spec">${c.banos} baños</span>
+        ${c.banos ? `<span class="spec">${c.banos} baños</span>` : ''}
       </div>
       <p>${esc(c.resumen)}</p>
       <div class="precio-box">
@@ -594,7 +594,7 @@ function paginaCasa(c) {
   const airF = enAirbnb(c) ? precioAirbnb(c.baseFinde) : null;
   const dirF = finde(c);
   const titulo = `${c.nombre} — ${c.titulo} en Torreón | ${marca.nombre}`;
-  const desc = `${c.resumen} ${c.recamaras} recámaras, ${c.camas} camas, ${c.banos} baños. Desde ${mxn(dir)} la noche reservando directo. Facturamos.`;
+  const desc = `${c.resumen} ${c.recamaras} recámaras, ${c.camas} camas${c.banos ? `, ${c.banos} baños` : ''}. Desde ${mxn(dir)} la noche reservando directo. Facturamos.`;
 
   const faqsCasa = [
     {
@@ -603,7 +603,7 @@ function paginaCasa(c) {
     },
     {
       q: `¿Cuántas personas caben en ${c.nombre}?`,
-      a: `Hasta ${c.huespedes} personas, en ${c.recamaras} recámaras con ${c.camas} camas y ${c.banos} baños. Si son más, tenemos otras casas — la más grande recibe 12.`,
+      a: `Hasta ${c.huespedes} personas, en ${c.recamaras} recámaras con ${c.camas} camas${c.banos ? ` y ${c.banos} baños` : ''}. Si son más, tenemos otras casas — la más grande recibe 12.`,
     },
     ...FAQS.slice(0, 4),
   ];
@@ -625,7 +625,7 @@ function paginaCasa(c) {
           image: c.fotos.map((f) => `${SITE}/img/${f}.jpg`),
           occupancy: { '@type': 'QuantitativeValue', maxValue: c.huespedes, unitText: 'personas' },
           numberOfBedrooms: c.recamaras,
-          numberOfBathroomsTotal: c.banos,
+          ...(c.banos ? { numberOfBathroomsTotal: c.banos } : {}),
           numberOfBeds: c.camas,
           address: { '@type': 'PostalAddress', addressLocality: marca.ciudad, addressRegion: marca.estado, addressCountry: 'MX' },
           amenityFeature: c.destacados.map((d) => ({ '@type': 'LocationFeatureSpecification', name: d, value: true })),
@@ -704,7 +704,7 @@ function paginaCasa(c) {
             <div class="dato"><span>Huéspedes</span><b>hasta ${c.huespedes}</b></div>
             <div class="dato"><span>Recámaras</span><b>${c.recamaras}</b></div>
             <div class="dato"><span>Camas</span><b>${c.camas}</b></div>
-            <div class="dato"><span>Baños</span><b>${c.banos}</b></div>
+            ${c.banos ? `<div class="dato"><span>Baños</span><b>${c.banos}</b></div>` : ''}
             <div class="dato"><span>Fin de semana</span><b>${mxn(dirF)}${IVA_NOTA}</b></div>
             ${c.precioMesSinServicios ? `<div class="dato"><span>Por mes, sin servicios</span><b>${mxn(c.precioMesSinServicios)}</b></div>
             <div class="dato"><span>Por mes, con servicios</span><b>${mxn(c.precioMesConServicios)}</b></div>` : ''}
@@ -1149,7 +1149,7 @@ ${casas
   .map(
     (c) => `### ${c.nombre} — ${c.zona}
 - Página: ${SITE}/casas/${c.slug}/
-- Capacidad: ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas · ${c.banos} baños
+- Capacidad: ${c.huespedes} personas · ${c.recamaras} recámaras · ${c.camas} camas${c.banos ? ` · ${c.banos} baños` : ''}
 - Entre semana: ${mxn(noche(c))} directo${enAirbnb(c) ? ` (${mxn(precioAirbnb(c.baseNoche))} en Airbnb)` : ''}
 - Fin de semana: ${mxn(finde(c))} directo${enAirbnb(c) ? ` (${mxn(precioAirbnb(c.baseFinde))} en Airbnb)` : ''}
 - Por mes: ${c.precioMesSinServicios ? `${mxn(c.precioMesSinServicios)} sin servicios · ${mxn(c.precioMesConServicios)} con servicios (agua, luz, gas e internet)` : 'se cotiza por WhatsApp'}
