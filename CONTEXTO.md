@@ -20,7 +20,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 | Casa | Personas | Recámaras | Camas | Baños | Por noche | Mes sin serv. | Mes con serv. |
 |---|---|---|---|---|---|---|---|
 | **Viñedos** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
-| **Zona Galerías** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
+| **Los Viñedos** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
 | **Provitec** | 12 | 4 | 7 | — | $1,750 | se cotiza | se cotiza |
 | **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
 | **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $30,000 | $33,000 |
@@ -49,7 +49,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 
 En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.
 
-### Zona Galerías — Casa Linces
+### Los Viñedos — Casa Linces
 
 - **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
