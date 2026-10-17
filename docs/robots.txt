@@ -13,7 +13,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://ofertaslaguna84-bit.github.io/home-express/sitemap.xml
+Sitemap: https://hostalia.com.mx/sitemap.xml
 
 # Índice para asistentes de IA
-# https://ofertaslaguna84-bit.github.io/home-express/llms.txt
+# https://hostalia.com.mx/llms.txt

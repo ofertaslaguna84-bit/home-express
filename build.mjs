@@ -14,12 +14,10 @@ import { fileURLToPath } from 'node:url';
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'docs'); // GitHub Pages sirve desde /docs
 /**
- * Dominio del sitio. Mientras no haya dominio propio se publica en la URL de
- * GitHub Pages, y los canonical/sitemap/llms apuntan ahí para que no queden
- * señalando a un dominio que no responde.
- * Al comprar el dominio: SITIO=https://<dominio> node build.mjs
+ * Dominio del sitio: va fijo aquí (no solo en SITIO) para que el workflow del blog,
+ * que reconstruye sin variables, no borre el CNAME. SITIO lo sobrescribe para pruebas.
  */
-const SITE = (process.env.SITIO || 'https://ofertaslaguna84-bit.github.io/home-express').replace(/\/$/, '');
+const SITE = (process.env.SITIO || 'https://hostalia.com.mx').replace(/\/$/, '');
 const USA_DOMINIO_PROPIO = !SITE.includes('github.io');
 
 const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));

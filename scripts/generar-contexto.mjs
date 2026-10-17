@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const { marca, casas } = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
-const SITIO = 'https://ofertaslaguna84-bit.github.io/home-express';
+const SITIO = 'https://hostalia.com.mx';
 
 const mxn = (n) => `$${Number(n).toLocaleString('es-MX')}`;
 const air = (b) => Math.round(b / (1 - marca.comisionAirbnb) / 10) * 10;

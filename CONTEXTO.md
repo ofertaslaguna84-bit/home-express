@@ -10,7 +10,7 @@ No es portal ni intermediario: son casas del mismo dueño, que también las publ
 en Airbnb con 84 reseñas y 4.9 de calificación.
 Reservando directo sale más barato porque no se paga la comisión de plataforma.
 
-**Sitio:** https://ofertaslaguna84-bit.github.io/home-express
+**Sitio:** https://hostalia.com.mx
 **WhatsApp:** 870 148 4216
 
 ---
@@ -43,7 +43,7 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 - **En Airbnb:** no está publicada; solo se renta directo
 - **Por mes:** se cotiza por WhatsApp
 - **Destaca por:** Alberca y asador, Lavadora y secadora, Clima en toda la casa, Patio con pasto
-- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/leones/
+- **Ficha:** https://hostalia.com.mx/casas/leones/
 
 En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.
 
@@ -54,7 +54,7 @@ En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavado
 - **En Airbnb:** cuesta $1,900 — o sea que directo se ahorra $190 por noche
 - **Por mes:** $33,000 sin servicios · $36,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** 12 personas, Recámara en planta baja, 2 baños y medio, Alberca
-- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/almendros/
+- **Ficha:** https://hostalia.com.mx/casas/almendros/
 
 La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.
 
@@ -65,7 +65,7 @@ La de mayor capacidad y la única con recámara en planta baja, sin escaleras. D
 - **En Airbnb:** cuesta $1,850 — o sea que directo se ahorra $180 por noche
 - **Por mes:** $30,000 sin servicios · $33,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Ubicación céntrica, Zona privada, Clima, 11 personas
-- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/acacia/
+- **Ficha:** https://hostalia.com.mx/casas/acacia/
 
 La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
 
@@ -76,7 +76,7 @@ La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden qui
 - **En Airbnb:** cuesta $1,490 — o sea que directo se ahorra $150 por noche
 - **Por mes:** $27,000 sin servicios · $30,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Palapa, Asador, Barra, Clima en toda la casa
-- **Ficha:** https://ofertaslaguna84-bit.github.io/home-express/casas/cantera/
+- **Ficha:** https://hostalia.com.mx/casas/cantera/
 
 Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.
 
@@ -133,7 +133,7 @@ Palapa, asador y barra en el patio. Es la más económica de todas y la que mejo
 
 ## El sitio web
 
-**https://ofertaslaguna84-bit.github.io/home-express** — publicado en GitHub Pages desde el repo `ofertaslaguna84-bit/home-express`.
+**https://hostalia.com.mx** — publicado en GitHub Pages desde el repo `ofertaslaguna84-bit/home-express`.
 
 Es un sitio estático generado por `build.mjs` desde `casas.json`. Todo sale de esa
 única fuente: el precio de la tarjeta, el de los datos estructurados y el del
