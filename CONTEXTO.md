@@ -76,10 +76,10 @@ La de mayor capacidad y la única con recámara en planta baja, sin escaleras. D
 - **Precio por noche:** $1,670 entre semana · $1,760 fin de semana
 - **En Airbnb:** cuesta $1,850 — o sea que directo se ahorra $180 por noche
 - **Por mes:** $30,000 sin servicios · $33,000 con servicios (agua, luz, gas, internet)
-- **Destaca por:** Ubicación céntrica, Zona privada, Clima, 11 personas
+- **Destaca por:** Alberca privada, Ubicación céntrica, Zona privada, Clima
 - **Ficha:** https://hostalia.com.mx/casas/acacia/
 
-La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
+La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
 
 ### Cantera — Casa Cantera
 

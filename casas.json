@@ -106,7 +106,7 @@
     {
       "slug": "acacia",
       "nombre": "Casa Acacias",
-      "titulo": "Casa céntrica en zona privada para 11 personas",
+      "titulo": "Casa céntrica con alberca privada para 11 personas",
       "zona": "Acacias",
       "huespedes": 11,
       "recamaras": 3,
@@ -117,13 +117,14 @@
       "precioMes": 30000,
       "airbnbId": "1717009568372459813",
       "destacados": [
+        "Alberca privada",
         "Ubicación céntrica",
         "Zona privada",
-        "Clima",
-        "11 personas"
+        "Clima"
       ],
-      "resumen": "La mejor ubicada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.",
+      "resumen": "La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.",
       "fotos": [
+        "acacia-alberca",
         "acacia-portada",
         "acacia-comedor",
         "acacia-fachada",
