@@ -43,7 +43,8 @@
         "leones-recamara_01",
         "leones-recamara_02",
         "leones-asador"
-      ]
+      ],
+      "m2": 230
     },
     {
       "slug": "linces",
@@ -70,7 +71,8 @@
         "linces-recamara_01",
         "linces-alberca",
         "linces-fachada"
-      ]
+      ],
+      "m2": 230
     },
     {
       "slug": "provitec",
@@ -84,11 +86,11 @@
       "precioFinde": 1750,
       "destacados": [
         "12 personas, 7 camas",
+        "Recámara en planta baja",
         "Cerca de Mieleras y Ferropuerto",
-        "Junto a Blvd. Revolución",
-        "Ideal para cuadrillas de trabajo"
+        "Junto a Blvd. Revolución"
       ],
-      "resumen": "Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.",
+      "resumen": "Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.",
       "fotos": [
         "provitec-portada",
         "provitec-sala",
@@ -97,7 +99,8 @@
         "provitec-recamara_02",
         "provitec-recamara_03",
         "provitec-recamara_04"
-      ]
+      ],
+      "m2": 230
     },
     {
       "slug": "almendros",
@@ -128,7 +131,8 @@
         "almendros-patio"
       ],
       "precioMesSinServicios": 33000,
-      "precioMesConServicios": 36000
+      "precioMesConServicios": 36000,
+      "m2": 180
     },
     {
       "slug": "acacia",
@@ -160,7 +164,8 @@
         "acacia-recamara_01"
       ],
       "precioMesSinServicios": 30000,
-      "precioMesConServicios": 33000
+      "precioMesConServicios": 33000,
+      "m2": 189
     },
     {
       "slug": "cantera",
@@ -191,7 +196,8 @@
         "cantera-patio"
       ],
       "precioMesSinServicios": 27000,
-      "precioMesConServicios": 30000
+      "precioMesConServicios": 30000,
+      "m2": 150
     }
   ],
   "clientes": [

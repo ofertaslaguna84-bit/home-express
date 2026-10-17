@@ -66,10 +66,10 @@ En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industri
 - **Precio por noche:** $1,750 entre semana · $1,750 fin de semana
 - **En Airbnb:** no está publicada; solo se renta directo
 - **Por mes:** se cotiza por WhatsApp
-- **Destaca por:** 12 personas, 7 camas, Cerca de Mieleras y Ferropuerto, Junto a Blvd. Revolución, Ideal para cuadrillas de trabajo
+- **Destaca por:** 12 personas, 7 camas, Recámara en planta baja, Cerca de Mieleras y Ferropuerto, Junto a Blvd. Revolución
 - **Ficha:** https://hostalia.com.mx/casas/provitec/
 
-Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.
+Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.
 
 ### Almendros — Casa Almendros
 
