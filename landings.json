@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "hospedaje-para-empresas-torreon",
+    "menu": "Empresas",
+    "titulo": "Hospedaje para empresas y trabajadores en Torreón, con factura",
+    "desc": "Casas completas para cuadrillas, técnicos y personal foráneo en Torreón. De 10 a 12 personas por casa, precio por casa y no por persona, CFDI a nombre de tu empresa. Desde 2 noches hasta 6 meses.",
+    "eyebrow": "Hospedaje corporativo en Torreón",
+    "h1": "Hospedaje para tu personal en Torreón, <em>con factura</em>.",
+    "lead": "Casas completas para cuadrillas, técnicos, auditores y personal de planta. Todo el equipo bajo el mismo techo, con cocina, lavadora y clima, y un solo CFDI a nombre de tu empresa.",
+    "wa": "Hola Hostalia, necesito hospedaje para personal de mi empresa en Torreón. ¿Me pasan disponibilidad y precio con factura?",
+    "casas": ["leones", "linces", "provitec", "almendros", "acacia", "cantera"],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "¿Por qué una casa y no un hotel para tu personal?",
+        "html": "<p>Cuando llegan 8, 10 o 12 personas por un proyecto, el hotel se cobra por cuarto y por noche, y cada comida se paga aparte. En una casa de Hostalia pagas <strong>un precio por la casa completa</strong>, no por persona, y el equipo cocina, lava su ropa y tiene sala y comedor para juntas.</p><ul><li><strong>Precio por casa:</strong> desde $1,750 la noche por casa completa para 10 o 12 personas.</li><li><strong>Factura CFDI</strong> a nombre de la razón social de tu empresa.</li><li><strong>Estancias de 2 noches a 6 meses</strong>, con mejor tarifa por semana y por mes.</li><li><strong>Equipadas:</strong> clima, WiFi, cocina, lavadora, ropa de cama y toallas.</li><li><strong>Contrato de hospedaje</strong> por escrito con fechas, monto y reglas.</li></ul>"
+      },
+      {
+        "h2": "Para quién es",
+        "html": "<p>Trabajamos con empresas que traen gente a La Laguna por temporadas: <strong>arranques y ampliaciones de planta</strong>, instalación y mantenimiento de maquinaria, cuadrillas de construcción de naves industriales, auditorías, capacitaciones y personal que rota cada semana. La mayoría de nuestras casas están del <strong>lado oriente de Torreón</strong>, cerca de la zona industrial de Mieleras, Ferropuerto y el Parque Industrial Oriente.</p>"
+      },
+      {
+        "h2": "Cómo se contrata",
+        "html": "<ul><li><strong>Nos escribes por WhatsApp</strong> con fechas, número de personas y razón social.</li><li><strong>Te mandamos disponibilidad y precio cerrado</strong> por casa, con IVA desglosado si lo necesitas.</li><li><strong>Se aparta con anticipo por transferencia</strong> y firmamos el contrato de hospedaje.</li><li><strong>Tu equipo llega a la casa lista</strong>: camas hechas, toallas y clima funcionando. La factura sale a tus datos fiscales.</li></ul>"
+      }
+    ],
+    "faqs": [
+      { "q": "¿Facturan el hospedaje a nombre de la empresa?", "a": "Sí. Emitimos CFDI a nombre de la razón social que nos indiques. Nos pasas tus datos fiscales al apartar y la factura sale con el IVA desglosado." },
+      { "q": "¿Cuántas personas caben por casa?", "a": "Nuestras casas reciben de 10 a 12 personas cada una. Si tu grupo es más grande, se pueden rentar dos o tres casas para las mismas fechas." },
+      { "q": "¿Cuánto cuesta el hospedaje para trabajadores en Torreón?", "a": "Desde $1,750 por noche por la casa completa, no por persona. Para estancias de semanas o meses hay mejor tarifa; se cotiza por WhatsApp con tus fechas." },
+      { "q": "¿Cuál es la estancia mínima y la máxima?", "a": "La mínima es de 2 noches. No hay máxima: hemos tenido estancias de hasta 6 meses." },
+      { "q": "¿Las casas están cerca de los parques industriales?", "a": "La mayoría están del lado oriente de Torreón, cerca de la carretera a Mieleras, del Parque Industrial Ferropuerto y del Parque Industrial Oriente. Cantera es la más céntrica." },
+      { "q": "¿Cómo se paga?", "a": "Con anticipo por transferencia para apartar y el resto al llegar. Para empresas manejamos transferencia y factura." }
+    ]
+  },
+  {
+    "slug": "hospedaje-cerca-de-mieleras",
+    "menu": "Cerca de Mieleras",
+    "titulo": "Hospedaje cerca de Mieleras y el Parque Industrial Ferropuerto, Torreón",
+    "desc": "Casas completas para personal de planta cerca de la carretera a Mieleras, Ferropuerto, Parque PYMES y Parque Centenario en Torreón. 10 a 12 personas por casa, con factura.",
+    "eyebrow": "Zona industrial Mieleras · Ferropuerto",
+    "h1": "Hospedaje cerca de <em>Mieleras y Ferropuerto</em>.",
+    "lead": "Casas completas del lado oriente de Torreón para técnicos, ingenieros y cuadrillas que trabajan en la zona industrial de Mieleras. Precio por casa, con factura.",
+    "wa": "Hola Hostalia, busco hospedaje para personal que va a trabajar en la zona de Mieleras / Ferropuerto. ¿Qué tienen disponible?",
+    "casas": ["provitec", "leones", "linces", "almendros", "acacia"],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "La zona industrial que más está creciendo en La Laguna",
+        "html": "<p>Sobre la <strong>carretera a Mieleras</strong> están el <strong>Parque Industrial Ferropuerto</strong>, el <strong>Parque Industrial PYMES</strong> y el <strong>Parque Industrial Centenario</strong>, con plantas como Caterpillar, John Deere, Lincoln Electric, Essex, Yura y Sumitomo, y parques nuevos en construcción. Cada arranque, ampliación o paro de mantenimiento trae personal foráneo por semanas o meses.</p><p>Nuestras casas de <strong>Provitec</strong> (junto al Blvd. Revolución), <strong>Viñedos</strong> y la zona de <strong>Galerías</strong> están del lado oriente, con salida rápida hacia Mieleras, sin cruzar el centro.</p>"
+      },
+      {
+        "h2": "Lo que necesita una cuadrilla, resuelto",
+        "html": "<ul><li><strong>10 a 12 personas por casa</strong>, en recámaras con varias camas.</li><li><strong>Cocina equipada</strong> para que coman en casa y bajen el gasto de viáticos.</li><li><strong>Lavadora</strong> para ropa de trabajo en estancias largas.</li><li><strong>Cochera y estacionamiento</strong> para las camionetas de la empresa.</li><li><strong>Clima en toda la casa</strong>: en Torreón no es opcional.</li><li><strong>CFDI</strong> a nombre de la empresa.</li></ul>"
+      }
+    ],
+    "faqs": [
+      { "q": "¿Qué tan cerca están las casas de Mieleras?", "a": "Están del lado oriente de Torreón (Provitec, Viñedos y zona Galerías), con salida hacia la carretera a Mieleras sin pasar por el centro. Te decimos cuál queda mejor según la planta a la que van." },
+      { "q": "¿Pueden hospedar a una cuadrilla completa?", "a": "Sí. Cada casa recibe de 10 a 12 personas y se pueden rentar varias casas para las mismas fechas." },
+      { "q": "¿Facturan?", "a": "Sí, CFDI a nombre de la razón social de la empresa o del contratista." },
+      { "q": "¿Rentan por semana o por mes?", "a": "Sí. Desde 2 noches hasta 6 meses, con mejor tarifa por semana y por mes. Se cotiza por WhatsApp con las fechas del proyecto." }
+    ]
+  },
+  {
+    "slug": "hospedaje-parque-industrial-oriente",
+    "menu": "Parque Industrial Oriente",
+    "titulo": "Hospedaje cerca del Parque Industrial Oriente y Montebello, Torreón",
+    "desc": "Casas amuebladas para personal que trabaja en el Parque Industrial Oriente y la zona de Montebello en Torreón. Casa completa para 10 a 12 personas, con factura.",
+    "eyebrow": "Parque Industrial Oriente · Montebello",
+    "h1": "Hospedaje cerca del <em>Parque Industrial Oriente</em>.",
+    "lead": "Si tu equipo trabaja en el Parque Industrial Oriente o en la zona industrial de Montebello, tenemos casas completas a pocos minutos, con cocina, lavadora, clima y factura.",
+    "wa": "Hola Hostalia, busco hospedaje para personal que trabaja en el Parque Industrial Oriente / Montebello. ¿Qué tienen disponible?",
+    "casas": ["provitec", "linces", "leones", "almendros", "acacia"],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Para las empresas del oriente de Torreón",
+        "html": "<p>En el <strong>Parque Industrial Oriente</strong> operan decenas de empresas (entre ellas Truper, Sigma Alimentos, Pisa Pinturas, Perfiles LM, Ultra Concretos y AB Control), y la zona industrial de <strong>Montebello</strong> sigue sumando naves. Técnicos de proveedores, auditores e instaladores necesitan dónde quedarse cerca y sin perder horas en el tráfico.</p><p>Nuestras casas del lado oriente (<strong>Provitec</strong>, <strong>Viñedos</strong>, <strong>zona Galerías</strong>) quedan a pocos minutos y se rentan completas, desde 2 noches.</p>"
+      },
+      {
+        "h2": "Una casa contra cinco cuartos de hotel",
+        "html": "<p>Para 10 personas en hotel necesitas cinco habitaciones y cada comida fuera. Una casa de Hostalia se cobra completa, desde $1,750 la noche, con cocina, sala para juntas y lavadora. Y la factura sale a nombre de tu empresa.</p>"
+      }
+    ],
+    "faqs": [
+      { "q": "¿Qué casas quedan más cerca del Parque Industrial Oriente?", "a": "Provitec, Viñedos y la zona Galerías, del lado oriente de Torreón. Dinos a qué planta van y te recomendamos la mejor." },
+      { "q": "¿Cuántas personas caben?", "a": "De 10 a 12 personas por casa." },
+      { "q": "¿Dan factura?", "a": "Sí, CFDI a nombre de la empresa." }
+    ]
+  },
+  {
+    "slug": "casas-con-alberca-torreon",
+    "menu": "Casas con alberca",
+    "titulo": "Casas con alberca en renta en Torreón para 10 a 12 personas",
+    "desc": "Renta de casas completas con alberca en Torreón: alberca privada o del fraccionamiento, para grupos de 10 a 12 personas. Por noche, semana o mes, con factura.",
+    "eyebrow": "Casas con alberca en Torreón",
+    "h1": "Casas con <em>alberca</em> en Torreón.",
+    "lead": "Casas completas con alberca privada o alberca del fraccionamiento, para grupos y familias de 10 a 12 personas. Más baratas que en Airbnb reservando directo.",
+    "wa": "Hola Hostalia, busco casa con alberca en Torreón. ¿Qué tienen disponible para mis fechas?",
+    "casas": ["acacia", "almendros", "leones", "linces"],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Alberca privada o del fraccionamiento",
+        "html": "<ul><li><strong>Casa Acacias</strong>: alberca privada en la casa, 11 personas, la mejor ubicada.</li><li><strong>Casa Almendros</strong>: alberca, 12 personas y recámara en planta baja.</li><li><strong>Casa Leones</strong> (Viñedos): alberca y asador del fraccionamiento, 10 personas.</li><li><strong>Casa Linces</strong> (zona Galerías): alberca del fraccionamiento en privada con seguridad, 10 personas.</li></ul><p>Las albercas no son climatizadas. Si vas en una fecha específica, pregúntanos si está en operación.</p>"
+      }
+    ],
+    "faqs": [
+      { "q": "¿Las albercas son privadas?", "a": "Acacias tiene alberca privada. Almendros tiene alberca. Leones y Linces tienen acceso a la alberca del fraccionamiento." },
+      { "q": "¿Son climatizadas?", "a": "No, ninguna es climatizada." },
+      { "q": "¿Cuántas noches mínimo?", "a": "2 noches." }
+    ]
+  }
+]

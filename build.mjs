@@ -22,6 +22,8 @@ const USA_DOMINIO_PROPIO = !SITE.includes('github.io');
 
 const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
 const { marca, casas, clientes = [] } = data;
+/** Páginas de aterrizaje por intención de búsqueda (empresas, zonas industriales, alberca). */
+const landings = existsSync(join(ROOT, 'landings.json')) ? JSON.parse(readFileSync(join(ROOT, 'landings.json'), 'utf8')) : [];
 
 /** Artículos del blog: los escribe scripts/blog-generate.mjs, aquí solo se maquetan. */
 const BLOG_DIR = join(ROOT, 'blog');
@@ -222,7 +224,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .art h2{font-size:26px;margin:38px 0 12px}
 .art h3{font-size:19px;margin:26px 0 8px}
 .art p{font-size:17px;color:#36405A;margin-bottom:17px;line-height:1.75}
-.art ul{margin:0 0 18px 0}
+.art ul{list-style:none;padding:0;margin:0 0 18px 0}
 .art li{font-size:17px;color:#36405A;padding:5px 0 5px 24px;position:relative;line-height:1.7}
 .art li::before{content:"•";position:absolute;left:6px;color:var(--azul);font-weight:900}
 .art table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;display:block;overflow-x:auto}
@@ -292,13 +294,25 @@ const encabezado = (prefijo = '') => `
     <nav class="nav">
       <a href="${prefijo}#casas">Casas</a>
       <a href="${prefijo}#como">Cómo funciona</a>
-      <a href="${prefijo}#empresas">Empresas</a>
+      <a href="${prefijo}hospedaje-para-empresas-torreon/">Empresas</a>
       <a href="${prefijo}#faq">Preguntas</a>
       <a href="${prefijo}blog/">Blog</a>
     </nav>
     <a href="${wa('Hola Hostalia, quiero información de las casas en Torreón')}" class="btn btn-wa">WhatsApp</a>
   </div>
 </header>`;
+
+const seccionClientes = (p = '') =>
+  clientes.length
+    ? `<section class="clientes" aria-label="Clientes">
+  <div class="w">
+    <h2>Empresas que se han hospedado con nosotros</h2>
+    <div class="logos">
+      ${clientes.map((x) => `<div class="logo-cli"><img src="${p}img/clientes/${x.logo}" alt="${esc(x.nombre)}" loading="lazy"></div>`).join('\n      ')}
+    </div>
+  </div>
+</section>`
+    : '';
 
 const barraConfianza = () => `
 <div class="trust"><div class="w"><div class="trust-in">
@@ -320,6 +334,10 @@ const pie = (prefijo = '') => `
         <h4>Casas</h4>
         <ul>${casas.map((c) => `<li><a href="${prefijo}casas/${c.slug}/">${esc(c.nombre)}</a></li>`).join('')}</ul>
       </div>
+      ${landings.length ? `<div>
+        <h4>Hospedaje</h4>
+        <ul>${landings.map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}</ul>
+      </div>` : ''}
       <div>
         <h4>Contacto</h4>
         <ul>
@@ -339,17 +357,17 @@ const pie = (prefijo = '') => `
 <a href="${wa('Hola Hostalia, quiero información de las casas')}" class="btn btn-wa flota" aria-label="Escribir por WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.06 24l1.68-6.16A11.87 11.87 0 010 11.9C0 5.34 5.34 0 11.9 0a11.82 11.82 0 018.42 3.49A11.82 11.82 0 0123.8 11.9c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zm6.6-3.8l.36.22a9.87 9.87 0 005.03 1.38h.01c5.45 0 9.89-4.43 9.89-9.89a9.83 9.83 0 00-2.9-6.99 9.82 9.82 0 00-6.99-2.9c-5.46 0-9.9 4.44-9.9 9.89a9.86 9.86 0 001.51 5.26l.24.38-1 3.65 3.75-.99zm11.15-5.6c-.07-.13-.28-.2-.58-.35-.3-.15-1.77-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.61-.92-2.2-.24-.59-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41z"/></svg></a>
 </body></html>`;
 
-function tarjeta(c) {
+function tarjeta(c, p = '') {
   const air = enAirbnb(c) ? precioAirbnb(c.baseNoche) : null;
   const dir = noche(c);
   return `
   <article class="casa">
-    <a href="casas/${c.slug}/" class="casa-foto">
-      <img src="img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)} en ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="900">
+    <a href="${p}casas/${c.slug}/" class="casa-foto">
+      <img src="${p}img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)} en ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="900">
       <span class="badge">${c.huespedes} personas</span>
     </a>
     <div class="casa-cuerpo">
-      <h3><a href="casas/${c.slug}/">${esc(c.nombre)}</a></h3>
+      <h3><a href="${p}casas/${c.slug}/">${esc(c.nombre)}</a></h3>
       <div class="casa-specs">
         <span class="spec">${c.recamaras} recámaras</span>
         <span class="spec">${c.camas} camas</span>
@@ -362,7 +380,7 @@ function tarjeta(c) {
         ${air ? `<span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>` : ''}
         ${c.precioMesSinServicios ? `<p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">${mxn(c.precioMesSinServicios)}</strong> sin servicios · <strong style="color:var(--marino)">${mxn(c.precioMesConServicios)}</strong> con servicios</p>` : ''}
         <div class="casa-btns">
-          <a href="casas/${c.slug}/" class="btn btn-out">Ver casa</a>
+          <a href="${p}casas/${c.slug}/" class="btn btn-out">Ver casa</a>
           <a href="${wa(`Hola Hostalia, me interesa ${c.nombre} (${c.huespedes} personas). ¿Está disponible?`)}" class="btn btn-nar">Reservar</a>
         </div>
       </div>
@@ -514,14 +532,7 @@ function paginaInicio() {
 
 ${barraConfianza()}
 
-${clientes.length ? `<section class="clientes" aria-label="Clientes">
-  <div class="w">
-    <h2>Empresas que se han hospedado con nosotros</h2>
-    <div class="logos">
-      ${clientes.map((x) => `<div class="logo-cli"><img src="img/clientes/${x.logo}" alt="${esc(x.nombre)}" loading="lazy"></div>`).join('\n      ')}
-    </div>
-  </div>
-</section>` : ''}
+${seccionClientes()}
 
 <section id="casas">
   <div class="w">
@@ -575,7 +586,7 @@ ${clientes.length ? `<section class="clientes" aria-label="Clientes">
         </ul>
       </div>
     </div>
-    <p style="margin-top:26px"><a href="${wa('Hola Hostalia, necesito hospedaje para personal de mi empresa en Torreón. ¿Me pasan precios por mes y con factura?')}" class="btn btn-nar">Cotizar para mi empresa</a></p>
+    <p style="margin-top:26px"><a href="${wa('Hola Hostalia, necesito hospedaje para personal de mi empresa en Torreón. ¿Me pasan precios por mes y con factura?')}" class="btn btn-nar">Cotizar para mi empresa</a> <a href="hospedaje-para-empresas-torreon/" class="btn btn-out">Hospedaje para empresas</a> <a href="hospedaje-cerca-de-mieleras/" class="btn btn-out">Cerca de Mieleras</a></p>
   </div>
 </section>
 
@@ -999,6 +1010,111 @@ ${barraConfianza()}
 
 // ─────────────────────────────────────────────────────────── blog
 
+// ─────────────────────────────────────────────────────────── aterrizaje
+function paginaLanding(l) {
+  const url = `${SITE}/${l.slug}/`;
+  const titulo = `${l.titulo} | ${marca.nombre}`;
+  const lista = l.casas.map((slug) => casas.find((c) => c.slug === slug)).filter(Boolean);
+  const h1Texto = l.h1.replace(/<[^>]+>/g, '');
+  return (
+    cabeza({
+      titulo,
+      desc: l.desc,
+      url,
+      imagen: lista[0].fotos[0],
+      schema: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          url,
+          name: titulo,
+          description: l.desc,
+          inLanguage: 'es-MX',
+          isPartOf: { '@id': `${SITE}/#organizacion` },
+          about: { '@id': `${SITE}/#organizacion` },
+          mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: lista.map((c, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE}/casas/${c.slug}/`,
+              name: `${c.nombre} — ${c.titulo}`,
+            })),
+          },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+            { '@type': 'ListItem', position: 2, name: h1Texto, item: url },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: l.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+        },
+      ],
+    }) +
+    encabezado('../') +
+    `
+<section class="hero-video">
+  <div class="hero-in">
+    <div class="hero-media">
+      <img src="../img/${lista[0].fotos[0]}.jpg" alt="${esc(lista[0].nombre)}" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="cont">
+      <span class="kicker">● ${esc(l.eyebrow)}</span>
+      <h1>${l.h1}</h1>
+      <p class="lead">${esc(l.lead)}</p>
+      <div class="hero-cta">
+        <a href="${wa(l.wa)}" class="btn btn-wa">Cotizar por WhatsApp</a>
+        <a href="#casas" class="btn btn-out">Ver casas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+${barraConfianza()}
+
+${l.clientes ? seccionClientes('../') : ''}
+
+<section>
+  <div class="w"><div class="art">
+    ${l.secciones.map((x) => `<h2>${esc(x.h2)}</h2>\n    ${x.html}`).join('\n    ')}
+  </div></div>
+</section>
+
+<section id="casas" class="sec-crema">
+  <div class="w">
+    <span class="eyebrow">Casas disponibles</span>
+    <h2>${lista.length} casas para ${esc(l.menu.toLowerCase() === 'empresas' ? 'tu equipo' : 'ti')}</h2>
+    <div class="casas">
+      ${lista.map((c) => tarjeta(c, '../')).join('\n')}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <span class="eyebrow">Preguntas frecuentes</span>
+    <h2>Lo que más nos preguntan</h2>
+    ${l.faqs.map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`).join('\n    ')}
+    <p style="margin-top:22px">${landings.filter((o) => o.slug !== l.slug).map((o) => `<a href="../${o.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0">${esc(o.menu)}</a>`).join('')}</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>¿Para cuántas personas y qué fechas?</h2>
+  <p>Escríbenos y te contestamos con disponibilidad y precio cerrado.</p>
+  <a href="${wa(l.wa)}" class="btn btn-wa" style="font-size:16px;padding:15px 30px">Escribir por WhatsApp</a>
+</section>
+` +
+    pie('../')
+  );
+}
+
 function paginaBlogIndice() {
   const titulo = `Blog — renta de casas amuebladas en ${marca.ciudad} | ${marca.nombre}`;
   const desc = `Guías prácticas sobre rentar casa amueblada en ${marca.ciudad}: precios reales, qué revisar antes de contratar, hospedaje para personal de empresa y facturación.`;
@@ -1175,7 +1291,11 @@ ${casas
 
 Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas de obra, técnicos, auditores y personal de planta. Una casa completa para 10 personas sale por debajo de lo que cuestan 5 habitaciones de hotel, incluye cocina para bajar el gasto de alimentos, y se factura a nombre de la empresa. Para estancias por mes hay tarifa especial: se cotiza por WhatsApp.
 
-## Preguntas frecuentes
+${landings.length ? `## Páginas por necesidad
+
+${landings.map((l) => `- [${l.titulo}](${SITE}/${l.slug}/): ${l.desc}`).join('\n')}
+
+` : ''}## Preguntas frecuentes
 
 ${FAQS.map((f) => `- **${f.q}** ${f.a}`).join('\n')}
 
@@ -1198,6 +1318,7 @@ function sitemap() {
   const urls = [
     { loc: `${SITE}/`, pri: '1.0' },
     ...casas.map((c) => ({ loc: `${SITE}/casas/${c.slug}/`, pri: '0.9' })),
+    ...landings.map((l) => ({ loc: `${SITE}/${l.slug}/`, pri: '0.9' })),
     { loc: `${SITE}/asesores/`, pri: '0.8' },
     ...(articulos.length ? [{ loc: `${SITE}/blog/`, pri: '0.8' }] : []),
     ...articulos.map((a) => ({ loc: `${SITE}/blog/${a.slug}/`, pri: '0.7' })),
@@ -1242,6 +1363,7 @@ mkdirSync(OUT, { recursive: true });
 escribir('index.html', paginaInicio());
 for (const c of casas) escribir(`casas/${c.slug}/index.html`, paginaCasa(c));
 escribir('asesores/index.html', paginaAsesores());
+for (const l of landings) escribir(`${l.slug}/index.html`, paginaLanding(l));
 escribir('blog/index.html', paginaBlogIndice());
 for (const a of articulos) escribir(`blog/${a.slug}/index.html`, paginaArticulo(a));
 escribir('llms.txt', llms());
