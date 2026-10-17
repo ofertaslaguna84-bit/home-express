@@ -513,7 +513,7 @@ function paginaInicio() {
   <div class="hero-in">
     <div class="cont">
       <span class="kicker">● ${casas.length} casas en ${esc(marca.ciudad)}, ${esc(marca.estado)}</span>
-      <h1>Casas completas,<br>listas para <em>entrar hoy</em>.</h1>
+      <h1>Casas amuebladas en renta en Torreón, <em>listas para entrar hoy</em>.</h1>
       <p class="lead">De ${PERSONAS} personas, con clima y con factura. Desde 2 noches hasta 6 meses, y más baratas que en Airbnb.</p>
       <div class="hero-cta">
         <a href="#casas" class="btn btn-nar">Ver las ${casas.length} casas</a>
@@ -537,7 +537,7 @@ ${seccionClientes()}
 <section id="casas">
   <div class="w">
     <span class="eyebrow">Nuestras casas</span>
-    <h2>Las ${casas.length} casas, con precio a la vista</h2>
+    <h2>${casas.length} casas amuebladas en renta, con precio a la vista</h2>
     <p class="sub">Todas en Torreón, todas equipadas y con clima. El precio de Airbnb está puesto al lado a propósito: queremos que compares.</p>
     <div class="casas">
       ${casas.map(tarjeta).join('\n')}
@@ -617,7 +617,7 @@ function paginaCasa(c) {
   const dir = noche(c);
   const airF = enAirbnb(c) ? precioAirbnb(c.baseFinde) : null;
   const dirF = finde(c);
-  const titulo = `${c.nombre} — ${c.titulo} en Torreón | ${marca.nombre}`;
+  const titulo = `Casa amueblada en renta en ${c.zona}, Torreón — ${c.nombre}, ${c.huespedes} personas | ${marca.nombre}`;
   const desc = `${c.resumen} ${c.recamaras} recámaras, ${c.camas} camas${c.banos ? `, ${c.banos} baños` : ''}. Desde ${mxn(dir)} la noche reservando directo. Facturamos.`;
 
   const faqsCasa = [

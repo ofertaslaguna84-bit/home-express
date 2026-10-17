@@ -8,7 +8,14 @@
     "h1": "Hospedaje para tu personal en Torreón, <em>con factura</em>.",
     "lead": "Casas completas para cuadrillas, técnicos, auditores y personal de planta. Todo el equipo bajo el mismo techo, con cocina, lavadora y clima, y un solo CFDI a nombre de tu empresa.",
     "wa": "Hola Hostalia, necesito hospedaje para personal de mi empresa en Torreón. ¿Me pasan disponibilidad y precio con factura?",
-    "casas": ["leones", "linces", "provitec", "almendros", "acacia", "cantera"],
+    "casas": [
+      "leones",
+      "linces",
+      "provitec",
+      "almendros",
+      "acacia",
+      "cantera"
+    ],
     "clientes": true,
     "secciones": [
       {
@@ -25,12 +32,81 @@
       }
     ],
     "faqs": [
-      { "q": "¿Facturan el hospedaje a nombre de la empresa?", "a": "Sí. Emitimos CFDI a nombre de la razón social que nos indiques. Nos pasas tus datos fiscales al apartar y la factura sale con el IVA desglosado." },
-      { "q": "¿Cuántas personas caben por casa?", "a": "Nuestras casas reciben de 10 a 12 personas cada una. Si tu grupo es más grande, se pueden rentar dos o tres casas para las mismas fechas." },
-      { "q": "¿Cuánto cuesta el hospedaje para trabajadores en Torreón?", "a": "Desde $1,750 por noche por la casa completa, no por persona. Para estancias de semanas o meses hay mejor tarifa; se cotiza por WhatsApp con tus fechas." },
-      { "q": "¿Cuál es la estancia mínima y la máxima?", "a": "La mínima es de 2 noches. No hay máxima: hemos tenido estancias de hasta 6 meses." },
-      { "q": "¿Las casas están cerca de los parques industriales?", "a": "La mayoría están del lado oriente de Torreón, cerca de la carretera a Mieleras, del Parque Industrial Ferropuerto y del Parque Industrial Oriente. Cantera es la más céntrica." },
-      { "q": "¿Cómo se paga?", "a": "Con anticipo por transferencia para apartar y el resto al llegar. Para empresas manejamos transferencia y factura." }
+      {
+        "q": "¿Facturan el hospedaje a nombre de la empresa?",
+        "a": "Sí. Emitimos CFDI a nombre de la razón social que nos indiques. Nos pasas tus datos fiscales al apartar y la factura sale con el IVA desglosado."
+      },
+      {
+        "q": "¿Cuántas personas caben por casa?",
+        "a": "Nuestras casas reciben de 10 a 12 personas cada una. Si tu grupo es más grande, se pueden rentar dos o tres casas para las mismas fechas."
+      },
+      {
+        "q": "¿Cuánto cuesta el hospedaje para trabajadores en Torreón?",
+        "a": "Desde $1,750 por noche por la casa completa, no por persona. Para estancias de semanas o meses hay mejor tarifa; se cotiza por WhatsApp con tus fechas."
+      },
+      {
+        "q": "¿Cuál es la estancia mínima y la máxima?",
+        "a": "La mínima es de 2 noches. No hay máxima: hemos tenido estancias de hasta 6 meses."
+      },
+      {
+        "q": "¿Las casas están cerca de los parques industriales?",
+        "a": "La mayoría están del lado oriente de Torreón, cerca de la carretera a Mieleras, del Parque Industrial Ferropuerto y del Parque Industrial Oriente. Cantera es la más céntrica."
+      },
+      {
+        "q": "¿Cómo se paga?",
+        "a": "Con anticipo por transferencia para apartar y el resto al llegar. Para empresas manejamos transferencia y factura."
+      }
+    ]
+  },
+  {
+    "slug": "casas-amuebladas-renta-por-mes-torreon",
+    "menu": "Renta por mes",
+    "titulo": "Casas amuebladas en renta por mes en Torreón, con servicios y factura",
+    "desc": "Casas amuebladas completas en renta por mes en Torreón, para 10 a 12 personas. Precio con o sin servicios (agua, luz, gas e internet), contrato y factura. Desde 1 mes hasta 6 meses.",
+    "eyebrow": "Renta mensual en Torreón",
+    "h1": "Casas amuebladas en renta <em>por mes</em> en Torreón.",
+    "lead": "Casas completas y equipadas para estancias de uno a seis meses: llegas con tu maleta y ya. Precio mensual con o sin servicios incluidos, contrato por escrito y factura.",
+    "wa": "Hola Hostalia, busco casa amueblada en renta por mes en Torreón. ¿Qué tienen disponible y en cuánto?",
+    "casas": [
+      "almendros",
+      "acacia",
+      "cantera",
+      "leones",
+      "linces",
+      "provitec"
+    ],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "Qué incluye una casa amueblada por mes",
+        "html": "<p>A diferencia de una casa en renta tradicional, aquí no necesitas comprar muebles, contratar servicios ni firmar un año. La casa está <strong>completa</strong>: camas con ropa de cama, sala, comedor, cocina equipada, lavadora, clima y WiFi.</p><ul><li><strong>Sin servicios:</strong> pagas la renta y los recibos de agua, luz y gas van por tu cuenta.</li><li><strong>Con servicios:</strong> agua, luz, gas e internet incluidos en un solo pago mensual ($3,000 más).</li><li><strong>Contrato por escrito</strong> y <strong>factura CFDI</strong> si la pagas como empresa.</li><li><strong>Desde 1 mes y hasta 6 meses</strong>; también rentamos por noche y por semana.</li></ul>"
+      },
+      {
+        "h2": "Precios por mes",
+        "html": "<ul><li><strong>Casa Almendros</strong> (12 personas): $33,000 sin servicios · $36,000 con servicios.</li><li><strong>Casa Acacias</strong> (11 personas, alberca privada): $30,000 sin servicios · $33,000 con servicios.</li><li><strong>Casa Cantera</strong> (10 personas, asador y palapa): $27,000 sin servicios · $30,000 con servicios.</li><li><strong>Leones, Linces y Provitec</strong> (10 a 12 personas): precio por mes por WhatsApp según fechas.</li></ul><p>Son casas para grupos de 10 a 12 personas: por persona sale bastante más barato que un departamento amueblado o un hotel por mes.</p>"
+      },
+      {
+        "h2": "Para quién es",
+        "html": "<p>Personal de empresas que viene por proyectos de semanas o meses, familias en remodelación o cambio de ciudad, médicos y residentes, y equipos que necesitan estar juntos. La mayoría de las casas están del lado oriente de Torreón (Viñedos, Provitec, zona Galerías), cerca de la zona industrial.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuánto cuesta una casa amueblada en renta por mes en Torreón?",
+        "a": "En Hostalia, de $27,000 a $33,000 al mes sin servicios y de $30,000 a $36,000 con agua, luz, gas e internet incluidos, por casas completas para 10 a 12 personas."
+      },
+      {
+        "q": "¿Cuál es el plazo mínimo?",
+        "a": "Para tarifa mensual, un mes. También rentamos desde 2 noches y por semana."
+      },
+      {
+        "q": "¿Piden aval o depósito?",
+        "a": "Se aparta con anticipo y se firma contrato de hospedaje. Los detalles del depósito se platican por WhatsApp según el plazo."
+      },
+      {
+        "q": "¿Dan factura?",
+        "a": "Sí, CFDI a nombre de la persona o empresa que paga."
+      }
     ]
   },
   {
@@ -42,7 +118,13 @@
     "h1": "Hospedaje cerca de <em>Mieleras y Ferropuerto</em>.",
     "lead": "Casas completas del lado oriente de Torreón para técnicos, ingenieros y cuadrillas que trabajan en la zona industrial de Mieleras. Precio por casa, con factura.",
     "wa": "Hola Hostalia, busco hospedaje para personal que va a trabajar en la zona de Mieleras / Ferropuerto. ¿Qué tienen disponible?",
-    "casas": ["provitec", "leones", "linces", "almendros", "acacia"],
+    "casas": [
+      "provitec",
+      "leones",
+      "linces",
+      "almendros",
+      "acacia"
+    ],
     "clientes": true,
     "secciones": [
       {
@@ -55,10 +137,22 @@
       }
     ],
     "faqs": [
-      { "q": "¿Qué tan cerca están las casas de Mieleras?", "a": "Están del lado oriente de Torreón (Provitec, Viñedos y zona Galerías), con salida hacia la carretera a Mieleras sin pasar por el centro. Te decimos cuál queda mejor según la planta a la que van." },
-      { "q": "¿Pueden hospedar a una cuadrilla completa?", "a": "Sí. Cada casa recibe de 10 a 12 personas y se pueden rentar varias casas para las mismas fechas." },
-      { "q": "¿Facturan?", "a": "Sí, CFDI a nombre de la razón social de la empresa o del contratista." },
-      { "q": "¿Rentan por semana o por mes?", "a": "Sí. Desde 2 noches hasta 6 meses, con mejor tarifa por semana y por mes. Se cotiza por WhatsApp con las fechas del proyecto." }
+      {
+        "q": "¿Qué tan cerca están las casas de Mieleras?",
+        "a": "Están del lado oriente de Torreón (Provitec, Viñedos y zona Galerías), con salida hacia la carretera a Mieleras sin pasar por el centro. Te decimos cuál queda mejor según la planta a la que van."
+      },
+      {
+        "q": "¿Pueden hospedar a una cuadrilla completa?",
+        "a": "Sí. Cada casa recibe de 10 a 12 personas y se pueden rentar varias casas para las mismas fechas."
+      },
+      {
+        "q": "¿Facturan?",
+        "a": "Sí, CFDI a nombre de la razón social de la empresa o del contratista."
+      },
+      {
+        "q": "¿Rentan por semana o por mes?",
+        "a": "Sí. Desde 2 noches hasta 6 meses, con mejor tarifa por semana y por mes. Se cotiza por WhatsApp con las fechas del proyecto."
+      }
     ]
   },
   {
@@ -70,7 +164,13 @@
     "h1": "Hospedaje cerca del <em>Parque Industrial Oriente</em>.",
     "lead": "Si tu equipo trabaja en el Parque Industrial Oriente o en la zona industrial de Montebello, tenemos casas completas a pocos minutos, con cocina, lavadora, clima y factura.",
     "wa": "Hola Hostalia, busco hospedaje para personal que trabaja en el Parque Industrial Oriente / Montebello. ¿Qué tienen disponible?",
-    "casas": ["provitec", "linces", "leones", "almendros", "acacia"],
+    "casas": [
+      "provitec",
+      "linces",
+      "leones",
+      "almendros",
+      "acacia"
+    ],
     "clientes": false,
     "secciones": [
       {
@@ -83,9 +183,18 @@
       }
     ],
     "faqs": [
-      { "q": "¿Qué casas quedan más cerca del Parque Industrial Oriente?", "a": "Provitec, Viñedos y la zona Galerías, del lado oriente de Torreón. Dinos a qué planta van y te recomendamos la mejor." },
-      { "q": "¿Cuántas personas caben?", "a": "De 10 a 12 personas por casa." },
-      { "q": "¿Dan factura?", "a": "Sí, CFDI a nombre de la empresa." }
+      {
+        "q": "¿Qué casas quedan más cerca del Parque Industrial Oriente?",
+        "a": "Provitec, Viñedos y la zona Galerías, del lado oriente de Torreón. Dinos a qué planta van y te recomendamos la mejor."
+      },
+      {
+        "q": "¿Cuántas personas caben?",
+        "a": "De 10 a 12 personas por casa."
+      },
+      {
+        "q": "¿Dan factura?",
+        "a": "Sí, CFDI a nombre de la empresa."
+      }
     ]
   },
   {
@@ -97,7 +206,12 @@
     "h1": "Casas con <em>alberca</em> en Torreón.",
     "lead": "Casas completas con alberca privada o alberca del fraccionamiento, para grupos y familias de 10 a 12 personas. Más baratas que en Airbnb reservando directo.",
     "wa": "Hola Hostalia, busco casa con alberca en Torreón. ¿Qué tienen disponible para mis fechas?",
-    "casas": ["acacia", "almendros", "leones", "linces"],
+    "casas": [
+      "acacia",
+      "almendros",
+      "leones",
+      "linces"
+    ],
     "clientes": false,
     "secciones": [
       {
@@ -106,9 +220,18 @@
       }
     ],
     "faqs": [
-      { "q": "¿Las albercas son privadas?", "a": "Acacias tiene alberca privada. Almendros tiene alberca. Leones y Linces tienen acceso a la alberca del fraccionamiento." },
-      { "q": "¿Son climatizadas?", "a": "No, ninguna es climatizada." },
-      { "q": "¿Cuántas noches mínimo?", "a": "2 noches." }
+      {
+        "q": "¿Las albercas son privadas?",
+        "a": "Acacias tiene alberca privada. Almendros tiene alberca. Leones y Linces tienen acceso a la alberca del fraccionamiento."
+      },
+      {
+        "q": "¿Son climatizadas?",
+        "a": "No, ninguna es climatizada."
+      },
+      {
+        "q": "¿Cuántas noches mínimo?",
+        "a": "2 noches."
+      }
     ]
   }
 ]
