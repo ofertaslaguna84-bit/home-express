@@ -46,6 +46,33 @@
       ]
     },
     {
+      "slug": "linces",
+      "nombre": "Casa Linces",
+      "titulo": "Casa para 10 personas con alberca, cerca de Galerías",
+      "zona": "Zona Galerías",
+      "huespedes": 10,
+      "recamaras": 3,
+      "camas": 5,
+      "banos": 2.5,
+      "precioNoche": 1900,
+      "precioFinde": 1900,
+      "destacados": [
+        "Alberca del fraccionamiento",
+        "Privada con seguridad",
+        "Clima, lavadora y secadora",
+        "Cochera para 2 autos"
+      ],
+      "resumen": "En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento.",
+      "fotos": [
+        "linces-portada",
+        "linces-sala",
+        "linces-cocina",
+        "linces-recamara_01",
+        "linces-alberca",
+        "linces-fachada"
+      ]
+    },
+    {
       "slug": "almendros",
       "nombre": "Casa Almendros",
       "titulo": "Casa para 12 personas con recámara en planta baja",
