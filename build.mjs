@@ -523,7 +523,6 @@ function paginaInicio() {
     </div>
     <div class="hero-media">
       <video autoplay muted loop playsinline preload="metadata" poster="video/poster.jpg" aria-hidden="true">
-        <source src="video/torreon.webm" type="video/webm">
         <source src="video/torreon.mp4" type="video/mp4">
       </video>
     </div>
@@ -828,7 +827,6 @@ function paginaAsesores() {
   <div class="hero-in">
     <div class="hero-media">
       <video autoplay muted loop playsinline preload="metadata" poster="../video/poster.jpg" aria-hidden="true">
-        <source src="../video/torreon.webm" type="video/webm">
         <source src="../video/torreon.mp4" type="video/mp4">
       </video>
     </div>
