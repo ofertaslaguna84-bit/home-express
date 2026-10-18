@@ -113,7 +113,7 @@
       "banos": 2.5,
       "baseNoche": 1600,
       "baseFinde": 1890,
-      "precioMes": 33000,
+      "precioMes": 45000,
       "airbnbId": "1441448938432888814",
       "destacados": [
         "12 personas",
@@ -130,8 +130,8 @@
         "almendros-recamara_pb",
         "almendros-patio"
       ],
-      "precioMesSinServicios": 33000,
-      "precioMesConServicios": 36000,
+      "precioMesSinServicios": 45000,
+      "precioMesConServicios": 48000,
       "m2": 180
     },
     {
@@ -145,7 +145,7 @@
       "banos": 2.5,
       "baseNoche": 1555,
       "baseFinde": 1648,
-      "precioMes": 30000,
+      "precioMes": 45000,
       "airbnbId": "1717009568372459813",
       "destacados": [
         "Alberca privada",
@@ -163,8 +163,8 @@
         "acacia-cocina",
         "acacia-recamara_01"
       ],
-      "precioMesSinServicios": 30000,
-      "precioMesConServicios": 33000,
+      "precioMesSinServicios": 45000,
+      "precioMesConServicios": 48000,
       "m2": 189
     },
     {
@@ -178,7 +178,7 @@
       "banos": 2.5,
       "baseNoche": 1250,
       "baseFinde": 1405,
-      "precioMes": 27000,
+      "precioMes": 35000,
       "airbnbId": "1717013979926833974",
       "destacados": [
         "Palapa",
@@ -195,8 +195,8 @@
         "cantera-recamara_01",
         "cantera-patio"
       ],
-      "precioMesSinServicios": 27000,
-      "precioMesConServicios": 30000,
+      "precioMesSinServicios": 35000,
+      "precioMesConServicios": 38000,
       "m2": 150
     }
   ],

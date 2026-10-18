@@ -1,6 +1,6 @@
 # Hostalia — contexto para responder clientes
 
-> Documento generado desde los datos reales del negocio. Última actualización: 17 de octubre de 2026.
+> Documento generado desde los datos reales del negocio. Última actualización: 18 de octubre de 2026.
 > Si cambian precios o casas: `node scripts/generar-contexto.mjs`
 
 ## Qué es el negocio
@@ -22,9 +22,9 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 | **Viñedos** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
 | **Los Viñedos** | 10 | 3 | 5 | 2.5 | $1,750 | se cotiza | se cotiza |
 | **Provitec** | 12 | 4 | 7 | — | $1,750 | se cotiza | se cotiza |
-| **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $33,000 | $36,000 |
-| **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $30,000 | $33,000 |
-| **Cantera** | 10 | 3 | 5 | 2.5 | $1,340 | $27,000 | $30,000 |
+| **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $45,000 | $48,000 |
+| **Acacias** | 11 | 3 | 6 | 2.5 | $1,670 | $45,000 | $48,000 |
+| **Cantera** | 10 | 3 | 5 | 2.5 | $1,340 | $35,000 | $38,000 |
 
 **Cómo elegir rápido:**
 - **Grupo grande con cada quien su cama** → Almendros (mejor proporción camas/persona)
@@ -76,7 +76,7 @@ Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, u
 - **Capacidad:** 12 personas · 3 recámaras · 8 camas · 2.5 baños
 - **Precio por noche:** $1,710 entre semana · $2,030 fin de semana
 - **En Airbnb:** cuesta $1,900 — o sea que directo se ahorra $190 por noche
-- **Por mes:** $33,000 sin servicios · $36,000 con servicios (agua, luz, gas, internet)
+- **Por mes:** $45,000 sin servicios · $48,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** 12 personas, Recámara en planta baja, 2 baños y medio, Alberca
 - **Ficha:** https://hostalia.com.mx/casas/almendros/
 
@@ -87,7 +87,7 @@ La de mayor capacidad y la única con recámara en planta baja, sin escaleras. D
 - **Capacidad:** 11 personas · 3 recámaras · 6 camas · 2.5 baños
 - **Precio por noche:** $1,670 entre semana · $1,760 fin de semana
 - **En Airbnb:** cuesta $1,850 — o sea que directo se ahorra $180 por noche
-- **Por mes:** $30,000 sin servicios · $33,000 con servicios (agua, luz, gas, internet)
+- **Por mes:** $45,000 sin servicios · $48,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Alberca privada, Ubicación céntrica, Zona privada, Clima
 - **Ficha:** https://hostalia.com.mx/casas/acacia/
 
@@ -98,7 +98,7 @@ La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. 
 - **Capacidad:** 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - **Precio por noche:** $1,340 entre semana · $1,500 fin de semana
 - **En Airbnb:** cuesta $1,490 — o sea que directo se ahorra $150 por noche
-- **Por mes:** $27,000 sin servicios · $30,000 con servicios (agua, luz, gas, internet)
+- **Por mes:** $35,000 sin servicios · $38,000 con servicios (agua, luz, gas, internet)
 - **Destaca por:** Palapa, Asador, Barra, Clima en toda la casa
 - **Ficha:** https://hostalia.com.mx/casas/cantera/
 
