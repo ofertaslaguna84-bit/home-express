@@ -514,7 +514,7 @@ function paginaInicio() {
     <div class="cont">
       <span class="kicker">● ${casas.length} casas en ${esc(marca.ciudad)}, ${esc(marca.estado)}</span>
       <h1>Casas amuebladas en renta en Torreón, <em>listas para entrar hoy</em>.</h1>
-      <p class="lead">De ${PERSONAS} personas, con clima y con factura. Desde 2 noches hasta 6 meses, y más baratas que en Airbnb.</p>
+      <p class="lead">De ${PERSONAS} personas, con clima y con factura. Rentamos de 15 días a 6 meses <strong>sin aval y sin contrato de un año</strong>, o por noche desde 2 noches.</p>
       <div class="hero-cta">
         <a href="#casas" class="btn btn-nar">Ver las ${casas.length} casas</a>
         <a href="${wa('Hola Hostalia, quiero cotizar una casa en Torreón')}" class="btn btn-wa">Cotizar por WhatsApp</a>
