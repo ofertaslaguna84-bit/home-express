@@ -37,6 +37,7 @@
       ],
       "resumen": "En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.",
       "fotos": [
+        "leones-cocina",
         "leones-portada",
         "leones-sala",
         "leones-comedor",
@@ -65,9 +66,9 @@
       ],
       "resumen": "En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento.",
       "fotos": [
+        "linces-cocina",
         "linces-portada",
         "linces-sala",
-        "linces-cocina",
         "linces-recamara_01",
         "linces-alberca",
         "linces-fachada"
@@ -92,10 +93,9 @@
       ],
       "resumen": "Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.",
       "fotos": [
-        "provitec-portada",
+        "provitec-recamara_01",
         "provitec-sala",
         "provitec-cocina",
-        "provitec-recamara_01",
         "provitec-recamara_02",
         "provitec-recamara_03",
         "provitec-recamara_04"
@@ -123,6 +123,7 @@
       ],
       "resumen": "La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.",
       "fotos": [
+        "almendros-comedor",
         "almendros-portada",
         "almendros-sala",
         "almendros-fachada",
@@ -155,9 +156,9 @@
       ],
       "resumen": "La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.",
       "fotos": [
+        "acacia-comedor",
         "acacia-alberca",
         "acacia-portada",
-        "acacia-comedor",
         "acacia-fachada",
         "acacia-sala",
         "acacia-cocina",
@@ -188,11 +189,11 @@
       ],
       "resumen": "Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.",
       "fotos": [
+        "cantera-recamara_01",
         "cantera-portada",
         "cantera-asador",
         "cantera-fachada",
         "cantera-cocina",
-        "cantera-recamara_01",
         "cantera-patio"
       ],
       "precioMesSinServicios": 35000,
@@ -219,10 +220,10 @@
       ],
       "resumen": "La más grande: 4 recámaras y 10 camas para cuadrillas de hasta 16 personas. Cocina, comedor, WiFi, lavadora y estacionamiento. Facturamos.",
       "fotos": [
+        "rosita-recamara_02",
         "rosita-portada",
         "rosita-comedor",
         "rosita-recamara_01",
-        "rosita-recamara_02",
         "rosita-recamara_03",
         "rosita-recamara_04"
       ]
@@ -247,8 +248,8 @@
       ],
       "resumen": "En Los Viñedos, cerca de la zona industrial. 3 recámaras, 3 baños completos y uno de visitas, así nadie hace fila en la mañana. Cocina, WiFi, lavadora y estacionamiento.",
       "fotos": [
-        "vinedos-portada",
         "vinedos-comedor",
+        "vinedos-portada",
         "vinedos-recamara_01",
         "vinedos-bano"
       ]
@@ -274,8 +275,8 @@
       ],
       "resumen": "Moderna y espaciosa, en privada cerrada en Los Viñedos. 7 camas: cada quien duerme en la suya. Pensada para estancias de trabajo.",
       "fotos": [
-        "moderna-portada",
         "moderna-cocina",
+        "moderna-portada",
         "moderna-comedor",
         "moderna-estancia"
       ]
@@ -300,11 +301,11 @@
       ],
       "resumen": "En Residencial Senderos: sala amplia, patio con comedor exterior y 3 recámaras. Cocina, WiFi, lavadora y estacionamiento.",
       "fotos": [
+        "senderos-recamara_02",
         "senderos-portada",
         "senderos-sala",
         "senderos-patio",
         "senderos-recamara_01",
-        "senderos-recamara_02",
         "senderos-recamara_03"
       ]
     }
