@@ -37,8 +37,8 @@
       ],
       "resumen": "En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.",
       "fotos": [
-        "leones-cocina",
         "leones-portada",
+        "leones-cocina",
         "leones-sala",
         "leones-comedor",
         "leones-recamara_01",
@@ -93,8 +93,8 @@
       ],
       "resumen": "Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.",
       "fotos": [
-        "provitec-recamara_01",
         "provitec-sala",
+        "provitec-recamara_01",
         "provitec-cocina",
         "provitec-recamara_02",
         "provitec-recamara_03",
@@ -123,13 +123,15 @@
       ],
       "resumen": "La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.",
       "fotos": [
+        "almendros-recamara_02",
         "almendros-comedor",
         "almendros-portada",
         "almendros-sala",
         "almendros-fachada",
         "almendros-cocina",
         "almendros-recamara_pb",
-        "almendros-patio"
+        "almendros-patio",
+        "almendros-recamara_03"
       ],
       "precioMesSinServicios": 45000,
       "precioMesConServicios": 48000,
