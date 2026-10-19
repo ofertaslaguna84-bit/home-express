@@ -539,7 +539,7 @@ ${seccionClientes()}
     <h2>${casas.length} casas amuebladas en renta, con precio a la vista</h2>
     <p class="sub">Todas en Torreón, todas equipadas y con clima. El precio de Airbnb está puesto al lado a propósito: queremos que compares.</p>
     <div class="casas">
-      ${casas.map(tarjeta).join('\n')}
+      ${casas.map((c) => tarjeta(c)).join('\n')}
     </div>
   </div>
 </section>
