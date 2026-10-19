@@ -292,7 +292,7 @@ ${schema.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</sc
 const encabezado = (prefijo = '') => `
 <header class="hdr">
   <div class="hdr-in">
-    <a href="${prefijo || '/'}"><img src="${prefijo}img/logo.png" alt="${esc(marca.nombre)}" class="logo"></a>
+    <a href="${prefijo || '/'}"><img src="${prefijo}img/logo.png?v=a" alt="${esc(marca.nombre)}" class="logo"></a>
     <nav class="nav">
       <a href="${prefijo}#casas">Casas</a>
       <a href="${prefijo}#como">Cómo funciona</a>
@@ -329,7 +329,7 @@ const pie = (prefijo = '') => `
   <div class="w">
     <div class="pie-in">
       <div>
-        <img src="${prefijo}img/logo.png" alt="${esc(marca.nombre)}" style="height:56px;background:#fff;border-radius:10px;padding:6px;margin-bottom:14px">
+        <img src="${prefijo}img/logo.png?v=a" alt="${esc(marca.nombre)}" style="height:56px;background:#fff;border-radius:10px;padding:6px;margin-bottom:14px">
         <p style="max-width:340px">Casas completas, equipadas y listas para entrar en ${esc(marca.ciudad)}, ${esc(marca.estado)}. Por noche, por semana o por mes. Con factura.</p>
       </div>
       <div>
