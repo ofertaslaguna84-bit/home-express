@@ -156,6 +156,11 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .casa:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
 .casa-foto{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--crema)}
 .casa-foto img{width:100%;height:100%;object-fit:cover}
+/* Las tarjetas van pasando 4 fotos: la primera queda de fondo y las otras 3 entran encima, una cada 4 s */
+.casa-foto .rota{position:absolute;inset:0;opacity:0;animation:rota 16s infinite backwards}
+.casa-foto .r1{animation-delay:4s}.casa-foto .r2{animation-delay:8s}.casa-foto .r3{animation-delay:12s}
+@keyframes rota{0%{opacity:0}6%{opacity:1}25%{opacity:1}31%{opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.casa-foto .rota{display:none}}
 .badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.95);color:var(--marino);font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
 .casa-cuerpo{padding:20px;display:flex;flex-direction:column;flex:1}
 .casa-specs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
@@ -258,7 +263,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 
 // ─────────────────────────────────────────────────────────── piezas
 
-function cabeza({ titulo, desc, url, imagen, schema }) {
+function cabeza({ titulo, desc, url, imagen, ogFoto, schema }) {
   return `<!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -274,9 +279,9 @@ function cabeza({ titulo, desc, url, imagen, schema }) {
 <meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/img/og-logo.jpg">
+${ogFoto ? `<meta property="og:image" content="${SITE}/img/${ogFoto}.jpg">` : `<meta property="og:image" content="${SITE}/img/og-logo.jpg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="630">`}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13203A">
 <link rel="icon" href="/favicon.png" type="image/png">
@@ -366,6 +371,7 @@ function tarjeta(c, p = '') {
   <article class="casa">
     <a href="${p}casas/${c.slug}/" class="casa-foto">
       <img src="${p}img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)} en ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="900">
+      ${c.fotos.slice(1, 4).map((f, i) => `<img src="${p}img/${f}.jpg" alt="" class="rota r${i + 1}" loading="lazy" width="900" height="900">`).join('')}
       <span class="badge">${c.huespedes} personas</span>
     </a>
     <div class="casa-cuerpo">
@@ -638,6 +644,7 @@ function paginaCasa(c) {
       desc,
       url: `${SITE}/casas/${c.slug}/`,
       imagen: c.fotos[0],
+      ogFoto: c.fotos[0],
       schema: [
         {
           '@context': 'https://schema.org',

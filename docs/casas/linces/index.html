@@ -13,9 +13,7 @@
 <meta property="og:title" content="Casa amueblada en renta en Los Viñedos, Torreón — Casa Linces, 10 personas | Hostalia">
 <meta property="og:description" content="En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento. 3 recámaras, 5 camas, 2.5 baños. Desde $1,750 la noche reservando directo. Facturamos.">
 <meta property="og:url" content="https://hostalia.com.mx/casas/linces/">
-<meta property="og:image" content="https://hostalia.com.mx/img/og-logo.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://hostalia.com.mx/img/linces-cocina.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13203A">
 <link rel="icon" href="/favicon.png" type="image/png">
@@ -116,6 +114,11 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .casa:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
 .casa-foto{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--crema)}
 .casa-foto img{width:100%;height:100%;object-fit:cover}
+/* Las tarjetas van pasando 4 fotos: la primera queda de fondo y las otras 3 entran encima, una cada 4 s */
+.casa-foto .rota{position:absolute;inset:0;opacity:0;animation:rota 16s infinite backwards}
+.casa-foto .r1{animation-delay:4s}.casa-foto .r2{animation-delay:8s}.casa-foto .r3{animation-delay:12s}
+@keyframes rota{0%{opacity:0}6%{opacity:1}25%{opacity:1}31%{opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.casa-foto .rota{display:none}}
 .badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.95);color:var(--marino);font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
 .casa-cuerpo{padding:20px;display:flex;flex-direction:column;flex:1}
 .casa-specs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
@@ -304,6 +307,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
   <article class="casa">
     <a href="../leones/" class="casa-foto">
       <img src="../../img/leones-portada.jpg" alt="Casa Leones en Viñedos, Torreón" loading="lazy" width="900" height="900">
+      <img src="../../img/leones-cocina.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/leones-sala.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/leones-comedor.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
       <span class="badge">10 personas</span>
     </a>
     <div class="casa-cuerpo">
@@ -330,6 +334,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
   <article class="casa">
     <a href="../provitec/" class="casa-foto">
       <img src="../../img/provitec-sala.jpg" alt="Casa Provitec en Provitec, Torreón" loading="lazy" width="900" height="900">
+      <img src="../../img/provitec-recamara_01.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/provitec-cocina.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/provitec-recamara_02.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
       <span class="badge">12 personas</span>
     </a>
     <div class="casa-cuerpo">
@@ -356,6 +361,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
   <article class="casa">
     <a href="../almendros/" class="casa-foto">
       <img src="../../img/almendros-recamara_02.jpg" alt="Casa Almendros en Almendros, Torreón" loading="lazy" width="900" height="900">
+      <img src="../../img/almendros-comedor.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/almendros-portada.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/almendros-sala.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
       <span class="badge">12 personas</span>
     </a>
     <div class="casa-cuerpo">
