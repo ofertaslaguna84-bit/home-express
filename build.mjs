@@ -85,7 +85,8 @@ img{display:block;max-width:100%}
 .nav a:hover{color:var(--azul)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14.5px;transition:transform .15s,box-shadow .15s;border:none;cursor:pointer}
 .btn:hover{transform:translateY(-1px)}
-.btn-wa{background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.32)}
+.btn-wa{background:var(--marino);color:#fff;box-shadow:0 4px 14px rgba(19,32,58,.22)}
+.btn-wa.flota{background:#25D366;box-shadow:0 4px 14px rgba(37,211,102,.32)}
 .btn-nar{background:var(--azul);color:#fff;box-shadow:0 4px 14px rgba(138,106,47,.3)}
 .btn-out{border:1.5px solid var(--linea);background:#fff;color:var(--marino)}
 
@@ -300,7 +301,6 @@ const encabezado = (prefijo = '') => `
       <a href="${prefijo}#faq">Preguntas</a>
       <a href="${prefijo}blog/">Blog</a>
     </nav>
-    <a href="${wa('Hola Hostalia, quiero información de las casas en Torreón')}" class="btn btn-wa">WhatsApp</a>
   </div>
 </header>`;
 
@@ -519,7 +519,6 @@ function paginaInicio() {
       <p class="lead">De ${PERSONAS} personas, con clima y con factura. Rentamos de 15 días a 6 meses <strong>sin aval y sin contrato de un año</strong>, o por noche desde 2 noches.</p>
       <div class="hero-cta">
         <a href="#casas" class="btn btn-nar">Ver las ${casas.length} casas</a>
-        <a href="${wa('Hola Hostalia, quiero cotizar una casa en Torreón')}" class="btn btn-wa">Cotizar por WhatsApp</a>
       </div>
       <p class="nota">⭐ ${marca.calificacion} con ${marca.resenas} reseñas como anfitrión en Airbnb</p>
     </div>
@@ -1069,8 +1068,7 @@ function paginaLanding(l) {
       <h1>${l.h1}</h1>
       <p class="lead">${esc(l.lead)}</p>
       <div class="hero-cta">
-        <a href="${wa(l.wa)}" class="btn btn-wa">Cotizar por WhatsApp</a>
-        <a href="#casas" class="btn btn-out">Ver casas</a>
+        <a href="#casas" class="btn btn-nar">Ver casas</a>
       </div>
     </div>
   </div>
@@ -1238,7 +1236,6 @@ function paginaArticulo(a) {
         <h3 style="margin-bottom:8px">¿Buscas casa en ${esc(marca.ciudad)}?</h3>
         <p style="font-size:15.5px;color:var(--gris);margin-bottom:16px">Tenemos ${casas.length} casas completas de ${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))} personas, con clima y factura. Por noche, semana o mes.</p>
         <a href="../../#casas" class="btn btn-nar">Ver las casas</a>
-        <a href="${wa(`Hola Hostalia, leí "${a.titulo}" y quiero cotizar`)}" class="btn btn-wa">WhatsApp</a>
       </div>
     </article>
   </div>
