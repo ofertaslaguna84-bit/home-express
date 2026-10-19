@@ -273,7 +273,9 @@ function cabeza({ titulo, desc, url, imagen, schema }) {
 <meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/img/${imagen}.jpg">
+<meta property="og:image" content="${SITE}/img/og-logo.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14213D">
 <link rel="icon" href="/favicon.png" type="image/png">
