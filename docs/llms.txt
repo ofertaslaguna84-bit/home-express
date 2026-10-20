@@ -1,15 +1,15 @@
 # Hostalia
 
-> Renta de casas completas amuebladas en Torreón, Coahuila, México. Por noche, por semana y por mes. De 8 a 16 personas. Con factura (CFDI).
+> Renta de casas completas amuebladas en Torreón, Coahuila, México. Por noche, por semana y por mes. De 4 a 16 personas. Con factura (CFDI).
 
-Hostalia renta 10 casas propias en Torreón. No es un portal ni una agencia: son casas del mismo dueño, que también las publica en Airbnb con 84 reseñas y 4.9 de calificación. Reservando directo el precio es menor porque no hay comisión de plataforma.
+Hostalia renta 18 casas propias en Torreón. No es un portal ni una agencia: son casas del mismo dueño, que también las publica en Airbnb con 84 reseñas y 4.9 de calificación. Reservando directo el precio es menor porque no hay comisión de plataforma.
 
 ## Datos clave
 
 - Sitio: https://hostalia.com.mx
 - Ciudad: Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo)
-- Casas disponibles: 10
-- Capacidad: de 8 a 16 personas por casa
+- Casas disponibles: 18
+- Capacidad: de 4 a 16 personas por casa
 - Estancia mínima: 2 noches · Máxima: sin límite (hay estancias de hasta 6 meses)
 - Factura: sí, CFDI a nombre de la empresa
 - Todas con: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
@@ -77,12 +77,12 @@ Se publica el precio por noche y el precio por mes, este último en dos niveles:
 
 ### Casa La Rosita — Ampliación La Rosita
 - Página: https://hostalia.com.mx/casas/rosita/
-- Capacidad: 16 personas · 4 recámaras · 10 camas · 3 baños
-- Entre semana: $2,350 directo
-- Fin de semana: $2,350 directo
-- Por mes: se cotiza por WhatsApp
-- Destaca por: 10 camas, Cocina equipada, WiFi, Lavadora, Estacionamiento
-- La más grande: 4 recámaras y 10 camas para cuadrillas de hasta 16 personas. Cocina, comedor, WiFi, lavadora y estacionamiento. Facturamos.
+- Capacidad: 16 personas · 4 recámaras · 8 camas · 3 baños
+- Entre semana: $2,000 directo
+- Fin de semana: $2,000 directo
+- Por mes: $45,000 sin servicios · $48,000 con servicios (agua, luz, gas e internet)
+- Destaca por: 8 camas en 4 recámaras, Cocina equipada, WiFi, Lavadora, Estacionamiento
+- 4 recámaras y 8 camas (dos matrimoniales, una king, una queen con individual, una queen y dos individuales en sala) para grupos de hasta 16 personas. Cocina, comedor, WiFi, lavadora y estacionamiento. Facturamos.
 
 ### Casa Viñedos — Los Viñedos
 - Página: https://hostalia.com.mx/casas/vinedos/
@@ -110,6 +110,78 @@ Se publica el precio por noche y el precio por mes, este último en dos niveles:
 - Por mes: se cotiza por WhatsApp
 - Destaca por: Patio con comedor, Cocina equipada, WiFi, Lavadora, Estacionamiento
 - En Residencial Senderos: sala amplia, patio con comedor exterior y 3 recámaras. Cocina, WiFi, lavadora y estacionamiento.
+
+### Casa Gómez 11 — Límite Torreón-Gómez Palacio
+- Página: https://hostalia.com.mx/casas/gomez-11/
+- Capacidad: 11 personas · 2 recámaras · 6 camas · 2 baños
+- Entre semana: $1,250 directo
+- Fin de semana: $1,250 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: 6 camas, Estacionamiento gratuito, Cocina y lavadora, Clima y WiFi, A minutos de Gómez Palacio
+- Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.
+
+### Casa Gómez 10 — Cerca de Gómez Palacio
+- Página: https://hostalia.com.mx/casas/gomez-10/
+- Capacidad: 10 personas · 3 recámaras · 7 camas · 3.5 baños
+- Entre semana: $1,250 directo
+- Fin de semana: $1,250 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: 7 camas en 3 recámaras, 3 baños y medio, Lavadora y secadora, Clima y WiFi, Estacionamiento gratuito
+- Céntrica y con salida rápida a Gómez Palacio. 3 recámaras con 7 camas (dos matrimoniales, una matrimonial con individual, una matrimonial con dos individuales), 3 baños y medio, cocina, lavadora y secadora. 5.0 en Airbnb.
+
+### Casa Familiar 10 — Torreón
+- Página: https://hostalia.com.mx/casas/familiar-10/
+- Capacidad: 10 personas · 4 recámaras · 6 camas · 2.5 baños
+- Entre semana: $1,250 directo
+- Fin de semana: $1,250 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: 4 recámaras, Zona tranquila, Cocina y microondas, Lavadora y clima, Estacionamiento gratuito
+- Para toda la familia o un equipo que quiere tranquilidad: 4 recámaras (dos individuales, queen, queen con sofá cama y matrimonial), cocina, lavadora, clima, WiFi y estacionamiento. Facturamos.
+
+### Depa Siete — Torreón
+- Página: https://hostalia.com.mx/casas/depa-7/
+- Capacidad: 7 personas · 3 recámaras · 7 camas · 2 baños
+- Entre semana: $1,000 directo
+- Fin de semana: $1,000 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: 7 camas: cada quien la suya, 3 recámaras, Cocina y lavadora, Clima y WiFi, Estacionamiento
+- Departamento con 3 recámaras y 7 camas individuales: cada quien duerme en la suya. Cocina, lavadora, clima, WiFi y estacionamiento. Pensado para personal de empresa, con factura.
+
+### Casa Jardín 14 — Torreón
+- Página: https://hostalia.com.mx/casas/jardin-14/
+- Capacidad: 14 personas · 3 recámaras · 7 camas · 3 baños
+- Entre semana: $1,700 directo
+- Fin de semana: $1,700 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: 14 personas, Jardín, 3 baños completos, Cocina y lavadora, Clima y WiFi
+- Casa grande con jardín para grupos de hasta 14: 3 recámaras con 7 camas, 3 baños completos, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 en Airbnb.
+
+### Casa Grande 14 — Torreón
+- Página: https://hostalia.com.mx/casas/grande-14/
+- Capacidad: 14 personas · 6 recámaras · 7 camas · 4 baños
+- Entre semana: $1,700 directo
+- Fin de semana: $1,700 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: 6 recámaras, 4 baños, Área para trabajar, Cocina y lavadora, Clima y WiFi
+- La de más recámaras: 6 habitaciones y 4 baños para 14 personas, con área para trabajar, cocina, lavadora, clima, WiFi y estacionamiento. Para cuadrillas y equipos que necesitan privacidad.
+
+### Loft Tec — Cerca del Tec
+- Página: https://hostalia.com.mx/casas/loft-tec/
+- Capacidad: 4 personas · 1 recámaras · 2 camas · 2 baños
+- Entre semana: $550 directo
+- Fin de semana: $550 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: Cerca del Tec, 2 baños, Cocina y WiFi, Minisplit, Estacionamiento
+- Loft para 1 a 4 personas a minutos del Tec de Monterrey: cama queen y sofá cama, 2 baños, cocina, WiFi, minisplit y estacionamiento. La opción económica para técnicos, médicos o estudiantes.
+
+### Depa Los Ángeles — Ampliación Los Ángeles
+- Página: https://hostalia.com.mx/casas/depa-los-angeles/
+- Capacidad: 8 personas · 2 recámaras · 6 camas · 2 baños
+- Entre semana: $1,000 directo
+- Fin de semana: $1,000 directo
+- Por mes: se cotiza por WhatsApp
+- Destaca por: A 5 min del centro, 6 camas, Lavadora y secadora, Área para trabajar, Clima y WiFi
+- A 5 minutos del centro de Torreón: 2 recámaras (dos matrimoniales y dos individuales) más sofá cama, 2 baños, cocina, lavadora, secadora, clima, WiFi y estacionamiento. 4.53 en Airbnb.
 
 ## Para empresas
 
@@ -142,8 +214,8 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 - **¿Los precios llevan IVA?** Los precios que ves son por noche, con IVA incluido. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido.
 - **¿Cómo reservo y cómo pago?** Nos escribes por WhatsApp con tus fechas y cuántas personas son. Te confirmamos disponibilidad y precio cerrado. Se aparta con un anticipo por transferencia y el resto se liquida al llegar. Para empresas manejamos transferencia y factura.
 - **¿Qué incluyen las casas?** Están completamente equipadas y listas para entrar: cocina equipada, ropa de cama y toallas, clima en toda la casa, wifi, estacionamiento y sala comedor. No tienes que llevar nada más que tu maleta.
-- **¿Reciben grupos de trabajo o cuadrillas?** Sí, es buena parte de lo que hacemos. Tenemos casas de 8 a 16 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.
-- **¿Dónde están ubicadas?** Todas están en Torreón, Coahuila: Viñedos, Los Viñedos, Provitec, Almendros, Acacias, Cantera, Ampliación La Rosita, Los Viñedos, Los Viñedos y Senderos. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.
+- **¿Reciben grupos de trabajo o cuadrillas?** Sí, es buena parte de lo que hacemos. Tenemos casas de 4 a 16 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.
+- **¿Dónde están ubicadas?** Todas están en Torreón, Coahuila: Viñedos, Los Viñedos, Provitec, Almendros, Acacias, Cantera, Ampliación La Rosita, Los Viñedos, Los Viñedos, Senderos, Límite Torreón-Gómez Palacio, Cerca de Gómez Palacio, Torreón, Torreón, Torreón, Torreón, Cerca del Tec y Ampliación Los Ángeles. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.
 - **¿Se puede ver la casa antes de reservar?** Sí. Si estás en Torreón te la mostramos sin compromiso. Y si vienes de fuera, te mandamos video por WhatsApp de la casa que te interese, del recorrido completo.
 
 ## Blog

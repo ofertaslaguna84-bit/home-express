@@ -209,18 +209,18 @@
       "zona": "Ampliación La Rosita",
       "huespedes": 16,
       "recamaras": 4,
-      "camas": 10,
+      "camas": 8,
       "banos": 3,
-      "precioNoche": 2350,
-      "precioFinde": 2350,
+      "precioNoche": 2000,
+      "precioFinde": 2000,
       "destacados": [
-        "10 camas",
+        "8 camas en 4 recámaras",
         "Cocina equipada",
         "WiFi",
         "Lavadora",
         "Estacionamiento"
       ],
-      "resumen": "La más grande: 4 recámaras y 10 camas para cuadrillas de hasta 16 personas. Cocina, comedor, WiFi, lavadora y estacionamiento. Facturamos.",
+      "resumen": "4 recámaras y 8 camas (dos matrimoniales, una king, una queen con individual, una queen y dos individuales en sala) para grupos de hasta 16 personas. Cocina, comedor, WiFi, lavadora y estacionamiento. Facturamos.",
       "fotos": [
         "rosita-recamara_02",
         "rosita-portada",
@@ -228,7 +228,9 @@
         "rosita-recamara_01",
         "rosita-recamara_03",
         "rosita-recamara_04"
-      ]
+      ],
+      "precioMesSinServicios": 45000,
+      "precioMesConServicios": 48000
     },
     {
       "slug": "vinedos",
@@ -309,6 +311,233 @@
         "senderos-patio",
         "senderos-recamara_01",
         "senderos-recamara_03"
+      ]
+    },
+    {
+      "slug": "gomez-11",
+      "nombre": "Casa Gómez 11",
+      "titulo": "Casa para 11 personas en el límite de Torreón y Gómez Palacio",
+      "zona": "Límite Torreón-Gómez Palacio",
+      "huespedes": 11,
+      "recamaras": 2,
+      "camas": 6,
+      "banos": 2,
+      "precioNoche": 1250,
+      "precioFinde": 1250,
+      "airbnbRef": "1462615611831615431",
+      "destacados": [
+        "6 camas",
+        "Estacionamiento gratuito",
+        "Cocina y lavadora",
+        "Clima y WiFi",
+        "A minutos de Gómez Palacio"
+      ],
+      "resumen": "Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.",
+      "fotos": [
+        "gomez-norte-01",
+        "gomez-norte-02",
+        "gomez-norte-03",
+        "gomez-norte-04",
+        "gomez-norte-05"
+      ]
+    },
+    {
+      "slug": "gomez-10",
+      "nombre": "Casa Gómez 10",
+      "titulo": "Casa para 10 personas con 7 camas y 3.5 baños, cerca de Gómez Palacio",
+      "zona": "Cerca de Gómez Palacio",
+      "huespedes": 10,
+      "recamaras": 3,
+      "camas": 7,
+      "banos": 3.5,
+      "precioNoche": 1250,
+      "precioFinde": 1250,
+      "airbnbRef": "1419752878764121561",
+      "destacados": [
+        "7 camas en 3 recámaras",
+        "3 baños y medio",
+        "Lavadora y secadora",
+        "Clima y WiFi",
+        "Estacionamiento gratuito"
+      ],
+      "resumen": "Céntrica y con salida rápida a Gómez Palacio. 3 recámaras con 7 camas (dos matrimoniales, una matrimonial con individual, una matrimonial con dos individuales), 3 baños y medio, cocina, lavadora y secadora. 5.0 en Airbnb.",
+      "fotos": [
+        "gomez-centro-01",
+        "gomez-centro-03",
+        "gomez-centro-05",
+        "gomez-centro-06",
+        "gomez-centro-07",
+        "gomez-centro-08"
+      ]
+    },
+    {
+      "slug": "familiar-10",
+      "nombre": "Casa Familiar 10",
+      "titulo": "Casa tranquila para 10 personas con 4 recámaras, con factura",
+      "zona": "Torreón",
+      "huespedes": 10,
+      "recamaras": 4,
+      "camas": 6,
+      "banos": 2.5,
+      "precioNoche": 1250,
+      "precioFinde": 1250,
+      "airbnbRef": "1685139615141733643",
+      "destacados": [
+        "4 recámaras",
+        "Zona tranquila",
+        "Cocina y microondas",
+        "Lavadora y clima",
+        "Estacionamiento gratuito"
+      ],
+      "resumen": "Para toda la familia o un equipo que quiere tranquilidad: 4 recámaras (dos individuales, queen, queen con sofá cama y matrimonial), cocina, lavadora, clima, WiFi y estacionamiento. Facturamos.",
+      "fotos": [
+        "familiar-10-01",
+        "familiar-10-02",
+        "familiar-10-03",
+        "familiar-10-04",
+        "familiar-10-05",
+        "familiar-10-06",
+        "familiar-10-07",
+        "familiar-10-08"
+      ]
+    },
+    {
+      "slug": "depa-7",
+      "nombre": "Depa Siete",
+      "titulo": "Departamento para 7 personas con 7 camas, con factura",
+      "zona": "Torreón",
+      "huespedes": 7,
+      "recamaras": 3,
+      "camas": 7,
+      "banos": 2,
+      "precioNoche": 1000,
+      "precioFinde": 1000,
+      "airbnbRef": "1672014333570728194",
+      "destacados": [
+        "7 camas: cada quien la suya",
+        "3 recámaras",
+        "Cocina y lavadora",
+        "Clima y WiFi",
+        "Estacionamiento"
+      ],
+      "resumen": "Departamento con 3 recámaras y 7 camas individuales: cada quien duerme en la suya. Cocina, lavadora, clima, WiFi y estacionamiento. Pensado para personal de empresa, con factura.",
+      "fotos": [
+        "depa-7-01",
+        "depa-7-02",
+        "depa-7-03",
+        "depa-7-04",
+        "depa-7-05"
+      ]
+    },
+    {
+      "slug": "jardin-14",
+      "nombre": "Casa Jardín 14",
+      "titulo": "Casa grande con jardín para 14 personas",
+      "zona": "Torreón",
+      "huespedes": 14,
+      "recamaras": 3,
+      "camas": 7,
+      "banos": 3,
+      "precioNoche": 1700,
+      "precioFinde": 1700,
+      "airbnbRef": "1583104575361290881",
+      "destacados": [
+        "14 personas",
+        "Jardín",
+        "3 baños completos",
+        "Cocina y lavadora",
+        "Clima y WiFi"
+      ],
+      "resumen": "Casa grande con jardín para grupos de hasta 14: 3 recámaras con 7 camas, 3 baños completos, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 en Airbnb.",
+      "fotos": [
+        "jardin-14-01",
+        "jardin-14-02",
+        "jardin-14-03",
+        "jardin-14-04",
+        "jardin-14-05"
+      ]
+    },
+    {
+      "slug": "grande-14",
+      "nombre": "Casa Grande 14",
+      "titulo": "Casa de 6 recámaras para 14 personas",
+      "zona": "Torreón",
+      "huespedes": 14,
+      "recamaras": 6,
+      "camas": 7,
+      "banos": 4,
+      "precioNoche": 1700,
+      "precioFinde": 1700,
+      "airbnbRef": "1067641861097140036",
+      "destacados": [
+        "6 recámaras",
+        "4 baños",
+        "Área para trabajar",
+        "Cocina y lavadora",
+        "Clima y WiFi"
+      ],
+      "resumen": "La de más recámaras: 6 habitaciones y 4 baños para 14 personas, con área para trabajar, cocina, lavadora, clima, WiFi y estacionamiento. Para cuadrillas y equipos que necesitan privacidad.",
+      "fotos": [
+        "grande-14-01",
+        "grande-14-02",
+        "grande-14-03",
+        "grande-14-04",
+        "grande-14-05"
+      ]
+    },
+    {
+      "slug": "loft-tec",
+      "nombre": "Loft Tec",
+      "titulo": "Loft para 4 personas cerca del Tec de Monterrey",
+      "zona": "Cerca del Tec",
+      "huespedes": 4,
+      "recamaras": 1,
+      "camas": 2,
+      "banos": 2,
+      "precioNoche": 550,
+      "precioFinde": 550,
+      "airbnbRef": "1448593693333501598",
+      "destacados": [
+        "Cerca del Tec",
+        "2 baños",
+        "Cocina y WiFi",
+        "Minisplit",
+        "Estacionamiento"
+      ],
+      "resumen": "Loft para 1 a 4 personas a minutos del Tec de Monterrey: cama queen y sofá cama, 2 baños, cocina, WiFi, minisplit y estacionamiento. La opción económica para técnicos, médicos o estudiantes.",
+      "fotos": [
+        "loft-tec-01",
+        "loft-tec-02",
+        "loft-tec-03",
+        "loft-tec-04",
+        "loft-tec-05"
+      ]
+    },
+    {
+      "slug": "depa-los-angeles",
+      "nombre": "Depa Los Ángeles",
+      "titulo": "Departamento para 8 personas en Ampliación Los Ángeles, a 5 min del centro",
+      "zona": "Ampliación Los Ángeles",
+      "huespedes": 8,
+      "recamaras": 2,
+      "camas": 6,
+      "banos": 2,
+      "precioNoche": 1000,
+      "precioFinde": 1000,
+      "airbnbRef": "45706771",
+      "destacados": [
+        "A 5 min del centro",
+        "6 camas",
+        "Lavadora y secadora",
+        "Área para trabajar",
+        "Clima y WiFi"
+      ],
+      "resumen": "A 5 minutos del centro de Torreón: 2 recámaras (dos matrimoniales y dos individuales) más sofá cama, 2 baños, cocina, lavadora, secadora, clima, WiFi y estacionamiento. 4.53 en Airbnb.",
+      "fotos": [
+        "depa-los-angeles-01",
+        "depa-los-angeles-02",
+        "depa-los-angeles-03",
+        "depa-los-angeles-04"
       ]
     }
   ],
