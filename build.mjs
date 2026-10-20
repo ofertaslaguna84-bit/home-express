@@ -482,7 +482,7 @@ const orgSchema = () => ({
 
 function paginaInicio() {
   const titulo = `Casas amuebladas en renta en Torreón — por noche, semana o mes | ${marca.nombre}`;
-  const desc = `${casas.length} casas completas y equipadas en Torreón para ${PERSONAS} personas. Desde 2 noches hasta 6 meses. Facturamos. Más baratas que en Airbnb — reserva directo por WhatsApp.`;
+  const desc = `${casas.length} casas completas y equipadas en Torreón, a minutos de Gómez Palacio y Lerdo, para ${PERSONAS} personas. Desde 2 noches hasta 6 meses. Facturamos. Más baratas que en Airbnb — reserva directo por WhatsApp.`;
 
   return (
     cabeza({

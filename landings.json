@@ -233,5 +233,154 @@
         "a": "2 noches."
       }
     ]
+  },
+  {
+    "slug": "casas-amuebladas-la-laguna",
+    "menu": "La Laguna",
+    "titulo": "Casas amuebladas en renta en La Laguna: Torreón, Gómez Palacio y Lerdo",
+    "desc": "Casas completas y equipadas en renta por noche, semana o mes en la Comarca Lagunera. Para grupos de 10 a 16 personas, con factura. Atendemos Torreón, Gómez Palacio y Lerdo desde el lado oriente de Torreón.",
+    "eyebrow": "Hospedaje en la Comarca Lagunera",
+    "h1": "Casas amuebladas en renta en <em>La Laguna</em>.",
+    "lead": "Diez casas completas en Torreón, a 15 o 25 minutos de Gómez Palacio y Lerdo. Por noche, semana o mes, para 10 a 16 personas, con contrato y factura. Más baratas que un hotel para grupos y más baratas que en Airbnb reservando directo.",
+    "wa": "Hola Hostalia, busco casa amueblada en La Laguna. ¿Qué tienen disponible y en cuánto?",
+    "casas": [
+      "leones",
+      "linces",
+      "provitec",
+      "almendros",
+      "acacia",
+      "cantera",
+      "rosita",
+      "vinedos",
+      "vinedos-moderna",
+      "senderos"
+    ],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "Una sola zona metropolitana, tres ciudades",
+        "html": "<p>Torreón, Gómez Palacio y Lerdo funcionan como una sola ciudad: el Periférico y el Puente Plateado las conectan en minutos. Por eso nuestras casas, todas en Torreón, sirven igual si tu trabajo o tu evento está en <strong>Gómez Palacio</strong> (Parque Industrial Lagunero, Chilchota, zona del Lala) o en <strong>Lerdo</strong> (Ciudad Industrial, Villa Juárez). Desde Los Viñedos o Provitec llegas a Gómez Palacio en 15 a 20 minutos y a Lerdo en 25.</p>"
+      },
+      {
+        "h2": "Para qué nos buscan en La Laguna",
+        "html": "<ul><li><strong>Personal de empresas</strong> por arranques de planta, mantenimientos y auditorías en los parques industriales de las tres ciudades.</li><li><strong>Familias y grupos</strong> que vienen a bodas, XV años, torneos deportivos, conciertos en el Coliseo Centenario o a la Feria de Torreón y la de Gómez Palacio.</li><li><strong>Médicos, residentes y pacientes</strong> de hospitales de Torreón que necesitan estancia por semanas.</li><li><strong>Cuadrillas de construcción</strong> que necesitan muchas camas, cocina y un lugar para lavar ropa.</li></ul>"
+      },
+      {
+        "h2": "Cómo elegir casa según dónde vas a estar",
+        "html": "<p><strong>Si tu trabajo es en Gómez Palacio o Lerdo:</strong> Leones, Linces, Viñedos y Viñedos Moderna, en Los Viñedos, salen directo al Periférico. <strong>Si es en la zona industrial de Torreón (Mieleras, Ferropuerto, Oriente):</strong> Provitec y Los Viñedos están a 5 o 10 minutos. <strong>Si quieres estar cerca de todo:</strong> Acacias y Almendros, en zona céntrica. <strong>Si son 14 a 16 personas:</strong> La Rosita, con 10 camas. Si no sabes cuál, nos dices dónde vas a estar y te decimos cuál conviene.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Tienen casas en Gómez Palacio o en Lerdo?",
+        "a": "Las casas están en Torreón, pero del lado que conecta rápido con Gómez Palacio y Lerdo por el Periférico: 15 a 25 minutos en coche. Muchos de nuestros huéspedes trabajan allá y se quedan con nosotros."
+      },
+      {
+        "q": "¿Cuánto cuesta una casa amueblada en La Laguna?",
+        "a": "Por noche desde $1,750 por casa completa para 10 personas; por mes de $35,000 a $45,000 sin servicios. El precio es por casa, no por persona."
+      },
+      {
+        "q": "¿Dan factura?",
+        "a": "Sí, CFDI a nombre de la persona o empresa que paga, en cualquiera de las tres ciudades."
+      },
+      {
+        "q": "¿Cuál es el mínimo de noches?",
+        "a": "Dos noches. Por semana y por mes hay tarifa especial."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-gomez-palacio",
+    "menu": "Gómez Palacio",
+    "titulo": "Hospedaje para grupos y empresas cerca de Gómez Palacio, Durango",
+    "desc": "Casas amuebladas para 10 a 16 personas a 15 minutos de Gómez Palacio, con cocina, clima, WiFi y factura. Para personal de empresas, cuadrillas y familias. Por noche, semana o mes.",
+    "eyebrow": "A 15 minutos de Gómez Palacio",
+    "h1": "Hospedaje para tu grupo o tu personal cerca de <em>Gómez Palacio</em>.",
+    "lead": "Si tu proyecto, tu planta o tu evento está en Gómez Palacio, nuestras casas en Los Viñedos y Provitec (Torreón) están a 15 o 20 minutos por el Periférico. Casa completa para 10 a 16 personas, precio por casa y factura a nombre de tu empresa.",
+    "wa": "Hola Hostalia, necesito hospedaje cerca de Gómez Palacio para un grupo. ¿Qué tienen disponible y en cuánto?",
+    "casas": [
+      "leones",
+      "linces",
+      "vinedos",
+      "vinedos-moderna",
+      "provitec",
+      "rosita"
+    ],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "Quién nos busca desde Gómez Palacio",
+        "html": "<p>Gómez Palacio concentra buena parte de la industria de La Laguna: el <strong>Parque Industrial Lagunero</strong>, la zona de <strong>Lala y Chilchota</strong>, maquiladoras y empresas agroindustriales sobre la carretera a Jiménez y a Chihuahua. Cada arranque, ampliación, auditoría o paro de mantenimiento trae técnicos y cuadrillas de fuera por semanas. También nos buscan familias que vienen a la Feria de Gómez Palacio, a bodas y a eventos deportivos, y que prefieren una casa con cocina y patio en vez de varios cuartos de hotel.</p>"
+      },
+      {
+        "h2": "Por qué conviene quedarse en Torreón",
+        "html": "<p>En Gómez Palacio casi no hay casas amuebladas para grupos grandes: la oferta es de hoteles de carretera o departamentos para 2 a 4 personas. Nuestras casas en <strong>Los Viñedos</strong> salen directo al Periférico y cruzan a Gómez Palacio por el <strong>Puente Plateado</strong> o el <strong>Puente Solidaridad</strong> en 15 a 20 minutos, sin pasar por el centro. Tienes cocina equipada, lavadora, clima en cada recámara, cochera y, en varias, alberca.</p><ul><li><strong>Precio por casa</strong>, no por persona: desde $1,750 la noche para 10 personas.</li><li><strong>Factura CFDI</strong> a nombre de tu empresa.</li><li><strong>Por semana y por mes</strong> con descuento.</li></ul>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿A cuánto tiempo están las casas de Gómez Palacio?",
+        "a": "Las de Los Viñedos a 15 o 20 minutos por el Periférico y el Puente Plateado; Provitec a unos 20 minutos."
+      },
+      {
+        "q": "¿Pueden hospedar a 14 o 16 personas?",
+        "a": "Sí. Casa La Rosita tiene 10 camas para hasta 16 personas, y combinando dos casas vecinas en Los Viñedos alojamos cuadrillas más grandes."
+      },
+      {
+        "q": "¿Facturan a empresas de Durango?",
+        "a": "Sí, el CFDI sale a cualquier razón social de México."
+      },
+      {
+        "q": "¿Rentan por mes?",
+        "a": "Sí, de 1 a 6 meses, con o sin servicios incluidos."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-lerdo",
+    "menu": "Lerdo",
+    "titulo": "Hospedaje para grupos y empresas cerca de Lerdo, Durango",
+    "desc": "Casas amuebladas para 10 a 16 personas a 25 minutos de Lerdo y su Ciudad Industrial, con cocina, clima, WiFi y factura. Por noche, semana o mes.",
+    "eyebrow": "A 25 minutos de Lerdo",
+    "h1": "Hospedaje para tu grupo o tu personal cerca de <em>Lerdo</em>.",
+    "lead": "Para personal que trabaja en la Ciudad Industrial de Lerdo, en Villa Juárez o en las plantas de la carretera a Durango, y para familias que vienen a eventos. Casas completas en Torreón a 25 minutos por el Periférico, con precio por casa y factura.",
+    "wa": "Hola Hostalia, necesito hospedaje cerca de Lerdo para un grupo. ¿Qué tienen disponible y en cuánto?",
+    "casas": [
+      "leones",
+      "linces",
+      "vinedos",
+      "vinedos-moderna",
+      "rosita",
+      "senderos"
+    ],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "Lerdo: industria, campo y fines de semana",
+        "html": "<p>Lerdo tiene la <strong>Ciudad Industrial</strong>, plantas sobre la carretera a Durango y una zona agrícola y ganadera fuerte, además del Cañón de Fernández y Villa Juárez, a donde llega gente de fuera los fines de semana. Cuando un proyecto trae a 8, 10 o 12 personas por semanas, en Lerdo no hay dónde ponerlas juntas: nosotros resolvemos eso con una casa completa.</p>"
+      },
+      {
+        "h2": "Qué incluye y cuánto cuesta",
+        "html": "<ul><li>Casa completa para <strong>10 a 16 personas</strong>: recámaras con clima, cocina equipada, lavadora, WiFi y cochera.</li><li><strong>Desde $1,750 la noche</strong> por casa; por semana y por mes hay descuento.</li><li><strong>Contrato y factura CFDI</strong> a nombre de la empresa.</li><li>Entrada y salida flexibles para turnos y cambios de cuadrilla.</li></ul><p>Las casas de <strong>Los Viñedos</strong> salen al Periférico y llegan a Lerdo en unos 25 minutos; <strong>Senderos</strong> y <strong>La Rosita</strong> quedan a 25 o 30.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Tienen casa dentro de Lerdo?",
+        "a": "No, nuestras casas están en Torreón, a 25 minutos de Lerdo por el Periférico. Es la opción más cercana para grupos de 10 o más con cocina y factura."
+      },
+      {
+        "q": "¿Cuántas personas caben?",
+        "a": "De 10 a 12 por casa; La Rosita hasta 16. Para cuadrillas más grandes combinamos casas."
+      },
+      {
+        "q": "¿Dan factura?",
+        "a": "Sí, CFDI a nombre de la persona o empresa que paga."
+      },
+      {
+        "q": "¿Se puede rentar por mes?",
+        "a": "Sí, de 1 a 6 meses, con o sin servicios incluidos."
+      }
+    ]
   }
 ]
