@@ -263,7 +263,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 
 // ─────────────────────────────────────────────────────────── piezas
 
-function cabeza({ titulo, desc, url, imagen, ogFoto, schema }) {
+function cabeza({ titulo, desc, url, imagen, schema }) {
   return `<!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -279,9 +279,9 @@ function cabeza({ titulo, desc, url, imagen, ogFoto, schema }) {
 <meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-${ogFoto ? `<meta property="og:image" content="${SITE}/img/${ogFoto}.jpg">` : `<meta property="og:image" content="${SITE}/img/og-logo.jpg">
+<meta property="og:image" content="${SITE}/img/og-logo.jpg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">`}
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13203A">
 <link rel="icon" href="/favicon.png" type="image/png">
@@ -644,7 +644,6 @@ function paginaCasa(c) {
       desc,
       url: `${SITE}/casas/${c.slug}/`,
       imagen: c.fotos[0],
-      ogFoto: c.fotos[0],
       schema: [
         {
           '@context': 'https://schema.org',
