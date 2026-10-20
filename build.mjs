@@ -1067,7 +1067,7 @@ function paginaLanding(l) {
 <section class="hero-video">
   <div class="hero-in">
     <div class="hero-media">
-      <img src="../img/${lista[0].fotos[0]}.jpg" alt="${esc(lista[0].nombre)}" style="width:100%;height:100%;object-fit:cover">
+      <img src="../img/${lista[0].fotos[0]}.jpg" alt="${esc(lista[0].nombre)} en ${esc(lista[0].zona)}, Torreón" style="width:100%;height:100%;object-fit:cover">
     </div>
     <div class="cont">
       <span class="kicker">● ${esc(l.eyebrow)}</span>

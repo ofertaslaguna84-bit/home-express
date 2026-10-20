@@ -1,0 +1,31 @@
+{
+  "slug": "hospedaje-lerdo-durango-casa-o-hotel",
+  "titulo": "Hospedaje en Lerdo, Durango: hotel o casa completa para tu equipo",
+  "descripcion": "Qué opciones hay para hospedarse en Lerdo y su Ciudad Industrial, cuánto cuestan y cuándo conviene una casa completa en Torreón a 25 minutos.",
+  "resumen": "Lerdo tiene Ciudad Industrial, campo y turismo de fin de semana en el Cañón de Fernández, pero poca capacidad hotelera. Comparamos hotel contra casa completa para equipos de trabajo y familias.",
+  "keywords": [
+    "hospedaje lerdo durango",
+    "hotel en lerdo durango",
+    "casas en renta lerdo durango",
+    "hospedaje ciudad industrial lerdo",
+    "donde quedarse en lerdo"
+  ],
+  "cuerpo": "<p>Lerdo es la tercera ciudad de La Laguna y la que menos hospedaje tiene. Hay dos o tres hoteles sobre la carretera a Durango y en el centro, cabañas en el Cañón de Fernández y Villa Juárez para fin de semana, y poco más. Cuando llega una cuadrilla a la <strong>Ciudad Industrial de Lerdo</strong> o un equipo de mantenimiento a una planta de la carretera, el problema no es el precio: es que no hay dónde poner a 10 personas juntas.</p>\n<h2>Hotel en Lerdo</h2>\n<p>Funciona para 1 a 3 personas por pocos días. Para un equipo: cuartos separados, sin cocina (cada comida se paga), sin lavandería, y en temporada de ferias o eventos se llenan. Precio típico por cuarto doble: de $800 a $1,300 la noche.</p>\n<h2>Casa completa en Torreón</h2>\n<p>Desde Los Viñedos (Torreón) se llega a la Ciudad Industrial de Lerdo en unos <strong>25 minutos por el Periférico</strong>. Por eso muchas empresas que trabajan en Lerdo hospedan a su gente con nosotros: una casa para 10 desde $1,750 la noche (precio total, no por persona), con cocina, lavadora, clima, cochera y factura. Para 16 personas, La Rosita con 10 camas.</p>\n<h2>Cuándo conviene cada una</h2>\n<ul>\n<li><strong>1 a 3 personas, 1 o 2 noches:</strong> hotel en Lerdo.</li>\n<li><strong>4 o más personas, 3 noches o más:</strong> casa completa; el ahorro en cuartos y comidas paga el traslado.</li>\n<li><strong>Semanas o meses:</strong> casa por mes, de $35,000 a $45,000 sin servicios, con contrato.</li>\n</ul>\n<p>Mándanos fechas y cuántos son; te contestamos con la casa que mejor queda para Lerdo.</p>",
+  "faqs": [
+    {
+      "q": "¿Qué tan lejos está Torreón de Lerdo?",
+      "a": "Unos 25 minutos por el Periférico desde el oriente de Torreón hasta la Ciudad Industrial de Lerdo; 30 al centro de Lerdo."
+    },
+    {
+      "q": "¿Hay casas para rentar por día en Lerdo?",
+      "a": "Casi no hay para grupos. La opción más cercana con cocina y factura son las casas de Hostalia en Torreón."
+    },
+    {
+      "q": "¿Rentan por semana?",
+      "a": "Sí, por noche desde 2 noches, por semana y por mes."
+    }
+  ],
+  "busqueda": "hospedaje lerdo durango",
+  "fecha": "2026-10-20",
+  "modelo": "claude-fable-5-1"
+}

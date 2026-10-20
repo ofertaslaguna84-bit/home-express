@@ -382,5 +382,375 @@
         "a": "Sí, de 1 a 6 meses, con o sin servicios incluidos."
       }
     ]
+  },
+  {
+    "slug": "casas-en-renta-los-vinedos-torreon",
+    "menu": "Los Viñedos",
+    "titulo": "Casas amuebladas en renta en Los Viñedos, Torreón (por noche, semana o mes)",
+    "desc": "Cuatro casas completas en Los Viñedos, Torreón: alberca, privada con seguridad, cerca de Galerías Laguna, la zona industrial y el Periférico. Para 8 a 10 personas, con factura.",
+    "eyebrow": "Fraccionamiento Los Viñedos, Torreón",
+    "h1": "Casas amuebladas en renta en <em>Los Viñedos</em>, Torreón.",
+    "lead": "Cuatro casas en el mismo fraccionamiento: Leones, Linces, Viñedos y Viñedos Moderna. Privadas con seguridad, alberca del fraccionamiento, a 6 minutos de Galerías Laguna y con salida directa al Periférico. Por noche, semana o mes, con factura.",
+    "wa": "Hola Hostalia, busco casa en Los Viñedos. ¿Qué tienen disponible y en cuánto?",
+    "casas": [
+      "leones",
+      "linces",
+      "vinedos",
+      "vinedos-moderna"
+    ],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Por qué Los Viñedos",
+        "html": "<p>Es la zona que más nos piden: fraccionamiento residencial del oriente de Torreón, con <strong>privadas cerradas y vigilancia</strong>, alberca común, áreas verdes y calles tranquilas. Está a <strong>6 minutos de Galerías Laguna</strong>, a 10 del aeropuerto, a 5 de la zona industrial de Mieleras y sale directo al Periférico hacia Gómez Palacio y Lerdo. Supermercados, farmacias y restaurantes a menos de 5 minutos.</p>"
+      },
+      {
+        "h2": "Cuatro casas, una misma zona",
+        "html": "<ul><li><strong>Casa Leones:</strong> 10 personas, alberca y asador, patio con pasto.</li><li><strong>Casa Linces:</strong> 10 personas, privada con seguridad, cochera para 2 autos.</li><li><strong>Casa Viñedos:</strong> 10 personas, 3 baños completos.</li><li><strong>Casa Viñedos Moderna:</strong> 8 personas en 7 camas, cada quien en su cama.</li></ul><p>Si tu grupo es de 20 o más, rentamos dos o tres casas juntas en el mismo fraccionamiento: el equipo queda a una cuadra y cada casa con su cocina.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Las casas de Los Viñedos tienen alberca?",
+        "a": "Leones y Linces tienen acceso a la alberca del fraccionamiento; Leones además tiene asador y patio con pasto."
+      },
+      {
+        "q": "¿Es seguro el fraccionamiento?",
+        "a": "Sí, son privadas con acceso controlado y vigilancia. Es zona residencial familiar."
+      },
+      {
+        "q": "¿Qué tan lejos está de la zona industrial?",
+        "a": "A 5 minutos de Mieleras y Ferropuerto, a 10 del Parque Industrial Oriente y a 15 o 20 de Gómez Palacio por el Periférico."
+      },
+      {
+        "q": "¿Puedo rentar dos casas juntas?",
+        "a": "Sí, cuando hay disponibilidad rentamos Leones, Linces, Viñedos y Viñedos Moderna en bloque para grupos de hasta 38 personas."
+      }
+    ]
+  },
+  {
+    "slug": "casas-en-renta-provitec-torreon",
+    "menu": "Provitec",
+    "titulo": "Casa amueblada en renta en Provitec, Torreón, para 12 personas",
+    "desc": "Casa Provitec: 12 personas en 7 camas, recámara en planta baja, junto al Blvd. Revolución y a minutos de Mieleras y Ferropuerto. Ideal para cuadrillas y personal de planta. Con factura.",
+    "eyebrow": "Colonia Provitec, Torreón",
+    "h1": "Casa en renta en <em>Provitec</em>, Torreón, para cuadrillas y personal de planta.",
+    "lead": "Doce personas en siete camas, una recámara en planta baja sin escaleras, cocina completa y lavadora. Junto al Boulevard Revolución, con salida rápida a la carretera a Mieleras, al Ferropuerto y al Parque Industrial Oriente. Precio por casa y factura a nombre de la empresa.",
+    "wa": "Hola Hostalia, me interesa la casa de Provitec para personal de empresa. ¿Disponibilidad y precio con factura?",
+    "casas": [
+      "provitec",
+      "leones",
+      "linces",
+      "rosita"
+    ],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "Para quién es Provitec",
+        "html": "<p>Es nuestra casa más usada por <strong>empresas</strong>: cuadrillas de construcción, técnicos de mantenimiento, supervisores y personal de planta que viene por semanas. Siete camas reales (no sofás), clima en cada recámara, sala y comedor para 12, y una <strong>recámara en planta baja</strong> para quien no puede subir escaleras.</p>"
+      },
+      {
+        "h2": "Ubicación",
+        "html": "<p>Provitec está sobre el <strong>Blvd. Revolución</strong>, en el oriente de Torreón: 8 minutos a la carretera a Mieleras y los parques industriales Ferropuerto, PYMES y Centenario; 10 al Parque Industrial Oriente; 12 al centro; 15 al aeropuerto. Tiendas, tortillerías y fondas a dos cuadras para el gasto diario del equipo.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuántas personas caben en Provitec?",
+        "a": "Doce personas en siete camas, en cuatro recámaras. Si son más, combinamos con La Rosita (16 personas) o con las casas de Los Viñedos."
+      },
+      {
+        "q": "¿Hay estacionamiento para camionetas de la empresa?",
+        "a": "Sí, cochera y espacio en la calle para unidades de trabajo."
+      },
+      {
+        "q": "¿Facturan?",
+        "a": "Sí, CFDI a nombre de la empresa, con contrato de hospedaje."
+      },
+      {
+        "q": "¿Cuál es el mínimo de estancia?",
+        "a": "Dos noches. Para semanas y meses hay tarifa especial."
+      }
+    ]
+  },
+  {
+    "slug": "casas-para-bodas-y-eventos-torreon",
+    "menu": "Bodas y eventos",
+    "titulo": "Casas para hospedar invitados de bodas y XV años en Torreón",
+    "desc": "Casas completas para 10 a 16 invitados de boda, XV años o bautizo en Torreón: todos juntos, con cocina, alberca y patio. Cerca de los salones de Torreón y Gómez Palacio. Desde 2 noches.",
+    "eyebrow": "Bodas, XV años y reuniones familiares",
+    "h1": "Hospeda a los invitados de tu <em>boda o XV años</em> en una sola casa.",
+    "lead": "Cuando viene la familia de fuera, un hotel los separa en cuartos y encarece todo. Una casa de Hostalia los junta: desayunan juntos, se arreglan juntos y el patio es para la tornaboda. Casas para 10 a 16 personas, con alberca en varias, desde 2 noches.",
+    "wa": "Hola Hostalia, tengo una boda en Torreón y necesito casa para mis invitados. ¿Qué tienen disponible?",
+    "casas": [
+      "acacia",
+      "almendros",
+      "leones",
+      "rosita",
+      "cantera",
+      "senderos"
+    ],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Por qué una casa y no cuartos de hotel",
+        "html": "<p>Para 10 invitados necesitas 5 cuartos de hotel y nadie convive. En una casa están <strong>todos bajo el mismo techo</strong>: cocina para el desayuno del día siguiente, sala para esperar a la novia, patio o alberca para la resaca del domingo, y estacionamiento para todos. <strong>Casa Acacias</strong> tiene alberca privada y es céntrica; <strong>Almendros</strong> es la más grande con una recámara en planta baja para los abuelos; <strong>Cantera</strong> tiene palapa y asador para la carne asada de la tornaboda.</p>"
+      },
+      {
+        "h2": "Cerca de los salones y jardines",
+        "html": "<p>Estamos a 10 o 20 minutos de los jardines y salones de eventos de Torreón y a 20 o 25 de los de Gómez Palacio por el Periférico. Si nos dices dónde es el evento, te decimos qué casa queda mejor.</p><ul><li>Desde <strong>2 noches</strong>; fin de semana completo con mejor precio.</li><li>Camas hechas, toallas y cocina equipada; llegan con su vestido y ya.</li><li>Varias casas juntas en Los Viñedos para familias grandes.</li></ul>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuántos invitados pueden hospedar?",
+        "a": "De 10 a 16 por casa; combinando casas en Los Viñedos, hasta 38 personas a una cuadra de distancia."
+      },
+      {
+        "q": "¿Se puede hacer la tornaboda en la casa?",
+        "a": "Sí, con reglas de la casa: música a volumen moderado y hasta la hora que marca el reglamento del fraccionamiento. Cantera y Leones tienen asador."
+      },
+      {
+        "q": "¿Cuál es la casa más bonita para fotos?",
+        "a": "Casa Acacias, con alberca privada y jardín, y Casa Leones con su patio con pasto."
+      },
+      {
+        "q": "¿Con cuánta anticipación reservo?",
+        "a": "Para bodas en temporada (octubre a diciembre y abril a junio) conviene apartar con 2 o 3 meses."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-equipos-deportivos-torneos-torreon",
+    "menu": "Equipos deportivos",
+    "titulo": "Hospedaje para equipos deportivos y torneos en Torreón",
+    "desc": "Casas para equipos de futbol, beisbol, basquet y sus familias que vienen a torneos en Torreón y La Laguna. De 10 a 16 por casa, cocina para comer bien, cerca del TSM, el Estadio Revolución y las unidades deportivas.",
+    "eyebrow": "Torneos y equipos visitantes",
+    "h1": "Hospedaje para <em>equipos deportivos</em> que vienen a torneos en La Laguna.",
+    "lead": "Un equipo completo con su cuerpo técnico en una sola casa: camas individuales, cocina para preparar lo que el nutriólogo pide, lavadora para los uniformes y patio para estirar. Casas para 10 a 16 personas, a minutos del Estadio Corona (TSM), el Revolución y las unidades deportivas.",
+    "wa": "Hola Hostalia, traigo un equipo a un torneo en Torreón. ¿Qué casas tienen y en cuánto?",
+    "casas": [
+      "rosita",
+      "provitec",
+      "almendros",
+      "leones",
+      "linces",
+      "vinedos-moderna"
+    ],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Lo que un equipo necesita",
+        "html": "<ul><li><strong>Camas para todos:</strong> La Rosita tiene 10 camas (16 personas), Provitec 7 camas, Viñedos Moderna 7 camas individuales.</li><li><strong>Cocina equipada:</strong> desayunos y cenas del equipo sin depender de restaurantes.</li><li><strong>Lavadora y secadora</strong> para uniformes entre partidos.</li><li><strong>Precio por casa</strong>, no por persona, y factura al club o a la escuela.</li></ul>"
+      },
+      {
+        "h2": "Cerca de dónde se juega",
+        "html": "<p>Las casas del oriente (Los Viñedos y Provitec) están a 10 minutos del <strong>Estadio Corona TSM</strong> y de las canchas de la zona; a 15 del <strong>Estadio Revolución</strong> y de la Unidad Deportiva Torreón; y a 20 o 25 de las unidades de Gómez Palacio y Lerdo. Para torneos de fin de semana, dos noches con llegada el viernes.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Reciben equipos de menores?",
+        "a": "Sí, con sus entrenadores o padres responsables en la misma casa."
+      },
+      {
+        "q": "¿Cuántas personas por casa?",
+        "a": "De 8 a 16 según la casa; para delegaciones grandes rentamos varias casas en Los Viñedos."
+      },
+      {
+        "q": "¿Hay estacionamiento para el camión?",
+        "a": "Las casas tienen cochera para 2 autos; un camión o van grande se estaciona en la calle de la privada, con aviso previo."
+      },
+      {
+        "q": "¿Facturan a asociaciones y escuelas?",
+        "a": "Sí, CFDI a cualquier razón social."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-cerca-de-hospitales-torreon",
+    "menu": "Hospitales y médicos",
+    "titulo": "Hospedaje cerca de hospitales en Torreón para familias, pacientes y médicos",
+    "desc": "Casas amuebladas cerca de los hospitales de Torreón para familias que acompañan a un paciente, médicos residentes y personal de salud. Por semana o por mes, con cocina, clima y factura.",
+    "eyebrow": "Pacientes, familias y personal de salud",
+    "h1": "Hospedaje cerca de los <em>hospitales de Torreón</em>, por semana o por mes.",
+    "lead": "Cuando un familiar está internado o viene a tratamiento, un hotel por semanas sale carísimo y no tiene cocina. Nuestras casas céntricas, Acacias y Almendros, están a 10 o 15 minutos de los principales hospitales de Torreón, con recámara en planta baja, clima y lavadora. También para médicos residentes y equipos de salud por meses.",
+    "wa": "Hola Hostalia, necesito hospedaje cerca de un hospital en Torreón por varias semanas. ¿Qué tienen?",
+    "casas": [
+      "almendros",
+      "acacia",
+      "cantera",
+      "senderos",
+      "vinedos"
+    ],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Para quién",
+        "html": "<ul><li><strong>Familias</strong> que acompañan a un paciente en tratamiento largo (oncología, cirugías, rehabilitación).</li><li><strong>Pacientes</strong> que vienen de otras ciudades a consulta o cirugía y necesitan reposo con su familia.</li><li><strong>Médicos residentes, enfermería y técnicos</strong> que llegan por meses a rotaciones o proyectos.</li></ul><p><strong>Casa Almendros</strong> tiene recámara y baño en planta baja, sin escaleras, pensada para quien se recupera.</p>"
+      },
+      {
+        "h2": "Qué tan cerca",
+        "html": "<p>Acacias y Almendros están en zona céntrica, a 10 o 15 minutos de los hospitales y clínicas del centro y del poniente de Torreón, y a 20 de los de Gómez Palacio. Farmacias y supermercados a menos de 5 minutos. Por mes, de $35,000 a $45,000 sin servicios para casas completas de 10 a 12 personas; si son menos personas, pregunta por tarifa.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Rentan por semana?",
+        "a": "Sí, desde 2 noches, por semana y por mes."
+      },
+      {
+        "q": "¿Tienen casa sin escaleras?",
+        "a": "Casa Almendros tiene recámara y baño en planta baja; Provitec también."
+      },
+      {
+        "q": "¿Hay cocina para dietas especiales?",
+        "a": "Todas las casas tienen cocina equipada con estufa, refrigerador y utensilios."
+      },
+      {
+        "q": "¿Facturan a la empresa o al hospital?",
+        "a": "Sí, CFDI a nombre de quien paga."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-cuadrillas-construccion-torreon",
+    "menu": "Cuadrillas",
+    "titulo": "Hospedaje para cuadrillas de construcción en Torreón y La Laguna",
+    "desc": "Casas para cuadrillas de obra, montaje y mantenimiento en Torreón: 10 a 16 trabajadores por casa, camas individuales, cocina, lavadora, estacionamiento para unidades y factura a la constructora. Por semana o por mes.",
+    "eyebrow": "Obra, montaje y mantenimiento",
+    "h1": "Hospedaje para <em>cuadrillas de construcción</em> en Torreón.",
+    "lead": "Si traes cuadrilla a una obra, una nave o un paro de planta en La Laguna, te damos una casa completa por semana o por mes: camas para todos, cocina para bajar el gasto de comida, lavadora, cochera para las unidades y un solo CFDI a la constructora. La Rosita aloja 16; Provitec 12; en Los Viñedos combinamos casas para 30 o más.",
+    "wa": "Hola Hostalia, necesito hospedaje para una cuadrilla en Torreón. ¿Cuántas personas caben y cuánto por mes con factura?",
+    "casas": [
+      "rosita",
+      "provitec",
+      "leones",
+      "linces",
+      "vinedos",
+      "vinedos-moderna"
+    ],
+    "clientes": true,
+    "secciones": [
+      {
+        "h2": "Lo que cuida al contratista",
+        "html": "<ul><li><strong>Precio por casa</strong>, no por persona: desde $1,750 la noche para 10; por mes desde $35,000 sin servicios.</li><li><strong>Contrato de hospedaje</strong> con reglas claras y <strong>CFDI</strong> a la razón social.</li><li>Camas individuales, clima en cada recámara, cocina, lavadora y cochera.</li><li>Entrada y salida flexibles para rotación de personal.</li></ul>"
+      },
+      {
+        "h2": "Cerca de las obras",
+        "html": "<p>Provitec y Los Viñedos están a 5 o 10 minutos de los parques industriales de Mieleras, Ferropuerto y Oriente, donde más naves se construyen; a 15 o 20 de Gómez Palacio y a 25 de Lerdo. La Rosita está en Ampliación La Rosita, con salida al Periférico.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuántos trabajadores por casa?",
+        "a": "De 10 a 16 según la casa. Para 30 o más, combinamos casas en el mismo fraccionamiento."
+      },
+      {
+        "q": "¿Hay reglas para cuadrillas?",
+        "a": "Sí: sin fiestas, sin ruido después de las 10 pm y cuidado de la casa; se firma en el contrato. Los equipos que las cumplen regresan cada proyecto."
+      },
+      {
+        "q": "¿Se puede pagar por semana?",
+        "a": "Sí, por semana y por mes, por transferencia, con factura."
+      },
+      {
+        "q": "¿Quién hace la limpieza?",
+        "a": "Limpieza al inicio y al final incluida; limpieza semanal se cotiza aparte."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-feria-torreon-y-eventos",
+    "menu": "Feria y conciertos",
+    "titulo": "Hospedaje para la Feria de Torreón, conciertos y eventos en La Laguna",
+    "desc": "Casas para grupos que vienen a la Feria de Torreón, a conciertos en el Coliseo Centenario, a eventos en el TSM o a la Feria de Gómez Palacio. De 8 a 16 personas, desde 2 noches, cerca de todo.",
+    "eyebrow": "Feria, conciertos y eventos masivos",
+    "h1": "Casa para tu grupo en la <em>Feria de Torreón</em>, conciertos y eventos.",
+    "lead": "Para la Feria, un concierto en el Coliseo Centenario o un partido en el TSM, los hoteles se llenan y suben de precio. Nosotros te damos una casa para 8 a 16 personas, con cocina, patio y estacionamiento, a 10 o 20 minutos de los recintos. Mínimo 2 noches.",
+    "wa": "Hola Hostalia, venimos en grupo a un evento en Torreón. ¿Qué casas tienen disponibles esas fechas?",
+    "casas": [
+      "leones",
+      "linces",
+      "cantera",
+      "senderos",
+      "vinedos",
+      "vinedos-moderna",
+      "rosita"
+    ],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Dónde quedan los eventos",
+        "html": "<p>La <strong>Feria de Torreón</strong> se hace en el recinto ferial del oriente, a 10 minutos de Los Viñedos. El <strong>Coliseo Centenario</strong> y el <strong>Estadio Corona TSM</strong> están en la misma zona oriente. La <strong>Feria de Gómez Palacio</strong> queda a 20 o 25 minutos por el Periférico. Para todos, las casas de Los Viñedos y Senderos son las mejor ubicadas.</p>"
+      },
+      {
+        "h2": "Cómo funciona",
+        "html": "<ul><li>Mínimo <strong>2 noches</strong>; para fines de semana de evento conviene apartar con semanas de anticipación.</li><li>Precio por casa completa: desde $1,550 la noche (8 personas) y $1,750 (10 personas).</li><li>Cocina, asador en algunas, estacionamiento para varios autos.</li><li>Se aparta con anticipo y contrato; se liquida al llegar.</li></ul>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuánto cuesta por persona?",
+        "a": "El precio es por casa: entre 8 y 16 personas, sale de $110 a $220 por persona por noche, muy por debajo de un hotel en fechas de evento."
+      },
+      {
+        "q": "¿Puedo llegar tarde después del concierto?",
+        "a": "Sí, la entrada es con código o llave; te explicamos al reservar."
+      },
+      {
+        "q": "¿Aceptan grupos de jóvenes?",
+        "a": "Sí, con un responsable mayor de edad que firme el contrato y cumpla el reglamento de la casa."
+      },
+      {
+        "q": "¿Hay transporte cerca?",
+        "a": "Las casas están sobre avenidas con taxis y aplicaciones disponibles a cualquier hora."
+      }
+    ]
+  },
+  {
+    "slug": "hospedaje-centro-torreon",
+    "menu": "Zona centro",
+    "titulo": "Casas amuebladas céntricas en Torreón: Acacias, Almendros, Cantera y Senderos",
+    "desc": "Casas completas en zonas céntricas y residenciales de Torreón para quien quiere estar cerca de todo: oficinas, hospitales, restaurantes y el centro histórico. De 8 a 12 personas, alberca privada en Acacias.",
+    "eyebrow": "Zona céntrica y residencial",
+    "h1": "Casas amuebladas <em>cerca de todo</em> en Torreón.",
+    "lead": "Si tu plan es oficina, hospital, trámites o salir a comer, estas cuatro casas quedan a 10 minutos del centro y de los corredores de restaurantes. Acacias tiene alberca privada; Almendros es la más grande y sin escaleras; Cantera tiene palapa y asador; Senderos es la más nueva, en residencial cerrado.",
+    "wa": "Hola Hostalia, busco casa céntrica en Torreón. ¿Cuáles tienen y en cuánto?",
+    "casas": [
+      "acacia",
+      "almendros",
+      "cantera",
+      "senderos"
+    ],
+    "clientes": false,
+    "secciones": [
+      {
+        "h2": "Qué hay cerca",
+        "html": "<p>Centro histórico, Plaza Mayor y la Alameda a 10 minutos; corredor de restaurantes del Blvd. Independencia y Paseo de la Rosita a 5 u 8; hospitales y clínicas a 10 o 15; Galerías Laguna a 12. Para trabajo de oficina, trámites de gobierno o citas médicas es la zona que conviene.</p>"
+      },
+      {
+        "h2": "Las cuatro casas",
+        "html": "<ul><li><strong>Casa Acacias:</strong> 11 personas, alberca privada, la mejor ubicada.</li><li><strong>Casa Almendros:</strong> 12 personas, 8 camas, recámara en planta baja, alberca.</li><li><strong>Casa Cantera:</strong> 10 personas, palapa, asador y barra; la más económica.</li><li><strong>Casa Senderos:</strong> 8 personas, residencial cerrado, patio con comedor exterior.</li></ul>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuál es la casa más céntrica?",
+        "a": "Casa Acacias, en zona privada y céntrica, con alberca propia."
+      },
+      {
+        "q": "¿Tienen casa económica en el centro?",
+        "a": "Casa Cantera es la más económica de todas, con palapa y asador."
+      },
+      {
+        "q": "¿Se puede caminar a restaurantes?",
+        "a": "Desde Acacias y Almendros hay cafés y restaurantes a pocas cuadras; para el centro histórico conviene coche o taxi (10 minutos)."
+      },
+      {
+        "q": "¿Rentan por mes?",
+        "a": "Sí, de 1 a 6 meses, con o sin servicios."
+      }
+    ]
   }
 ]
