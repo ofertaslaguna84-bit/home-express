@@ -211,8 +211,8 @@
       "recamaras": 4,
       "camas": 8,
       "banos": 3,
-      "precioNoche": 2000,
-      "precioFinde": 2000,
+      "precioNoche": 2300,
+      "precioFinde": 2300,
       "destacados": [
         "8 camas en 4 recámaras",
         "Cocina equipada",
@@ -229,8 +229,10 @@
         "rosita-recamara_03",
         "rosita-recamara_04"
       ],
-      "precioMesSinServicios": 45000,
-      "precioMesConServicios": 48000
+      "precioMesSinServicios": 51750,
+      "precioMesConServicios": 54750,
+      "precioEdith": 2000,
+      "precioMesEdith": 45000
     },
     {
       "slug": "vinedos",
@@ -322,8 +324,8 @@
       "recamaras": 2,
       "camas": 6,
       "banos": 2,
-      "precioNoche": 1250,
-      "precioFinde": 1250,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
       "airbnbRef": "1462615611831615431",
       "destacados": [
         "6 camas",
@@ -339,7 +341,8 @@
         "gomez-norte-03",
         "gomez-norte-04",
         "gomez-norte-05"
-      ]
+      ],
+      "precioEdith": 1250
     },
     {
       "slug": "gomez-10",
@@ -350,8 +353,8 @@
       "recamaras": 3,
       "camas": 7,
       "banos": 3.5,
-      "precioNoche": 1250,
-      "precioFinde": 1250,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
       "airbnbRef": "1419752878764121561",
       "destacados": [
         "7 camas en 3 recámaras",
@@ -368,7 +371,8 @@
         "gomez-centro-06",
         "gomez-centro-07",
         "gomez-centro-08"
-      ]
+      ],
+      "precioEdith": 1250
     },
     {
       "slug": "familiar-10",
@@ -379,8 +383,8 @@
       "recamaras": 4,
       "camas": 6,
       "banos": 2.5,
-      "precioNoche": 1250,
-      "precioFinde": 1250,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
       "airbnbRef": "1685139615141733643",
       "destacados": [
         "4 recámaras",
@@ -399,7 +403,8 @@
         "familiar-10-06",
         "familiar-10-07",
         "familiar-10-08"
-      ]
+      ],
+      "precioEdith": 1250
     },
     {
       "slug": "depa-7",
@@ -410,8 +415,8 @@
       "recamaras": 3,
       "camas": 7,
       "banos": 2,
-      "precioNoche": 1000,
-      "precioFinde": 1000,
+      "precioNoche": 1150,
+      "precioFinde": 1150,
       "airbnbRef": "1672014333570728194",
       "destacados": [
         "7 camas: cada quien la suya",
@@ -427,7 +432,8 @@
         "depa-7-03",
         "depa-7-04",
         "depa-7-05"
-      ]
+      ],
+      "precioEdith": 1000
     },
     {
       "slug": "jardin-14",
@@ -438,8 +444,8 @@
       "recamaras": 3,
       "camas": 7,
       "banos": 3,
-      "precioNoche": 1700,
-      "precioFinde": 1700,
+      "precioNoche": 2000,
+      "precioFinde": 2000,
       "airbnbRef": "1583104575361290881",
       "destacados": [
         "14 personas",
@@ -455,7 +461,8 @@
         "jardin-14-03",
         "jardin-14-04",
         "jardin-14-05"
-      ]
+      ],
+      "precioEdith": 1700
     },
     {
       "slug": "grande-14",
@@ -466,8 +473,8 @@
       "recamaras": 6,
       "camas": 7,
       "banos": 4,
-      "precioNoche": 1700,
-      "precioFinde": 1700,
+      "precioNoche": 2000,
+      "precioFinde": 2000,
       "airbnbRef": "1067641861097140036",
       "destacados": [
         "6 recámaras",
@@ -483,7 +490,8 @@
         "grande-14-03",
         "grande-14-04",
         "grande-14-05"
-      ]
+      ],
+      "precioEdith": 1700
     },
     {
       "slug": "loft-tec",
@@ -494,8 +502,8 @@
       "recamaras": 1,
       "camas": 2,
       "banos": 2,
-      "precioNoche": 550,
-      "precioFinde": 550,
+      "precioNoche": 650,
+      "precioFinde": 650,
       "airbnbRef": "1448593693333501598",
       "destacados": [
         "Cerca del Tec",
@@ -511,7 +519,8 @@
         "loft-tec-03",
         "loft-tec-04",
         "loft-tec-05"
-      ]
+      ],
+      "precioEdith": 550
     },
     {
       "slug": "depa-los-angeles",
@@ -522,8 +531,8 @@
       "recamaras": 2,
       "camas": 6,
       "banos": 2,
-      "precioNoche": 1000,
-      "precioFinde": 1000,
+      "precioNoche": 1150,
+      "precioFinde": 1150,
       "airbnbRef": "45706771",
       "destacados": [
         "A 5 min del centro",
@@ -538,7 +547,8 @@
         "depa-los-angeles-02",
         "depa-los-angeles-03",
         "depa-los-angeles-04"
-      ]
+      ],
+      "precioEdith": 1000
     }
   ],
   "clientes": [
