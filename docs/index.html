@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -219,6 +219,84 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .dato{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--linea);font-size:14.5px}
 .dato:last-child{border:0}
 .dato b{font-weight:700}
+
+/* ── Diseño elegante (oct 2026): letra con serifa en títulos, portada a pantalla completa,
+   logo al centro y menú limpio. Va al final para encimarse a lo de arriba. */
+body{font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+h1,h2,h3,.cta h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:0}
+h1{font-size:clamp(36px,5.6vw,64px);line-height:1.05}
+h2{font-size:clamp(30px,3.8vw,46px);line-height:1.1}
+h3{font-size:23px}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
+.eyebrow,.kicker{font-weight:600;letter-spacing:.32em;font-size:11px;color:var(--azul)}
+.btn{border-radius:0;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;padding:15px 28px}
+.btn-nar{background:var(--marino);box-shadow:none}.btn-nar:hover{background:#0b1426}
+.btn-out{border:1px solid var(--marino);background:transparent}
+.btn-claro{border:1px solid rgba(255,255,255,.55);color:#fff;background:transparent}.btn-claro:hover{background:#fff;color:var(--marino)}
+.casa,.vs-card,.post,.panel,.logo-cli,.galeria div{border-radius:4px}
+.casa-btns .btn{letter-spacing:.08em;font-size:11px}
+.spec,.badge,.ahorro{border-radius:2px}
+
+/* encabezado: logo al centro y menú en texto debajo */
+.hdr{position:relative;background:#fff;border-bottom:1px solid var(--linea);backdrop-filter:none}
+.hdr-in{flex-direction:column;justify-content:center;gap:14px;padding:22px 22px 0}
+.hdr .logo{height:62px}
+.nav{gap:34px;font-size:14px;font-weight:400;color:var(--gris);padding-bottom:18px}
+.nav a:hover,.nav a[aria-current]{color:var(--marino)}
+.menu-btn{position:absolute;right:14px;top:18px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;cursor:pointer;color:var(--marino)}
+.menu-btn svg{width:28px;height:28px}
+@media(min-width:900px){.hdr .menu-btn{display:none}}
+.hdr.sobre{position:absolute;left:0;right:0;top:0;z-index:50;background:none;border:0}
+.hdr.sobre .hdr-in{padding-top:30px}
+.hdr.sobre .logo{height:74px}
+.hdr.sobre .nav{display:none}
+.hdr.sobre .menu-btn{display:flex;color:#fff;right:22px;top:26px}
+.menu-capa{position:fixed;inset:0;z-index:80;background:rgba(19,32,58,.97);display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.menu-capa.abierto{display:flex}
+.menu-capa a{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;color:rgba(255,255,255,.88)}
+.menu-capa a:hover{color:#C9A46A}
+.menu-capa .cerrar{position:absolute;top:22px;right:22px;color:#fff}
+
+/* portada a pantalla completa con el video */
+.portada{position:relative;height:100svh;min-height:600px;overflow:hidden;background:var(--marino);color:#fff;padding:0;display:flex;align-items:flex-end;justify-content:center;text-align:center}
+.portada video,.portada .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,19,38,.55) 0%,rgba(11,19,38,.15) 35%,rgba(11,19,38,.35) 60%,rgba(11,19,38,.88) 100%)}
+.portada .cont{position:relative;z-index:2;max-width:880px;padding:0 22px 64px}
+.portada .kicker{color:#E2C891;margin-bottom:18px;justify-content:center}
+.portada h1{color:#fff;font-weight:500;margin-bottom:18px}
+.portada h1 em{color:#E2C891}
+.portada .lead{color:rgba(255,255,255,.86);margin:0 auto 30px;font-weight:300;font-size:18px}
+.portada .hero-cta{justify-content:center;gap:12px}
+.portada .nota{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:26px}
+.bajar{display:block;width:1px;height:46px;background:rgba(255,255,255,.45);margin:26px auto 0}
+
+/* franja de confianza más fina */
+.trust{background:var(--crema);color:var(--marino);padding:20px 0;border-bottom:1px solid var(--linea)}
+.trust-in{font-weight:400;font-size:13px;letter-spacing:.04em}
+.trust b{color:var(--azul)}
+
+/* clientes en franja marina */
+.clientes{background:var(--marino);padding:60px 0}
+.clientes h2{color:#fff;font-size:clamp(24px,2.8vw,32px);font-weight:500;margin-bottom:30px}
+.logo-cli{border:0;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+
+/* secciones centradas */
+#casas>.w>.eyebrow,#casas>.w>h2,#casas>.w>.sub,#como .eyebrow,#como h2,#como .sub,#faq .eyebrow,#faq h2{display:block;text-align:center;margin-left:auto;margin-right:auto}
+#faq .w>div{margin-left:auto;margin-right:auto}
+.paso::before{background:none;border:1px solid var(--azul);color:var(--azul);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600}
+.faq summary{font-weight:500}
+.cta{background:var(--marino)}
+.cta h2{font-weight:500}
+
+/* pie centrado */
+.pie{background:#0E182D;text-align:center}
+.pie-in{grid-template-columns:1fr!important;justify-items:center}
+.pie-in>div:first-child p{margin:0 auto}
+.pie ul{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px}
+.pie h4{font-family:'Cormorant Garamond',Georgia,serif;text-transform:none;letter-spacing:0;font-size:20px;font-weight:500;color:#E2C891}
+.pie-bajo{justify-content:center;gap:20px}
+.btn.flota{border-radius:50%;padding:0;letter-spacing:0}
+@media(max-width:600px){.hdr.sobre .logo{height:50px}.hdr.sobre .hdr-in{padding-top:22px}.hdr.sobre .menu-btn{right:8px;top:16px}.hdr .logo{height:50px}.portada .hero-cta .btn{width:100%;justify-content:center}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LodgingBusiness","@id":"https://hostalia.com.mx/#organizacion","name":"Hostalia","url":"https://hostalia.com.mx","logo":"https://hostalia.com.mx/img/logo.png","image":"https://hostalia.com.mx/img/leones-portada.jpg","description":"Renta de casas completas amuebladas en Torreón, Coahuila. Por noche, semana o mes, con factura. De 4 a 16 personas.","telephone":"+528712638082","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"areaServed":[{"@type":"City","name":"Torreón"},{"@type":"City","name":"Gómez Palacio"},{"@type":"City","name":"Lerdo"}],"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Aire acondicionado","value":true},{"@type":"LocationFeatureSpecification","name":"Cocina equipada","value":true},{"@type":"LocationFeatureSpecification","name":"Wifi","value":true},{"@type":"LocationFeatureSpecification","name":"Estacionamiento","value":true}],"numberOfRooms":56}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué son más baratas aquí que en Airbnb?","acceptedAnswer":{"@type":"Answer","text":"Porque en Airbnb hay una comisión del 16% que se va a la plataforma. Al reservar directo con nosotros esa comisión no existe, y ese ahorro te lo pasamos a ti. Es la misma casa, el mismo anfitrión y las mismas llaves."}},{"@type":"Question","name":"¿Facturan? Lo necesito para mi empresa.","acceptedAnswer":{"@type":"Answer","text":"Sí, facturamos con CFDI en todas las casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa."}},{"@type":"Question","name":"¿Cuál es la estancia mínima y la máxima?","acceptedAnswer":{"@type":"Answer","text":"La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de $35,000 a $54,750 según la casa y si incluye servicios (agua, luz, gas e internet), que suben $3,000. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas."}},{"@type":"Question","name":"¿Los precios llevan IVA?","acceptedAnswer":{"@type":"Answer","text":"Los precios que ves son por noche más IVA. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido."}},{"@type":"Question","name":"¿La limpieza está incluida?","acceptedAnswer":{"@type":"Answer","text":"No, la limpieza es obligatoria y se cobra aparte: $550 + IVA por servicio, una vez por semana. La casa se entrega limpia y en estancias largas pasa el servicio cada semana; si quieres limpieza más seguido se cotiza por WhatsApp."}},{"@type":"Question","name":"¿Cómo reservo y cómo pago?","acceptedAnswer":{"@type":"Answer","text":"Nos escribes por WhatsApp con tus fechas y cuántas personas son. Te confirmamos disponibilidad y precio cerrado. Se aparta con un anticipo por transferencia y el resto se liquida al llegar. Para empresas manejamos transferencia y factura."}},{"@type":"Question","name":"¿Qué incluyen las casas?","acceptedAnswer":{"@type":"Answer","text":"Están completamente equipadas y listas para entrar: cocina equipada, ropa de cama y toallas, clima en toda la casa, wifi, estacionamiento y sala comedor. No tienes que llevar nada más que tu maleta."}},{"@type":"Question","name":"¿Reciben grupos de trabajo o cuadrillas?","acceptedAnswer":{"@type":"Answer","text":"Sí, es buena parte de lo que hacemos. Tenemos casas de 4 a 16 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura."}},{"@type":"Question","name":"¿Dónde están ubicadas?","acceptedAnswer":{"@type":"Answer","text":"Todas están en Torreón, Coahuila: Viñedos, Los Viñedos, Provitec, Almendros, Acacias, Cantera, Ampliación La Rosita, Los Viñedos, Los Viñedos, Senderos, Límite Torreón-Gómez Palacio, Cerca de Gómez Palacio, Torreón, Torreón, Torreón, Torreón, Cerca del Tec y Ampliación Los Ángeles. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro."}},{"@type":"Question","name":"¿Se puede ver la casa antes de reservar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si estás en Torreón te la mostramos sin compromiso. Y si vienes de fuera, te mandamos video por WhatsApp de la casa que te interese, del recorrido completo."}}]}</script>
@@ -226,9 +304,9 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Casas en renta en Torreón","numberOfItems":18,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://hostalia.com.mx/casas/leones/","name":"Casa Leones"},{"@type":"ListItem","position":2,"url":"https://hostalia.com.mx/casas/linces/","name":"Casa Linces"},{"@type":"ListItem","position":3,"url":"https://hostalia.com.mx/casas/provitec/","name":"Casa Provitec"},{"@type":"ListItem","position":4,"url":"https://hostalia.com.mx/casas/almendros/","name":"Casa Almendros"},{"@type":"ListItem","position":5,"url":"https://hostalia.com.mx/casas/acacia/","name":"Casa Acacias"},{"@type":"ListItem","position":6,"url":"https://hostalia.com.mx/casas/cantera/","name":"Casa Cantera"},{"@type":"ListItem","position":7,"url":"https://hostalia.com.mx/casas/rosita/","name":"Casa La Rosita"},{"@type":"ListItem","position":8,"url":"https://hostalia.com.mx/casas/vinedos/","name":"Casa Viñedos"},{"@type":"ListItem","position":9,"url":"https://hostalia.com.mx/casas/vinedos-moderna/","name":"Casa Viñedos Moderna"},{"@type":"ListItem","position":10,"url":"https://hostalia.com.mx/casas/senderos/","name":"Casa Senderos"},{"@type":"ListItem","position":11,"url":"https://hostalia.com.mx/casas/gomez-11/","name":"Casa Gómez 11"},{"@type":"ListItem","position":12,"url":"https://hostalia.com.mx/casas/gomez-10/","name":"Casa Gómez 10"},{"@type":"ListItem","position":13,"url":"https://hostalia.com.mx/casas/familiar-10/","name":"Casa Familiar 10"},{"@type":"ListItem","position":14,"url":"https://hostalia.com.mx/casas/depa-7/","name":"Depa Siete"},{"@type":"ListItem","position":15,"url":"https://hostalia.com.mx/casas/jardin-14/","name":"Casa Jardín 14"},{"@type":"ListItem","position":16,"url":"https://hostalia.com.mx/casas/grande-14/","name":"Casa Grande 14"},{"@type":"ListItem","position":17,"url":"https://hostalia.com.mx/casas/loft-tec/","name":"Loft Tec"},{"@type":"ListItem","position":18,"url":"https://hostalia.com.mx/casas/depa-los-angeles/","name":"Depa Los Ángeles"}]}</script>
 </head>
 <body>
-<header class="hdr">
+<header class="hdr sobre">
   <div class="hdr-in">
-    <a href="/"><img src="img/logo.png?v=a" alt="Hostalia" class="logo"></a>
+    <a href="/"><img src="img/logo-blanco.svg" alt="Hostalia" class="logo"></a>
     <nav class="nav">
       <a href="#casas">Casas</a>
       <a href="#como">Cómo funciona</a>
@@ -236,34 +314,34 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
       <a href="#faq">Preguntas</a>
       <a href="blog/">Blog</a>
     </nav>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.add('abierto')"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 10h22M5 16h22M5 22h22"/></svg></button>
   </div>
 </header>
-<section class="hero-video">
-  <div class="hero-in">
-    <div class="cont">
-      <span class="kicker">● 18 casas en Torreón, Coahuila</span>
-      <h1>Casas amuebladas en renta en Torreón, <em>listas para entrar hoy</em>.</h1>
-      <p class="lead">De 4 a 16 personas, con clima y con factura. Rentamos de 15 días a 6 meses <strong>sin aval y sin contrato de un año</strong>, o por noche desde 2 noches.</p>
-      <div class="hero-cta">
-        <a href="#casas" class="btn btn-nar">Ver las 18 casas</a>
-      </div>
-      <p class="nota">⭐ 4.9 con 84 reseñas como anfitrión en Airbnb</p>
+<div class="menu-capa" id="menu" onclick="if(event.target.tagName==='A'||event.target===this)this.classList.remove('abierto')">
+  <button class="menu-btn cerrar" type="button" aria-label="Cerrar menú" onclick="document.getElementById('menu').classList.remove('abierto')"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 8l16 16M24 8L8 24"/></svg></button>
+  <a href="/">Inicio</a>
+  <a href="#casas">Casas</a>
+  <a href="#como">Cómo funciona</a>
+  <a href="hospedaje-para-empresas-torreon/">Empresas</a>
+  <a href="#faq">Preguntas</a>
+  <a href="blog/">Blog</a>
+</div>
+<section class="portada">
+  <video autoplay muted loop playsinline preload="metadata" poster="video/poster.jpg" aria-hidden="true">
+    <source src="video/torreon.mp4" type="video/mp4">
+  </video>
+  <div class="cont">
+    <span class="kicker">18 casas · Torreón, Coahuila</span>
+    <h1>Casas amuebladas en renta en Torreón, <em>listas para entrar hoy</em>.</h1>
+    <p class="lead">De 4 a 16 personas, con clima y con factura. De 15 días a 6 meses sin aval, o por noche desde 2 noches.</p>
+    <div class="hero-cta">
+      <a href="#casas" class="btn btn-claro">Ver las 18 casas</a>
+      <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20quiero%20informaci%C3%B3n%20de%20las%20casas" class="btn btn-claro">Escríbenos</a>
     </div>
-    <div class="hero-media">
-      <video autoplay muted loop playsinline preload="metadata" poster="video/poster.jpg" aria-hidden="true">
-        <source src="video/torreon.mp4" type="video/mp4">
-      </video>
-    </div>
+    <p class="nota">★ 4.9 · 84 reseñas en Airbnb</p>
+    <a href="#casas" class="bajar" aria-label="Ver las casas"></a>
   </div>
 </section>
-
-
-<div class="trust"><div class="w"><div class="trust-in">
-  <span>⭐ <b>4.9</b> · 84 reseñas en Airbnb</span>
-  <span>🧾 <b>Facturamos</b> — CFDI para tu empresa</span>
-  <span>🗓️ Desde <b>2 noches</b> hasta <b>6 meses</b></span>
-  <span>❄️ <b>Clima</b> en todas las casas</span>
-</div></div></div>
 
 <section class="clientes" aria-label="Clientes">
   <div class="w">
@@ -284,6 +362,14 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
     </div>
   </div>
 </section>
+
+
+<div class="trust"><div class="w"><div class="trust-in">
+  <span>⭐ <b>4.9</b> · 84 reseñas en Airbnb</span>
+  <span>🧾 <b>Facturamos</b> — CFDI para tu empresa</span>
+  <span>🗓️ Desde <b>2 noches</b> hasta <b>6 meses</b></span>
+  <span>❄️ <b>Clima</b> en todas las casas</span>
+</div></div></div>
 
 <section id="casas">
   <div class="w">
@@ -896,7 +982,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
     </div>
     <div class="pie-bajo">
       <span>© 2026 Hostalia</span>
-      <span>Actualizado el 21 de octubre de 2026</span>
+      <span>Actualizado el 22 de octubre de 2026</span>
     </div>
   </div>
 </footer>

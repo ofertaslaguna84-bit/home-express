@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -219,6 +219,84 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .dato{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--linea);font-size:14.5px}
 .dato:last-child{border:0}
 .dato b{font-weight:700}
+
+/* ── Diseño elegante (oct 2026): letra con serifa en títulos, portada a pantalla completa,
+   logo al centro y menú limpio. Va al final para encimarse a lo de arriba. */
+body{font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+h1,h2,h3,.cta h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:0}
+h1{font-size:clamp(36px,5.6vw,64px);line-height:1.05}
+h2{font-size:clamp(30px,3.8vw,46px);line-height:1.1}
+h3{font-size:23px}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
+.eyebrow,.kicker{font-weight:600;letter-spacing:.32em;font-size:11px;color:var(--azul)}
+.btn{border-radius:0;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;padding:15px 28px}
+.btn-nar{background:var(--marino);box-shadow:none}.btn-nar:hover{background:#0b1426}
+.btn-out{border:1px solid var(--marino);background:transparent}
+.btn-claro{border:1px solid rgba(255,255,255,.55);color:#fff;background:transparent}.btn-claro:hover{background:#fff;color:var(--marino)}
+.casa,.vs-card,.post,.panel,.logo-cli,.galeria div{border-radius:4px}
+.casa-btns .btn{letter-spacing:.08em;font-size:11px}
+.spec,.badge,.ahorro{border-radius:2px}
+
+/* encabezado: logo al centro y menú en texto debajo */
+.hdr{position:relative;background:#fff;border-bottom:1px solid var(--linea);backdrop-filter:none}
+.hdr-in{flex-direction:column;justify-content:center;gap:14px;padding:22px 22px 0}
+.hdr .logo{height:62px}
+.nav{gap:34px;font-size:14px;font-weight:400;color:var(--gris);padding-bottom:18px}
+.nav a:hover,.nav a[aria-current]{color:var(--marino)}
+.menu-btn{position:absolute;right:14px;top:18px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;cursor:pointer;color:var(--marino)}
+.menu-btn svg{width:28px;height:28px}
+@media(min-width:900px){.hdr .menu-btn{display:none}}
+.hdr.sobre{position:absolute;left:0;right:0;top:0;z-index:50;background:none;border:0}
+.hdr.sobre .hdr-in{padding-top:30px}
+.hdr.sobre .logo{height:74px}
+.hdr.sobre .nav{display:none}
+.hdr.sobre .menu-btn{display:flex;color:#fff;right:22px;top:26px}
+.menu-capa{position:fixed;inset:0;z-index:80;background:rgba(19,32,58,.97);display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.menu-capa.abierto{display:flex}
+.menu-capa a{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;color:rgba(255,255,255,.88)}
+.menu-capa a:hover{color:#C9A46A}
+.menu-capa .cerrar{position:absolute;top:22px;right:22px;color:#fff}
+
+/* portada a pantalla completa con el video */
+.portada{position:relative;height:100svh;min-height:600px;overflow:hidden;background:var(--marino);color:#fff;padding:0;display:flex;align-items:flex-end;justify-content:center;text-align:center}
+.portada video,.portada .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,19,38,.55) 0%,rgba(11,19,38,.15) 35%,rgba(11,19,38,.35) 60%,rgba(11,19,38,.88) 100%)}
+.portada .cont{position:relative;z-index:2;max-width:880px;padding:0 22px 64px}
+.portada .kicker{color:#E2C891;margin-bottom:18px;justify-content:center}
+.portada h1{color:#fff;font-weight:500;margin-bottom:18px}
+.portada h1 em{color:#E2C891}
+.portada .lead{color:rgba(255,255,255,.86);margin:0 auto 30px;font-weight:300;font-size:18px}
+.portada .hero-cta{justify-content:center;gap:12px}
+.portada .nota{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:26px}
+.bajar{display:block;width:1px;height:46px;background:rgba(255,255,255,.45);margin:26px auto 0}
+
+/* franja de confianza más fina */
+.trust{background:var(--crema);color:var(--marino);padding:20px 0;border-bottom:1px solid var(--linea)}
+.trust-in{font-weight:400;font-size:13px;letter-spacing:.04em}
+.trust b{color:var(--azul)}
+
+/* clientes en franja marina */
+.clientes{background:var(--marino);padding:60px 0}
+.clientes h2{color:#fff;font-size:clamp(24px,2.8vw,32px);font-weight:500;margin-bottom:30px}
+.logo-cli{border:0;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+
+/* secciones centradas */
+#casas>.w>.eyebrow,#casas>.w>h2,#casas>.w>.sub,#como .eyebrow,#como h2,#como .sub,#faq .eyebrow,#faq h2{display:block;text-align:center;margin-left:auto;margin-right:auto}
+#faq .w>div{margin-left:auto;margin-right:auto}
+.paso::before{background:none;border:1px solid var(--azul);color:var(--azul);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600}
+.faq summary{font-weight:500}
+.cta{background:var(--marino)}
+.cta h2{font-weight:500}
+
+/* pie centrado */
+.pie{background:#0E182D;text-align:center}
+.pie-in{grid-template-columns:1fr!important;justify-items:center}
+.pie-in>div:first-child p{margin:0 auto}
+.pie ul{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px}
+.pie h4{font-family:'Cormorant Garamond',Georgia,serif;text-transform:none;letter-spacing:0;font-size:20px;font-weight:500;color:#E2C891}
+.pie-bajo{justify-content:center;gap:20px}
+.btn.flota{border-radius:50%;padding:0;letter-spacing:0}
+@media(max-width:600px){.hdr.sobre .logo{height:50px}.hdr.sobre .hdr-in{padding-top:22px}.hdr.sobre .menu-btn{right:8px;top:16px}.hdr .logo{height:50px}.portada .hero-cta .btn{width:100%;justify-content:center}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://hostalia.com.mx/hospedaje-cerca-de-mieleras/","name":"Hospedaje cerca de Mieleras y el Parque Industrial Ferropuerto, Torreón | Hostalia","description":"Casas completas para personal de planta cerca de la carretera a Mieleras, Ferropuerto, Parque PYMES y Parque Centenario en Torreón. 10 a 12 personas por casa, con factura.","inLanguage":"es-MX","isPartOf":{"@id":"https://hostalia.com.mx/#organizacion"},"about":{"@id":"https://hostalia.com.mx/#organizacion"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://hostalia.com.mx/casas/provitec/","name":"Casa Provitec — Casa para 12 personas cerca de la zona industrial de Mieleras"},{"@type":"ListItem","position":2,"url":"https://hostalia.com.mx/casas/leones/","name":"Casa Leones — Casa para 10 personas con alberca y asador en Viñedos"},{"@type":"ListItem","position":3,"url":"https://hostalia.com.mx/casas/linces/","name":"Casa Linces — Casa para 10 personas con alberca en Los Viñedos"},{"@type":"ListItem","position":4,"url":"https://hostalia.com.mx/casas/almendros/","name":"Casa Almendros — Casa para 12 personas con recámara en planta baja"},{"@type":"ListItem","position":5,"url":"https://hostalia.com.mx/casas/acacia/","name":"Casa Acacias — Casa céntrica con alberca privada para 11 personas"}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hostalia.com.mx/"},{"@type":"ListItem","position":2,"name":"Hospedaje cerca de Mieleras y Ferropuerto.","item":"https://hostalia.com.mx/hospedaje-cerca-de-mieleras/"}]}</script>
@@ -227,7 +305,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 <body>
 <header class="hdr">
   <div class="hdr-in">
-    <a href="../"><img src="../img/logo.png?v=a" alt="Hostalia" class="logo"></a>
+    <a href="../"><img src="../img/logo-h.svg" alt="Hostalia" class="logo"></a>
     <nav class="nav">
       <a href="../#casas">Casas</a>
       <a href="../#como">Cómo funciona</a>
@@ -235,8 +313,18 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
       <a href="../#faq">Preguntas</a>
       <a href="../blog/">Blog</a>
     </nav>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.add('abierto')"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 10h22M5 16h22M5 22h22"/></svg></button>
   </div>
 </header>
+<div class="menu-capa" id="menu" onclick="if(event.target.tagName==='A'||event.target===this)this.classList.remove('abierto')">
+  <button class="menu-btn cerrar" type="button" aria-label="Cerrar menú" onclick="document.getElementById('menu').classList.remove('abierto')"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 8l16 16M24 8L8 24"/></svg></button>
+  <a href="../">Inicio</a>
+  <a href="../#casas">Casas</a>
+  <a href="../#como">Cómo funciona</a>
+  <a href="../hospedaje-para-empresas-torreon/">Empresas</a>
+  <a href="../#faq">Preguntas</a>
+  <a href="../blog/">Blog</a>
+</div>
 <section class="hero-video">
   <div class="hero-in">
     <div class="hero-media">
@@ -484,7 +572,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
     </div>
     <div class="pie-bajo">
       <span>© 2026 Hostalia</span>
-      <span>Actualizado el 21 de octubre de 2026</span>
+      <span>Actualizado el 22 de octubre de 2026</span>
     </div>
   </div>
 </footer>
