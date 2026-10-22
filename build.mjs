@@ -389,6 +389,7 @@ function tarjeta(c, p = '') {
         <div class="p-fila directo"><span>${air ? 'Directo aquí' : 'Por noche'}</span><b>${mxn(dir)}${IVA_NOTA}</b></div>
         ${air ? `<span class="ahorro">Ahorras ${mxn(air - dir)} por noche</span>` : ''}
         ${c.precioMesSinServicios ? `<p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">${mxn(c.precioMesSinServicios)}</strong> sin servicios · <strong style="color:var(--marino)">${mxn(c.precioMesConServicios)}</strong> con servicios${IVA_NOTA}</p>` : ''}
+        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: ${mxn(LIMPIEZA)}${IVA_NOTA} por semana</p>
         <div class="casa-btns">
           <a href="${p}casas/${c.slug}/" class="btn btn-out">Ver casa</a>
           <a href="${wa(`Hola Hostalia, me interesa ${c.nombre} (${c.huespedes} personas). ¿Está disponible?`)}" class="btn btn-nar">Reservar</a>
@@ -419,7 +420,7 @@ const FAQS = [
   },
   {
     q: '¿La limpieza está incluida?',
-    a: `No, la limpieza se cobra aparte: ${mxn(LIMPIEZA)}${IVA_NOTA} por servicio, una vez por semana. La casa se entrega limpia y en estancias largas pasa el servicio cada semana; si quieres limpieza más seguido se cotiza por WhatsApp.`,
+    a: `No, la limpieza es obligatoria y se cobra aparte: ${mxn(LIMPIEZA)}${IVA_NOTA} por servicio, una vez por semana. La casa se entrega limpia y en estancias largas pasa el servicio cada semana; si quieres limpieza más seguido se cotiza por WhatsApp.`,
   },
   {
     q: '¿Cómo reservo y cómo pago?',
@@ -744,12 +745,12 @@ function paginaCasa(c) {
             <div class="dato"><span>Fin de semana</span><b>${mxn(dirF)}${IVA_NOTA}</b></div>
             ${c.precioMesSinServicios ? `<div class="dato"><span>Por mes, sin servicios</span><b>${mxn(c.precioMesSinServicios)}${IVA_NOTA}</b></div>
             <div class="dato"><span>Por mes, con servicios</span><b>${mxn(c.precioMesConServicios)}${IVA_NOTA}</b></div>` : ''}
-            <div class="dato"><span>Limpieza (aparte)</span><b>${mxn(LIMPIEZA)}${IVA_NOTA} / semana</b></div>
+            <div class="dato"><span>Limpieza obligatoria</span><b>${mxn(LIMPIEZA)}${IVA_NOTA} / semana</b></div>
             <div class="dato"><span>Estancia mínima</span><b>2 noches</b></div>
             <div class="dato"><span>Factura</span><b>Sí, CFDI</b></div>
           </div>
           <a href="${wa(`Hola Hostalia, quiero reservar ${c.nombre} (${c.huespedes} personas). Mis fechas son:`)}" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:14px">Reservar por WhatsApp</a>
-          <p style="font-size:12.5px;color:var(--gris);text-align:center;margin-top:10px">Precios${IVA_NOTA}. Limpieza aparte: ${mxn(LIMPIEZA)}${IVA_NOTA}, una vez por semana. El de estancias largas se cotiza.</p>
+          <p style="font-size:12.5px;color:var(--gris);text-align:center;margin-top:10px">Precios${IVA_NOTA}. Limpieza obligatoria aparte: ${mxn(LIMPIEZA)}${IVA_NOTA}, una vez por semana. El de estancias largas se cotiza.</p>
         </div>
       </aside>
     </div>
@@ -1283,7 +1284,7 @@ ${marca.nombre} renta ${casas.length} casas propias en ${marca.ciudad}. No es un
 
 Precios por noche reservando directo${IVA_NOTA}. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
 Se publica el precio por noche y el precio por mes, este último en dos niveles: sin servicios y con servicios incluidos (agua, luz, gas e internet), con $3,000 de diferencia. La tarifa por semana no se publica: se cotiza por WhatsApp y es negociable.
-La limpieza NO está incluida: se cobra aparte a ${mxn(LIMPIEZA)}${IVA_NOTA} por servicio, una vez por semana.
+La limpieza es obligatoria y NO está incluida: se cobra aparte a ${mxn(LIMPIEZA)}${IVA_NOTA} por servicio, una vez por semana.
 
 ${casas
   .map(

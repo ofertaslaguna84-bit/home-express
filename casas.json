@@ -46,7 +46,9 @@
         "leones-recamara_02",
         "leones-asador"
       ],
-      "m2": 230
+      "m2": 230,
+      "precioMesSinServicios": 45000,
+      "precioMesConServicios": 48000
     },
     {
       "slug": "linces",
@@ -74,7 +76,9 @@
         "linces-alberca",
         "linces-fachada"
       ],
-      "m2": 230
+      "m2": 230,
+      "precioMesSinServicios": 45000,
+      "precioMesConServicios": 48000
     },
     {
       "slug": "provitec",
@@ -101,7 +105,9 @@
         "provitec-recamara_03",
         "provitec-recamara_04"
       ],
-      "m2": 230
+      "m2": 230,
+      "precioMesSinServicios": 40000,
+      "precioMesConServicios": 43000
     },
     {
       "slug": "almendros",

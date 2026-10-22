@@ -20,14 +20,14 @@ Hostalia renta 18 casas propias en Torreón. No es un portal ni una agencia: son
 
 Precios por noche reservando directo + IVA. El precio de Airbnb se incluye para comparar: es más alto porque incluye la comisión de la plataforma.
 Se publica el precio por noche y el precio por mes, este último en dos niveles: sin servicios y con servicios incluidos (agua, luz, gas e internet), con $3,000 de diferencia. La tarifa por semana no se publica: se cotiza por WhatsApp y es negociable.
-La limpieza NO está incluida: se cobra aparte a $550 + IVA por servicio, una vez por semana.
+La limpieza es obligatoria y NO está incluida: se cobra aparte a $550 + IVA por servicio, una vez por semana.
 
 ### Casa Leones — Viñedos
 - Página: https://hostalia.com.mx/casas/leones/
 - Capacidad: 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - Entre semana: $1,750 + IVA directo
 - Fin de semana: $1,750 directo
-- Por mes: se cotiza por WhatsApp
+- Por mes: $45,000 sin servicios · $48,000 con servicios (agua, luz, gas e internet)
 - Destaca por: Alberca y asador, Lavadora y secadora, Clima en toda la casa, Patio con pasto
 - En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.
 
@@ -36,7 +36,7 @@ La limpieza NO está incluida: se cobra aparte a $550 + IVA por servicio, una ve
 - Capacidad: 10 personas · 3 recámaras · 5 camas · 2.5 baños
 - Entre semana: $1,750 + IVA directo
 - Fin de semana: $1,750 directo
-- Por mes: se cotiza por WhatsApp
+- Por mes: $45,000 sin servicios · $48,000 con servicios (agua, luz, gas e internet)
 - Destaca por: Alberca del fraccionamiento, Privada con seguridad, Clima, lavadora y secadora, Cochera para 2 autos
 - En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento.
 
@@ -45,7 +45,7 @@ La limpieza NO está incluida: se cobra aparte a $550 + IVA por servicio, una ve
 - Capacidad: 12 personas · 4 recámaras · 7 camas
 - Entre semana: $1,750 + IVA directo
 - Fin de semana: $1,750 directo
-- Por mes: se cotiza por WhatsApp
+- Por mes: $40,000 sin servicios · $43,000 con servicios (agua, luz, gas e internet)
 - Destaca por: 12 personas, 7 camas, Recámara en planta baja, Cerca de Mieleras y Ferropuerto, Junto a Blvd. Revolución
 - Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.
 
@@ -213,7 +213,7 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 - **¿Facturan? Lo necesito para mi empresa.** Sí, facturamos con CFDI en todas las casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa.
 - **¿Cuál es la estancia mínima y la máxima?** La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de $35,000 a $54,750 según la casa y si incluye servicios (agua, luz, gas e internet), que suben $3,000. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas.
 - **¿Los precios llevan IVA?** Los precios que ves son por noche más IVA. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido.
-- **¿La limpieza está incluida?** No, la limpieza se cobra aparte: $550 + IVA por servicio, una vez por semana. La casa se entrega limpia y en estancias largas pasa el servicio cada semana; si quieres limpieza más seguido se cotiza por WhatsApp.
+- **¿La limpieza está incluida?** No, la limpieza es obligatoria y se cobra aparte: $550 + IVA por servicio, una vez por semana. La casa se entrega limpia y en estancias largas pasa el servicio cada semana; si quieres limpieza más seguido se cotiza por WhatsApp.
 - **¿Cómo reservo y cómo pago?** Nos escribes por WhatsApp con tus fechas y cuántas personas son. Te confirmamos disponibilidad y precio cerrado. Se aparta con un anticipo por transferencia y el resto se liquida al llegar. Para empresas manejamos transferencia y factura.
 - **¿Qué incluyen las casas?** Están completamente equipadas y listas para entrar: cocina equipada, ropa de cama y toallas, clima en toda la casa, wifi, estacionamiento y sala comedor. No tienes que llevar nada más que tu maleta.
 - **¿Reciben grupos de trabajo o cuadrillas?** Sí, es buena parte de lo que hacemos. Tenemos casas de 4 a 16 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.
