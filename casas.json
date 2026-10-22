@@ -12,7 +12,8 @@
     "descuentoSemana": 0.1,
     "descuentoMes": 0.2,
     "iva": 0.16,
-    "preciosMasIva": false,
+    "preciosMasIva": true,
+    "limpiezaSemanal": 550,
     "publicarDescuentos": false,
     "comisionAsesor": 0.1
   },
