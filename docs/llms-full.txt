@@ -1,0 +1,983 @@
+# Hostalia — contenido completo para asistentes de IA
+
+> Renta de casas completas amuebladas en Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo). Por noche, por semana y por mes. De 4 a 16 personas por casa. Con factura CFDI. Reservas por WhatsApp 871 263 8082.
+> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-03.
+
+## Quiénes somos
+
+Hostalia (antes Home Express) renta 18 casas y departamentos propios en Torreón. No es portal ni agencia: son casas del mismo anfitrión, que también las publica en Airbnb, donde tiene 84 reseñas y 4.9 de calificación. Reservando directo el precio es menor porque no hay comisión de plataforma. No hay oficina abierta al público ni recepción: todo se atiende por WhatsApp.
+
+## Datos clave
+
+- Sitio: https://hostalia.com.mx
+- Ciudad: Torreón, Coahuila, México. Referencia geográfica de la ciudad: 25.5428, -103.4068 (no es una dirección de oficina).
+- Cobertura: Torreón, Gómez Palacio (Durango) y Lerdo (Durango). Todas las casas están en Torreón.
+- Casas: 18 · Capacidad: de 4 a 16 personas por casa
+- Precio por noche: de $650 a $2,300 + IVA por casa completa (no por persona)
+- Precio por mes (casas con tarifa mensual publicada): de $35,000 a $51,750 + IVA sin servicios; con servicios (agua, luz, gas e internet) suman $3,000 más
+- Contacto: WhatsApp 871 263 8082 (+528712638082)
+- Idioma: español. Moneda: pesos mexicanos (MXN).
+
+## Políticas y condiciones
+
+- Estancia mínima: 2 noches. Máxima: sin límite (hay estancias de hasta 6 meses). Sin aval para estancias de 15 días a 6 meses.
+- Precios: por casa completa, por noche, en pesos mexicanos, MÁS IVA (16%). Al facturar se desglosa el IVA.
+- Limpieza: obligatoria y aparte, $550 + IVA por servicio, una vez por semana. La casa se entrega limpia.
+- Por semana: hay mejor tarifa, pero no se publica; se cotiza por WhatsApp con las fechas.
+- Por mes: dos niveles, sin servicios y con servicios (agua, luz, gas e internet), $3,000 de diferencia.
+- Factura: sí, CFDI a nombre de la persona o empresa que paga.
+- Reserva: por WhatsApp. Se aparta con anticipo por transferencia y el resto se liquida al llegar. No hay motor de reservas en línea ni pago con tarjeta en el sitio.
+- Depósito en garantía: sí, se devuelve al salir.
+- Contrato de hospedaje por escrito con fechas, monto, qué incluye y reglas de la casa.
+- Dirección exacta: se da al apartar; en el sitio solo se publica colonia o fraccionamiento y ciudad.
+- Todas incluyen: clima (aire acondicionado), cocina equipada, wifi, estacionamiento, ropa de cama y toallas. La mayoría tiene lavadora.
+- Se puede ver la casa antes de reservar si estás en Torreón; si vienes de fuera se manda video del recorrido por WhatsApp.
+
+## Las casas, una por una
+
+### Casa Leones (Viñedos, Torreón)
+- URL: https://hostalia.com.mx/casas/leones/
+- Tipo: casa completa
+- Capacidad: hasta 10 personas
+- Recámaras: 3 · Camas: 5 · Baños: 2.5 · Superficie: 230 m²
+- Precio por noche entre semana: $1,750 + IVA
+- Precio por noche fin de semana: $1,750 + IVA
+- Precio por mes: $45,000 + IVA sin servicios · $48,000 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: Alberca y asador, Lavadora y secadora, Clima en toda la casa, Patio con pasto
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Viñedos, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavadora y secadora, y clima en toda la casa. Dos baños completos y medio baño.
+
+### Casa Linces (Los Viñedos, Torreón)
+- URL: https://hostalia.com.mx/casas/linces/
+- Tipo: casa completa
+- Capacidad: hasta 10 personas
+- Recámaras: 3 · Camas: 5 · Baños: 2.5 · Superficie: 230 m²
+- Precio por noche entre semana: $1,750 + IVA
+- Precio por noche fin de semana: $1,750 + IVA
+- Precio por mes: $45,000 + IVA sin servicios · $48,000 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: Alberca del fraccionamiento, Privada con seguridad, Clima, lavadora y secadora, Cochera para 2 autos
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Los Viñedos, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento.
+
+### Casa Provitec (Provitec, Torreón)
+- URL: https://hostalia.com.mx/casas/provitec/
+- Tipo: casa completa
+- Capacidad: hasta 12 personas
+- Recámaras: 4 · Camas: 7 · Superficie: 230 m²
+- Precio por noche entre semana: $1,750 + IVA
+- Precio por noche fin de semana: $1,750 + IVA
+- Precio por mes: $40,000 + IVA sin servicios · $43,000 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 12 personas, 7 camas, Recámara en planta baja, Cerca de Mieleras y Ferropuerto, Junto a Blvd. Revolución
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Provitec, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.
+
+### Casa Almendros (Almendros, Torreón)
+- URL: https://hostalia.com.mx/casas/almendros/
+- Tipo: casa completa
+- Capacidad: hasta 12 personas
+- Recámaras: 3 · Camas: 8 · Baños: 2.5 · Superficie: 180 m²
+- Precio por noche entre semana: $1,710 + IVA (en Airbnb $1,900)
+- Precio por noche fin de semana: $2,030 + IVA (en Airbnb $2,250)
+- Precio por mes: $45,000 + IVA sin servicios · $48,000 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 12 personas, Recámara en planta baja, 2 baños y medio, Alberca
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Almendros, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Anuncio en Airbnb: https://www.airbnb.mx/rooms/1441448938432888814
+- Descripción: La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.
+
+### Casa Acacias (Acacias, Torreón)
+- URL: https://hostalia.com.mx/casas/acacia/
+- Tipo: casa completa
+- Capacidad: hasta 11 personas
+- Recámaras: 3 · Camas: 6 · Baños: 2.5 · Superficie: 189 m²
+- Precio por noche entre semana: $1,670 + IVA (en Airbnb $1,850)
+- Precio por noche fin de semana: $1,760 + IVA (en Airbnb $1,960)
+- Precio por mes: $45,000 + IVA sin servicios · $48,000 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: Alberca privada, Ubicación céntrica, Zona privada, Clima
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Acacias, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Anuncio en Airbnb: https://www.airbnb.mx/rooms/1717009568372459813
+- Descripción: La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
+
+### Casa Cantera (Cantera, Torreón)
+- URL: https://hostalia.com.mx/casas/cantera/
+- Tipo: casa completa
+- Capacidad: hasta 10 personas
+- Recámaras: 3 · Camas: 5 · Baños: 2.5 · Superficie: 150 m²
+- Precio por noche entre semana: $1,340 + IVA (en Airbnb $1,490)
+- Precio por noche fin de semana: $1,500 + IVA (en Airbnb $1,670)
+- Precio por mes: $35,000 + IVA sin servicios · $38,000 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: Palapa, Asador, Barra, Clima en toda la casa
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Cantera, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Anuncio en Airbnb: https://www.airbnb.mx/rooms/1717013979926833974
+- Descripción: Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.
+
+### Casa La Rosita (Ampliación La Rosita, Torreón)
+- URL: https://hostalia.com.mx/casas/rosita/
+- Tipo: casa completa
+- Capacidad: hasta 16 personas
+- Recámaras: 4 · Camas: 8 · Baños: 3
+- Precio por noche entre semana: $2,300 + IVA
+- Precio por noche fin de semana: $2,300 + IVA
+- Precio por mes: $51,750 + IVA sin servicios · $54,750 + IVA con servicios (agua, luz, gas e internet)
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 8 camas en 4 recámaras, Cocina equipada, WiFi, Lavadora, Estacionamiento
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Ampliación La Rosita, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: 4 recámaras y 8 camas (dos matrimoniales, una king, una queen con individual, una queen y dos individuales en sala) para grupos de hasta 16 personas. Cocina, comedor, WiFi, lavadora y estacionamiento. Facturamos.
+
+### Casa Viñedos (Los Viñedos, Torreón)
+- URL: https://hostalia.com.mx/casas/vinedos/
+- Tipo: casa completa
+- Capacidad: hasta 10 personas
+- Recámaras: 3 · Camas: 5 · Baños: 3.5
+- Precio por noche entre semana: $1,800 + IVA
+- Precio por noche fin de semana: $1,800 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 3 baños completos, Cocina equipada, WiFi, Lavadora, Estacionamiento
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Los Viñedos, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: En Los Viñedos, cerca de la zona industrial. 3 recámaras, 3 baños completos y uno de visitas, así nadie hace fila en la mañana. Cocina, WiFi, lavadora y estacionamiento.
+
+### Casa Viñedos Moderna (Los Viñedos, Torreón)
+- URL: https://hostalia.com.mx/casas/vinedos-moderna/
+- Tipo: casa completa
+- Capacidad: hasta 8 personas
+- Recámaras: 3 · Camas: 7 · Baños: 2.5
+- Precio por noche entre semana: $1,550 + IVA
+- Precio por noche fin de semana: $1,550 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 7 camas, Privada con acceso controlado, Cocina equipada, WiFi, Lavadora, Estacionamiento
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Los Viñedos, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Moderna y espaciosa, en privada cerrada en Los Viñedos. 7 camas: cada quien duerme en la suya. Pensada para estancias de trabajo.
+
+### Casa Senderos (Senderos, Torreón)
+- URL: https://hostalia.com.mx/casas/senderos/
+- Tipo: casa completa
+- Capacidad: hasta 8 personas
+- Recámaras: 3 · Camas: 5 · Baños: 2.5
+- Precio por noche entre semana: $1,900 + IVA
+- Precio por noche fin de semana: $1,900 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: Patio con comedor, Cocina equipada, WiFi, Lavadora, Estacionamiento
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Senderos, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: En Residencial Senderos: sala amplia, patio con comedor exterior y 3 recámaras. Cocina, WiFi, lavadora y estacionamiento.
+
+### Casa Gómez 11 (Límite Torreón-Gómez Palacio, Torreón)
+- URL: https://hostalia.com.mx/casas/gomez-11/
+- Tipo: casa completa
+- Capacidad: hasta 11 personas
+- Recámaras: 2 · Camas: 6 · Baños: 2
+- Precio por noche entre semana: $1,450 + IVA
+- Precio por noche fin de semana: $1,450 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 6 camas, Estacionamiento gratuito, Cocina y lavadora, Clima y WiFi, A minutos de Gómez Palacio
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Límite Torreón-Gómez Palacio, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.
+
+### Casa Gómez 10 (Cerca de Gómez Palacio, Torreón)
+- URL: https://hostalia.com.mx/casas/gomez-10/
+- Tipo: casa completa
+- Capacidad: hasta 10 personas
+- Recámaras: 3 · Camas: 7 · Baños: 3.5
+- Precio por noche entre semana: $1,450 + IVA
+- Precio por noche fin de semana: $1,450 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 7 camas en 3 recámaras, 3 baños y medio, Lavadora y secadora, Clima y WiFi, Estacionamiento gratuito
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Cerca de Gómez Palacio, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Céntrica y con salida rápida a Gómez Palacio. 3 recámaras con 7 camas (dos matrimoniales, una matrimonial con individual, una matrimonial con dos individuales), 3 baños y medio, cocina, lavadora y secadora. 5.0 en Airbnb.
+
+### Casa Familiar 10 (Torreón)
+- URL: https://hostalia.com.mx/casas/familiar-10/
+- Tipo: casa completa
+- Capacidad: hasta 10 personas
+- Recámaras: 4 · Camas: 6 · Baños: 2.5
+- Precio por noche entre semana: $1,450 + IVA
+- Precio por noche fin de semana: $1,450 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 4 recámaras, Zona tranquila, Cocina y microondas, Lavadora y clima, Estacionamiento gratuito
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Torreón, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Para toda la familia o un equipo que quiere tranquilidad: 4 recámaras (dos individuales, queen, queen con sofá cama y matrimonial), cocina, lavadora, clima, WiFi y estacionamiento. Facturamos.
+
+### Depa Siete (Torreón)
+- URL: https://hostalia.com.mx/casas/depa-7/
+- Tipo: departamento / loft
+- Capacidad: hasta 7 personas
+- Recámaras: 3 · Camas: 7 · Baños: 2
+- Precio por noche entre semana: $1,150 + IVA
+- Precio por noche fin de semana: $1,150 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 7 camas: cada quien la suya, 3 recámaras, Cocina y lavadora, Clima y WiFi, Estacionamiento
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Torreón, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Departamento con 3 recámaras y 7 camas individuales: cada quien duerme en la suya. Cocina, lavadora, clima, WiFi y estacionamiento. Pensado para personal de empresa, con factura.
+
+### Casa Jardín 14 (Torreón)
+- URL: https://hostalia.com.mx/casas/jardin-14/
+- Tipo: casa completa
+- Capacidad: hasta 14 personas
+- Recámaras: 3 · Camas: 7 · Baños: 3
+- Precio por noche entre semana: $2,000 + IVA
+- Precio por noche fin de semana: $2,000 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 14 personas, Jardín, 3 baños completos, Cocina y lavadora, Clima y WiFi
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Torreón, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Casa grande con jardín para grupos de hasta 14: 3 recámaras con 7 camas, 3 baños completos, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 en Airbnb.
+
+### Casa Grande 14 (Torreón)
+- URL: https://hostalia.com.mx/casas/grande-14/
+- Tipo: casa completa
+- Capacidad: hasta 14 personas
+- Recámaras: 6 · Camas: 7 · Baños: 4
+- Precio por noche entre semana: $2,000 + IVA
+- Precio por noche fin de semana: $2,000 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: 6 recámaras, 4 baños, Área para trabajar, Cocina y lavadora, Clima y WiFi
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Torreón, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: La de más recámaras: 6 habitaciones y 4 baños para 14 personas, con área para trabajar, cocina, lavadora, clima, WiFi y estacionamiento. Para cuadrillas y equipos que necesitan privacidad.
+
+### Loft Tec (Cerca del Tec, Torreón)
+- URL: https://hostalia.com.mx/casas/loft-tec/
+- Tipo: departamento / loft
+- Capacidad: hasta 4 personas
+- Recámaras: 1 · Camas: 2 · Baños: 2
+- Precio por noche entre semana: $650 + IVA
+- Precio por noche fin de semana: $650 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: Cerca del Tec, 2 baños, Cocina y WiFi, Minisplit, Estacionamiento
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Cerca del Tec, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: Loft para 1 a 4 personas a minutos del Tec de Monterrey: cama queen y sofá cama, 2 baños, cocina, WiFi, minisplit y estacionamiento. La opción económica para técnicos, médicos o estudiantes.
+
+### Depa Los Ángeles (Ampliación Los Ángeles, Torreón)
+- URL: https://hostalia.com.mx/casas/depa-los-angeles/
+- Tipo: departamento / loft
+- Capacidad: hasta 8 personas
+- Recámaras: 2 · Camas: 6 · Baños: 2
+- Precio por noche entre semana: $1,150 + IVA
+- Precio por noche fin de semana: $1,150 + IVA
+- Precio por mes: se cotiza por WhatsApp según fechas y número de personas
+- Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
+- Amenidades destacadas: A 5 min del centro, 6 camas, Lavadora y secadora, Área para trabajar, Clima y WiFi
+- Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
+- Zona: Ampliación Los Ángeles, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Descripción: A 5 minutos del centro de Torreón: 2 recámaras (dos matrimoniales y dos individuales) más sofá cama, 2 baños, cocina, lavadora, secadora, clima, WiFi y estacionamiento. 4.53 en Airbnb.
+
+## Cómo elegir según dónde vas a estar
+
+- Zona industrial de Torreón (Mieleras, Ferropuerto, Parque Industrial Oriente, Montebello): Casa Provitec y las casas de Los Viñedos (Leones, Linces, Viñedos, Viñedos Moderna).
+- Gómez Palacio y Lerdo: las casas de Los Viñedos salen al Periférico y cruzan a Gómez Palacio en 15 a 20 minutos (Puente Plateado o Solidaridad); a Lerdo unos 25 minutos. Casa Gómez 11 está en el límite de Torreón y Gómez Palacio.
+- Centro, hospitales, UA de C: Casa Acacias (céntrica, alberca privada), Casa Almendros (recámara en planta baja), Casa Cantera y Depa Los Ángeles (a 5 minutos del centro).
+- Tec de Monterrey Campus Laguna y lado oriente (Estadio Corona / TSM): Loft Tec (a minutos del Tec), Casa Senderos, Los Viñedos.
+- Grupos de 14 a 16: Casa La Rosita (16), Casa Jardín 14 y Casa Grande 14 (6 recámaras).
+- Quien no puede subir escaleras: Casa Almendros y Casa Provitec tienen recámara en planta baja.
+- Lo más económico: Loft Tec (hasta 4 personas, $650 + IVA) y los departamentos Depa Siete y Depa Los Ángeles.
+
+## Preguntas frecuentes generales
+
+- P: ¿Por qué son más baratas aquí que en Airbnb?
+  R: Porque en Airbnb hay una comisión del 16% que se va a la plataforma. Al reservar directo con nosotros esa comisión no existe, y ese ahorro te lo pasamos a ti. Es la misma casa, el mismo anfitrión y las mismas llaves.
+- P: ¿Facturan? Lo necesito para mi empresa.
+  R: Sí, facturamos con CFDI en todas las casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa.
+- P: ¿Cuál es la estancia mínima y la máxima?
+  R: La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de $35,000 a $54,750 según la casa y si incluye servicios (agua, luz, gas e internet), que suben $3,000. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas.
+- P: ¿Los precios llevan IVA?
+  R: Los precios que ves son por noche más IVA. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido.
+- P: ¿La limpieza está incluida?
+  R: No, la limpieza es obligatoria y se cobra aparte: $550 + IVA por servicio, una vez por semana. La casa se entrega limpia y en estancias largas pasa el servicio cada semana; si quieres limpieza más seguido se cotiza por WhatsApp.
+- P: ¿Cómo reservo y cómo pago?
+  R: Nos escribes por WhatsApp con tus fechas y cuántas personas son. Te confirmamos disponibilidad y precio cerrado. Se aparta con un anticipo por transferencia y el resto se liquida al llegar. Para empresas manejamos transferencia y factura.
+- P: ¿Qué incluyen las casas?
+  R: Están completamente equipadas y listas para entrar: cocina equipada, ropa de cama y toallas, clima en toda la casa, wifi, estacionamiento y sala comedor. No tienes que llevar nada más que tu maleta.
+- P: ¿Reciben grupos de trabajo o cuadrillas?
+  R: Sí, es buena parte de lo que hacemos. Tenemos casas de 4 a 16 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.
+- P: ¿Dónde están ubicadas?
+  R: Todas están en Torreón, Coahuila: Viñedos, Los Viñedos, Provitec, Almendros, Acacias, Cantera, Ampliación La Rosita, Los Viñedos, Los Viñedos, Senderos, Límite Torreón-Gómez Palacio, Cerca de Gómez Palacio, Torreón, Torreón, Torreón, Torreón, Cerca del Tec y Ampliación Los Ángeles. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.
+- P: ¿Se puede ver la casa antes de reservar?
+  R: Sí. Si estás en Torreón te la mostramos sin compromiso. Y si vienes de fuera, te mandamos video por WhatsApp de la casa que te interese, del recorrido completo.
+
+## Guías por zona, ocasión y tipo de estancia (28)
+
+Índice: https://hostalia.com.mx/zonas/
+
+### Hospedaje para empresas y trabajadores en Torreón, con factura
+- URL: https://hostalia.com.mx/hospedaje-para-empresas-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Casas completas para cuadrillas, técnicos, auditores y personal de planta. Todo el equipo bajo el mismo techo, con cocina, lavadora y clima, y un solo CFDI a nombre de tu empresa. De 15 días a 6 meses, sin aval ni contrato de un año.
+- ¿Por qué una casa y no un hotel para tu personal?: Cuando llegan 8, 10 o 12 personas por un proyecto, el hotel se cobra por cuarto y por noche, y cada comida se paga aparte. En una casa de Hostalia pagas un precio por la casa completa , no por persona, y el equipo cocina, lava su ropa y tiene sala y comedor para juntas. Precio por casa: desde $1,750 la noche por casa completa para 10 o 12 personas.
+- Para quién es: Trabajamos con empresas que traen gente a La Laguna por temporadas: arranques y ampliaciones de planta , instalación y mantenimiento de maquinaria, cuadrillas de construcción de naves industriales, auditorías, capacitaciones y personal que rota cada semana. La mayoría de nuestras casas están del lado oriente de Torreón , cerca de la zona industrial de Mieleras, Ferropuerto y el Parque Industrial Oriente.
+- Cómo se contrata: Nos escribes por WhatsApp con fechas, número de personas y razón social. Te mandamos disponibilidad y precio cerrado por casa, con IVA desglosado si lo necesitas. Se aparta con anticipo por transferencia y firmamos el contrato de hospedaje.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Facturan el hospedaje a nombre de la empresa?
+  R: Sí. Emitimos CFDI a nombre de la razón social que nos indiques. Nos pasas tus datos fiscales al apartar y la factura sale con el IVA desglosado.
+- P: ¿Cuántas personas caben por casa?
+  R: Nuestras casas reciben de 10 a 12 personas cada una. Si tu grupo es más grande, se pueden rentar dos o tres casas para las mismas fechas.
+- P: ¿Cuánto cuesta el hospedaje para trabajadores en Torreón?
+  R: Desde $1,750 por noche por la casa completa, no por persona. Para estancias de semanas o meses hay mejor tarifa; se cotiza por WhatsApp con tus fechas.
+- P: ¿Cuál es la estancia mínima y la máxima?
+  R: La mínima es de 2 noches. No hay máxima: hemos tenido estancias de hasta 6 meses.
+- P: ¿Las casas están cerca de los parques industriales?
+  R: La mayoría están del lado oriente de Torreón, cerca de la carretera a Mieleras, del Parque Industrial Ferropuerto y del Parque Industrial Oriente. Cantera es la más céntrica.
+- P: ¿Cómo se paga?
+  R: Con anticipo por transferencia para apartar y el resto al llegar. Para empresas manejamos transferencia y factura.
+
+### Casas amuebladas en renta por mes en Torreón, con servicios y factura
+- URL: https://hostalia.com.mx/casas-amuebladas-renta-por-mes-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Rentamos de 15 días a 6 meses, sin aval y sin contrato forzoso de un año. Casas completas y equipadas: llegas con tu maleta y ya. Precio mensual con o sin servicios incluidos, contrato por escrito y factura.
+- Qué incluye una casa amueblada por mes: A diferencia de una casa en renta tradicional, aquí no necesitas comprar muebles, contratar servicios ni firmar un año. La casa está completa : camas con ropa de cama, sala, comedor, cocina equipada, lavadora, clima y WiFi. Sin servicios: pagas la renta y los recibos de agua, luz y gas van por tu cuenta.
+- Precios por mes: Casa Almendros (12 personas): $45,000 sin servicios · $48,000 con servicios. Casa Acacias (11 personas, alberca privada): $45,000 sin servicios · $48,000 con servicios. Casa Cantera (10 personas, asador y palapa): $35,000 sin servicios · $38,000 con servicios.
+- Para quién es: Personal de empresas que viene por proyectos de semanas o meses, familias en remodelación o cambio de ciudad, médicos y residentes, y equipos que necesitan estar juntos. La mayoría de las casas están del lado oriente de Torreón (Los Viñedos y Provitec), cerca de la zona industrial.
+- Casas que aplican: Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta una casa amueblada en renta por mes en Torreón?
+  R: En Hostalia, de $35,000 a $45,000 al mes sin servicios y de $38,000 a $48,000 con agua, luz, gas e internet incluidos, por casas completas para 10 a 12 personas.
+- P: ¿Cuál es el plazo mínimo?
+  R: Para tarifa mensual, un mes. También rentamos desde 2 noches y por semana.
+- P: ¿Piden aval o depósito?
+  R: Se aparta con anticipo y se firma contrato de hospedaje. Los detalles del depósito se platican por WhatsApp según el plazo.
+- P: ¿Dan factura?
+  R: Sí, CFDI a nombre de la persona o empresa que paga.
+
+### Hospedaje cerca de Mieleras y el Parque Industrial Ferropuerto, Torreón
+- URL: https://hostalia.com.mx/hospedaje-cerca-de-mieleras/
+- Actualizado: 2026-10-21
+- Resumen: Casas completas del lado oriente de Torreón para técnicos, ingenieros y cuadrillas que trabajan en la zona industrial de Mieleras. Precio por casa, con factura.
+- La zona industrial que más está creciendo en La Laguna: Sobre la carretera a Mieleras están el Parque Industrial Ferropuerto , el Parque Industrial PYMES y el Parque Industrial Centenario , con plantas como Caterpillar, John Deere, Lincoln Electric, Essex, Yura y Sumitomo, y parques nuevos en construcción. Cada arranque, ampliación o paro de mantenimiento trae personal foráneo por semanas o meses. Nuestras casas de Provitec (junto al Blvd.
+- Lo que necesita una cuadrilla, resuelto: 10 a 12 personas por casa , en recámaras con varias camas. Cocina equipada para que coman en casa y bajen el gasto de viáticos. Lavadora para ropa de trabajo en estancias largas.
+- Casas que aplican: Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche)
+- Precio desde: $1,670 + IVA por noche por casa completa
+- P: ¿Qué tan cerca están las casas de Mieleras?
+  R: Están del lado oriente de Torreón (Provitec y Los Viñedos), con salida hacia la carretera a Mieleras sin pasar por el centro. Te decimos cuál queda mejor según la planta a la que van.
+- P: ¿Pueden hospedar a una cuadrilla completa?
+  R: Sí. Cada casa recibe de 10 a 12 personas y se pueden rentar varias casas para las mismas fechas.
+- P: ¿Facturan?
+  R: Sí, CFDI a nombre de la razón social de la empresa o del contratista.
+- P: ¿Rentan por semana o por mes?
+  R: Sí. Desde 2 noches hasta 6 meses, con mejor tarifa por semana y por mes. Se cotiza por WhatsApp con las fechas del proyecto.
+
+### Hospedaje cerca del Parque Industrial Oriente y Montebello, Torreón
+- URL: https://hostalia.com.mx/hospedaje-parque-industrial-oriente/
+- Actualizado: 2026-10-21
+- Resumen: Si tu equipo trabaja en el Parque Industrial Oriente o en la zona industrial de Montebello, tenemos casas completas a pocos minutos, con cocina, lavadora, clima y factura.
+- Para las empresas del oriente de Torreón: En el Parque Industrial Oriente operan decenas de empresas (entre ellas Truper, Sigma Alimentos, Pisa Pinturas, Perfiles LM, Ultra Concretos y AB Control), y la zona industrial de Montebello sigue sumando naves. Técnicos de proveedores, auditores e instaladores necesitan dónde quedarse cerca y sin perder horas en el tráfico. Nuestras casas del lado oriente ( Provitec y Los Viñedos ) quedan a pocos minutos y se rentan completas, desde 2 noches.
+- Una casa contra cinco cuartos de hotel: Para 10 personas en hotel necesitas cinco habitaciones y cada comida fuera. Una casa de Hostalia se cobra completa, desde $1,750 la noche, con cocina, sala para juntas y lavadora. Y la factura sale a nombre de tu empresa.
+- Casas que aplican: Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche)
+- Precio desde: $1,670 + IVA por noche por casa completa
+- P: ¿Qué casas quedan más cerca del Parque Industrial Oriente?
+  R: Provitec y Los Viñedos, del lado oriente de Torreón. Dinos a qué planta van y te recomendamos la mejor.
+- P: ¿Cuántas personas caben?
+  R: De 10 a 12 personas por casa.
+- P: ¿Dan factura?
+  R: Sí, CFDI a nombre de la empresa.
+
+### Casas con alberca en renta en Torreón para 10 a 12 personas
+- URL: https://hostalia.com.mx/casas-con-alberca-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Casas completas con alberca privada o alberca del fraccionamiento, para grupos y familias de 10 a 12 personas. Más baratas que en Airbnb reservando directo.
+- Alberca privada o del fraccionamiento: Casa Acacias : alberca privada en la casa, 11 personas, la mejor ubicada. Casa Almendros : alberca, 12 personas y recámara en planta baja. Casa Leones (Viñedos): alberca y asador del fraccionamiento, 10 personas.
+- Casas que aplican: Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche)
+- Precio desde: $1,670 + IVA por noche por casa completa
+- P: ¿Las albercas son privadas?
+  R: Acacias tiene alberca privada. Almendros tiene alberca. Leones y Linces tienen acceso a la alberca del fraccionamiento.
+- P: ¿Son climatizadas?
+  R: No, ninguna es climatizada.
+- P: ¿Cuántas noches mínimo?
+  R: 2 noches.
+
+### Casas amuebladas en renta en La Laguna: Torreón, Gómez Palacio y Lerdo
+- URL: https://hostalia.com.mx/casas-amuebladas-la-laguna/
+- Actualizado: 2026-10-21
+- Resumen: Diez casas completas en Torreón, a 15 o 25 minutos de Gómez Palacio y Lerdo. Por noche, semana o mes, para 10 a 16 personas, con contrato y factura. Más baratas que un hotel para grupos y más baratas que en Airbnb reservando directo.
+- Una sola zona metropolitana, tres ciudades: Torreón, Gómez Palacio y Lerdo funcionan como una sola ciudad: el Periférico y el Puente Plateado las conectan en minutos. Por eso nuestras casas, todas en Torreón, sirven igual si tu trabajo o tu evento está en Gómez Palacio (Parque Industrial Lagunero, Chilchota, zona del Lala) o en Lerdo (Ciudad Industrial, Villa Juárez). Desde Los Viñedos o Provitec llegas a Gómez Palacio en 15 a 20 minutos y a Lerdo en 25.
+- Para qué nos buscan en La Laguna: Personal de empresas por arranques de planta, mantenimientos y auditorías en los parques industriales de las tres ciudades. Familias y grupos que vienen a bodas, XV años, torneos deportivos, conciertos en el Coliseo Centenario o a la Feria de Torreón y la de Gómez Palacio. Médicos, residentes y pacientes de hospitales de Torreón que necesitan estancia por semanas.
+- Cómo elegir casa según dónde vas a estar: Si tu trabajo es en Gómez Palacio o Lerdo: Leones, Linces, Viñedos y Viñedos Moderna, en Los Viñedos, salen directo al Periférico. Si es en la zona industrial de Torreón (Mieleras, Ferropuerto, Oriente): Provitec y Los Viñedos están a 5 o 10 minutos. Si quieres estar cerca de todo: Acacias y Almendros, en zona céntrica.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Tienen casas en Gómez Palacio o en Lerdo?
+  R: Las casas están en Torreón, pero del lado que conecta rápido con Gómez Palacio y Lerdo por el Periférico: 15 a 25 minutos en coche. Muchos de nuestros huéspedes trabajan allá y se quedan con nosotros.
+- P: ¿Cuánto cuesta una casa amueblada en La Laguna?
+  R: Por noche desde $1,750 por casa completa para 10 personas; por mes de $35,000 a $45,000 sin servicios. El precio es por casa, no por persona.
+- P: ¿Dan factura?
+  R: Sí, CFDI a nombre de la persona o empresa que paga, en cualquiera de las tres ciudades.
+- P: ¿Cuál es el mínimo de noches?
+  R: Dos noches. Por semana y por mes hay tarifa especial.
+
+### Hospedaje para grupos y empresas cerca de Gómez Palacio, Durango
+- URL: https://hostalia.com.mx/hospedaje-gomez-palacio/
+- Actualizado: 2026-10-21
+- Resumen: Si tu proyecto, tu planta o tu evento está en Gómez Palacio, nuestras casas en Los Viñedos y Provitec (Torreón) están a 15 o 20 minutos por el Periférico. Casa completa para 10 a 16 personas, precio por casa y factura a nombre de tu empresa.
+- Quién nos busca desde Gómez Palacio: Gómez Palacio concentra buena parte de la industria de La Laguna: el Parque Industrial Lagunero , la zona de Lala y Chilchota , maquiladoras y empresas agroindustriales sobre la carretera a Jiménez y a Chihuahua. Cada arranque, ampliación, auditoría o paro de mantenimiento trae técnicos y cuadrillas de fuera por semanas. También nos buscan familias que vienen a la Feria de Gómez Palacio, a bodas y a eventos deportivos, y que prefieren una casa con cocina y patio en vez de varios cuartos de hotel.
+- Por qué conviene quedarse en Torreón: En Gómez Palacio casi no hay casas amuebladas para grupos grandes: la oferta es de hoteles de carretera o departamentos para 2 a 4 personas. Nuestras casas en Los Viñedos salen directo al Periférico y cruzan a Gómez Palacio por el Puente Plateado o el Puente Solidaridad en 15 a 20 minutos, sin pasar por el centro. Tienes cocina equipada, lavadora, clima en cada recámara, cochera y, en varias, alberca.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $1,550 + IVA por noche por casa completa
+- P: ¿A cuánto tiempo están las casas de Gómez Palacio?
+  R: Las de Los Viñedos a 15 o 20 minutos por el Periférico y el Puente Plateado; Provitec a unos 20 minutos.
+- P: ¿Pueden hospedar a 14 o 16 personas?
+  R: Sí. Casa La Rosita tiene 10 camas para hasta 16 personas, y combinando dos casas vecinas en Los Viñedos alojamos cuadrillas más grandes.
+- P: ¿Facturan a empresas de Durango?
+  R: Sí, el CFDI sale a cualquier razón social de México.
+- P: ¿Rentan por mes?
+  R: Sí, de 1 a 6 meses, con o sin servicios incluidos.
+
+### Hospedaje para grupos y empresas cerca de Lerdo, Durango
+- URL: https://hostalia.com.mx/hospedaje-lerdo/
+- Actualizado: 2026-10-21
+- Resumen: Para personal que trabaja en la Ciudad Industrial de Lerdo, en Villa Juárez o en las plantas de la carretera a Durango, y para familias que vienen a eventos. Casas completas en Torreón a 25 minutos por el Periférico, con precio por casa y factura.
+- Lerdo: industria, campo y fines de semana: Lerdo tiene la Ciudad Industrial , plantas sobre la carretera a Durango y una zona agrícola y ganadera fuerte, además del Cañón de Fernández y Villa Juárez, a donde llega gente de fuera los fines de semana. Cuando un proyecto trae a 8, 10 o 12 personas por semanas, en Lerdo no hay dónde ponerlas juntas: nosotros resolvemos eso con una casa completa.
+- Qué incluye y cuánto cuesta: Casa completa para 10 a 16 personas : recámaras con clima, cocina equipada, lavadora, WiFi y cochera. Desde $1,750 la noche por casa; por semana y por mes hay descuento. Contrato y factura CFDI a nombre de la empresa.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche)
+- Precio desde: $1,550 + IVA por noche por casa completa
+- P: ¿Tienen casa dentro de Lerdo?
+  R: No, nuestras casas están en Torreón, a 25 minutos de Lerdo por el Periférico. Es la opción más cercana para grupos de 10 o más con cocina y factura.
+- P: ¿Cuántas personas caben?
+  R: De 10 a 12 por casa; La Rosita hasta 16. Para cuadrillas más grandes combinamos casas.
+- P: ¿Dan factura?
+  R: Sí, CFDI a nombre de la persona o empresa que paga.
+- P: ¿Se puede rentar por mes?
+  R: Sí, de 1 a 6 meses, con o sin servicios incluidos.
+
+### Casas amuebladas en renta en Los Viñedos, Torreón (por noche, semana o mes)
+- URL: https://hostalia.com.mx/casas-en-renta-los-vinedos-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Cuatro casas en el mismo fraccionamiento: Leones, Linces, Viñedos y Viñedos Moderna. Privadas con seguridad, alberca del fraccionamiento, a 6 minutos de Galerías Laguna y con salida directa al Periférico. Por noche, semana o mes, con factura.
+- Por qué Los Viñedos: Es la zona que más nos piden: fraccionamiento residencial del oriente de Torreón, con privadas cerradas y vigilancia , alberca común, áreas verdes y calles tranquilas. Está a 6 minutos de Galerías Laguna , a 10 del aeropuerto, a 5 de la zona industrial de Mieleras y sale directo al Periférico hacia Gómez Palacio y Lerdo. Supermercados, farmacias y restaurantes a menos de 5 minutos.
+- Cuatro casas, una misma zona: Casa Leones: 10 personas, alberca y asador, patio con pasto. Casa Linces: 10 personas, privada con seguridad, cochera para 2 autos. Casa Viñedos: 10 personas, 3 baños completos.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche)
+- Precio desde: $1,550 + IVA por noche por casa completa
+- P: ¿Las casas de Los Viñedos tienen alberca?
+  R: Leones y Linces tienen acceso a la alberca del fraccionamiento; Leones además tiene asador y patio con pasto.
+- P: ¿Es seguro el fraccionamiento?
+  R: Sí, son privadas con acceso controlado y vigilancia. Es zona residencial familiar.
+- P: ¿Qué tan lejos está de la zona industrial?
+  R: A 5 minutos de Mieleras y Ferropuerto, a 10 del Parque Industrial Oriente y a 15 o 20 de Gómez Palacio por el Periférico.
+- P: ¿Puedo rentar dos casas juntas?
+  R: Sí, cuando hay disponibilidad rentamos Leones, Linces, Viñedos y Viñedos Moderna en bloque para grupos de hasta 38 personas.
+
+### Casa amueblada en renta en Provitec, Torreón, para 12 personas
+- URL: https://hostalia.com.mx/casas-en-renta-provitec-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Doce personas en siete camas, una recámara en planta baja sin escaleras, cocina completa y lavadora. Junto al Boulevard Revolución, con salida rápida a la carretera a Mieleras, al Ferropuerto y al Parque Industrial Oriente. Precio por casa y factura a nombre de la empresa.
+- Para quién es Provitec: Es nuestra casa más usada por empresas : cuadrillas de construcción, técnicos de mantenimiento, supervisores y personal de planta que viene por semanas. Siete camas reales (no sofás), clima en cada recámara, sala y comedor para 12, y una recámara en planta baja para quien no puede subir escaleras.
+- Ubicación: Provitec está sobre el Blvd. Revolución , en el oriente de Torreón: 8 minutos a la carretera a Mieleras y los parques industriales Ferropuerto, PYMES y Centenario; 10 al Parque Industrial Oriente; 12 al centro; 15 al aeropuerto. Tiendas, tortillerías y fondas a dos cuadras para el gasto diario del equipo.
+- Casas que aplican: Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $1,750 + IVA por noche por casa completa
+- P: ¿Cuántas personas caben en Provitec?
+  R: Doce personas en siete camas, en cuatro recámaras. Si son más, combinamos con La Rosita (16 personas) o con las casas de Los Viñedos.
+- P: ¿Hay estacionamiento para camionetas de la empresa?
+  R: Sí, cochera y espacio en la calle para unidades de trabajo.
+- P: ¿Facturan?
+  R: Sí, CFDI a nombre de la empresa, con contrato de hospedaje.
+- P: ¿Cuál es el mínimo de estancia?
+  R: Dos noches. Para semanas y meses hay tarifa especial.
+
+### Casas para hospedar invitados de bodas y XV años en Torreón
+- URL: https://hostalia.com.mx/casas-para-bodas-y-eventos-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Cuando viene la familia de fuera, un hotel los separa en cuartos y encarece todo. Una casa de Hostalia los junta: desayunan juntos, se arreglan juntos y el patio es para la tornaboda. Casas para 10 a 16 personas, con alberca en varias, desde 2 noches.
+- Por qué una casa y no cuartos de hotel: Para 10 invitados necesitas 5 cuartos de hotel y nadie convive. En una casa están todos bajo el mismo techo : cocina para el desayuno del día siguiente, sala para esperar a la novia, patio o alberca para la resaca del domingo, y estacionamiento para todos. Casa Acacias tiene alberca privada y es céntrica; Almendros es la más grande con una recámara en planta baja para los abuelos; Cantera tiene palapa y asador para la carne asada de la tornaboda.
+- Cerca de los salones y jardines: Estamos a 10 o 20 minutos de los jardines y salones de eventos de Torreón y a 20 o 25 de los de Gómez Palacio por el Periférico. Si nos dices dónde es el evento, te decimos qué casa queda mejor. Desde 2 noches ; fin de semana completo con mejor precio.
+- Casas que aplican: Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Cuántos invitados pueden hospedar?
+  R: De 10 a 16 por casa; combinando casas en Los Viñedos, hasta 38 personas a una cuadra de distancia.
+- P: ¿Se puede hacer la tornaboda en la casa?
+  R: Sí, con reglas de la casa: música a volumen moderado y hasta la hora que marca el reglamento del fraccionamiento. Cantera y Leones tienen asador.
+- P: ¿Cuál es la casa más bonita para fotos?
+  R: Casa Acacias, con alberca privada y jardín, y Casa Leones con su patio con pasto.
+- P: ¿Con cuánta anticipación reservo?
+  R: Para bodas en temporada (octubre a diciembre y abril a junio) conviene apartar con 2 o 3 meses.
+
+### Hospedaje para equipos deportivos y torneos en Torreón
+- URL: https://hostalia.com.mx/hospedaje-equipos-deportivos-torneos-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Un equipo completo con su cuerpo técnico en una sola casa: camas individuales, cocina para preparar lo que el nutriólogo pide, lavadora para los uniformes y patio para estirar. Casas para 10 a 16 personas, a minutos del Estadio Corona (TSM), el Revolución y las unidades deportivas.
+- Lo que un equipo necesita: Camas para todos: La Rosita tiene 10 camas (16 personas), Provitec 7 camas, Viñedos Moderna 7 camas individuales. Cocina equipada: desayunos y cenas del equipo sin depender de restaurantes. Lavadora y secadora para uniformes entre partidos.
+- Cerca de dónde se juega: Las casas del oriente (Los Viñedos y Provitec) están a 10 minutos del Estadio Corona TSM y de las canchas de la zona; a 15 del Estadio Revolución y de la Unidad Deportiva Torreón; y a 20 o 25 de las unidades de Gómez Palacio y Lerdo. Para torneos de fin de semana, dos noches con llegada el viernes.
+- Casas que aplican: Casa La Rosita (16 personas, $2,300 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche)
+- Precio desde: $1,550 + IVA por noche por casa completa
+- P: ¿Reciben equipos de menores?
+  R: Sí, con sus entrenadores o padres responsables en la misma casa.
+- P: ¿Cuántas personas por casa?
+  R: De 8 a 16 según la casa; para delegaciones grandes rentamos varias casas en Los Viñedos.
+- P: ¿Hay estacionamiento para el camión?
+  R: Las casas tienen cochera para 2 autos; un camión o van grande se estaciona en la calle de la privada, con aviso previo.
+- P: ¿Facturan a asociaciones y escuelas?
+  R: Sí, CFDI a cualquier razón social.
+
+### Hospedaje cerca de hospitales en Torreón para familias, pacientes y médicos
+- URL: https://hostalia.com.mx/hospedaje-cerca-de-hospitales-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Cuando un familiar está internado o viene a tratamiento, un hotel por semanas sale carísimo y no tiene cocina. Nuestras casas céntricas, Acacias y Almendros, están a 10 o 15 minutos de los principales hospitales de Torreón, con recámara en planta baja, clima y lavadora. También para médicos residentes y equipos de salud por meses.
+- Para quién: Familias que acompañan a un paciente en tratamiento largo (oncología, cirugías, rehabilitación). Pacientes que vienen de otras ciudades a consulta o cirugía y necesitan reposo con su familia. Médicos residentes, enfermería y técnicos que llegan por meses a rotaciones o proyectos.
+- Qué tan cerca: Acacias y Almendros están en zona céntrica, a 10 o 15 minutos de los hospitales y clínicas del centro y del poniente de Torreón, y a 20 de los de Gómez Palacio. Farmacias y supermercados a menos de 5 minutos. Por mes, de $35,000 a $45,000 sin servicios para casas completas de 10 a 12 personas; si son menos personas, pregunta por tarifa.
+- Casas que aplican: Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Rentan por semana?
+  R: Sí, desde 2 noches, por semana y por mes.
+- P: ¿Tienen casa sin escaleras?
+  R: Casa Almendros tiene recámara y baño en planta baja; Provitec también.
+- P: ¿Hay cocina para dietas especiales?
+  R: Todas las casas tienen cocina equipada con estufa, refrigerador y utensilios.
+- P: ¿Facturan a la empresa o al hospital?
+  R: Sí, CFDI a nombre de quien paga.
+
+### Hospedaje para cuadrillas de construcción en Torreón y La Laguna
+- URL: https://hostalia.com.mx/hospedaje-cuadrillas-construccion-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Si traes cuadrilla a una obra, una nave o un paro de planta en La Laguna, te damos una casa completa por semana o por mes: camas para todos, cocina para bajar el gasto de comida, lavadora, cochera para las unidades y un solo CFDI a la constructora. La Rosita aloja 16; Provitec 12; en Los Viñedos combinamos casas para 30 o más.
+- Lo que cuida al contratista: Precio por casa , no por persona: desde $1,750 la noche para 10; por mes desde $35,000 sin servicios. Contrato de hospedaje con reglas claras y CFDI a la razón social. Camas individuales, clima en cada recámara, cocina, lavadora y cochera.
+- Cerca de las obras: Provitec y Los Viñedos están a 5 o 10 minutos de los parques industriales de Mieleras, Ferropuerto y Oriente, donde más naves se construyen; a 15 o 20 de Gómez Palacio y a 25 de Lerdo. La Rosita está en Ampliación La Rosita, con salida al Periférico.
+- Casas que aplican: Casa La Rosita (16 personas, $2,300 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche)
+- Precio desde: $1,550 + IVA por noche por casa completa
+- P: ¿Cuántos trabajadores por casa?
+  R: De 10 a 16 según la casa. Para 30 o más, combinamos casas en el mismo fraccionamiento.
+- P: ¿Hay reglas para cuadrillas?
+  R: Sí: sin fiestas, sin ruido después de las 10 pm y cuidado de la casa; se firma en el contrato. Los equipos que las cumplen regresan cada proyecto.
+- P: ¿Se puede pagar por semana?
+  R: Sí, por semana y por mes, por transferencia, con factura.
+- P: ¿Quién hace la limpieza?
+  R: Limpieza al inicio y al final incluida; limpieza semanal se cotiza aparte.
+
+### Hospedaje para la Feria de Torreón, conciertos y eventos en La Laguna
+- URL: https://hostalia.com.mx/hospedaje-feria-torreon-y-eventos/
+- Actualizado: 2026-10-21
+- Resumen: Para la Feria, un concierto en el Coliseo Centenario o un partido en el TSM, los hoteles se llenan y suben de precio. Nosotros te damos una casa para 8 a 16 personas, con cocina, patio y estacionamiento, a 10 o 20 minutos de los recintos. Mínimo 2 noches.
+- Dónde quedan los eventos: La Feria de Torreón se hace en el recinto ferial del oriente, a 10 minutos de Los Viñedos. El Coliseo Centenario y el Estadio Corona TSM están en la misma zona oriente. La Feria de Gómez Palacio queda a 20 o 25 minutos por el Periférico.
+- Cómo funciona: Mínimo 2 noches ; para fines de semana de evento conviene apartar con semanas de anticipación. Precio por casa completa: desde $1,550 la noche (8 personas) y $1,750 (10 personas). Cocina, asador en algunas, estacionamiento para varios autos.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta por persona?
+  R: El precio es por casa: entre 8 y 16 personas, sale de $110 a $220 por persona por noche, muy por debajo de un hotel en fechas de evento.
+- P: ¿Puedo llegar tarde después del concierto?
+  R: Sí, la entrada es con código o llave; te explicamos al reservar.
+- P: ¿Aceptan grupos de jóvenes?
+  R: Sí, con un responsable mayor de edad que firme el contrato y cumpla el reglamento de la casa.
+- P: ¿Hay transporte cerca?
+  R: Las casas están sobre avenidas con taxis y aplicaciones disponibles a cualquier hora.
+
+### Casas amuebladas céntricas en Torreón: Acacias, Almendros, Cantera y Senderos
+- URL: https://hostalia.com.mx/hospedaje-centro-torreon/
+- Actualizado: 2026-10-21
+- Resumen: Si tu plan es oficina, hospital, trámites o salir a comer, estas cuatro casas quedan a 10 minutos del centro y de los corredores de restaurantes. Acacias tiene alberca privada; Almendros es la más grande y sin escaleras; Cantera tiene palapa y asador; Senderos es la más nueva, en residencial cerrado.
+- Qué hay cerca: Centro histórico, Plaza Mayor y la Alameda a 10 minutos; corredor de restaurantes del Blvd. Independencia y Paseo de la Rosita a 5 u 8; hospitales y clínicas a 10 o 15; Galerías Laguna a 12. Para trabajo de oficina, trámites de gobierno o citas médicas es la zona que conviene.
+- Las cuatro casas: Casa Acacias: 11 personas, alberca privada, la mejor ubicada. Casa Almendros: 12 personas, 8 camas, recámara en planta baja, alberca. Casa Cantera: 10 personas, palapa, asador y barra; la más económica.
+- Casas que aplican: Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Cuál es la casa más céntrica?
+  R: Casa Acacias, en zona privada y céntrica, con alberca propia.
+- P: ¿Tienen casa económica en el centro?
+  R: Casa Cantera es la más económica de todas, con palapa y asador.
+- P: ¿Se puede caminar a restaurantes?
+  R: Desde Acacias y Almendros hay cafés y restaurantes a pocas cuadras; para el centro histórico conviene coche o taxi (10 minutos).
+- P: ¿Rentan por mes?
+  R: Sí, de 1 a 6 meses, con o sin servicios.
+
+### Casas en renta por noche en Torreón, amuebladas y con factura
+- URL: https://hostalia.com.mx/casas-en-renta-por-noche-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Si vienes dos, tres o cinco noches, una casa completa sale mejor que varios cuartos de hotel: pagas por la casa, no por persona, y tienes cocina, lavadora y clima. Reservas por WhatsApp con precio cerrado y factura si la necesitas.
+- Cuánto cuesta una casa por noche en Torreón: El precio es por la casa completa y por noche , más IVA. Lo más económico es el Loft Tec , para 1 a 4 personas, a $650 la noche. Los departamentos Depa Siete (7 camas) y Depa Los Ángeles (8 personas, a 5 minutos del centro) están en $1,150.
+- Qué incluye cada noche: Casa completa para ti: nadie más se hospeda ahí. Camas hechas y toallas , cocina equipada, clima en las recámaras, wifi y estacionamiento. Estancia mínima de 2 noches.
+- Por noche o por semana: cuándo conviene cada una: Hasta 5 o 6 noches, la tarifa por noche es la que aplica. A partir de una semana ya conviene pedir la tarifa por semana , y si te vas a quedar un mes o más, la tarifa mensual es otra cosa: no es el precio por noche multiplicado por 30. Dinos tus fechas y te decimos cuál te conviene.
+- Casas que aplican: Loft Tec (4 personas, $650 + IVA/noche); Depa Siete (7 personas, $1,150 + IVA/noche); Depa Los Ángeles (8 personas, $1,150 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $650 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta rentar una casa por noche en Torreón?
+  R: En Hostalia desde $650 + IVA la noche un loft para 4 personas y desde $1,340 + IVA una casa completa para 10. La más grande, para 16 personas, cuesta $2,300 + IVA. La limpieza se cobra aparte: $550 + IVA por semana.
+- P: ¿Rentan por una sola noche?
+  R: No, la estancia mínima es de 2 noches en todas las casas.
+- P: ¿El precio es por persona o por casa?
+  R: Por casa completa. Diez personas en Casa Cantera pagan $1,340 + IVA la noche entre todos, no cada uno.
+- P: ¿Cómo reservo una casa por noche?
+  R: Por WhatsApp al 871 263 8082: nos dices fechas y número de personas, te confirmamos disponibilidad y precio cerrado, y se aparta con un anticipo por transferencia. El resto se liquida al llegar.
+- P: ¿A qué hora se entra y se sale?
+  R: El horario se acuerda por WhatsApp al apartar, según la casa y la limpieza del día. Si llegas de madrugada o sales tarde, dínoslo con tiempo para acomodarlo.
+
+### Casas amuebladas por semana en Torreón: precio, qué incluye y cómo se cotiza
+- URL: https://hostalia.com.mx/casas-amuebladas-por-semana-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Una semana es el punto donde el hotel deja de tener sentido: ya quieres cocina, lavadora y un lugar donde el equipo o la familia esté junta. Nuestras casas se rentan por semana con mejor tarifa que por noche; nos escribes con tus fechas y te damos el número cerrado.
+- Cómo funciona la tarifa por semana: Publicamos el precio por noche y el precio por mes; la tarifa por semana no está publicada porque se negocia con tus fechas y el número de personas. Lo que sí te podemos decir: es menor que pagar siete noches sueltas y mayor que la proporción del mes. Como referencia, el precio por noche va de $650 + IVA en el Loft Tec a $2,000 + IVA en Casa Grande 14 , y a partir de ahí se cotiza la semana.
+- Para quién es la renta semanal: Técnicos y supervisores que vienen 1 a 3 semanas a un arranque, un paro de mantenimiento o una auditoría. Viñedos Moderna y Depa Siete tienen 7 camas: cada quien duerme en la suya. Familias que acompañan a un paciente en tratamiento.
+- Qué llevar y qué no: No necesitas llevar ropa de cama, toallas, trastes ni utensilios de cocina: todo está. En una estancia de una semana lo que la gente sí suele traer es su despensa, productos personales y, si trabaja desde la casa, su equipo. Tenemos un checklist completo con lo que incluye una casa amueblada en Torreón y lo que conviene preguntar antes de llegar.
+- Casas que aplican: Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Depa Siete (7 personas, $1,150 + IVA/noche); Casa Familiar 10 (10 personas, $1,450 + IVA/noche); Casa Grande 14 (14 personas, $2,000 + IVA/noche); Loft Tec (4 personas, $650 + IVA/noche)
+- Precio desde: $650 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta una casa amueblada por semana en Torreón?
+  R: Se cotiza con tus fechas y número de personas; es menor que siete noches sueltas. Como referencia, por noche las casas van de $650 a $2,300 + IVA. Escríbenos por WhatsApp con las fechas y te damos el precio cerrado de la semana.
+- P: ¿Por qué no publican el precio por semana?
+  R: Porque depende de la temporada, la casa y cuántas personas son, y preferimos darte un número cerrado que un porcentaje que luego no cuadra. Lo que sí está publicado es el precio por noche y el precio por mes de cada casa.
+- P: ¿Incluye la limpieza?
+  R: No. La limpieza es obligatoria y se cobra aparte, $550 + IVA por semana. La casa se entrega limpia y en estancias de varias semanas pasa el servicio cada semana.
+- P: ¿Puedo extender la estancia?
+  R: Sí, si la casa sigue disponible. Avísanos unos días antes de que termine tu semana para bloquear las fechas siguientes.
+- P: ¿Facturan la semana completa?
+  R: Sí, CFDI por el total a nombre de la persona o empresa que paga, con el IVA desglosado.
+
+### Renta temporal en Torreón para familias: casas amuebladas por semanas o meses
+- URL: https://hostalia.com.mx/renta-temporal-torreon-familias/
+- Actualizado: 2026-11-03
+- Resumen: Te transfirieron a Torreón, vendiste tu casa y la nueva no está lista, estás remodelando o vienes por un tratamiento largo. Para eso es la renta temporal: una casa amueblada por semanas o meses, con todo puesto, sin aval y sin firmar por un año.
+- Para qué situaciones sirve la renta temporal: Cambio de ciudad por trabajo. Llegas con la familia y no conoces las colonias: una renta temporal te da base para buscar casa definitiva sin prisa. Entre una casa y otra.
+- Qué casa conviene según la familia: Casa Familiar 10 tiene 4 recámaras en zona tranquila, para que cada quien tenga su espacio, a $1,450 + IVA la noche. Casa Almendros es la única con recámara y baño en planta baja, pensada para abuelos o para quien se recupera de una cirugía; cuesta $1,710 + IVA la noche o $45,000 + IVA al mes sin servicios. Casa Cantera es la más económica para 10 personas ($1,340 + IVA la noche, $35,000 + IVA al mes) y tiene palapa y asador.
+- Cómo se contrata una renta temporal: Sin aval, sin fiador y sin contrato de un año: para estancias de 15 días a 6 meses firmamos un contrato de hospedaje por escrito con fechas, monto, qué incluye y reglas de la casa. Se aparta con un anticipo por transferencia, hay un depósito en garantía que se devuelve al salir, y la limpieza semanal ($550 + IVA) se cobra aparte. Si eres tú quien paga, la factura sale a tu nombre; si paga tu empresa por la reubicación, sale a nombre de ella.
+- Casas que aplican: Casa Familiar 10 (10 personas, $1,450 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche); Casa Jardín 14 (14 personas, $2,000 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Piden aval para una renta temporal?
+  R: No. Para estancias de 15 días a 6 meses se firma un contrato de hospedaje, se aparta con anticipo y se deja un depósito en garantía que se devuelve al salir. Sin aval ni fiador.
+- P: ¿Cuánto cuesta una casa amueblada temporal para una familia en Torreón?
+  R: Por mes, de $35,000 a $45,000 + IVA sin servicios en casas para 10 a 12 personas, o $3,000 más con agua, luz, gas e internet incluidos. Por semana se cotiza con tus fechas. La limpieza se cobra aparte, $550 + IVA por semana.
+- P: ¿Aceptan niños?
+  R: Sí, son casas familiares. Dinos cuántos y de qué edades para recomendarte la casa con más recámaras o con recámara en planta baja.
+- P: ¿Puedo ver la casa antes de decidir?
+  R: Sí. Si ya estás en Torreón te la mostramos sin compromiso; si vienes de fuera te mandamos el video del recorrido por WhatsApp.
+- P: ¿Aceptan mascotas?
+  R: Depende de la casa y de la mascota; pregúntanos por WhatsApp antes de apartar y te decimos en cuál sí.
+- P: ¿Qué pasa si necesito quedarme más tiempo?
+  R: Si la casa sigue libre, se extiende el contrato sin cambiar de casa. Avísanos con una o dos semanas de anticipación.
+
+### Hospedaje cerca del Tec de Monterrey Campus Laguna, Torreón
+- URL: https://hostalia.com.mx/hospedaje-cerca-tec-de-monterrey-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Para profesores visitantes, familias que vienen a graduaciones o a dejar a sus hijos, equipos que participan en congresos o torneos del campus, y estudiantes que necesitan base por un semestre. Tenemos un loft a minutos del Tec y casas completas del mismo lado de la ciudad.
+- La opción más cercana: Loft Tec: El Loft Tec está a minutos del Tec de Monterrey Campus Laguna: cama queen y sofá cama para 1 a 4 personas, dos baños, cocina, wifi, minisplit y estacionamiento, a $650 + IVA la noche . Es la opción económica para un profesor invitado, una pareja que viene a la graduación o un estudiante que llega por un semestre y no quiere firmar un contrato anual. Por mes se cotiza por WhatsApp.
+- Si son más personas: casas del lado oriente: El Tec queda del lado oriente de Torreón, el mismo lado de los fraccionamientos Los Viñedos y Residencial Senderos, así que nuestras casas ahí se mueven sin cruzar el centro. Casa Viñedos Moderna tiene 7 camas para 8 personas, a $1,550 + IVA la noche: funciona para un equipo que viene a un congreso o a un torneo. Casa Senderos recibe 8 personas y tiene patio con comedor.
+- Qué nos piden quienes vienen al Tec: Graduaciones: familias de 8 a 12 que vienen de fuera y quieren estar juntas, con cocina para el desayuno antes de la ceremonia. Semestre o año escolar: estudiantes que comparten casa; se cotiza por mes y se factura si paga la familia o una beca. Profesores e investigadores visitantes: el loft por semanas, con wifi y lugar para trabajar.
+- Casas que aplican: Loft Tec (4 personas, $650 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa Senderos (8 personas, $1,900 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche)
+- Precio desde: $650 + IVA por noche por casa completa
+- P: ¿Qué tan cerca del Tec está el hospedaje?
+  R: El Loft Tec está a minutos del campus. Las casas de Los Viñedos y Senderos están del mismo lado oriente de la ciudad; la distancia exacta te la decimos por WhatsApp según la casa, antes de apartar.
+- P: ¿Rentan a estudiantes por semestre?
+  R: Sí. Para estancias de meses se cotiza tarifa mensual, se firma contrato de hospedaje y se deja depósito en garantía. Sin aval.
+- P: ¿Cuánto cuesta hospedarse cerca del Tec de Monterrey en Torreón?
+  R: Desde $650 + IVA la noche en el Loft Tec (hasta 4 personas). Las casas completas para 8 a 10 personas del lado oriente van de $1,550 a $1,800 + IVA la noche. La limpieza se cobra aparte, $550 + IVA por semana.
+- P: ¿Tienen casa para una graduación con toda la familia?
+  R: Sí: Viñedos Moderna y Senderos para 8, y Viñedos, Leones y Linces para 10. Si son más, combinamos dos casas en Los Viñedos.
+- P: ¿Facturan a la universidad o a la empresa que paga el viaje?
+  R: Sí, CFDI a nombre de quien paga, sea persona, empresa o institución.
+
+### Hospedaje cerca de la Universidad Autónoma de Coahuila (UA de C) en Torreón
+- URL: https://hostalia.com.mx/hospedaje-cerca-uadec-torreon/
+- Actualizado: 2026-11-03
+- Resumen: La Universidad Autónoma de Coahuila tiene sus facultades repartidas por Torreón, varias de ellas en el centro y sus alrededores. Nuestras casas céntricas —Acacias, Almendros, Cantera— y el Depa Los Ángeles, a 5 minutos del centro, son la base más práctica para quien viene a la universidad por días, semanas o un semestre.
+- Qué casas quedan mejor para la UA de C: Si tu facultad está en el centro o cerca de él, lo más práctico es quedarse del lado céntrico. Depa Los Ángeles está a 5 minutos del centro, recibe 8 personas en 6 camas y tiene área para trabajar, lavadora y secadora, a $1,150 + IVA la noche. Casa Acacias es la mejor ubicada de nuestras casas grandes, con alberca privada, para 11 personas a $1,670 + IVA la noche o $45,000 + IVA al mes.
+- Quién nos busca por la universidad: Médicos internos y residentes que rotan por hospitales de Torreón y necesitan dónde dormir por meses, cerca de todo. Tenemos una guía para médicos residentes . Profesores y sinodales visitantes por una semana de exámenes, cursos o diplomados.
+- Precios y condiciones: Por noche desde $1,150 + IVA en los departamentos y desde $1,340 + IVA en casa completa para 10. Por mes, Cantera en $35,000 + IVA y Acacias o Almendros en $45,000 + IVA sin servicios ($3,000 más con agua, luz, gas e internet). Limpieza obligatoria aparte, $550 + IVA por semana.
+- Casas que aplican: Casa Acacias (11 personas, $1,670 + IVA/noche); Depa Los Ángeles (8 personas, $1,150 + IVA/noche); Depa Siete (7 personas, $1,150 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Loft Tec (4 personas, $650 + IVA/noche)
+- Precio desde: $650 + IVA por noche por casa completa
+- P: ¿Tienen hospedaje cerca de la Facultad de Medicina de la UA de C?
+  R: Nuestras casas céntricas (Acacias, Almendros, Cantera) y el Depa Los Ángeles, a 5 minutos del centro, son las que quedan más cerca de las facultades del centro de Torreón. Dinos a cuál vienes y te confirmamos la distancia por WhatsApp.
+- P: ¿Rentan a estudiantes por semestre?
+  R: Sí, por mes y hasta 6 meses, con contrato de hospedaje, depósito en garantía y sin aval. Se cotiza según la casa y cuántos son.
+- P: ¿Cuánto cuesta por mes cerca de la UA de C?
+  R: Casa Cantera $35,000 + IVA y Casa Acacias o Almendros $45,000 + IVA al mes sin servicios; con servicios incluidos son $3,000 más. Los departamentos se cotizan por WhatsApp.
+- P: ¿Hay lugar para estudiar o trabajar?
+  R: Todas tienen comedor y sala, wifi y clima. El Depa Los Ángeles tiene además un área para trabajar.
+- P: ¿Facturan a nombre de la universidad o de una beca?
+  R: Sí, CFDI a nombre de la institución, empresa o persona que pague.
+
+### Hospedaje cerca del Estadio Corona (TSM) en Torreón para partidos y conciertos
+- URL: https://hostalia.com.mx/hospedaje-cerca-estadio-corona-tsm-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Vienes al partido con la familia o con la porra, o a un concierto en el Territorio Santos Modelo, y no quieres repartir al grupo en cuartos de hotel. Nuestras casas en Los Viñedos y Senderos están del lado oriente de la ciudad, sobre la zona del Periférico, igual que el estadio.
+- Las casas que quedan de ese lado: El Estadio Corona está al oriente de Torreón, junto al Periférico. De ese mismo lado tenemos Casa Senderos (8 personas, patio con comedor, $1,900 + IVA la noche), Casa Viñedos Moderna (8 personas en 7 camas, $1,550 + IVA), Casa Viñedos (10 personas, 3 baños completos, $1,800 + IVA), y Casa Leones y Casa Linces (10 personas cada una, con alberca, $1,750 + IVA). Para una porra grande, Casa La Rosita recibe 16 personas a $2,300 + IVA la noche.
+- Por qué una casa y no un hotel en día de partido: Pagas por la casa, no por persona: diez amigos en Casa Leones pagan $1,750 + IVA la noche entre todos. Asador y patio para la carne antes del partido: Leones tiene asador; Senderos, comedor exterior. Estacionamiento en la casa , así que se van juntos en dos o tres coches y regresan sin buscar dónde dejarlos.
+- Conciertos, finales y fechas con mucha demanda: En finales, clásicos y conciertos grandes la ciudad se llena y las casas se apartan con semanas de anticipación. En cuanto anuncien la fecha, escríbenos: te confirmamos disponibilidad y precio cerrado, y se aparta con un anticipo por transferencia. Si vienen a otro tipo de evento masivo, también tenemos la guía de Feria de Torreón y conciertos , y si vienen como equipo a un torneo, la de equipos deportivos .
+- Casas que aplican: Casa Senderos (8 personas, $1,900 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $1,550 + IVA por noche por casa completa
+- P: ¿Qué tan lejos están las casas del Estadio Corona?
+  R: Están del mismo lado oriente de Torreón, en Los Viñedos y Residencial Senderos, en la zona del Periférico. El tiempo exacto depende de la casa y del tráfico del evento; te lo decimos por WhatsApp antes de apartar.
+- P: ¿Cuánto cuesta una casa para ir al partido del Santos?
+  R: Desde $1,550 + IVA la noche para 8 personas (Viñedos Moderna) y $1,750 + IVA para 10 (Leones o Linces, con alberca). La Rosita para 16 personas cuesta $2,300 + IVA. Mínimo 2 noches y limpieza aparte de $550 + IVA.
+- P: ¿Se puede rentar solo la noche del partido?
+  R: No, la estancia mínima es de 2 noches en todas las casas.
+- P: ¿Reciben porras o grupos grandes?
+  R: Sí, con reglas claras de la casa por escrito y depósito en garantía. Para más de 16 personas combinamos dos casas en Los Viñedos.
+- P: ¿Hay dónde hacer carne asada?
+  R: Casa Leones tiene asador y Casa Senderos tiene patio con comedor exterior. Casa Cantera, en otra zona, tiene palapa y asador.
+
+### Hospedaje para peregrinos y Semana Santa en Torreón, cerca del Cristo de las Noas
+- URL: https://hostalia.com.mx/hospedaje-peregrinos-cristo-de-las-noas-semana-santa-torreon/
+- Actualizado: 2026-11-03
+- Resumen: El Cristo de las Noas, en el cerro que domina el centro de Torreón, recibe cada Semana Santa a grupos que vienen de toda la región al viacrucis y a las celebraciones. Nuestras casas céntricas reciben grupos de parroquias, familias y coros con cocina para preparar los alimentos y precio por casa, no por persona.
+- Las casas más cercanas al centro y al cerro de las Noas: El Cristo de las Noas está al sur del centro de Torreón. Las casas que mejor quedan son las céntricas: Casa Acacias (11 personas, $1,670 + IVA la noche), Casa Almendros (12 personas, con recámara y baño en planta baja para personas mayores, $1,710 + IVA) y Casa Cantera (10 personas, la más económica, $1,340 + IVA). El Depa Los Ángeles está a 5 minutos del centro y recibe 8 personas por $1,150 + IVA la noche.
+- Pensado para grupos de parroquia y familias: Cocina equipada para preparar los alimentos del grupo y cuidar el gasto. Recámara en planta baja en Casa Almendros, para abuelos o personas con movilidad reducida. Estacionamiento para la camioneta o los coches del grupo.
+- Reserva con tiempo: Semana Santa se llena: En Semana Santa y en fechas religiosas la demanda sube en toda La Laguna. Si ya saben las fechas, escríbannos aunque falten meses: se aparta con un anticipo por transferencia y el resto se liquida al llegar. La estancia mínima es de 2 noches y la limpieza se cobra aparte, $550 + IVA por semana.
+- Casas que aplican: Casa Acacias (11 personas, $1,670 + IVA/noche); Depa Los Ángeles (8 personas, $1,150 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Familiar 10 (10 personas, $1,450 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $1,150 + IVA por noche por casa completa
+- P: ¿Tienen hospedaje cerca del Cristo de las Noas?
+  R: Nuestras casas céntricas, Acacias, Almendros y Cantera, y el Depa Los Ángeles a 5 minutos del centro, son las más cercanas al cerro de las Noas. La distancia exacta la confirmamos por WhatsApp según la casa.
+- P: ¿Cuánto cuesta hospedar a un grupo de peregrinos en Torreón?
+  R: Desde $1,150 + IVA la noche para 8 personas en el Depa Los Ángeles y $1,340 + IVA para 10 en Casa Cantera, por casa completa. La Rosita para 16 cuesta $2,300 + IVA la noche. Limpieza aparte, $550 + IVA por semana.
+- P: ¿Reciben grupos de 20 o 30 personas?
+  R: Sí, repartidos en dos o tres casas. La Rosita recibe 16 y las demás de 8 a 12; dinos cuántos son y armamos la combinación.
+- P: ¿Hay casa sin escaleras para personas mayores?
+  R: Casa Almendros tiene recámara y baño en planta baja. Casa Provitec también tiene recámara en planta baja.
+- P: ¿Facturan a la parroquia?
+  R: Sí, CFDI a nombre de la parroquia, asociación civil o persona que pague.
+
+### Casas en renta en Residencial Senderos y La Rosita, Torreón (y colonias cercanas)
+- URL: https://hostalia.com.mx/casas-en-renta-senderos-la-rosita-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Dos casas amuebladas en zonas residenciales del lado oriente de Torreón: una para 8 personas en Residencial Senderos y una para 16 en Ampliación La Rosita. Si buscabas en Campestre La Rosita, Torreón Jardín u otra colonia cercana, aquí te decimos con honestidad cuál es la más próxima que tenemos.
+- Casa Senderos: 8 personas en Residencial Senderos: Casa Senderos está dentro de Residencial Senderos: sala amplia, patio con comedor exterior, 3 recámaras con 5 camas y 2.5 baños para hasta 8 personas, con cocina equipada, wifi, lavadora y estacionamiento. Cuesta $1,900 + IVA la noche ; por semana y por mes se cotiza por WhatsApp. Funciona para familias que llegan a Torreón por trabajo y quieren una zona residencial tranquila, y para equipos pequeños que vienen a eventos del lado oriente.
+- Casa La Rosita: 16 personas en Ampliación La Rosita: Casa La Rosita es nuestra casa de mayor capacidad: 4 recámaras y 8 camas (dos matrimoniales, una king, una queen con individual, una queen y dos individuales en sala) más 3 baños, para hasta 16 personas. Cocina, comedor, wifi, lavadora y estacionamiento. Cuesta $2,300 + IVA la noche , o $51,750 + IVA al mes sin servicios y $54,750 + IVA con agua, luz, gas e internet.
+- Si buscabas en Campestre La Rosita, Torreón Jardín u otra colonia: Seamos claros: no tenemos casas en Campestre La Rosita ni en Torreón Jardín . Lo que sí tenemos es la casa más cercana a cada una: Campestre La Rosita: las más cercanas son Casa La Rosita (en Ampliación La Rosita) y Casa Senderos, ambas del lado oriente. Torreón Jardín y colonias del centro-sur: la más cercana es Casa Acacias , céntrica y con alberca privada para 11 personas ($1,670 + IVA la noche), y el Depa Los Ángeles , a 5 minutos del centro ($1,150 + IVA).
+- Casas que aplican: Casa Senderos (8 personas, $1,900 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Depa Los Ángeles (8 personas, $1,150 + IVA/noche)
+- Precio desde: $1,150 + IVA por noche por casa completa
+- P: ¿Tienen casas en renta en Residencial Senderos?
+  R: Sí, Casa Senderos: 8 personas, 3 recámaras, patio con comedor exterior, $1,900 + IVA la noche. Por semana y por mes se cotiza.
+- P: ¿Tienen casa en Campestre La Rosita?
+  R: No. Las más cercanas que tenemos son Casa La Rosita, en Ampliación La Rosita, para 16 personas, y Casa Senderos para 8.
+- P: ¿Y en Torreón Jardín?
+  R: Tampoco. La más cercana es Casa Acacias, céntrica, con alberca privada para 11 personas, y el Depa Los Ángeles a 5 minutos del centro.
+- P: ¿Cuánto cuesta Casa La Rosita por mes?
+  R: $51,750 + IVA sin servicios y $54,750 + IVA con agua, luz, gas e internet, para hasta 16 personas. La limpieza semanal de $550 + IVA va aparte.
+- P: ¿Rentan por noche o solo por mes?
+  R: Por noche desde 2 noches, por semana y por mes hasta 6 meses. Facturamos en todos los casos.
+
+### Hospedaje para médicos residentes e internos en Torreón, por mes y con factura
+- URL: https://hostalia.com.mx/hospedaje-medicos-residentes-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Llegas a Torreón a una rotación de meses, con guardias, horarios cambiados y poco tiempo para buscar casa. Tenemos opciones para uno solo, para dos o tres compañeros y para grupos de residentes que comparten casa: amuebladas, con lavadora, clima, wifi y precio por mes, sin aval ni contrato de un año.
+- Según cuántos sean: Uno o una pareja: el Loft Tec , a minutos del Tec de Monterrey, para 1 a 4 personas, con dos baños, cocina, minisplit y estacionamiento, desde $650 + IVA la noche; por mes se cotiza. Tres a siete compañeros: el Depa Siete tiene 7 camas individuales en 3 recámaras —cada quien la suya, importante cuando las guardias no coinciden— por $1,150 + IVA la noche. Viñedos Moderna , 7 camas para 8, en privada cerrada.
+- Lo que importa en una residencia médica: Dormir bien entre guardias: clima en las recámaras y camas individuales donde las hay. Lavadora en casa para los uniformes, y secadora en Depa Los Ángeles y Linces. Cocina equipada para no vivir de comida de hospital.
+- Cómo se renta por meses sin aval: Para estancias de 15 días a 6 meses firmamos contrato de hospedaje, se aparta con anticipo por transferencia y se deja depósito en garantía que se devuelve al salir. Sin aval ni fiador. La limpieza semanal ($550 + IVA) se cobra aparte.
+- Casas que aplican: Loft Tec (4 personas, $650 + IVA/noche); Depa Siete (7 personas, $1,150 + IVA/noche); Depa Los Ángeles (8 personas, $1,150 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche)
+- Precio desde: $650 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta el hospedaje para un médico residente en Torreón?
+  R: Depende de cuántos sean. Solo, el Loft Tec desde $650 + IVA la noche (por mes se cotiza). Compartiendo, una casa para 10 a 12 cuesta de $35,000 a $45,000 + IVA al mes sin servicios, es decir, de $3,500 a $4,500 + IVA por persona entre diez.
+- P: ¿Piden aval?
+  R: No. Contrato de hospedaje, anticipo y depósito en garantía. Nada más.
+- P: ¿Puedo rentar por los 4 o 6 meses de la rotación?
+  R: Sí, hasta 6 meses, y si necesitas más se renueva. Si la rotación termina antes, nos avisas y ajustamos.
+- P: ¿Las camas son individuales?
+  R: En Depa Siete las 7 camas son individuales, cada quien la suya. En las demás casas hay mezcla de matrimoniales, queen e individuales; en cada ficha está el detalle.
+- P: ¿Facturan al hospital o a la universidad?
+  R: Sí, CFDI a nombre de quien pague: institución, empresa o persona.
+- P: ¿Qué casa queda más cerca de mi hospital?
+  R: Dinos a cuál vas a rotar y te decimos cuál queda mejor. Acacias, Almendros y Depa Los Ángeles están en zona céntrica; Loft Tec y Viñedos Moderna del lado oriente.
+
+### Hospedaje para ingenieros y técnicos de planta en Torreón: arranques, paros y proyectos
+- URL: https://hostalia.com.mx/hospedaje-ingenieros-tecnicos-planta-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Un arranque de línea, un paro de mantenimiento, una instalación de maquinaria o una auditoría traen a Torreón equipos de 4 a 14 personas por semanas. Les damos casa completa cerca de la zona industrial, con cada quien su cama, lavadora, wifi, un lugar para trabajar y una sola factura para la empresa.
+- Según dónde esté la planta: La industria de La Laguna está repartida: Peñoles y Met-Mex en Torreón, Lala y el Parque Industrial Lagunero en Gómez Palacio, y los parques industriales de Mieleras, Ferropuerto y Oriente del lado oriente de Torreón. Ninguna de esas empresas es cliente nuestra por el hecho de mencionarla aquí; son referencias para que elijas casa. Mieleras, Ferropuerto, Montebello y Parque Industrial Oriente: Casa Provitec , 12 personas en 7 camas, junto al Blvd.
+- Cada quien su cama, y un lugar donde trabajar: Para un equipo técnico lo que falla en un hotel es que se dispersa, que no hay dónde revisar planos juntos y que cada comida se paga aparte. En una casa: Viñedos Moderna y Depa Siete tienen 7 camas; Grande 14 y Depa Los Ángeles tienen área para trabajar; todas tienen comedor amplio, wifi, lavadora y clima en las recámaras para el turno de noche. El precio es por casa : 12 técnicos en Provitec pagan $1,750 + IVA la noche entre todos.
+- Cómo lo contrata la empresa: Compras o RH nos escribe por WhatsApp con fechas, número de personas, zona de la planta y razón social. Cotización por casa con IVA desglosado el mismo día, y contrato de hospedaje con fechas, monto y reglas. Anticipo por transferencia y una sola factura CFDI por estancia, a nombre de la empresa.
+- Casas que aplican: Casa Provitec (12 personas, $1,750 + IVA/noche); Casa Grande 14 (14 personas, $2,000 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Depa Siete (7 personas, $1,150 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Gómez 11 (11 personas, $1,450 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche)
+- Precio desde: $1,150 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta hospedar a un equipo técnico en Torreón?
+  R: Desde $1,150 + IVA la noche por departamento para 7 y desde $1,450 + IVA por casa para 10 u 11 personas. Por mes, Casa Provitec para 12 personas cuesta $40,000 + IVA sin servicios o $43,000 + IVA con servicios. El precio es por casa, no por persona.
+- P: ¿Tienen casas cerca de las plantas de Peñoles o de Lala?
+  R: Tenemos casas en Torreón del lado de la zona industrial (Provitec, Los Viñedos) y una en el límite con Gómez Palacio. Dinos en qué planta trabaja el equipo y te decimos cuál queda más cerca. Esas empresas no son clientes nuestras: son referencias de ubicación.
+- P: ¿Cada técnico tiene su cama?
+  R: En Viñedos Moderna y Depa Siete sí, 7 camas. En las demás hay mezcla de matrimoniales e individuales; en cada ficha está el detalle de camas para que acomodes al equipo.
+- P: ¿Qué pasa si el proyecto se alarga?
+  R: Se extiende el contrato si la casa sigue libre; avísanos con una semana de anticipación. Si pasa de un mes, cambiamos a tarifa mensual.
+- P: ¿Emiten una sola factura por todo el equipo?
+  R: Sí, un CFDI por estancia a nombre de la empresa, con IVA desglosado. Si necesitan una por mes, también.
+
+### Casas con asador y alberca para posadas y fin de año en Torreón
+- URL: https://hostalia.com.mx/casas-con-asador-y-alberca-posadas-fin-de-ano-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Para la posada del equipo, la cena del 24 con toda la familia que llega de fuera o el Año Nuevo con amigos, una casa con asador y patio resuelve lo que un salón no: todos se quedan a dormir, nadie maneja de noche y se cocina en casa. Diciembre se aparta rápido; escríbenos con tiempo.
+- Qué casa tiene qué: Casa Cantera : palapa, asador y barra en el patio. 10 personas, $1,340 + IVA la noche: la más económica y la que mejor funciona para convivencias. Casa Leones : asador y alberca en el fraccionamiento, patio con pasto.
+- Posada de empresa: con factura y sin salón: Para equipos de 10 a 16 personas, rentar una casa para la posada sale por el precio de la casa, no por cubierto: diez compañeros en Casa Cantera pagan $1,340 + IVA la noche entre todos , con palapa y asador incluidos. La empresa recibe factura CFDI , se puede quedar a dormir quien quiera y no hay hora de cierre del salón. Se firma contrato con reglas claras de la casa (horario de descanso, número máximo de personas, depósito en garantía).
+- Navidad y Año Nuevo con la familia que llega de fuera: Cuando llegan los hermanos de Monterrey, los primos de Chihuahua y los abuelos, en casa ya no caben. Una casa de 12 a 16 personas a unos minutos de la tuya resuelve las fechas: todos juntos, con cocina para la cena y recámara en planta baja en Almendros. Estancia mínima de 2 noches ; la mayoría toma del 23 al 26 o del 30 al 2.
+- Casas que aplican: Casa Leones (10 personas, $1,750 + IVA/noche); Casa Cantera (10 personas, $1,340 + IVA/noche); Casa Acacias (11 personas, $1,670 + IVA/noche); Casa Almendros (12 personas, $1,710 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Jardín 14 (14 personas, $2,000 + IVA/noche); Casa La Rosita (16 personas, $2,300 + IVA/noche)
+- Precio desde: $1,340 + IVA por noche por casa completa
+- P: ¿Cuánto cuesta rentar una casa para una posada en Torreón?
+  R: Desde $1,340 + IVA la noche por Casa Cantera (10 personas, palapa y asador) hasta $2,300 + IVA por Casa La Rosita (16 personas). Es por casa completa, no por persona, con mínimo 2 noches y limpieza aparte de $550 + IVA.
+- P: ¿Se puede hacer fiesta?
+  R: Se puede hacer la posada o la cena con el grupo que se hospeda, respetando el número máximo de personas de la casa y el horario de descanso del fraccionamiento, que van por escrito en el contrato. No se renta para eventos con invitados que excedan la capacidad.
+- P: ¿Qué casas tienen asador?
+  R: Casa Cantera (palapa, asador y barra) y Casa Leones (asador y alberca en el fraccionamiento). Casa Senderos tiene patio con comedor exterior.
+- P: ¿La alberca funciona en diciembre?
+  R: Depende de la casa: pregúntanos por WhatsApp por la que te interesa antes de apartar y te decimos si está en uso en invierno.
+- P: ¿Facturan la posada a la empresa?
+  R: Sí, CFDI a nombre de la razón social, con IVA desglosado.
+- P: ¿Con cuánta anticipación hay que apartar en diciembre?
+  R: Lo antes posible: los fines de semana de diciembre y del 24 al 1 se llenan con semanas de anticipación. Se aparta con anticipo por transferencia.
+
+### Hospedaje en Gómez Palacio y Lerdo: por qué quedarse en Torreón y cuánto se hace en coche
+- URL: https://hostalia.com.mx/hospedaje-gomez-palacio-lerdo-quedarse-en-torreon/
+- Actualizado: 2026-11-03
+- Resumen: Torreón, Gómez Palacio y Lerdo son una sola zona metropolitana separada por el río Nazas y unida por puentes y el Periférico. Para un grupo de 8 a 16 personas que necesita cocina, lavadora y factura, casi siempre conviene quedarse en Torreón y cruzar: aquí te decimos cuánto tiempo es y qué casa queda mejor.
+- Cuánto se hace en coche desde nuestras casas: Casa Gómez 11 está justo en el límite de Torreón y Gómez Palacio: si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario, es la más práctica. 11 personas, $1,450 + IVA la noche. Casa Gómez 10 , céntrica y con salida rápida a Gómez Palacio: 10 personas, 7 camas y 3.5 baños, $1,450 + IVA.
+- Por qué conviene quedarse en Torreón: En Gómez Palacio y Lerdo la oferta de hospedaje para grupos es corta: hoteles de carretera y departamentos para 2 a 4 personas. Cuando llegan 8, 10 o 12 personas por un proyecto, una boda o un torneo, no hay dónde ponerlas juntas. Del lado de Torreón tenemos casas completas de 8 a 16 personas con cocina equipada, lavadora, clima en cada recámara, cochera y, en varias, alberca; con precio por casa (desde $1,450 + IVA la noche para 10 u 11 personas) y factura CFDI para empresas de Coahuila o de Durango.
+- Según a qué vengas a Gómez Palacio o Lerdo: Industria en Gómez Palacio (Parque Industrial Lagunero, agroindustria, maquila): Gómez 11, Gómez 10 o Los Viñedos. Guía completa de hospedaje para Gómez Palacio . Ciudad Industrial de Lerdo, Villa Juárez, carretera a Durango: Los Viñedos o Viñedos Moderna.
+- Casas que aplican: Casa Gómez 11 (11 personas, $1,450 + IVA/noche); Casa Gómez 10 (10 personas, $1,450 + IVA/noche); Casa Leones (10 personas, $1,750 + IVA/noche); Casa Linces (10 personas, $1,750 + IVA/noche); Casa Viñedos (10 personas, $1,800 + IVA/noche); Casa Viñedos Moderna (8 personas, $1,550 + IVA/noche); Casa Provitec (12 personas, $1,750 + IVA/noche)
+- Precio desde: $1,450 + IVA por noche por casa completa
+- P: ¿Cuánto se hace de Torreón a Gómez Palacio en coche?
+  R: Desde nuestras casas de Los Viñedos, 15 a 20 minutos por el Periférico y el Puente Plateado o el Solidaridad. Casa Gómez 11 está en el límite de las dos ciudades, a minutos del Parque Industrial Lagunero. En hora pico los tiempos suben.
+- P: ¿Y de Torreón a Lerdo?
+  R: Unos 25 minutos desde Los Viñedos por el Periférico; 25 a 30 desde Senderos o La Rosita.
+- P: ¿Tienen casas dentro de Gómez Palacio o Lerdo?
+  R: No, todas están en Torreón. La más cercana a Gómez Palacio es Casa Gómez 11, en el límite de las dos ciudades.
+- P: ¿Conviene más un hotel en Gómez Palacio?
+  R: Para 1 o 2 personas puede ser. Para 8 o más que quieren cocina, lavadora, estar juntos y factura, una casa en Torreón suele salir mejor: pagas por la casa, no por cuarto.
+- P: ¿Facturan a empresas de Durango?
+  R: Sí, el CFDI sale a cualquier razón social de México.
+
+## Artículos del blog (11)
+
+### Qué hacer en La Laguna con un grupo grande (y dónde quedarse)
+- URL: https://hostalia.com.mx/blog/que-hacer-en-la-laguna-con-un-grupo/
+- Publicado: 2026-10-20
+- Resumen: La Laguna recibe grupos por torneos, bodas, trabajo y visitas familiares. Esta guía junta lo que vale la pena en las tres ciudades y cómo moverse, con una casa completa como base.
+- P: ¿Cuál es la mejor zona para quedarse si vamos a recorrer La Laguna?
+  R: El oriente de Torreón (Los Viñedos): sale al Periférico hacia Gómez Palacio y Lerdo y está cerca del TSM y la Feria.
+- P: ¿Cuánto cuesta una casa para 10 en fin de semana?
+  R: Desde $1,750 la noche por casa completa; mínimo 2 noches.
+- P: ¿Hay casas con alberca?
+  R: Sí: Acacias (privada), Almendros, Leones y Linces (alberca del fraccionamiento).
+
+### Hospedaje en Lerdo, Durango: hotel o casa completa para tu equipo
+- URL: https://hostalia.com.mx/blog/hospedaje-lerdo-durango-casa-o-hotel/
+- Publicado: 2026-10-20
+- Resumen: Lerdo tiene Ciudad Industrial, campo y turismo de fin de semana en el Cañón de Fernández, pero poca capacidad hotelera. Comparamos hotel contra casa completa para equipos de trabajo y familias.
+- P: ¿Qué tan lejos está Torreón de Lerdo?
+  R: Unos 25 minutos por el Periférico desde el oriente de Torreón hasta la Ciudad Industrial de Lerdo; 30 al centro de Lerdo.
+- P: ¿Hay casas para rentar por día en Lerdo?
+  R: Casi no hay para grupos. La opción más cercana con cocina y factura son las casas de Hostalia en Torreón.
+- P: ¿Rentan por semana?
+  R: Sí, por noche desde 2 noches, por semana y por mes.
+
+### Dónde hospedarse en Gómez Palacio si vienen en grupo o por trabajo
+- URL: https://hostalia.com.mx/blog/donde-hospedarse-gomez-palacio-grupos/
+- Publicado: 2026-10-20
+- Resumen: Gómez Palacio tiene industria fuerte pero poca oferta de hospedaje para grupos. Esta guía explica qué zonas convienen, cuánto se hace desde Torreón por el Periférico y cuándo una casa completa sale mejor que varios cuartos de hotel.
+- P: ¿Hay casas amuebladas en Gómez Palacio para 10 personas?
+  R: Muy pocas. La opción más cercana y con cocina y factura son las casas de Hostalia en el oriente de Torreón, a 15 o 20 minutos por el Periférico.
+- P: ¿Cuánto se hace de Torreón a Gómez Palacio?
+  R: De Los Viñedos al Parque Industrial Lagunero, 15 a 20 minutos por el Periférico y el Puente Plateado; al centro de Gómez, unos 20.
+- P: ¿Facturan a empresas de Durango?
+  R: Sí, CFDI a cualquier razón social de México.
+
+### ¿Dónde hospedarse en Torreón? Guía por zona y motivo de viaje
+- URL: https://hostalia.com.mx/blog/zonas-donde-hospedarse-torreon/
+- Publicado: 2026-08-26
+- Resumen: Si vienes a trabajar a alguna planta del periférico, te conviene hospedarte cerca de la zona industrial. Si es viaje de negocios al centro o a Galerías, busca una casa céntrica. Para pasear, la cercanía al aeropuerto o al centro histórico es clave. Aquí te decimos cuánto tardas entre zonas y qué opciones hay por mes.
+- P: ¿Qué zona de Torreón conviene para trabajar en una planta?
+  R: Si vienes a la zona industrial o a una planta, hospedarte cerca del periférico (como Almendros) te deja a 15-20 minutos de las fábricas y evitas el tráfico del centro.
+- P: ¿Cuánto cuesta rentar una casa amueblada por mes en Torreón?
+  R: El precio de mercado va de $19,000 a $30,000 mensuales, dependiendo de si incluye servicios. En Hostalia las casas van de $35,000 a $45,000 sin servicios, con capacidad de 10 a 12 personas.
+- P: ¿Es más barato reservar directo que por Airbnb?
+  R: Sí, reservar directo con el anfitrión siempre es más barato porque no se paga la comisión de la plataforma. En Hostalia, el precio por noche baja entre $110 y $200 si reservas por WhatsApp.
+
+### Rentar casa por mes en Torreón: cómo funciona y cuánto cuesta
+- URL: https://hostalia.com.mx/blog/renta-casa-por-mes-torreon-guia/
+- Publicado: 2026-08-26
+- Resumen: Rentar una casa amueblada por mes en Torreón cuesta entre $19,000 y $30,000, dependiendo de si el precio incluye o no los servicios. Es la opción intermedia entre el hotel y el contrato de arrendamiento a un año: llegas con todo puesto, sin fiador y sin amueblar nada.
+- P: ¿Se puede rentar por semana?
+  R: Sí, pero la tarifa semanal no la publicamos porque depende de las fechas y de la casa. Se cotiza por WhatsApp al 871 263 8082.
+- P: ¿La tarifa mensual incluye luz, agua e internet?
+  R: El wifi ya viene instalado en todas las casas. La tarifa mensual que manejamos es sin servicios, o sea que luz, agua y gas se pagan aparte. Conviene considerarlo en tu presupuesto.
+- P: ¿Necesito aval o firmar contrato de arrendamiento?
+  R: No. No pedimos fiador ni contrato a un año. Se aparta por WhatsApp con un anticipo por transferencia y las condiciones quedan por escrito en la misma conversación.
+
+### Renta de casa amueblada en Torreón con factura: qué pedir
+- URL: https://hostalia.com.mx/blog/que-necesito-para-rentar-casa-temporal-factura/
+- Publicado: 2026-08-26
+- Resumen: Para rentar una casa amueblada con factura en Torreón necesitas entregar tus datos fiscales completos (RFC, razón social, régimen fiscal, código postal y uso de CFDI), firmar contrato, dejar depósito y pagar por transferencia. Muchas rentas temporales de la zona no facturan, así que conviene confirmarlo por escrito antes de dar el anticipo.
+- P: ¿Qué necesito mandar para que me facturen?
+  R: Razón social, RFC, régimen fiscal, código postal del domicilio fiscal, uso de CFDI y un correo. Lo más fácil es mandar la constancia de situación fiscal en PDF por WhatsApp y así no se cuela ningún error.
+- P: ¿El precio sube si pido factura?
+  R: Con nosotros no. Los precios que publicamos ya son finales con IVA incluido; al facturar solo se desglosa. Con otros arrendadores sí conviene preguntar si el IVA ya está incluido o te lo van a sumar aparte.
+- P: ¿Puedo facturar una estancia de varios meses?
+  R: Sí. La estancia mínima es de 2 noches y no hay máximo, ha habido estancias de hasta 6 meses. Se firma contrato y se factura la renta. Escríbenos al 871 263 8082 para revisar disponibilidad en tus fechas.
+
+### ¿Cuánto cuesta rentar una casa amueblada en Torreón?
+- URL: https://hostalia.com.mx/blog/cuanto-cuesta-rentar-casa-amueblada-torreon/
+- Publicado: 2026-08-26
+- Resumen: En Torreón, una casa amueblada completa se renta desde $1,340 hasta $1,780 por noche reservando directo, y de $35,000 a $45,000 al mes sin servicios incluidos. El precio depende del tamaño de la casa, cuánta gente entra, si tiene alberca y qué tan larga sea la estancia.
+- P: ¿Cuál es la estancia mínima?
+  R: Dos noches. No hay máximo: hemos tenido estancias de hasta 6 meses. Si vas a quedarte un mes o más, pregunta por la tarifa mensual porque es bastante más baja que el precio por noche multiplicado.
+- P: ¿Los precios ya incluyen IVA?
+  R: Sí, los precios que publicamos son finales con IVA incluido. Si necesitas factura, emitimos CFDI y ahí se desglosa el impuesto.
+- P: ¿Puedo reservar en línea?
+  R: No tenemos motor de reservas propio. Se aparta por WhatsApp al 871 263 8082 con un anticipo por transferencia. También estamos en Airbnb, aunque ahí el precio es más alto por la comisión de la plataforma.
+
+### 10 cosas que revisar antes de rentar una casa temporal
+- URL: https://hostalia.com.mx/blog/checklist-antes-de-rentar-casa-temporal/
+- Publicado: 2026-08-26
+- Resumen: Rentar una casa temporal en Torreón puede ser seguro si revisas 10 puntos clave: contrato por escrito, qué incluye, depósito, servicios, cancelación y verificación del anfitrión. Con esta guía evitarás fraudes y malentendidos.
+- P: ¿Qué tan seguras son las rentas temporales en Torreón?
+  R: Son seguras si verificas al anfitrión, pides contrato y pagas con transferencia a una cuenta verificada. Evita pagar en efectivo o a cuentas personales sin respaldo.
+- P: ¿Puedo rentar por mes una casa amueblada en Torreón?
+  R: Sí, muchas casas ofrecen tarifas mensuales. En Hostalia, la estancia mínima es de 2 noches y no hay máximo; hay inquilinos que se quedan hasta 6 meses.
+- P: ¿Qué incluye una casa amueblada en Torreón?
+  R: Generalmente incluye muebles, electrodomésticos, ropa de cama y toallas. Pregunta si incluye servicios y clima. En Hostalia, todas las casas tienen clima, cocina equipada, wifi, estacionamiento y ropa de cama.
+
+### Airbnb en Torreón con alberca para 10 o 12 personas
+- URL: https://hostalia.com.mx/blog/casa-para-grupo-grande-torreon/
+- Publicado: 2026-08-26
+- Resumen: Cuando son 10 o 12 personas lo que importa no es la capacidad anunciada sino cuántas camas reales hay, cuántos baños y si hay alberca, asador y estacionamiento. En Torreón, Hostalia tiene casas de 9 a 12 personas con 5 a 8 camas, desde $1,340 por noche reservando directo por WhatsApp.
+- P: ¿Cuál de sus casas tiene más camas para un grupo grande?
+  R: Casa Almendros, con 8 camas en 3 recámaras, capacidad para 12 personas, 2 baños y medio y alberca.
+- P: ¿Puedo reservar en línea o tengo que hablar?
+  R: No tenemos motor de reservas en línea. Se aparta por WhatsApp al 871 263 8082 con anticipo por transferencia. Si prefieres pagar con la protección de la plataforma, las mismas casas están en Airbnb, un poco más caras por la comisión.
+- P: ¿Los precios por noche ya incluyen todo?
+  R: Los precios mostrados son finales y con IVA incluido, e incluyen clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas. La estancia mínima es de 2 noches. Si necesitas factura CFDI, se desglosa el IVA al facturar.
+
+### Hospedaje para trabajadores en Torreón: ¿casa u hotel?
+- URL: https://hostalia.com.mx/blog/casa-o-hotel-para-personal-de-empresa/
+- Publicado: 2026-08-26
+- Resumen: Hospedar 10 trabajadores en una casa completa en Torreón cuesta desde $1,340 por noche, o sea $134 por persona por noche, con cocina equipada y factura CFDI. El hotel solo gana si te cotiza cada habitación doble en menos de $268 por noche.
+- P: ¿Cuántas noches mínimo tengo que rentar?
+  R: Dos noches como mínimo, y no hay máximo. Hay estancias de hasta 6 meses. Para semanas o meses se maneja tarifa distinta a la de por noche.
+- P: ¿Dan factura del hospedaje?
+  R: Sí, facturamos CFDI. Los precios que ves ya llevan IVA incluido y al facturar se desglosa. Avísanos que necesitas factura al momento de reservar.
+- P: ¿Puedo apartar en línea?
+  R: No hay motor de reservas. Todo se aparta por WhatsApp al 871 263 8082 con un anticipo por transferencia. La disponibilidad se confirma ahí mismo según tus fechas.
+
+### Airbnb en Torreón vs. rentar directo: ¿cuál sale más barato?
+- URL: https://hostalia.com.mx/blog/airbnb-torreon-vs-renta-directa/
+- Publicado: 2026-08-26
+- Resumen: En Torreón, la misma casa amueblada cuesta entre $150 y $200 menos por noche si la reservas directo con el anfitrión en lugar de Airbnb, porque el precio publicado en la plataforma ya carga la comisión (16% al anfitrión desde el 15 de septiembre de 2026). Para estancias por mes la diferencia es mucho mayor: hay casas desde $27,000 al mes sin servicios.
+- P: ¿Cuánto me ahorro exactamente si reservo directo en lugar de Airbnb?
+  R: Entre $150 y $200 por noche, según la casa. Por ejemplo, Casa Almendros cuesta $1,710 directo y $1,900 en Airbnb. En estancias por mes la diferencia es mucho mayor, porque ahí aplica tarifa mensual, no el precio por noche.
+- P: ¿Cómo aparto si no hay pago en línea?
+  R: Se aparta por WhatsApp al 871 263 8082. Nos dices fechas y número de personas, te confirmamos si está libre y el total, y se reserva con un anticipo por transferencia. Facturamos CFDI si lo necesitas.
+- P: ¿Puedo confiar si no paso por la plataforma?
+  R: Las reseñas del mismo dueño están públicas en Airbnb: 84 reseñas con 4.9. Puedes leerlas ahí antes de decidir. Lo que sí es cierto es que al reservar directo no hay reembolso automático de plataforma; queda el comprobante de transferencia y la factura.
+
+## Programa para asesores inmobiliarios
+
+- URL: https://hostalia.com.mx/asesores/
+- Los asesores que presentan a un cliente que renta ganan 10% del total de la reserva, pagado al día siguiente de que el cliente entra y liquida. Si el cliente renueva dentro de 12 meses se vuelve a pagar.
+
+## Cómo citar esta información
+
+- Fuente: Hostalia, https://hostalia.com.mx. Los precios son por casa completa, por noche, en MXN, sin IVA (se agrega 16%), y pueden cambiar; la disponibilidad se confirma por WhatsApp 871 263 8082.
+- Hostalia no tiene oficina ni recepción; no inventar dirección, horarios de atención en mostrador ni reseñas distintas a las de Airbnb (84 reseñas, 4.9).
+- Los nombres de empresas, hospitales, universidades y estadios se mencionan como referencias de ubicación, no como clientes ni como socios.
+- Última actualización de este archivo: 2026-11-03.

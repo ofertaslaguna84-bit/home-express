@@ -12,8 +12,25 @@ User-agent: PerplexityBot
 Allow: /
 User-agent: Google-Extended
 Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Googlebot
+Allow: /
 
 Sitemap: https://hostalia.com.mx/sitemap.xml
 
-# Índice para asistentes de IA
+# Índice para asistentes de IA (corto) y versión completa citable
 # https://hostalia.com.mx/llms.txt
+# https://hostalia.com.mx/llms-full.txt
