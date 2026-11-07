@@ -258,4 +258,4 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 - Versión completa y citable de todo el sitio (casas, políticas, guías por zona y FAQ): https://hostalia.com.mx/llms-full.txt
 - Hub de guías por zona y ocasión: https://hostalia.com.mx/zonas/
 - Sitemap: https://hostalia.com.mx/sitemap.xml
-- Última actualización: 2026-11-03
+- Última actualización: 2026-11-07

@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/ical/:listing.ics", "destination": "/api/ical?listing=:listing" },
+    { "source": "/", "destination": "/api/admin" }
+  ]
+}

@@ -48,7 +48,13 @@
       ],
       "m2": 230,
       "precioMesSinServicios": 45000,
-      "precioMesConServicios": 48000
+      "precioMesConServicios": 48000,
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1759886885358229472",
+        "1774280308317674341"
+      ],
+      "minNoches": 2
     },
     {
       "slug": "linces",
@@ -78,7 +84,13 @@
       ],
       "m2": 230,
       "precioMesSinServicios": 45000,
-      "precioMesConServicios": 48000
+      "precioMesConServicios": 48000,
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1759858083956311669",
+        "1791611259291694703"
+      ],
+      "minNoches": 2
     },
     {
       "slug": "provitec",
@@ -107,7 +119,13 @@
       ],
       "m2": 230,
       "precioMesSinServicios": 40000,
-      "precioMesConServicios": 43000
+      "precioMesConServicios": 43000,
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1801616618511928037",
+        "1805213705734928554"
+      ],
+      "minNoches": 2
     },
     {
       "slug": "almendros",

@@ -1,0 +1,200 @@
+{
+  "marca": {
+    "nombre": "Hostalia",
+    "whatsapp": "528712638082",
+    "iva": 0.16,
+    "limpiezaSemanal": 550,
+    "descuentoSemana": 0.1
+  },
+  "casas": [
+    {
+      "slug": "leones",
+      "nombre": "Casa Leones",
+      "huespedes": 10,
+      "precioNoche": 1750,
+      "precioFinde": 1750,
+      "minNoches": 2,
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1759886885358229472",
+        "1774280308317674341"
+      ]
+    },
+    {
+      "slug": "linces",
+      "nombre": "Casa Linces",
+      "huespedes": 10,
+      "precioNoche": 1750,
+      "precioFinde": 1750,
+      "minNoches": 2,
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1759858083956311669",
+        "1791611259291694703"
+      ]
+    },
+    {
+      "slug": "provitec",
+      "nombre": "Casa Provitec",
+      "huespedes": 12,
+      "precioNoche": 1750,
+      "precioFinde": 1750,
+      "minNoches": 2,
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1801616618511928037",
+        "1805213705734928554"
+      ]
+    },
+    {
+      "slug": "almendros",
+      "nombre": "Casa Almendros",
+      "huespedes": 12,
+      "precioNoche": 1710,
+      "precioFinde": 2030,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "acacia",
+      "nombre": "Casa Acacias",
+      "huespedes": 11,
+      "precioNoche": 1670,
+      "precioFinde": 1760,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "cantera",
+      "nombre": "Casa Cantera",
+      "huespedes": 10,
+      "precioNoche": 1340,
+      "precioFinde": 1500,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "rosita",
+      "nombre": "Casa La Rosita",
+      "huespedes": 16,
+      "precioNoche": 2300,
+      "precioFinde": 2300,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "vinedos",
+      "nombre": "Casa Viñedos",
+      "huespedes": 10,
+      "precioNoche": 1800,
+      "precioFinde": 1800,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "vinedos-moderna",
+      "nombre": "Casa Viñedos Moderna",
+      "huespedes": 8,
+      "precioNoche": 1550,
+      "precioFinde": 1550,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "senderos",
+      "nombre": "Casa Senderos",
+      "huespedes": 8,
+      "precioNoche": 1900,
+      "precioFinde": 1900,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "gomez-11",
+      "nombre": "Casa Gómez 11",
+      "huespedes": 11,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "gomez-10",
+      "nombre": "Casa Gómez 10",
+      "huespedes": 10,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "familiar-10",
+      "nombre": "Casa Familiar 10",
+      "huespedes": 10,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "depa-7",
+      "nombre": "Depa Siete",
+      "huespedes": 7,
+      "precioNoche": 1150,
+      "precioFinde": 1150,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "jardin-14",
+      "nombre": "Casa Jardín 14",
+      "huespedes": 14,
+      "precioNoche": 2000,
+      "precioFinde": 2000,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "grande-14",
+      "nombre": "Casa Grande 14",
+      "huespedes": 14,
+      "precioNoche": 2000,
+      "precioFinde": 2000,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "loft-tec",
+      "nombre": "Loft Tec",
+      "huespedes": 4,
+      "precioNoche": 650,
+      "precioFinde": 650,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "depa-los-angeles",
+      "nombre": "Depa Los Ángeles",
+      "huespedes": 8,
+      "precioNoche": 1150,
+      "precioFinde": 1150,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    }
+  ]
+}

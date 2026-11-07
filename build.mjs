@@ -94,6 +94,8 @@ const descMes = Math.round(marca.descuentoMes * 100);
 /** Rango de personas, sale de casas.json para que cambie solo al agregar o quitar casas. */
 const PERSONAS = `${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))}`;
 
+/** API de reservas directas (Vercel, carpeta reservas/). El widget y la página /reserva/ le pegan desde el navegador. */
+const API_RESERVAS = process.env.API_RESERVAS || 'https://reservas.hostalia.com.mx';
 const wa = (texto) => `https://wa.me/${marca.whatsapp}?text=${encodeURIComponent(texto)}`;
 
 // ─────────────────────────────────────────────────────────── estilos
@@ -974,7 +976,8 @@ function paginaCasa(c) {
             <div class="dato"><span>Estancia mínima</span><b>2 noches</b></div>
             <div class="dato"><span>Factura</span><b>Sí, CFDI</b></div>
           </div>
-          <a href="${wa(`Hola Hostalia, quiero reservar ${c.nombre} (${c.huespedes} personas). Mis fechas son:`)}" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:14px">Reservar por WhatsApp</a>
+          ${c.reservaEnLinea ? `<div id="reservar" class="rsv" data-casa="${c.slug}" data-api="${API_RESERVAS}"></div><script src="/js/reservas.js" defer></script>` : ''}
+          <a href="${wa(`Hola Hostalia, quiero reservar ${c.nombre} (${c.huespedes} personas). Mis fechas son:`)}" class="btn ${c.reservaEnLinea ? 'btn-out' : 'btn-wa'}" style="width:100%;justify-content:center;margin-top:14px">${c.reservaEnLinea ? 'O escríbenos por WhatsApp' : 'Reservar por WhatsApp'}</a>
           <p style="font-size:12.5px;color:var(--gris);text-align:center;margin-top:10px">Precios${IVA_NOTA}. Limpieza obligatoria aparte: ${mxn(LIMPIEZA)}${IVA_NOTA}, una vez por semana. El de estancias largas se cotiza.</p>
         </div>
       </aside>
@@ -1599,6 +1602,53 @@ function paginaArticulo(a) {
   );
 }
 
+
+// ─────────────────────────────────────────────────────────── /reserva/ (regreso de Mercado Pago)
+
+function paginaReserva() {
+  return (
+    cabeza({
+      titulo: `Tu reserva | ${marca.nombre}`,
+      desc: 'Estado de tu reserva directa en Hostalia.',
+      url: `${SITE}/reserva/`,
+      schema: [],
+      extraHead: '<meta name="robots" content="noindex,nofollow">\n',
+    }) +
+    encabezado('../') +
+    `
+<section><div class="w" style="max-width:640px">
+  <span class="eyebrow">Reserva directa</span>
+  <div id="rv" class="panel" style="position:static;margin-top:14px"><p style="color:var(--gris)">Consultando tu reserva…</p></div>
+  <p style="font-size:13px;color:var(--gris);margin-top:16px">¿Dudas? WhatsApp <a href="${wa('Hola Hostalia, tengo una duda de mi reserva')}">${esc(marca.whatsappVisible)}</a></p>
+</div></section>
+<script>
+(function(){
+  var API='${API_RESERVAS}', el=document.getElementById('rv'), q=new URLSearchParams(location.search), id=(q.get('id')||'').toUpperCase();
+  var MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  var f=function(s){return (+s.slice(8,10))+' '+MES[+s.slice(5,7)-1]+' '+s.slice(0,4)}, mxn=function(n){return '$'+Number(n).toLocaleString('es-MX')};
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  if(!id){el.innerHTML='<p>No encontramos el número de reserva. Si ya pagaste, escríbenos por WhatsApp con tu nombre.</p>';return}
+  var intentos=0;
+  function pinta(r){
+    var datos='<div class="dato"><span>Reserva</span><b>'+esc(r.id)+'</b></div><div class="dato"><span>Casa</span><b><a href="'+esc(r.casaUrl)+'">'+esc(r.nombreCasa)+'</a></b></div><div class="dato"><span>Llegada</span><b>'+f(r.llegada)+' · 3:00 pm</b></div><div class="dato"><span>Salida</span><b>'+f(r.salida)+' · 11:00 am</b></div><div class="dato"><span>Noches</span><b>'+r.noches+'</b></div><div class="dato"><span>Personas</span><b>'+r.personas+'</b></div><div class="dato"><span>Total</span><b>'+mxn(r.total)+' MXN'+(r.factura?' (con IVA, con factura)':'')+'</b></div>';
+    var h='';
+    if(r.estado==='pagada') h='<h1 style="font-size:28px;margin:0 0 6px">¡Listo, '+esc(r.nombre)+'! Tu reserva está confirmada</h1><p style="color:var(--gris)">Ya apartamos la casa. Un día antes de tu llegada te mandamos por WhatsApp la ubicación exacta y las indicaciones de acceso.</p>'+datos+'<a class="btn btn-wa" style="width:100%;justify-content:center;margin-top:16px" href="'+esc(r.whatsapp)+'">Confirmar por WhatsApp</a>'+(r.factura?'<p style="font-size:13px;color:var(--gris);margin-top:10px">Para tu factura mándanos por WhatsApp tu constancia de situación fiscal.</p>':'');
+    else if(r.estado==='pendiente'&&r.modo==='mercadopago') h='<h1 style="font-size:26px;margin:0 0 6px">Pago pendiente</h1><p style="color:var(--gris)">Todavía no nos llega la confirmación de Mercado Pago. Si ya pagaste, en un momento se actualiza solo. Si no, puedes volver a intentar; las fechas quedan apartadas hasta las '+new Date(r.expira).toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'})+'.</p>'+datos+(r.pagoUrl?'<a class="btn btn-wa" style="width:100%;justify-content:center;margin-top:16px;background:#009EE3" href="'+esc(r.pagoUrl)+'">Pagar con Mercado Pago</a>':'');
+    else if(r.estado==='pendiente') h='<h1 style="font-size:26px;margin:0 0 6px">Apartamos tus fechas 24 horas</h1><p style="color:var(--gris)">Para confirmar, transfiere el total y mándanos el comprobante por WhatsApp.</p>'+datos+'<div class="dato"><span>Banco</span><b>Banorte</b></div><div class="dato"><span>CLABE</span><b>072 060 013474723761</b></div><div class="dato"><span>Titular</span><b>Pedro Díaz</b></div><a class="btn btn-wa" style="width:100%;justify-content:center;margin-top:16px" href="'+esc(r.whatsapp)+'">Mandar comprobante por WhatsApp</a>';
+    else if(r.estado==='expirada') h='<h1 style="font-size:26px;margin:0 0 6px">Esta reserva expiró</h1><p style="color:var(--gris)">No recibimos el pago a tiempo y las fechas se liberaron. Puedes volver a reservar en la página de la casa.</p>'+datos+'<a class="btn btn-wa" style="width:100%;justify-content:center;margin-top:16px" href="'+esc(r.casaUrl)+'">Volver a '+esc(r.nombreCasa)+'</a>';
+    else h='<h1 style="font-size:26px;margin:0 0 6px">Reserva cancelada</h1><p style="color:var(--gris)">Si crees que es un error, escríbenos.</p>'+datos+'<a class="btn btn-wa" style="width:100%;justify-content:center;margin-top:16px" href="'+esc(r.whatsapp)+'">WhatsApp</a>';
+    el.innerHTML=h;
+    if(r.estado==='pendiente'&&r.modo==='mercadopago'&&intentos<12){intentos++;setTimeout(carga,5000)}
+  }
+  function carga(){fetch(API+'/api/estado?id='+encodeURIComponent(id)).then(function(r){return r.json()}).then(function(r){if(r.error)throw new Error(r.error);pinta(r)}).catch(function(e){el.innerHTML='<p>'+esc(e.message)+'. Escríbenos por WhatsApp con tu nombre y te confirmamos.</p>'})}
+  carga();
+})();
+</script>
+` +
+    pie('../')
+  );
+}
+
 // ─────────────────────────────────────────────────────────── llms.txt / sitemap / robots
 
 function llms() {
@@ -1857,6 +1907,12 @@ mkdirSync(OUT, { recursive: true });
 escribir('index.html', paginaInicio());
 for (const c of casas) escribir(`casas/${c.slug}/index.html`, paginaCasa(c));
 escribir('asesores/index.html', paginaAsesores());
+escribir('reserva/index.html', paginaReserva());
+/** Copia mínima de casas.json para el API de reservas (carpeta reservas/, se despliega aparte en Vercel): una sola fuente de precios. */
+writeFileSync(join(ROOT, 'reservas', 'casas-api.json'), JSON.stringify({
+  marca: { nombre: marca.nombre, whatsapp: marca.whatsapp, iva: marca.iva, limpiezaSemanal: LIMPIEZA, descuentoSemana: marca.descuentoSemana },
+  casas: casas.map((c) => ({ slug: c.slug, nombre: c.nombre, huespedes: c.huespedes, precioNoche: noche(c), precioFinde: finde(c), minNoches: c.minNoches ?? 2, reservaEnLinea: Boolean(c.reservaEnLinea), airbnbIds: c.airbnbIds || [] })),
+}, null, 2) + '\n', 'utf8');
 for (const l of landings) escribir(`${l.slug}/index.html`, paginaLanding(l));
 escribir('zonas/index.html', paginaZonas());
 escribir('blog/index.html', paginaBlogIndice());
