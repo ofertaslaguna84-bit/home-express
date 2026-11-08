@@ -203,7 +203,7 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 /* tarjetas de casa */
 .casas{display:grid;gap:26px;grid-template-columns:1fr}
 @media(min-width:720px){.casas{grid-template-columns:1fr 1fr}}
-@media(min-width:1060px){.casas{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media(min-width:1060px){.casas{grid-template-columns:repeat(3,1fr);gap:24px}}
 .casa{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
 .casa:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
 .casa-foto{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--crema)}
@@ -1043,7 +1043,7 @@ function paginaCasa(c) {
   /** Primero las de la misma zona, luego las de capacidad parecida. */
   const parecidas = [...casas.filter((o) => o.slug !== c.slug)]
     .sort((a, b) => (zonaKey(b) === zonaKey(c)) - (zonaKey(a) === zonaKey(c)) || Math.abs(a.huespedes - c.huespedes) - Math.abs(b.huespedes - c.huespedes))
-    .slice(0, 4);
+    .slice(0, 3);
 
   const faqsCasa = [
     {
