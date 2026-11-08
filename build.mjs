@@ -26,6 +26,21 @@ const { marca, casas, clientes = [] } = data;
 /** Páginas de aterrizaje por intención de búsqueda (empresas, zonas industriales, alberca). */
 const landings = existsSync(join(ROOT, 'landings.json')) ? JSON.parse(readFileSync(join(ROOT, 'landings.json'), 'utf8')) : [];
 
+/** Ubicaciones (nov 2026, formato Barrio México): centro de cada zona a nivel colonia, qué casa cae en qué zona y
+ *  lugares cercanos por categoría con minutos en coche. Lo genera scripts/lugares.py desde OpenStreetMap; la calle
+ *  exacta de cada casa nunca se publica, solo el círculo de la colonia. */
+const lugares = existsSync(join(ROOT, 'lugares.json'))
+  ? JSON.parse(readFileSync(join(ROOT, 'lugares.json'), 'utf8'))
+  : { zonas: {}, casaZona: {}, cerca: {} };
+const zonaKey = (c) => lugares.casaZona[c.slug] || 'torreon';
+const zonaDe = (c) => lugares.zonas[zonaKey(c)] || { nombre: c.zona, lat: 25.5428, lng: -103.4068, radio: 2500 };
+const cercaDe = (c) => lugares.cerca[zonaKey(c)] || {};
+/** Video hero por casa: docs/video/<slug>-hero.mp4 (los hace el Contenido Bot de Grok); si no existe, va la foto de portada. */
+const videoCasa = (c) => (existsSync(join(OUT, 'video', `${c.slug}-hero.mp4`)) ? `video/${c.slug}-hero.mp4` : null);
+const NUM = ['cero', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte'];
+const enLetra = (n) => NUM[n] || String(n);
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
 /** Artículos del blog: los escribe scripts/blog-generate.mjs, aquí solo se maquetan. */
 const BLOG_DIR = join(ROOT, 'blog');
 const articulos = existsSync(BLOG_DIR)
@@ -374,6 +389,63 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .pie-bajo{justify-content:center;gap:20px}
 .btn.flota{border-radius:50%;padding:0;letter-spacing:0}
 @media(max-width:600px){.hdr.sobre .logo{height:50px}.hdr.sobre .hdr-in{padding-top:22px}.hdr.sobre .menu-btn{right:8px;top:16px}.hdr .logo{height:50px}.portada .hero-cta .btn{width:100%;justify-content:center}}
+
+/* ── Formato editorial (nov 2026, a imagen de barriomexico.travel): titulares enormes con serifa,
+   portada de video, zonas con mapa y "en la zona" por tipo de plan en cada casa. */
+.portada .cont{max-width:1080px}
+.portada h1{font-size:clamp(40px,min(7.2vw,11.5vh),100px);line-height:.96;letter-spacing:-.01em;font-weight:500}
+.portada{padding-top:120px}
+.portada h1 em{display:block;color:#E2C891;font-weight:500}
+.portada .lead{font-size:clamp(15px,1.4vw,19px);letter-spacing:.02em}
+.ed-k{display:block;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--azul);margin-bottom:14px;font-weight:600}
+.ed-h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-.01em;margin-bottom:16px}
+.ed-h2 em{font-style:italic;color:var(--azul);font-weight:500}
+.ed-sub{font-size:16.5px;color:var(--gris);max-width:640px;margin-bottom:36px;font-weight:300}
+.cab-ed{display:grid;gap:18px;align-items:end;margin-bottom:36px}@media(min-width:900px){.cab-ed{grid-template-columns:1.2fr 1fr}.cab-ed .ed-sub{margin-bottom:0}}
+.sec-ed{padding:76px 0}
+.zonas-ed{display:grid;gap:14px;grid-template-columns:1fr}@media(min-width:760px){.zonas-ed{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.zonas-ed{grid-template-columns:repeat(3,1fr)}}
+.zona-c{border:1px solid var(--linea);background:#fff;padding:22px 22px 18px;display:flex;flex-direction:column;gap:6px;transition:transform .18s,box-shadow .18s}
+.zona-c:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
+.zona-c h3{font-size:25px;margin:0;font-weight:500}
+.zona-c .n{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600}
+.zona-c p{font-size:14px;color:var(--gris);margin:0}
+.zona-c .cs{font-size:13px;color:var(--marino);margin-top:8px}
+.mapa{height:min(70vh,560px);border:1px solid var(--linea);background:var(--crema);margin:0 0 28px;position:relative;z-index:0}
+.mapa.chico{height:380px;margin:0}
+.leaflet-container{font-family:'Manrope',sans-serif;font-size:12px}
+.pin-wrap{width:auto!important;height:auto!important;background:none;border:0}
+.pin-casa{display:inline-block;background:var(--marino);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 9px;border:1px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap;cursor:pointer;transform:translate(-50%,-50%)}
+.leaflet-container .leaflet-tile-pane{filter:saturate(.55) contrast(.95) brightness(1.04)}
+.casa-hero{position:relative;height:min(78svh,720px);min-height:460px;overflow:hidden;background:var(--marino);color:#fff;display:flex;align-items:flex-end;padding:0}
+.casa-hero video,.casa-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.casa-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,19,38,.5) 0%,rgba(11,19,38,.05) 40%,rgba(11,19,38,.78) 100%)}
+.casa-hero .w{position:relative;z-index:2;width:100%;padding-bottom:46px}
+.casa-hero .ed-k{color:#E2C891}
+.casa-hero h1{color:#fff;font-weight:500;font-size:clamp(38px,6vw,84px);line-height:1;margin-bottom:10px}
+.casa-hero .sub{color:rgba(255,255,255,.85);font-weight:300;font-size:17px;margin:0 0 18px;max-width:640px}
+.casa-hero .datos{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.casa-hero .datos b{color:#fff;font-weight:600}
+.ficha-ed{display:grid;gap:40px;grid-template-columns:1fr}@media(min-width:980px){.ficha-ed{grid-template-columns:1.55fr 1fr;align-items:start}}
+.gal-ed{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}@media(min-width:800px){.gal-ed{grid-template-columns:repeat(4,1fr);grid-auto-rows:240px}.gal-ed div:first-child{grid-column:span 2;grid-row:span 2}}
+.gal-ed div{overflow:hidden;background:var(--crema);aspect-ratio:4/5}@media(min-width:800px){.gal-ed div{aspect-ratio:auto}}
+.gal-ed img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gal-ed div:hover img{transform:scale(1.04)}
+.incluye{display:grid;gap:0 28px;grid-template-columns:1fr;list-style:none}@media(min-width:620px){.incluye{grid-template-columns:1fr 1fr}}@media(min-width:960px){.incluye{grid-template-columns:repeat(3,1fr)}}
+.incluye li{font-size:15px;color:var(--marino);padding:12px 0;border-bottom:1px solid var(--linea);display:flex;gap:12px;align-items:baseline}
+.incluye li::before{content:"";width:6px;height:6px;background:var(--azul);flex:none;transform:translateY(-2px)}
+.rasgos{display:grid;gap:26px;grid-template-columns:1fr;counter-reset:r}@media(min-width:720px){.rasgos{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.rasgos{grid-template-columns:repeat(4,1fr)}}
+.rasgo{border-top:1px solid var(--marino);padding-top:18px}
+.rasgo::before{counter-increment:r;content:"0" counter(r);display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;letter-spacing:.2em;color:var(--azul);margin-bottom:10px}
+.rasgo h3{font-size:24px;margin-bottom:8px;font-weight:500}.rasgo p{font-size:14.5px;color:var(--gris)}
+.en-zona{display:grid;gap:34px;grid-template-columns:1fr}@media(min-width:1000px){.en-zona{grid-template-columns:1fr 1fr;align-items:start}}
+.cerca{display:grid;gap:26px 34px;grid-template-columns:1fr}@media(min-width:620px){.cerca{grid-template-columns:1fr 1fr}}
+.cerca h4{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--linea)}
+.cerca ul{list-style:none}.cerca li{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:7px 0;border-bottom:1px dotted var(--linea)}
+.cerca li span{color:var(--gris);font-size:12.5px;white-space:nowrap}
+.comparten{display:grid;gap:18px;grid-template-columns:1fr}@media(min-width:720px){.comparten{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.comparten{grid-template-columns:repeat(4,1fr)}}
+.comparten div{padding:28px 24px;border:1px solid var(--linea);background:#fff}.comparten h3{font-size:25px;margin-bottom:8px;font-weight:500}.comparten p{font-size:14.5px;color:var(--gris)}
+.quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
+.quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
+.posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
 `;
 
 // ─────────────────────────────────────────────────────────── piezas
@@ -671,6 +743,82 @@ const bloqueZonas = (p = '', conDesc = false) =>
 
 // ─────────────────────────────────────────────────────────── index
 
+// ─────────────────────────────────────────────────────────── mapas y "en la zona"
+
+const LEAFLET_HEAD = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="">\n`;
+/** Mapa Leaflet con teselas claras de CARTO. puntos: [{lat,lng,nombre,url,radio}]. Sin llave de API. */
+function mapaHtml(id, puntos, { zoom = 12, centro = null, chico = false } = {}) {
+  /** Sin setView previo, L.Circle.getBounds() truena; los límites salen de los centros. */
+  const vista = centro ? `m.setView([${centro.lat},${centro.lng}],${zoom});` : `m.fitBounds(L.latLngBounds(P.map(function(p){return [p.lat,p.lng]})).pad(.25));`;
+  return `<div id="${id}" class="mapa${chico ? ' chico' : ''}" role="img" aria-label="Mapa de ubicación"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="" defer></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.L)return;var m=L.map('${id}',{scrollWheelZoom:false});L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(m);var P=${JSON.stringify(puntos)};var g=[];P.forEach(function(p){var c=L.circle([p.lat,p.lng],{radius:p.radio||600,color:'#13203A',weight:1,fillColor:'#8A6A2F',fillOpacity:.22}).addTo(m);g.push(c);var k=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'pin-wrap',html:'<div class="pin-casa">'+p.nombre+'</div>',iconSize:null,iconAnchor:[0,0]})}).addTo(m);if(p.url){k.on('click',function(){location.href=p.url});c.on('click',function(){location.href=p.url})}});${vista}});</script>`;
+}
+/** Zonas con casas: una entrada por zona, con cuántas casas y desde cuánto. */
+const ZONAS_CON_CASAS = Object.entries(lugares.zonas)
+  .map(([k, z]) => ({ key: k, ...z, casas: casas.filter((c) => zonaKey(c) === k) }))
+  .filter((z) => z.casas.length);
+/** A qué guía manda cada zona. */
+const LANDING_ZONA = {
+  vinedos: 'casas-en-renta-los-vinedos-torreon', provitec: 'casas-en-renta-provitec-torreon', senderos: 'casas-en-renta-senderos-la-rosita-torreon',
+  rosita: 'casas-en-renta-senderos-la-rosita-torreon', acacias: 'hospedaje-centro-torreon', 'los-angeles': 'hospedaje-centro-torreon',
+  tec: 'hospedaje-cerca-tec-de-monterrey-torreon', gomez: 'hospedaje-gomez-palacio', almendros: 'hospedaje-parque-industrial-oriente',
+};
+const linkZona = (z, p = '') => (LANDING_ZONA[z.key] && landings.some((l) => l.slug === LANDING_ZONA[z.key]) ? `${p}${LANDING_ZONA[z.key]}/` : `${p}zonas/`);
+const puntosZonas = (p = '') => ZONAS_CON_CASAS.map((z) => ({ lat: z.lat, lng: z.lng, radio: z.radio, nombre: `${z.nombre} · ${z.casas.length} ${z.casas.length === 1 ? 'casa' : 'casas'}`, url: linkZona(z, p) }));
+/** Lo más cercano que vale la pena decir de una zona en una línea. */
+const lineaZona = (z) => {
+  const c = lugares.cerca[z.key] || {};
+  const pick = (cat) => (c[cat] || [])[0];
+  /** Lo más cercano entre compras, escuelas, salud e industria (la industria solo si está realmente al lado). */
+  const cand = [pick('Súper y compras'), pick('Escuelas y universidades'), pick('Salud'), pick('Trabajo e industria')]
+    .filter(Boolean)
+    .filter((x, i) => i < 3 || x.min <= 6)
+    .sort((x, y) => x.min - y.min);
+  const vistos = new Set();
+  return cand.filter((x) => !vistos.has(x.n) && vistos.add(x.n)).slice(0, 2).map((x) => `${x.n} a ${x.min} min`).join(' · ');
+};
+const seccionZonas = (p = '') => `
+<section id="zonas" class="sec-ed sec-crema">
+  <div class="w">
+    <div class="cab-ed">
+      <div><span class="ed-k">Dónde están</span><h2 class="ed-h2">Una ciudad, <em>${enLetra(ZONAS_CON_CASAS.length)} formas</em> de vivirla.</h2></div>
+      <p class="ed-sub">Cada zona tiene su razón: la industria al oriente, el Tec al sur, el centro con sus hospitales y oficinas, el límite con Gómez Palacio para quien cruza a diario. Elige la zona y luego la casa.</p>
+    </div>
+    ${mapaHtml('mapa-zonas', puntosZonas(p))}
+    <div class="zonas-ed">
+      ${ZONAS_CON_CASAS.map((z) => `<a class="zona-c" href="${linkZona(z, p)}">
+        <span class="n">${z.casas.length} ${z.casas.length === 1 ? 'casa' : 'casas'} · desde ${mxn(Math.min(...z.casas.map(noche)))}${IVA_NOTA}</span>
+        <h3>${esc(z.nombre)}</h3>
+        <p>${esc(lineaZona(z))}</p>
+        <span class="cs">${z.casas.map((c) => esc(c.nombre)).join(' · ')}</span>
+      </a>`).join('\n      ')}
+    </div>
+    <p style="margin-top:28px">${bloqueZonas(p)}</p>
+  </div>
+</section>`;
+/** Bloque "En la zona · por tipo de plan" de la ficha de casa. */
+const seccionCerca = (c, p = '') => {
+  const z = zonaDe(c);
+  const cats = Object.entries(cercaDe(c)).filter(([, l]) => l.length);
+  if (!cats.length) return '';
+  return `
+<section class="sec-ed sec-crema">
+  <div class="w">
+    <div class="cab-ed">
+      <div><span class="ed-k">En la zona</span><h2 class="ed-h2">${esc(z.nombre)}, <em>por tipo de plan.</em></h2></div>
+      <p class="ed-sub">Lo que tienes cerca de ${esc(c.nombre)} y cuánto se hace en coche. La dirección exacta se comparte al reservar; en el mapa va la colonia.</p>
+    </div>
+    <div class="en-zona">
+      <div class="cerca">
+        ${cats.map(([cat, l]) => `<div><h4>${esc(cat)}</h4><ul>${l.map((x) => `<li>${esc(x.n)}<span>${x.min} min</span></li>`).join('')}</ul></div>`).join('\n        ')}
+      </div>
+      ${mapaHtml(`mapa-${c.slug}`, [{ lat: z.lat, lng: z.lng, radio: z.radio, nombre: c.nombre }], { zoom: 14, centro: z, chico: true })}
+    </div>
+  </div>
+</section>`;
+};
+
 function paginaInicio() {
   const titulo = `Casas amuebladas en renta en Torreón, por noche, semana o mes | ${marca.nombre}`;
   const desc = `${casas.length} casas completas y equipadas en Torreón, Coahuila, a minutos de Gómez Palacio y Lerdo, para ${PERSONAS} personas. Desde 2 noches hasta 6 meses. Facturamos. Más baratas que en Airbnb — reserva directo por WhatsApp.`;
@@ -682,6 +830,7 @@ function paginaInicio() {
       desc,
       url: `${SITE}/`,
       imagen: casas[0].fotos[0],
+      extraHead: LEAFLET_HEAD,
       schema: [
         orgSchema(),
         faqSchema(),
@@ -729,9 +878,9 @@ function paginaInicio() {
     <source src="video/torreon.mp4" type="video/mp4">
   </video>
   <div class="cont">
-    <span class="kicker">${casas.length} casas · ${esc(marca.ciudad)}, ${esc(marca.estado)}</span>
-    <h1>Casas amuebladas en renta en Torreón, <em>listas para entrar hoy</em>.</h1>
-    <p class="lead">De ${PERSONAS} personas, con clima y con factura. De 15 días a 6 meses sin aval, o por noche desde 2 noches.</p>
+    <span class="kicker">Casas amuebladas · ${esc(marca.ciudad)}, ${esc(marca.estado)}</span>
+    <h1>${cap(enLetra(casas.length))} casas. ${cap(enLetra(ZONAS_CON_CASAS.length))} zonas. <em>Un Torreón para quedarse.</em></h1>
+    <p class="lead">Casas completas y listas para entrar, de ${PERSONAS} personas, con clima, cocina y factura. Por noche, por semana o por mes: tú eliges la zona, nosotros la casa.</p>
     <div class="hero-cta">
       <a href="#casas" class="btn btn-claro">Ver las ${casas.length} casas</a>
       <a href="${wa('Hola Hostalia, quiero información de las casas')}" class="btn btn-claro">Escríbenos</a>
@@ -745,13 +894,31 @@ ${seccionClientes()}
 
 ${barraConfianza()}
 
-<section id="casas">
+<section id="casas" class="sec-ed">
   <div class="w">
-    <span class="eyebrow">Nuestras casas</span>
-    <h2>${casas.length} casas amuebladas en renta, con precio a la vista</h2>
-    <p class="sub">Todas en Torreón, todas equipadas y con clima. El precio de Airbnb está puesto al lado a propósito: queremos que compares.</p>
+    <div class="cab-ed">
+      <div><span class="ed-k">Las casas</span><h2 class="ed-h2">Elige la casa, <em>no el cuarto.</em></h2></div>
+      <p class="ed-sub">${casas.length} casas completas en Torreón, todas equipadas y con clima, con el precio a la vista. El de Airbnb está al lado a propósito: queremos que compares.</p>
+    </div>
     <div class="casas">
       ${casas.map((c) => tarjeta(c)).join('\n')}
+    </div>
+  </div>
+</section>
+
+${seccionZonas('')}
+
+<section class="sec-ed">
+  <div class="w">
+    <div class="cab-ed">
+      <div><span class="ed-k">Lo que no cambia</span><h2 class="ed-h2">Todas las casas <em>comparten lo mismo.</em></h2></div>
+      <p class="ed-sub">Cambia la zona, el tamaño y el precio. Lo que se repite en las ${casas.length} es lo que hace que una casa funcione para quedarse, no solo para dormir.</p>
+    </div>
+    <div class="comparten">
+      <div><h3>Clima en toda la casa</h3><p>Minisplit en recámaras y áreas comunes. En Torreón no es un extra, es la condición para descansar.</p></div>
+      <div><h3>Cocina equipada</h3><p>Refrigerador, estufa, trastes y lo necesario para cocinar a diario. El equipo come en casa y baja el gasto.</p></div>
+      <div><h3>Lavadora y estacionamiento</h3><p>Para estancias largas: ropa limpia sin salir y lugar para los coches o las camionetas de la cuadrilla.</p></div>
+      <div><h3>Factura y contrato</h3><p>CFDI a nombre de tu empresa y contrato de hospedaje con fechas, monto y reglas por escrito.</p></div>
     </div>
   </div>
 </section>
@@ -801,15 +968,18 @@ ${barraConfianza()}
   </div>
 </section>
 
-<section id="zonas" class="sec-crema">
+${articulos.length ? `<section class="sec-ed sec-crema">
   <div class="w">
-    <span class="eyebrow">Dónde quedarte en Torreón</span>
-    <h2>Hospedaje por zona, por ocasión y por tipo de estancia</h2>
-    <p class="sub">Guías cortas con las casas que aplican a cada caso, precio desde y respuestas directas: cerca del Tec, de los hospitales, del Estadio Corona, para Gómez Palacio y Lerdo, por noche, por semana o por mes.</p>
-    ${bloqueZonas('')}
-    <p><a href="zonas/" class="btn btn-nar">Ver todas las guías de zonas y ocasiones</a></p>
+    <div class="cab-ed">
+      <div><span class="ed-k">Blog</span><h2 class="ed-h2">Guías para <em>quedarse bien</em> en Torreón.</h2></div>
+      <p class="ed-sub">Zonas, precios, qué llevar y qué preguntar antes de rentar. Escrito con los datos de nuestras casas.</p>
+    </div>
+    <div class="posts tres">
+      ${articulos.slice(0, 3).map((a) => `<a href="blog/${a.slug}/" class="post"><h3>${esc(a.titulo)}</h3><p>${esc(frases(a.resumen || a.descripcion || '', 2))}</p><span>Leer →</span></a>`).join('\n      ')}
+    </div>
+    <p style="margin-top:26px"><a href="blog/" class="btn btn-out">Todo el blog</a> <a href="zonas/" class="btn btn-nar">Guías por zona y ocasión</a></p>
   </div>
-</section>
+</section>` : ''}
 
 <section id="faq">
   <div class="w">
@@ -841,6 +1011,39 @@ function paginaCasa(c) {
   const dirF = finde(c);
   const titulo = `Casa amueblada en renta en ${c.zona}, Torreón — ${c.nombre}, ${c.huespedes} personas | ${marca.nombre}`;
   const desc = `${c.resumen} ${c.recamaras} recámaras, ${c.camas} camas${c.banos ? `, ${c.banos} baños` : ''}. Desde ${mxn(dir)}${IVA_NOTA} la noche reservando directo. Facturamos.`;
+  const zona = zonaDe(c);
+  const video = videoCasa(c);
+  /** Lista "todo lo que incluye": lo destacado de la casa más lo que traen todas, sin repetir. */
+  const BASE = ['Cocina equipada', 'Clima en recámaras y áreas comunes', 'WiFi', 'Lavadora', 'Estacionamiento', 'Ropa de cama y toallas', 'Agua caliente', 'TV', 'Limpieza semanal (aparte)', 'Factura CFDI'];
+  const incluye = [...c.destacados, ...BASE.filter((x) => !c.destacados.some((d) => d.toLowerCase().includes(x.toLowerCase().split(' ')[0].toLowerCase())))];
+  /** Cuatro rasgos: los destacados con una línea cada uno, rellenando con zona, capacidad y precio. */
+  const explica = {
+    alberca: 'Para el calor de Torreón: la alberca cambia la tarde de un grupo o una familia.',
+    asador: 'Carne asada en casa, como se hace en La Laguna. Sin pedir permiso a nadie.',
+    lavadora: 'Para estancias de semanas: ropa limpia sin salir ni pagar lavandería.',
+    clima: 'Minisplit en toda la casa. En verano aquí no es un extra, es lo que te deja dormir.',
+    patio: 'Espacio afuera para los niños, el perro o una sobremesa larga.',
+    recámara: 'Sin escaleras para quien las evita: abuelos, lesionados o quien llega cansado de la planta.',
+    baños: 'Nadie hace fila por la mañana. Con grupo grande se agradece a las 6 am.',
+    palapa: 'Sombra, barra y asador afuera: la casa pensada para la convivencia.',
+    personas: 'La capacidad real, con camas de verdad, no sofás contados como camas.',
+    seguridad: 'Privada con acceso controlado: tranquilidad para dejar la camioneta cargada.',
+  };
+  const rasgosBase = c.destacados.slice(0, 4).map((d) => {
+    const k = Object.keys(explica).find((x) => d.toLowerCase().includes(x));
+    return { t: d, p: explica[k] || `Es de las cosas que más valoran quienes ya se quedaron en ${c.nombre}.` };
+  });
+  const extras = [
+    { t: zona.nombre, p: `La zona define el viaje: ${lineaZona({ key: zonaKey(c) }) || 'cerca de lo que vienes a hacer'}.` },
+    { t: `Hasta ${c.huespedes} personas`, p: `${c.recamaras} recámaras y ${c.camas} camas para que el grupo entero quede bajo el mismo techo.` },
+    { t: 'Precio por casa', p: `${mxn(dir)}${IVA_NOTA} la noche por toda la casa, no por persona. Por semana y por mes baja.` },
+    { t: 'Con factura', p: 'CFDI a nombre de tu empresa y contrato de hospedaje por escrito.' },
+  ];
+  const rasgos = [...rasgosBase, ...extras].slice(0, 4);
+  /** Primero las de la misma zona, luego las de capacidad parecida. */
+  const parecidas = [...casas.filter((o) => o.slug !== c.slug)]
+    .sort((a, b) => (zonaKey(b) === zonaKey(c)) - (zonaKey(a) === zonaKey(c)) || Math.abs(a.huespedes - c.huespedes) - Math.abs(b.huespedes - c.huespedes))
+    .slice(0, 4);
 
   const faqsCasa = [
     {
@@ -860,6 +1063,7 @@ function paginaCasa(c) {
       desc,
       url: `${SITE}/casas/${c.slug}/`,
       imagen: c.fotos[0],
+      extraHead: LEAFLET_HEAD,
       schema: [
         {
           '@context': 'https://schema.org',
@@ -928,30 +1132,50 @@ function paginaCasa(c) {
         },
       ],
     }) +
-    encabezado('../../') +
+    encabezado('../../', true) +
     `
+<section class="casa-hero">
+  ${video ? `<video autoplay muted loop playsinline preload="metadata" poster="../../img/${c.fotos[0]}.jpg" aria-hidden="true"><source src="../../${video}" type="video/mp4"></video>` : `<img src="../../img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)}, ${esc(c.zona)}, Torreón" width="1600" height="1000" fetchpriority="high">`}
+  <div class="w">
+    <span class="ed-k">${esc(zona.nombre)} · ${esc(marca.ciudad)}</span>
+    <h1>${esc(c.nombre)}</h1>
+    <p class="sub">${esc(c.titulo)}</p>
+    <div class="datos"><span><b>${c.huespedes}</b> personas</span><span><b>${c.recamaras}</b> recámaras</span><span><b>${c.camas}</b> camas</span>${c.banos ? `<span><b>${c.banos}</b> baños</span>` : ''}<span>desde <b>${mxn(dir)}</b>${IVA_NOTA} la noche</span></div>
+  </div>
+</section>
+
 <div class="w"><nav class="crumbs"><a href="../../">Inicio</a> › <a href="../../#casas">Casas</a> › ${esc(c.nombre)}</nav></div>
 
 <section style="padding-top:8px">
   <div class="w">
-    <span class="eyebrow">${esc(c.zona)}, ${esc(marca.ciudad)}</span>
-    <h1 style="font-size:clamp(27px,4vw,42px);margin-bottom:12px">${esc(c.nombre)}</h1>
-    <p class="sub" style="margin-bottom:26px">${esc(c.titulo)}</p>
-
-    <div class="ficha">
+    <div class="ficha-ed">
       <div>
-        <div class="galeria">
+        <span class="ed-k">La casa por dentro</span>
+        <h2 class="ed-h2" style="font-size:clamp(30px,3.6vw,46px)">${esc(frases(c.resumen, 1).replace(/\.$/, ''))}.</h2>
+        <p class="ed-sub">${esc(c.resumen)}</p>
+        <div class="gal-ed">
           ${c.fotos.map((f, i) => `<div><img src="../../img/${f}.jpg" alt="${esc(c.nombre)} — ${f.split('-')[1].replace(/_/g, ' ')}" ${i > 1 ? 'loading="lazy"' : ''} width="800" height="1000"></div>`).join('\n          ')}
         </div>
 
-        <div style="margin-top:38px">
-          <h2 style="font-size:26px">Sobre esta casa</h2>
-          <p style="color:var(--gris);font-size:16.5px;margin:14px 0 22px">${esc(c.resumen)}</p>
-          <div class="casa-specs" style="margin-bottom:26px">
-            ${c.destacados.map((d) => `<span class="spec">${esc(d)}</span>`).join('')}
-          </div>
+        <div style="margin-top:56px">
+          <span class="ed-k">Todo lo que incluye</span>
+          <h2 class="ed-h2" style="font-size:clamp(28px,3.2vw,40px)">Lo que ya está <em>cuando llegas.</em></h2>
+          <ul class="incluye" style="margin-top:22px">
+            ${incluye.map((d) => `<li>${esc(d)}</li>`).join('\n            ')}
+          </ul>
+        </div>
 
-          <h2 style="font-size:26px;margin-top:34px">Preguntas sobre ${esc(c.nombre)}</h2>
+        <div style="margin-top:56px">
+          <span class="ed-k">Qué la distingue</span>
+          <h2 class="ed-h2" style="font-size:clamp(28px,3.2vw,40px)">Cuatro razones <em>para esta y no otra.</em></h2>
+          <div class="rasgos" style="margin-top:26px">
+            ${rasgos.map((r) => `<div class="rasgo"><h3>${esc(r.t)}</h3><p>${esc(r.p)}</p></div>`).join('\n            ')}
+          </div>
+        </div>
+
+        <div style="margin-top:56px">
+          <span class="ed-k">Preguntas</span>
+          <h2 class="ed-h2" style="font-size:clamp(28px,3.2vw,40px)">Antes de reservar <em>${esc(c.nombre)}.</em></h2>
           <div style="margin-top:16px">
             ${faqsCasa.map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`).join('\n            ')}
           </div>
@@ -985,14 +1209,24 @@ function paginaCasa(c) {
   </div>
 </section>
 
-<section class="sec-crema">
+${seccionCerca(c, '../../')}
+
+<section class="sec-ed">
   <div class="w">
-    <span class="eyebrow">Otras casas</span>
-    <h2>También tenemos</h2>
-    <div class="casas" style="margin-top:26px">
-      ${casas.filter((o) => o.slug !== c.slug).slice(0, 3).map((o) => tarjeta(o).replace(/href="casas\//g, 'href="../').replace(/src="img\//g, 'src="../../img/')).join('\n')}
+    <div class="cab-ed">
+      <div><span class="ed-k">Otras casas</span><h2 class="ed-h2">También te van <em>a gustar.</em></h2></div>
+      <p class="ed-sub">${parecidas.length && zonaKey(parecidas[0]) === zonaKey(c) ? `En la misma zona o para un grupo parecido.` : `Para un grupo parecido, en otras zonas de Torreón.`}</p>
+    </div>
+    <div class="casas">
+      ${parecidas.map((o) => tarjeta(o).replace(/href="casas\//g, 'href="../').replace(/src="img\//g, 'src="../../img/')).join('\n')}
     </div>
   </div>
+</section>
+
+<section class="cta">
+  <h2>¿Listo para quedarte en ${esc(c.nombre)}?</h2>
+  <p>Dinos tus fechas y cuántos son. Te contestamos con disponibilidad y precio cerrado.</p>
+  <a href="${c.reservaEnLinea ? '#reservar' : wa(`Hola Hostalia, quiero reservar ${c.nombre}. Mis fechas son:`)}" class="btn btn-claro" style="font-size:13px;padding:16px 32px">${c.reservaEnLinea ? 'Reservar en línea' : 'Reservar por WhatsApp'}</a>
 </section>
 ` +
     pie('../../')
@@ -1392,6 +1626,7 @@ function paginaZonas() {
       desc,
       url,
       imagen: casas[0].fotos[0],
+      extraHead: LEAFLET_HEAD,
       schema: [
         {
           '@context': 'https://schema.org',
@@ -1429,6 +1664,15 @@ function paginaZonas() {
     <span class="eyebrow">Dónde quedarte en Torreón</span>
     <h1 style="font-size:clamp(28px,4vw,46px);margin-bottom:12px">Guías de hospedaje en Torreón por zona, ocasión y tipo de estancia</h1>
     <p class="sub">Cada guía trae las casas que aplican, el precio desde, cuánto se hace en coche y las preguntas que nos hacen de verdad. Todas las casas son nuestras, están en Torreón y se facturan.</p>
+    ${mapaHtml('mapa-zonas', puntosZonas('../'))}
+    <div class="zonas-ed" style="margin-bottom:40px">
+      ${ZONAS_CON_CASAS.map((z) => `<a class="zona-c" href="${linkZona(z, '../')}">
+        <span class="n">${z.casas.length} ${z.casas.length === 1 ? 'casa' : 'casas'} · desde ${mxn(Math.min(...z.casas.map(noche)))}${IVA_NOTA}</span>
+        <h3>${esc(z.nombre)}</h3>
+        <p>${esc(lineaZona(z))}</p>
+        <span class="cs">${z.casas.map((c) => esc(c.nombre)).join(' · ')}</span>
+      </a>`).join('\n      ')}
+    </div>
     ${GRUPOS.filter(([g]) => landingsDe(g).length)
       .map(
         ([g, t, d]) => `

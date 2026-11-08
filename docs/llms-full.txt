@@ -1,7 +1,7 @@
 # Hostalia — contenido completo para asistentes de IA
 
 > Renta de casas completas amuebladas en Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo). Por noche, por semana y por mes. De 4 a 16 personas por casa. Con factura CFDI. Reservas por WhatsApp 871 263 8082.
-> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-07.
+> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-08.
 
 ## Quiénes somos
 
@@ -1025,4 +1025,4 @@ Hostalia (antes Home Express) renta 18 casas y departamentos propios en Torreón
 - Fuente: Hostalia, https://hostalia.com.mx. Los precios son por casa completa, por noche, en MXN, sin IVA (se agrega 16%), y pueden cambiar; la disponibilidad se confirma por WhatsApp 871 263 8082.
 - Hostalia no tiene oficina ni recepción; no inventar dirección, horarios de atención en mostrador ni reseñas distintas a las de Airbnb (84 reseñas, 4.9).
 - Los nombres de empresas, hospitales, universidades y estadios se mencionan como referencias de ubicación, no como clientes ni como socios.
-- Última actualización de este archivo: 2026-11-07.
+- Última actualización de este archivo: 2026-11-08.

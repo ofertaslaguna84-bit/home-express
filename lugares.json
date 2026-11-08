@@ -1,0 +1,1258 @@
+{
+ "zonas": {
+  "vinedos": {
+   "nombre": "Los Viñedos",
+   "lat": 25.5738,
+   "lng": -103.3828,
+   "radio": 700
+  },
+  "provitec": {
+   "nombre": "Provitec",
+   "lat": 25.53,
+   "lng": -103.433,
+   "radio": 600
+  },
+  "almendros": {
+   "nombre": "Los Almendros",
+   "lat": 25.5446,
+   "lng": -103.3407,
+   "radio": 600
+  },
+  "acacias": {
+   "nombre": "Acacias, zona centro",
+   "lat": 25.545,
+   "lng": -103.43,
+   "radio": 900
+  },
+  "cantera": {
+   "nombre": "La Cantera",
+   "lat": 25.619,
+   "lng": -103.377,
+   "radio": 700
+  },
+  "rosita": {
+   "nombre": "Ampliación La Rosita",
+   "lat": 25.52,
+   "lng": -103.35,
+   "radio": 800
+  },
+  "senderos": {
+   "nombre": "Residencial Senderos",
+   "lat": 25.61,
+   "lng": -103.39,
+   "radio": 700
+  },
+  "los-angeles": {
+   "nombre": "Ampliación Los Ángeles",
+   "lat": 25.5491,
+   "lng": -103.4474,
+   "radio": 600
+  },
+  "tec": {
+   "nombre": "Zona Tec de Monterrey",
+   "lat": 25.516,
+   "lng": -103.399,
+   "radio": 800
+  },
+  "gomez": {
+   "nombre": "Límite Torreón – Gómez Palacio",
+   "lat": 25.565,
+   "lng": -103.47,
+   "radio": 900
+  },
+  "torreon": {
+   "nombre": "Torreón",
+   "lat": 25.55,
+   "lng": -103.42,
+   "radio": 1500
+  }
+ },
+ "casaZona": {
+  "leones": "vinedos",
+  "linces": "vinedos",
+  "vinedos": "vinedos",
+  "vinedos-moderna": "vinedos",
+  "provitec": "provitec",
+  "almendros": "almendros",
+  "acacia": "acacias",
+  "cantera": "cantera",
+  "rosita": "rosita",
+  "senderos": "senderos",
+  "depa-los-angeles": "los-angeles",
+  "loft-tec": "tec",
+  "gomez-11": "gomez",
+  "gomez-10": "gomez",
+  "familiar-10": "torreon",
+  "depa-7": "torreon",
+  "jardin-14": "torreon",
+  "grande-14": "torreon"
+ },
+ "cerca": {
+  "vinedos": {
+   "Comer y café": [
+    {
+     "n": "Deliflor",
+     "min": 3
+    },
+    {
+     "n": "La Casa de la Arrachera",
+     "min": 3
+    },
+    {
+     "n": "Los Farolitos",
+     "min": 3
+    },
+    {
+     "n": "Martin's",
+     "min": 3
+    },
+    {
+     "n": "La Blanquita",
+     "min": 4
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Galerías Laguna",
+     "min": 6
+    },
+    {
+     "n": "Costco",
+     "min": 12
+    },
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 14
+    },
+    {
+     "n": "Intermall",
+     "min": 18
+    }
+   ],
+   "Salud": [
+    {
+     "n": "AR emergencias",
+     "min": 13
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 17
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 18
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 12
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 18
+    },
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 19
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Lala",
+     "min": 4
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 7
+    },
+    {
+     "n": "Parque Industrial Lajat",
+     "min": 9
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 12
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Feria de",
+     "min": 6
+    },
+    {
+     "n": "Estadio Corona TSM",
+     "min": 13
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 17
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 20
+    }
+   ]
+  },
+  "provitec": {
+   "Comer y café": [
+    {
+     "n": "Taqueria El Vergel",
+     "min": 3
+    },
+    {
+     "n": "El huarache",
+     "min": 3
+    },
+    {
+     "n": "El Restaurante Ingles",
+     "min": 3
+    },
+    {
+     "n": "El buen trato",
+     "min": 3
+    },
+    {
+     "n": "Pizza El buen trato",
+     "min": 3
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 9
+    },
+    {
+     "n": "Intermall",
+     "min": 11
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 18
+    },
+    {
+     "n": "Costco",
+     "min": 27
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Cruz Roja Mexicana Delegacion Torreón",
+     "min": 3
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 4
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 11
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 3
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 10
+    },
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 26
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Peñoles",
+     "min": 3
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 9
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 12
+    },
+    {
+     "n": "Lala",
+     "min": 19
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 3
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 5
+    },
+    {
+     "n": "Cristo de las Noas",
+     "min": 7
+    },
+    {
+     "n": "Museo Arocena",
+     "min": 8
+    }
+   ]
+  },
+  "almendros": {
+   "Comer y café": [
+    {
+     "n": "Tim Hortons",
+     "min": 4
+    },
+    {
+     "n": "Encomenderos",
+     "min": 5
+    },
+    {
+     "n": "Coffee Tree",
+     "min": 5
+    },
+    {
+     "n": "Los pioneros de la joya",
+     "min": 5
+    },
+    {
+     "n": "Kavee Cafeteria",
+     "min": 5
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Intermall",
+     "min": 17
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 20
+    },
+    {
+     "n": "Costco",
+     "min": 25
+    },
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 25
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Hospital Centro Médico de la Mujer",
+     "min": 15
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 17
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 27
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "UA de C, Ciudad Universitaria",
+     "min": 5
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 18
+    },
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 26
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Parque Industrial Oriente",
+     "min": 3
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 16
+    },
+    {
+     "n": "Parque Industrial Ferropuerto",
+     "min": 17
+    },
+    {
+     "n": "Parque Industrial Lajat",
+     "min": 18
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Estadio Corona TSM",
+     "min": 6
+    },
+    {
+     "n": "Feria de",
+     "min": 21
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 25
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 29
+    }
+   ]
+  },
+  "acacias": {
+   "Comer y café": [
+    {
+     "n": "El Diablito",
+     "min": 3
+    },
+    {
+     "n": "Doña Mary",
+     "min": 3
+    },
+    {
+     "n": "Gorditas a la leña La Chata",
+     "min": 3
+    },
+    {
+     "n": "La Chimenea",
+     "min": 3
+    },
+    {
+     "n": "El Restaurante Ingles",
+     "min": 3
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 4
+    },
+    {
+     "n": "Intermall",
+     "min": 13
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 13
+    },
+    {
+     "n": "Costco",
+     "min": 22
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Sanatorio Español",
+     "min": 3
+    },
+    {
+     "n": "Hospital Club de Leones",
+     "min": 3
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 13
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 4
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 12
+    },
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 21
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Peñoles",
+     "min": 4
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 8
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 8
+    },
+    {
+     "n": "Lala",
+     "min": 15
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 3
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 5
+    },
+    {
+     "n": "Museo Arocena",
+     "min": 9
+    },
+    {
+     "n": "Cristo de las Noas",
+     "min": 9
+    }
+   ]
+  },
+  "cantera": {
+   "Comer y café": [
+    {
+     "n": "Bigos Pizza",
+     "min": 3
+    },
+    {
+     "n": "San Miguel Steak House",
+     "min": 4
+    },
+    {
+     "n": "Pizzeria La Sierra",
+     "min": 4
+    },
+    {
+     "n": "Koto Sushi Bar Campestre",
+     "min": 4
+    },
+    {
+     "n": "La Pestaña",
+     "min": 4
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Costco",
+     "min": 6
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 13
+    },
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 23
+    },
+    {
+     "n": "Intermall",
+     "min": 31
+    }
+   ],
+   "Salud": [
+    {
+     "n": "AR emergencias",
+     "min": 25
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 29
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 31
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 7
+    },
+    {
+     "n": "UA de C, Ciudad Universitaria",
+     "min": 30
+    },
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 31
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Parque Industrial Lajat",
+     "min": 7
+    },
+    {
+     "n": "Lala",
+     "min": 12
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 19
+    },
+    {
+     "n": "Parque Industrial Oriente",
+     "min": 25
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Feria de",
+     "min": 12
+    },
+    {
+     "n": "Estadio Corona TSM",
+     "min": 25
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 28
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 30
+    }
+   ]
+  },
+  "rosita": {
+   "Comer y café": [
+    {
+     "n": "Coffee Tree",
+     "min": 5
+    },
+    {
+     "n": "Marisqueria Don Ray",
+     "min": 5
+    },
+    {
+     "n": "Kavee Cafeteria",
+     "min": 6
+    },
+    {
+     "n": "Los pioneros de la joya",
+     "min": 6
+    },
+    {
+     "n": "Tortas La Blanquita",
+     "min": 6
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Intermall",
+     "min": 12
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 23
+    },
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 25
+    },
+    {
+     "n": "Costco",
+     "min": 30
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Hospital Centro Médico de la Mujer",
+     "min": 10
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 12
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 25
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "UA de C, Ciudad Universitaria",
+     "min": 6
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 13
+    },
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 24
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Parque Industrial Oriente",
+     "min": 9
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 15
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 20
+    },
+    {
+     "n": "Parque Industrial Mieleras",
+     "min": 20
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Estadio Corona TSM",
+     "min": 6
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 23
+    },
+    {
+     "n": "Feria de",
+     "min": 24
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 27
+    }
+   ]
+  },
+  "senderos": {
+   "Comer y café": [
+    {
+     "n": "San Miguel Steak House",
+     "min": 3
+    },
+    {
+     "n": "Pizzeria La Sierra",
+     "min": 3
+    },
+    {
+     "n": "Taquería Los Encomenderos",
+     "min": 3
+    },
+    {
+     "n": "La Pestaña",
+     "min": 3
+    },
+    {
+     "n": "Quesipizzas",
+     "min": 3
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Costco",
+     "min": 3
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 9
+    },
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 19
+    },
+    {
+     "n": "Intermall",
+     "min": 28
+    }
+   ],
+   "Salud": [
+    {
+     "n": "AR emergencias",
+     "min": 21
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 25
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 28
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 3
+    },
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 27
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 28
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Parque Industrial Lajat",
+     "min": 7
+    },
+    {
+     "n": "Lala",
+     "min": 8
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 15
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 22
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Feria de",
+     "min": 8
+    },
+    {
+     "n": "Estadio Corona TSM",
+     "min": 23
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 24
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 26
+    }
+   ]
+  },
+  "los-angeles": {
+   "Comer y café": [
+    {
+     "n": "La Majada",
+     "min": 3
+    },
+    {
+     "n": "El Zaguán de Giorgio's",
+     "min": 3
+    },
+    {
+     "n": "nod - Coffee & Plants",
+     "min": 3
+    },
+    {
+     "n": "Pollo Loco",
+     "min": 3
+    },
+    {
+     "n": "Cafelina",
+     "min": 3
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 5
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 16
+    },
+    {
+     "n": "Intermall",
+     "min": 17
+    },
+    {
+     "n": "Costco",
+     "min": 24
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Sanatorio Español",
+     "min": 3
+    },
+    {
+     "n": "Centro Médico",
+     "min": 3
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 17
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 6
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 17
+    },
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 22
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Peñoles",
+     "min": 6
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 12
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 13
+    },
+    {
+     "n": "Lala",
+     "min": 18
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 3
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 5
+    },
+    {
+     "n": "Museo Arocena",
+     "min": 5
+    },
+    {
+     "n": "Cristo de las Noas",
+     "min": 7
+    }
+   ]
+  },
+  "tec": {
+   "Comer y café": [
+    {
+     "n": "Tacotorro",
+     "min": 3
+    },
+    {
+     "n": "Tacostao",
+     "min": 3
+    },
+    {
+     "n": "Monab Café",
+     "min": 3
+    },
+    {
+     "n": "La Guera Laura",
+     "min": 4
+    },
+    {
+     "n": "Taqueria la Joya",
+     "min": 4
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Intermall",
+     "min": 3
+    },
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 16
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 20
+    },
+    {
+     "n": "Costco",
+     "min": 29
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Hospital Ángeles",
+     "min": 3
+    },
+    {
+     "n": "Hospital Ángeles Torreón",
+     "min": 3
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 13
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 3
+    },
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 11
+    },
+    {
+     "n": "UA de C, Ciudad Universitaria",
+     "min": 19
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Central de Autobuses",
+     "min": 7
+    },
+    {
+     "n": "Peñoles",
+     "min": 12
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 14
+    },
+    {
+     "n": "Parque Industrial Oriente",
+     "min": 20
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Estadio Corona TSM",
+     "min": 12
+    },
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 12
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 15
+    },
+    {
+     "n": "Cristo de las Noas",
+     "min": 16
+    }
+   ]
+  },
+  "gomez": {
+   "Comer y café": [
+    {
+     "n": "Caffenio",
+     "min": 3
+    },
+    {
+     "n": "Gorditas y Desayunos El Che",
+     "min": 3
+    },
+    {
+     "n": "Gorditas Cristy",
+     "min": 3
+    },
+    {
+     "n": "Burritos",
+     "min": 3
+    },
+    {
+     "n": "Quesipizzas",
+     "min": 3
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 10
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 19
+    },
+    {
+     "n": "Costco",
+     "min": 25
+    },
+    {
+     "n": "Intermall",
+     "min": 25
+    }
+   ],
+   "Salud": [
+    {
+     "n": "Centro de Salud",
+     "min": 10
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 11
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 25
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 13
+    },
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 23
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 24
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Peñoles",
+     "min": 13
+    },
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 17
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 20
+    },
+    {
+     "n": "Lala",
+     "min": 21
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Centro de Gómez Palacio",
+     "min": 8
+    },
+    {
+     "n": "Museo Arocena",
+     "min": 8
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 9
+    },
+    {
+     "n": "Cristo de las Noas",
+     "min": 12
+    }
+   ]
+  },
+  "torreon": {
+   "Comer y café": [
+    {
+     "n": "Centro Gordero",
+     "min": 3
+    },
+    {
+     "n": "La norteña",
+     "min": 4
+    },
+    {
+     "n": "Gorditas la Guera",
+     "min": 4
+    },
+    {
+     "n": "Come Rico",
+     "min": 4
+    },
+    {
+     "n": "La Troje",
+     "min": 4
+    }
+   ],
+   "Súper y compras": [
+    {
+     "n": "Plaza Cuatro Caminos",
+     "min": 5
+    },
+    {
+     "n": "Galerías Laguna",
+     "min": 11
+    },
+    {
+     "n": "Intermall",
+     "min": 12
+    },
+    {
+     "n": "Costco",
+     "min": 20
+    }
+   ],
+   "Salud": [
+    {
+     "n": "AR emergencias",
+     "min": 3
+    },
+    {
+     "n": "Sanatorio Español",
+     "min": 6
+    },
+    {
+     "n": "Hospital Ángeles",
+     "min": 12
+    }
+   ],
+   "Escuelas y universidades": [
+    {
+     "n": "Instituto Tecnológico de La Laguna",
+     "min": 7
+    },
+    {
+     "n": "Tec de Monterrey Campus Laguna",
+     "min": 12
+    },
+    {
+     "n": "Universidad Iberoamericana",
+     "min": 19
+    }
+   ],
+   "Trabajo e industria": [
+    {
+     "n": "Aeropuerto Internacional de",
+     "min": 5
+    },
+    {
+     "n": "Central de Autobuses",
+     "min": 6
+    },
+    {
+     "n": "Peñoles",
+     "min": 7
+    },
+    {
+     "n": "Lala",
+     "min": 12
+    }
+   ],
+   "Para salir": [
+    {
+     "n": "Bosque Venustiano Carranza",
+     "min": 4
+    },
+    {
+     "n": "Paseo Morelos (centro)",
+     "min": 8
+    },
+    {
+     "n": "Feria de",
+     "min": 12
+    },
+    {
+     "n": "Museo Arocena",
+     "min": 12
+    }
+   ]
+  }
+ }
+}

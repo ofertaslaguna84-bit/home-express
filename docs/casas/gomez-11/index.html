@@ -13,6 +13,7 @@
 <meta name="ICBM" content="25.5428, -103.4068">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="alternate" type="text/plain" href="https://hostalia.com.mx/llms.txt" title="llms.txt">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Hostalia">
@@ -303,6 +304,63 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .pie-bajo{justify-content:center;gap:20px}
 .btn.flota{border-radius:50%;padding:0;letter-spacing:0}
 @media(max-width:600px){.hdr.sobre .logo{height:50px}.hdr.sobre .hdr-in{padding-top:22px}.hdr.sobre .menu-btn{right:8px;top:16px}.hdr .logo{height:50px}.portada .hero-cta .btn{width:100%;justify-content:center}}
+
+/* ── Formato editorial (nov 2026, a imagen de barriomexico.travel): titulares enormes con serifa,
+   portada de video, zonas con mapa y "en la zona" por tipo de plan en cada casa. */
+.portada .cont{max-width:1080px}
+.portada h1{font-size:clamp(40px,min(7.2vw,11.5vh),100px);line-height:.96;letter-spacing:-.01em;font-weight:500}
+.portada{padding-top:120px}
+.portada h1 em{display:block;color:#E2C891;font-weight:500}
+.portada .lead{font-size:clamp(15px,1.4vw,19px);letter-spacing:.02em}
+.ed-k{display:block;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--azul);margin-bottom:14px;font-weight:600}
+.ed-h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-.01em;margin-bottom:16px}
+.ed-h2 em{font-style:italic;color:var(--azul);font-weight:500}
+.ed-sub{font-size:16.5px;color:var(--gris);max-width:640px;margin-bottom:36px;font-weight:300}
+.cab-ed{display:grid;gap:18px;align-items:end;margin-bottom:36px}@media(min-width:900px){.cab-ed{grid-template-columns:1.2fr 1fr}.cab-ed .ed-sub{margin-bottom:0}}
+.sec-ed{padding:76px 0}
+.zonas-ed{display:grid;gap:14px;grid-template-columns:1fr}@media(min-width:760px){.zonas-ed{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.zonas-ed{grid-template-columns:repeat(3,1fr)}}
+.zona-c{border:1px solid var(--linea);background:#fff;padding:22px 22px 18px;display:flex;flex-direction:column;gap:6px;transition:transform .18s,box-shadow .18s}
+.zona-c:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
+.zona-c h3{font-size:25px;margin:0;font-weight:500}
+.zona-c .n{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600}
+.zona-c p{font-size:14px;color:var(--gris);margin:0}
+.zona-c .cs{font-size:13px;color:var(--marino);margin-top:8px}
+.mapa{height:min(70vh,560px);border:1px solid var(--linea);background:var(--crema);margin:0 0 28px;position:relative;z-index:0}
+.mapa.chico{height:380px;margin:0}
+.leaflet-container{font-family:'Manrope',sans-serif;font-size:12px}
+.pin-wrap{width:auto!important;height:auto!important;background:none;border:0}
+.pin-casa{display:inline-block;background:var(--marino);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 9px;border:1px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap;cursor:pointer;transform:translate(-50%,-50%)}
+.leaflet-container .leaflet-tile-pane{filter:saturate(.55) contrast(.95) brightness(1.04)}
+.casa-hero{position:relative;height:min(78svh,720px);min-height:460px;overflow:hidden;background:var(--marino);color:#fff;display:flex;align-items:flex-end;padding:0}
+.casa-hero video,.casa-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.casa-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,19,38,.5) 0%,rgba(11,19,38,.05) 40%,rgba(11,19,38,.78) 100%)}
+.casa-hero .w{position:relative;z-index:2;width:100%;padding-bottom:46px}
+.casa-hero .ed-k{color:#E2C891}
+.casa-hero h1{color:#fff;font-weight:500;font-size:clamp(38px,6vw,84px);line-height:1;margin-bottom:10px}
+.casa-hero .sub{color:rgba(255,255,255,.85);font-weight:300;font-size:17px;margin:0 0 18px;max-width:640px}
+.casa-hero .datos{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.casa-hero .datos b{color:#fff;font-weight:600}
+.ficha-ed{display:grid;gap:40px;grid-template-columns:1fr}@media(min-width:980px){.ficha-ed{grid-template-columns:1.55fr 1fr;align-items:start}}
+.gal-ed{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}@media(min-width:800px){.gal-ed{grid-template-columns:repeat(4,1fr);grid-auto-rows:240px}.gal-ed div:first-child{grid-column:span 2;grid-row:span 2}}
+.gal-ed div{overflow:hidden;background:var(--crema);aspect-ratio:4/5}@media(min-width:800px){.gal-ed div{aspect-ratio:auto}}
+.gal-ed img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gal-ed div:hover img{transform:scale(1.04)}
+.incluye{display:grid;gap:0 28px;grid-template-columns:1fr;list-style:none}@media(min-width:620px){.incluye{grid-template-columns:1fr 1fr}}@media(min-width:960px){.incluye{grid-template-columns:repeat(3,1fr)}}
+.incluye li{font-size:15px;color:var(--marino);padding:12px 0;border-bottom:1px solid var(--linea);display:flex;gap:12px;align-items:baseline}
+.incluye li::before{content:"";width:6px;height:6px;background:var(--azul);flex:none;transform:translateY(-2px)}
+.rasgos{display:grid;gap:26px;grid-template-columns:1fr;counter-reset:r}@media(min-width:720px){.rasgos{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.rasgos{grid-template-columns:repeat(4,1fr)}}
+.rasgo{border-top:1px solid var(--marino);padding-top:18px}
+.rasgo::before{counter-increment:r;content:"0" counter(r);display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;letter-spacing:.2em;color:var(--azul);margin-bottom:10px}
+.rasgo h3{font-size:24px;margin-bottom:8px;font-weight:500}.rasgo p{font-size:14.5px;color:var(--gris)}
+.en-zona{display:grid;gap:34px;grid-template-columns:1fr}@media(min-width:1000px){.en-zona{grid-template-columns:1fr 1fr;align-items:start}}
+.cerca{display:grid;gap:26px 34px;grid-template-columns:1fr}@media(min-width:620px){.cerca{grid-template-columns:1fr 1fr}}
+.cerca h4{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--linea)}
+.cerca ul{list-style:none}.cerca li{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:7px 0;border-bottom:1px dotted var(--linea)}
+.cerca li span{color:var(--gris);font-size:12.5px;white-space:nowrap}
+.comparten{display:grid;gap:18px;grid-template-columns:1fr}@media(min-width:720px){.comparten{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.comparten{grid-template-columns:repeat(4,1fr)}}
+.comparten div{padding:28px 24px;border:1px solid var(--linea);background:#fff}.comparten h3{font-size:25px;margin-bottom:8px;font-weight:500}.comparten p{font-size:14.5px;color:var(--gris)}
+.quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
+.quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
+.posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["Accommodation","House"],"@id":"https://hostalia.com.mx/casas/gomez-11/#casa","name":"Casa Gómez 11","description":"Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.","url":"https://hostalia.com.mx/casas/gomez-11/","image":["https://hostalia.com.mx/img/gomez-norte-01.jpg","https://hostalia.com.mx/img/gomez-norte-02.jpg","https://hostalia.com.mx/img/gomez-norte-03.jpg","https://hostalia.com.mx/img/gomez-norte-04.jpg","https://hostalia.com.mx/img/gomez-norte-05.jpg"],"occupancy":{"@type":"QuantitativeValue","minValue":1,"maxValue":11,"unitText":"personas"},"numberOfRooms":2,"numberOfBedrooms":2,"numberOfBathroomsTotal":2,"numberOfBeds":6,"address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"containedInPlace":{"@type":"Place","name":"Límite Torreón-Gómez Palacio, Torreón","address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"geo":{"@type":"GeoCoordinates","latitude":25.5428,"longitude":-103.4068}},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"6 camas","value":true},{"@type":"LocationFeatureSpecification","name":"Estacionamiento gratuito","value":true},{"@type":"LocationFeatureSpecification","name":"Cocina y lavadora","value":true},{"@type":"LocationFeatureSpecification","name":"Clima y WiFi","value":true},{"@type":"LocationFeatureSpecification","name":"A minutos de Gómez Palacio","value":true},{"@type":"LocationFeatureSpecification","name":"Aire acondicionado","value":true},{"@type":"LocationFeatureSpecification","name":"Ropa de cama y toallas","value":true}],"provider":{"@id":"https://hostalia.com.mx/#organizacion"},"potentialAction":{"@type":"ReserveAction","target":"https://wa.me/528712638082?text=Hola%20Hostalia%2C%20quiero%20reservar%20Casa%20G%C3%B3mez%2011"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Offer","itemOffered":{"@id":"https://hostalia.com.mx/casas/gomez-11/#casa"},"price":1450,"priceCurrency":"MXN","url":"https://hostalia.com.mx/casas/gomez-11/","availability":"https://schema.org/InStock","areaServed":{"@type":"City","name":"Torreón"},"description":"Renta por noche de Casa Gómez 11, reservando directo + IVA. Limpieza aparte $550 + IVA por semana."}</script>
@@ -310,9 +368,9 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta Casa Gómez 11 por noche?","acceptedAnswer":{"@type":"Answer","text":"Entre semana $1,450 y en fin de semana $1,450, más IVA, reservando directo con nosotros. Para estancias de una semana o más el precio baja: pregúntanos por WhatsApp."}},{"@type":"Question","name":"¿Cuántas personas caben en Casa Gómez 11?","acceptedAnswer":{"@type":"Answer","text":"Hasta 11 personas, en 2 recámaras con 6 camas y 2 baños. Si son más, tenemos otras casas — la más grande recibe 12."}},{"@type":"Question","name":"¿Por qué son más baratas aquí que en Airbnb?","acceptedAnswer":{"@type":"Answer","text":"Porque en Airbnb hay una comisión del 16% que se va a la plataforma. Al reservar directo con nosotros esa comisión no existe, y ese ahorro te lo pasamos a ti. Es la misma casa, el mismo anfitrión y las mismas llaves."}},{"@type":"Question","name":"¿Facturan? Lo necesito para mi empresa.","acceptedAnswer":{"@type":"Answer","text":"Sí, facturamos con CFDI en todas las casas. Es de las razones por las que muchas empresas de la región nos buscan: sin factura no hay comprobación de gastos. Nos pasas tus datos fiscales al reservar y la factura sale a nombre de tu empresa."}},{"@type":"Question","name":"¿Cuál es la estancia mínima y la máxima?","acceptedAnswer":{"@type":"Answer","text":"La mínima son 2 noches y no hay máxima: hay casas ocupadas por temporadas de hasta 6 meses. Por mes van de $35,000 a $54,750 según la casa y si incluye servicios (agua, luz, gas e internet), que suben $3,000. Por semana también hay mejor tarifa: se cotiza por WhatsApp con tus fechas."}},{"@type":"Question","name":"¿Los precios llevan IVA?","acceptedAnswer":{"@type":"Answer","text":"Los precios que ves son por noche más IVA. Al facturar te desglosamos el IVA para que tu empresa lo pueda acreditar. Si necesitas el precio final cerrado, pídelo por WhatsApp y te lo mandamos con todo incluido."}}]}</script>
 </head>
 <body>
-<header class="hdr">
+<header class="hdr sobre">
   <div class="hdr-in">
-    <a href="../../"><img src="../../img/logo-h.svg" alt="Hostalia" class="logo"></a>
+    <a href="../../"><img src="../../img/logo-blanco.svg" alt="Hostalia" class="logo"></a>
     <nav class="nav">
       <a href="../../#casas">Casas</a>
       <a href="../../#como">Cómo funciona</a>
@@ -334,17 +392,26 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <a href="../../#faq">Preguntas</a>
   <a href="../../blog/">Blog</a>
 </div>
+<section class="casa-hero">
+  <img src="../../img/gomez-norte-01.jpg" alt="Casa Gómez 11, Límite Torreón-Gómez Palacio, Torreón" width="1600" height="1000" fetchpriority="high">
+  <div class="w">
+    <span class="ed-k">Límite Torreón – Gómez Palacio · Torreón</span>
+    <h1>Casa Gómez 11</h1>
+    <p class="sub">Casa para 11 personas en el límite de Torreón y Gómez Palacio</p>
+    <div class="datos"><span><b>11</b> personas</span><span><b>2</b> recámaras</span><span><b>6</b> camas</span><span><b>2</b> baños</span><span>desde <b>$1,450</b> + IVA la noche</span></div>
+  </div>
+</section>
+
 <div class="w"><nav class="crumbs"><a href="../../">Inicio</a> › <a href="../../#casas">Casas</a> › Casa Gómez 11</nav></div>
 
 <section style="padding-top:8px">
   <div class="w">
-    <span class="eyebrow">Límite Torreón-Gómez Palacio, Torreón</span>
-    <h1 style="font-size:clamp(27px,4vw,42px);margin-bottom:12px">Casa Gómez 11</h1>
-    <p class="sub" style="margin-bottom:26px">Casa para 11 personas en el límite de Torreón y Gómez Palacio</p>
-
-    <div class="ficha">
+    <div class="ficha-ed">
       <div>
-        <div class="galeria">
+        <span class="ed-k">La casa por dentro</span>
+        <h2 class="ed-h2" style="font-size:clamp(30px,3.6vw,46px)">Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario.</h2>
+        <p class="ed-sub">Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.</p>
+        <div class="gal-ed">
           <div><img src="../../img/gomez-norte-01.jpg" alt="Casa Gómez 11 — norte"  width="800" height="1000"></div>
           <div><img src="../../img/gomez-norte-02.jpg" alt="Casa Gómez 11 — norte"  width="800" height="1000"></div>
           <div><img src="../../img/gomez-norte-03.jpg" alt="Casa Gómez 11 — norte" loading="lazy" width="800" height="1000"></div>
@@ -352,14 +419,37 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
           <div><img src="../../img/gomez-norte-05.jpg" alt="Casa Gómez 11 — norte" loading="lazy" width="800" height="1000"></div>
         </div>
 
-        <div style="margin-top:38px">
-          <h2 style="font-size:26px">Sobre esta casa</h2>
-          <p style="color:var(--gris);font-size:16.5px;margin:14px 0 22px">Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.</p>
-          <div class="casa-specs" style="margin-bottom:26px">
-            <span class="spec">6 camas</span><span class="spec">Estacionamiento gratuito</span><span class="spec">Cocina y lavadora</span><span class="spec">Clima y WiFi</span><span class="spec">A minutos de Gómez Palacio</span>
-          </div>
+        <div style="margin-top:56px">
+          <span class="ed-k">Todo lo que incluye</span>
+          <h2 class="ed-h2" style="font-size:clamp(28px,3.2vw,40px)">Lo que ya está <em>cuando llegas.</em></h2>
+          <ul class="incluye" style="margin-top:22px">
+            <li>6 camas</li>
+            <li>Estacionamiento gratuito</li>
+            <li>Cocina y lavadora</li>
+            <li>Clima y WiFi</li>
+            <li>A minutos de Gómez Palacio</li>
+            <li>Ropa de cama y toallas</li>
+            <li>Agua caliente</li>
+            <li>TV</li>
+            <li>Limpieza semanal (aparte)</li>
+            <li>Factura CFDI</li>
+          </ul>
+        </div>
 
-          <h2 style="font-size:26px;margin-top:34px">Preguntas sobre Casa Gómez 11</h2>
+        <div style="margin-top:56px">
+          <span class="ed-k">Qué la distingue</span>
+          <h2 class="ed-h2" style="font-size:clamp(28px,3.2vw,40px)">Cuatro razones <em>para esta y no otra.</em></h2>
+          <div class="rasgos" style="margin-top:26px">
+            <div class="rasgo"><h3>6 camas</h3><p>Es de las cosas que más valoran quienes ya se quedaron en Casa Gómez 11.</p></div>
+            <div class="rasgo"><h3>Estacionamiento gratuito</h3><p>Es de las cosas que más valoran quienes ya se quedaron en Casa Gómez 11.</p></div>
+            <div class="rasgo"><h3>Cocina y lavadora</h3><p>Para estancias de semanas: ropa limpia sin salir ni pagar lavandería.</p></div>
+            <div class="rasgo"><h3>Clima y WiFi</h3><p>Minisplit en toda la casa. En verano aquí no es un extra, es lo que te deja dormir.</p></div>
+          </div>
+        </div>
+
+        <div style="margin-top:56px">
+          <span class="ed-k">Preguntas</span>
+          <h2 class="ed-h2" style="font-size:clamp(28px,3.2vw,40px)">Antes de reservar <em>Casa Gómez 11.</em></h2>
           <div style="margin-top:16px">
             <details class="faq"><summary>¿Cuánto cuesta Casa Gómez 11 por noche?</summary><div class="faq-a"><p>Entre semana $1,450 y en fin de semana $1,450, más IVA, reservando directo con nosotros. Para estancias de una semana o más el precio baja: pregúntanos por WhatsApp.</p></div></details>
             <details class="faq"><summary>¿Cuántas personas caben en Casa Gómez 11?</summary><div class="faq-a"><p>Hasta 11 personas, en 2 recámaras con 6 camas y 2 baños. Si son más, tenemos otras casas — la más grande recibe 12.</p></div></details>
@@ -397,12 +487,93 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   </div>
 </section>
 
-<section class="sec-crema">
+
+<section class="sec-ed sec-crema">
   <div class="w">
-    <span class="eyebrow">Otras casas</span>
-    <h2>También tenemos</h2>
-    <div class="casas" style="margin-top:26px">
+    <div class="cab-ed">
+      <div><span class="ed-k">En la zona</span><h2 class="ed-h2">Límite Torreón – Gómez Palacio, <em>por tipo de plan.</em></h2></div>
+      <p class="ed-sub">Lo que tienes cerca de Casa Gómez 11 y cuánto se hace en coche. La dirección exacta se comparte al reservar; en el mapa va la colonia.</p>
+    </div>
+    <div class="en-zona">
+      <div class="cerca">
+        <div><h4>Comer y café</h4><ul><li>Caffenio<span>3 min</span></li><li>Gorditas y Desayunos El Che<span>3 min</span></li><li>Gorditas Cristy<span>3 min</span></li><li>Burritos<span>3 min</span></li><li>Quesipizzas<span>3 min</span></li></ul></div>
+        <div><h4>Súper y compras</h4><ul><li>Plaza Cuatro Caminos<span>10 min</span></li><li>Galerías Laguna<span>19 min</span></li><li>Costco<span>25 min</span></li><li>Intermall<span>25 min</span></li></ul></div>
+        <div><h4>Salud</h4><ul><li>Centro de Salud<span>10 min</span></li><li>Sanatorio Español<span>11 min</span></li><li>Hospital Ángeles<span>25 min</span></li></ul></div>
+        <div><h4>Escuelas y universidades</h4><ul><li>Instituto Tecnológico de La Laguna<span>13 min</span></li><li>Universidad Iberoamericana<span>23 min</span></li><li>Tec de Monterrey Campus Laguna<span>24 min</span></li></ul></div>
+        <div><h4>Trabajo e industria</h4><ul><li>Peñoles<span>13 min</span></li><li>Aeropuerto Internacional de<span>17 min</span></li><li>Central de Autobuses<span>20 min</span></li><li>Lala<span>21 min</span></li></ul></div>
+        <div><h4>Para salir</h4><ul><li>Centro de Gómez Palacio<span>8 min</span></li><li>Museo Arocena<span>8 min</span></li><li>Paseo Morelos (centro)<span>9 min</span></li><li>Cristo de las Noas<span>12 min</span></li></ul></div>
+      </div>
+      <div id="mapa-gomez-11" class="mapa chico" role="img" aria-label="Mapa de ubicación"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="" defer></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.L)return;var m=L.map('mapa-gomez-11',{scrollWheelZoom:false});L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(m);var P=[{"lat":25.565,"lng":-103.47,"radio":900,"nombre":"Casa Gómez 11"}];var g=[];P.forEach(function(p){var c=L.circle([p.lat,p.lng],{radius:p.radio||600,color:'#13203A',weight:1,fillColor:'#8A6A2F',fillOpacity:.22}).addTo(m);g.push(c);var k=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'pin-wrap',html:'<div class="pin-casa">'+p.nombre+'</div>',iconSize:null,iconAnchor:[0,0]})}).addTo(m);if(p.url){k.on('click',function(){location.href=p.url});c.on('click',function(){location.href=p.url})}});m.setView([25.565,-103.47],14);});</script>
+    </div>
+  </div>
+</section>
+
+<section class="sec-ed">
+  <div class="w">
+    <div class="cab-ed">
+      <div><span class="ed-k">Otras casas</span><h2 class="ed-h2">También te van <em>a gustar.</em></h2></div>
+      <p class="ed-sub">En la misma zona o para un grupo parecido.</p>
+    </div>
+    <div class="casas">
       
+  <article class="casa">
+    <a href="../gomez-10/" class="casa-foto">
+      <img src="../../img/gomez-centro-01.jpg" alt="Casa Gómez 10, Cerca de Gómez Palacio, Torreón" loading="lazy" width="900" height="900">
+      <img src="../../img/gomez-centro-03.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/gomez-centro-05.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/gomez-centro-06.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
+      <span class="badge">10 personas</span>
+    </a>
+    <div class="casa-cuerpo">
+      <h3><a href="../gomez-10/">Casa Gómez 10</a></h3>
+      <div class="casa-specs">
+        <span class="spec">3 recámaras</span>
+        <span class="spec">7 camas</span>
+        <span class="spec">3.5 baños</span>
+      </div>
+      <p>Céntrica y con salida rápida a Gómez Palacio. 3 recámaras con 7 camas (dos matrimoniales, una matrimonial con individual, una matrimonial con dos individuales), 3 baños y medio, cocina, lavadora y secadora. 5.0 en Airbnb.</p>
+      <div class="precio-box">
+        
+        <div class="p-fila directo"><span>Por noche</span><b>$1,450 + IVA</b></div>
+        
+        
+        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
+        <div class="casa-btns">
+          <a href="../gomez-10/" class="btn btn-out">Ver casa</a>
+          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20G%C3%B3mez%2010%20(10%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="casa">
+    <a href="../acacia/" class="casa-foto">
+      <img src="../../img/acacia-comedor.jpg" alt="Casa Acacias, Acacias, Torreón" loading="lazy" width="900" height="900">
+      <img src="../../img/acacia-alberca.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/acacia-portada.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/acacia-fachada.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
+      <span class="badge">11 personas</span>
+    </a>
+    <div class="casa-cuerpo">
+      <h3><a href="../acacia/">Casa Acacias</a></h3>
+      <div class="casa-specs">
+        <span class="spec">3 recámaras</span>
+        <span class="spec">6 camas</span>
+        <span class="spec">2.5 baños</span>
+      </div>
+      <p>La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.</p>
+      <div class="precio-box">
+        <div class="p-fila tachado"><span>En Airbnb</span><b>$1,850</b></div>
+        <div class="p-fila directo"><span>Directo aquí</span><b>$1,670 + IVA</b></div>
+        <span class="ahorro">Ahorras $180 por noche</span>
+        <p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">$45,000</strong> sin servicios · <strong style="color:var(--marino)">$48,000</strong> con servicios + IVA</p>
+        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
+        <div class="casa-btns">
+          <a href="../acacia/" class="btn btn-out">Ver casa</a>
+          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20Acacias%20(11%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
   <article class="casa">
     <a href="../leones/" class="casa-foto">
       <img src="../../img/leones-portada.jpg" alt="Casa Leones, Viñedos, Torreón" loading="lazy" width="900" height="900">
@@ -458,36 +629,14 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
       </div>
     </div>
   </article>
-
-  <article class="casa">
-    <a href="../provitec/" class="casa-foto">
-      <img src="../../img/provitec-sala.jpg" alt="Casa Provitec, Provitec, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/provitec-recamara_01.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/provitec-cocina.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/provitec-recamara_02.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">12 personas</span>
-    </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../provitec/">Casa Provitec</a></h3>
-      <div class="casa-specs">
-        <span class="spec">4 recámaras</span>
-        <span class="spec">7 camas</span>
-        
-      </div>
-      <p>Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.</p>
-      <div class="precio-box">
-        
-        <div class="p-fila directo"><span>Por noche</span><b>$1,750 + IVA</b></div>
-        
-        <p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">$40,000</strong> sin servicios · <strong style="color:var(--marino)">$43,000</strong> con servicios + IVA</p>
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../provitec/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20Provitec%20(12%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
-    </div>
-  </article>
     </div>
   </div>
+</section>
+
+<section class="cta">
+  <h2>¿Listo para quedarte en Casa Gómez 11?</h2>
+  <p>Dinos tus fechas y cuántos son. Te contestamos con disponibilidad y precio cerrado.</p>
+  <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20quiero%20reservar%20Casa%20G%C3%B3mez%2011.%20Mis%20fechas%20son%3A" class="btn btn-claro" style="font-size:13px;padding:16px 32px">Reservar por WhatsApp</a>
 </section>
 
 <footer class="pie">
@@ -517,7 +666,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
     </div>
     <div class="pie-bajo">
       <span>© 2026 Hostalia</span>
-      <span>Actualizado el 7 de noviembre de 2026</span>
+      <span>Actualizado el 8 de noviembre de 2026</span>
     </div>
   </div>
 </footer>

@@ -13,6 +13,7 @@
 <meta name="ICBM" content="25.5428, -103.4068">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="alternate" type="text/plain" href="https://hostalia.com.mx/llms.txt" title="llms.txt">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Hostalia">
@@ -303,6 +304,63 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .pie-bajo{justify-content:center;gap:20px}
 .btn.flota{border-radius:50%;padding:0;letter-spacing:0}
 @media(max-width:600px){.hdr.sobre .logo{height:50px}.hdr.sobre .hdr-in{padding-top:22px}.hdr.sobre .menu-btn{right:8px;top:16px}.hdr .logo{height:50px}.portada .hero-cta .btn{width:100%;justify-content:center}}
+
+/* ── Formato editorial (nov 2026, a imagen de barriomexico.travel): titulares enormes con serifa,
+   portada de video, zonas con mapa y "en la zona" por tipo de plan en cada casa. */
+.portada .cont{max-width:1080px}
+.portada h1{font-size:clamp(40px,min(7.2vw,11.5vh),100px);line-height:.96;letter-spacing:-.01em;font-weight:500}
+.portada{padding-top:120px}
+.portada h1 em{display:block;color:#E2C891;font-weight:500}
+.portada .lead{font-size:clamp(15px,1.4vw,19px);letter-spacing:.02em}
+.ed-k{display:block;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--azul);margin-bottom:14px;font-weight:600}
+.ed-h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-.01em;margin-bottom:16px}
+.ed-h2 em{font-style:italic;color:var(--azul);font-weight:500}
+.ed-sub{font-size:16.5px;color:var(--gris);max-width:640px;margin-bottom:36px;font-weight:300}
+.cab-ed{display:grid;gap:18px;align-items:end;margin-bottom:36px}@media(min-width:900px){.cab-ed{grid-template-columns:1.2fr 1fr}.cab-ed .ed-sub{margin-bottom:0}}
+.sec-ed{padding:76px 0}
+.zonas-ed{display:grid;gap:14px;grid-template-columns:1fr}@media(min-width:760px){.zonas-ed{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.zonas-ed{grid-template-columns:repeat(3,1fr)}}
+.zona-c{border:1px solid var(--linea);background:#fff;padding:22px 22px 18px;display:flex;flex-direction:column;gap:6px;transition:transform .18s,box-shadow .18s}
+.zona-c:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,33,61,.1)}
+.zona-c h3{font-size:25px;margin:0;font-weight:500}
+.zona-c .n{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600}
+.zona-c p{font-size:14px;color:var(--gris);margin:0}
+.zona-c .cs{font-size:13px;color:var(--marino);margin-top:8px}
+.mapa{height:min(70vh,560px);border:1px solid var(--linea);background:var(--crema);margin:0 0 28px;position:relative;z-index:0}
+.mapa.chico{height:380px;margin:0}
+.leaflet-container{font-family:'Manrope',sans-serif;font-size:12px}
+.pin-wrap{width:auto!important;height:auto!important;background:none;border:0}
+.pin-casa{display:inline-block;background:var(--marino);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 9px;border:1px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap;cursor:pointer;transform:translate(-50%,-50%)}
+.leaflet-container .leaflet-tile-pane{filter:saturate(.55) contrast(.95) brightness(1.04)}
+.casa-hero{position:relative;height:min(78svh,720px);min-height:460px;overflow:hidden;background:var(--marino);color:#fff;display:flex;align-items:flex-end;padding:0}
+.casa-hero video,.casa-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.casa-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,19,38,.5) 0%,rgba(11,19,38,.05) 40%,rgba(11,19,38,.78) 100%)}
+.casa-hero .w{position:relative;z-index:2;width:100%;padding-bottom:46px}
+.casa-hero .ed-k{color:#E2C891}
+.casa-hero h1{color:#fff;font-weight:500;font-size:clamp(38px,6vw,84px);line-height:1;margin-bottom:10px}
+.casa-hero .sub{color:rgba(255,255,255,.85);font-weight:300;font-size:17px;margin:0 0 18px;max-width:640px}
+.casa-hero .datos{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.casa-hero .datos b{color:#fff;font-weight:600}
+.ficha-ed{display:grid;gap:40px;grid-template-columns:1fr}@media(min-width:980px){.ficha-ed{grid-template-columns:1.55fr 1fr;align-items:start}}
+.gal-ed{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}@media(min-width:800px){.gal-ed{grid-template-columns:repeat(4,1fr);grid-auto-rows:240px}.gal-ed div:first-child{grid-column:span 2;grid-row:span 2}}
+.gal-ed div{overflow:hidden;background:var(--crema);aspect-ratio:4/5}@media(min-width:800px){.gal-ed div{aspect-ratio:auto}}
+.gal-ed img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gal-ed div:hover img{transform:scale(1.04)}
+.incluye{display:grid;gap:0 28px;grid-template-columns:1fr;list-style:none}@media(min-width:620px){.incluye{grid-template-columns:1fr 1fr}}@media(min-width:960px){.incluye{grid-template-columns:repeat(3,1fr)}}
+.incluye li{font-size:15px;color:var(--marino);padding:12px 0;border-bottom:1px solid var(--linea);display:flex;gap:12px;align-items:baseline}
+.incluye li::before{content:"";width:6px;height:6px;background:var(--azul);flex:none;transform:translateY(-2px)}
+.rasgos{display:grid;gap:26px;grid-template-columns:1fr;counter-reset:r}@media(min-width:720px){.rasgos{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.rasgos{grid-template-columns:repeat(4,1fr)}}
+.rasgo{border-top:1px solid var(--marino);padding-top:18px}
+.rasgo::before{counter-increment:r;content:"0" counter(r);display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;letter-spacing:.2em;color:var(--azul);margin-bottom:10px}
+.rasgo h3{font-size:24px;margin-bottom:8px;font-weight:500}.rasgo p{font-size:14.5px;color:var(--gris)}
+.en-zona{display:grid;gap:34px;grid-template-columns:1fr}@media(min-width:1000px){.en-zona{grid-template-columns:1fr 1fr;align-items:start}}
+.cerca{display:grid;gap:26px 34px;grid-template-columns:1fr}@media(min-width:620px){.cerca{grid-template-columns:1fr 1fr}}
+.cerca h4{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--linea)}
+.cerca ul{list-style:none}.cerca li{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:7px 0;border-bottom:1px dotted var(--linea)}
+.cerca li span{color:var(--gris);font-size:12.5px;white-space:nowrap}
+.comparten{display:grid;gap:18px;grid-template-columns:1fr}@media(min-width:720px){.comparten{grid-template-columns:repeat(2,1fr)}}@media(min-width:1060px){.comparten{grid-template-columns:repeat(4,1fr)}}
+.comparten div{padding:28px 24px;border:1px solid var(--linea);background:#fff}.comparten h3{font-size:25px;margin-bottom:8px;font-weight:500}.comparten p{font-size:14.5px;color:var(--gris)}
+.quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
+.quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
+.posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://hostalia.com.mx/zonas/#pagina","url":"https://hostalia.com.mx/zonas/","name":"Dónde hospedarte en Torreón: guías por zona, ocasión y tipo de estancia | Hostalia","description":"28 guías para elegir casa amueblada en Torreón según dónde vas a estar (Tec, UA de C, centro, Los Viñedos, Senderos, zona industrial, Gómez Palacio, Lerdo), a qué vienes y cuánto tiempo te quedas. Con casas, precio desde y respuestas directas.","inLanguage":"es-MX","isPartOf":{"@id":"https://hostalia.com.mx/#website"},"about":{"@id":"https://hostalia.com.mx/#organizacion"},"dateModified":"2026-11-03","mainEntity":{"@type":"ItemList","numberOfItems":28,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://hostalia.com.mx/hospedaje-para-empresas-torreon/","name":"Hospedaje para empresas y trabajadores en Torreón, con factura"},{"@type":"ListItem","position":2,"url":"https://hostalia.com.mx/casas-amuebladas-renta-por-mes-torreon/","name":"Casas amuebladas en renta por mes en Torreón, con servicios y factura"},{"@type":"ListItem","position":3,"url":"https://hostalia.com.mx/hospedaje-cerca-de-mieleras/","name":"Hospedaje cerca de Mieleras y el Parque Industrial Ferropuerto, Torreón"},{"@type":"ListItem","position":4,"url":"https://hostalia.com.mx/hospedaje-parque-industrial-oriente/","name":"Hospedaje cerca del Parque Industrial Oriente y Montebello, Torreón"},{"@type":"ListItem","position":5,"url":"https://hostalia.com.mx/casas-con-alberca-torreon/","name":"Casas con alberca en renta en Torreón para 10 a 12 personas"},{"@type":"ListItem","position":6,"url":"https://hostalia.com.mx/casas-amuebladas-la-laguna/","name":"Casas amuebladas en renta en La Laguna: Torreón, Gómez Palacio y Lerdo"},{"@type":"ListItem","position":7,"url":"https://hostalia.com.mx/hospedaje-gomez-palacio/","name":"Hospedaje para grupos y empresas cerca de Gómez Palacio, Durango"},{"@type":"ListItem","position":8,"url":"https://hostalia.com.mx/hospedaje-lerdo/","name":"Hospedaje para grupos y empresas cerca de Lerdo, Durango"},{"@type":"ListItem","position":9,"url":"https://hostalia.com.mx/casas-en-renta-los-vinedos-torreon/","name":"Casas amuebladas en renta en Los Viñedos, Torreón (por noche, semana o mes)"},{"@type":"ListItem","position":10,"url":"https://hostalia.com.mx/casas-en-renta-provitec-torreon/","name":"Casa amueblada en renta en Provitec, Torreón, para 12 personas"},{"@type":"ListItem","position":11,"url":"https://hostalia.com.mx/casas-para-bodas-y-eventos-torreon/","name":"Casas para hospedar invitados de bodas y XV años en Torreón"},{"@type":"ListItem","position":12,"url":"https://hostalia.com.mx/hospedaje-equipos-deportivos-torneos-torreon/","name":"Hospedaje para equipos deportivos y torneos en Torreón"},{"@type":"ListItem","position":13,"url":"https://hostalia.com.mx/hospedaje-cerca-de-hospitales-torreon/","name":"Hospedaje cerca de hospitales en Torreón para familias, pacientes y médicos"},{"@type":"ListItem","position":14,"url":"https://hostalia.com.mx/hospedaje-cuadrillas-construccion-torreon/","name":"Hospedaje para cuadrillas de construcción en Torreón y La Laguna"},{"@type":"ListItem","position":15,"url":"https://hostalia.com.mx/hospedaje-feria-torreon-y-eventos/","name":"Hospedaje para la Feria de Torreón, conciertos y eventos en La Laguna"},{"@type":"ListItem","position":16,"url":"https://hostalia.com.mx/hospedaje-centro-torreon/","name":"Casas amuebladas céntricas en Torreón: Acacias, Almendros, Cantera y Senderos"},{"@type":"ListItem","position":17,"url":"https://hostalia.com.mx/casas-en-renta-por-noche-torreon/","name":"Casas en renta por noche en Torreón, amuebladas y con factura"},{"@type":"ListItem","position":18,"url":"https://hostalia.com.mx/casas-amuebladas-por-semana-torreon/","name":"Casas amuebladas por semana en Torreón: precio, qué incluye y cómo se cotiza"},{"@type":"ListItem","position":19,"url":"https://hostalia.com.mx/renta-temporal-torreon-familias/","name":"Renta temporal en Torreón para familias: casas amuebladas por semanas o meses"},{"@type":"ListItem","position":20,"url":"https://hostalia.com.mx/hospedaje-cerca-tec-de-monterrey-torreon/","name":"Hospedaje cerca del Tec de Monterrey Campus Laguna, Torreón"},{"@type":"ListItem","position":21,"url":"https://hostalia.com.mx/hospedaje-cerca-uadec-torreon/","name":"Hospedaje cerca de la Universidad Autónoma de Coahuila (UA de C) en Torreón"},{"@type":"ListItem","position":22,"url":"https://hostalia.com.mx/hospedaje-cerca-estadio-corona-tsm-torreon/","name":"Hospedaje cerca del Estadio Corona (TSM) en Torreón para partidos y conciertos"},{"@type":"ListItem","position":23,"url":"https://hostalia.com.mx/hospedaje-peregrinos-cristo-de-las-noas-semana-santa-torreon/","name":"Hospedaje para peregrinos y Semana Santa en Torreón, cerca del Cristo de las Noas"},{"@type":"ListItem","position":24,"url":"https://hostalia.com.mx/casas-en-renta-senderos-la-rosita-torreon/","name":"Casas en renta en Residencial Senderos y La Rosita, Torreón (y colonias cercanas)"},{"@type":"ListItem","position":25,"url":"https://hostalia.com.mx/hospedaje-medicos-residentes-torreon/","name":"Hospedaje para médicos residentes e internos en Torreón, por mes y con factura"},{"@type":"ListItem","position":26,"url":"https://hostalia.com.mx/hospedaje-ingenieros-tecnicos-planta-torreon/","name":"Hospedaje para ingenieros y técnicos de planta en Torreón: arranques, paros y proyectos"},{"@type":"ListItem","position":27,"url":"https://hostalia.com.mx/casas-con-asador-y-alberca-posadas-fin-de-ano-torreon/","name":"Casas con asador y alberca para posadas y fin de año en Torreón"},{"@type":"ListItem","position":28,"url":"https://hostalia.com.mx/hospedaje-gomez-palacio-lerdo-quedarse-en-torreon/","name":"Hospedaje en Gómez Palacio y Lerdo: por qué quedarse en Torreón y cuánto se hace en coche"}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hostalia.com.mx/"},{"@type":"ListItem","position":2,"name":"Zonas y ocasiones","item":"https://hostalia.com.mx/zonas/"}]}</script>
@@ -339,6 +397,77 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
     <span class="eyebrow">Dónde quedarte en Torreón</span>
     <h1 style="font-size:clamp(28px,4vw,46px);margin-bottom:12px">Guías de hospedaje en Torreón por zona, ocasión y tipo de estancia</h1>
     <p class="sub">Cada guía trae las casas que aplican, el precio desde, cuánto se hace en coche y las preguntas que nos hacen de verdad. Todas las casas son nuestras, están en Torreón y se facturan.</p>
+    <div id="mapa-zonas" class="mapa" role="img" aria-label="Mapa de ubicación"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="" defer></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.L)return;var m=L.map('mapa-zonas',{scrollWheelZoom:false});L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(m);var P=[{"lat":25.5738,"lng":-103.3828,"radio":700,"nombre":"Los Viñedos · 4 casas","url":"../casas-en-renta-los-vinedos-torreon/"},{"lat":25.53,"lng":-103.433,"radio":600,"nombre":"Provitec · 1 casa","url":"../casas-en-renta-provitec-torreon/"},{"lat":25.5446,"lng":-103.3407,"radio":600,"nombre":"Los Almendros · 1 casa","url":"../hospedaje-parque-industrial-oriente/"},{"lat":25.545,"lng":-103.43,"radio":900,"nombre":"Acacias, zona centro · 1 casa","url":"../hospedaje-centro-torreon/"},{"lat":25.619,"lng":-103.377,"radio":700,"nombre":"La Cantera · 1 casa","url":"../zonas/"},{"lat":25.52,"lng":-103.35,"radio":800,"nombre":"Ampliación La Rosita · 1 casa","url":"../casas-en-renta-senderos-la-rosita-torreon/"},{"lat":25.61,"lng":-103.39,"radio":700,"nombre":"Residencial Senderos · 1 casa","url":"../casas-en-renta-senderos-la-rosita-torreon/"},{"lat":25.5491,"lng":-103.4474,"radio":600,"nombre":"Ampliación Los Ángeles · 1 casa","url":"../hospedaje-centro-torreon/"},{"lat":25.516,"lng":-103.399,"radio":800,"nombre":"Zona Tec de Monterrey · 1 casa","url":"../hospedaje-cerca-tec-de-monterrey-torreon/"},{"lat":25.565,"lng":-103.47,"radio":900,"nombre":"Límite Torreón – Gómez Palacio · 2 casas","url":"../hospedaje-gomez-palacio/"},{"lat":25.55,"lng":-103.42,"radio":1500,"nombre":"Torreón · 4 casas","url":"../zonas/"}];var g=[];P.forEach(function(p){var c=L.circle([p.lat,p.lng],{radius:p.radio||600,color:'#13203A',weight:1,fillColor:'#8A6A2F',fillOpacity:.22}).addTo(m);g.push(c);var k=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'pin-wrap',html:'<div class="pin-casa">'+p.nombre+'</div>',iconSize:null,iconAnchor:[0,0]})}).addTo(m);if(p.url){k.on('click',function(){location.href=p.url});c.on('click',function(){location.href=p.url})}});m.fitBounds(L.latLngBounds(P.map(function(p){return [p.lat,p.lng]})).pad(.25));});</script>
+    <div class="zonas-ed" style="margin-bottom:40px">
+      <a class="zona-c" href="../casas-en-renta-los-vinedos-torreon/">
+        <span class="n">4 casas · desde $1,550 + IVA</span>
+        <h3>Los Viñedos</h3>
+        <p>Lala a 4 min · Galerías Laguna a 6 min</p>
+        <span class="cs">Casa Leones · Casa Linces · Casa Viñedos · Casa Viñedos Moderna</span>
+      </a>
+      <a class="zona-c" href="../casas-en-renta-provitec-torreon/">
+        <span class="n">1 casa · desde $1,750 + IVA</span>
+        <h3>Provitec</h3>
+        <p>Instituto Tecnológico de La Laguna a 3 min · Cruz Roja Mexicana Delegacion Torreón a 3 min</p>
+        <span class="cs">Casa Provitec</span>
+      </a>
+      <a class="zona-c" href="../hospedaje-parque-industrial-oriente/">
+        <span class="n">1 casa · desde $1,710 + IVA</span>
+        <h3>Los Almendros</h3>
+        <p>Parque Industrial Oriente a 3 min · UA de C, Ciudad Universitaria a 5 min</p>
+        <span class="cs">Casa Almendros</span>
+      </a>
+      <a class="zona-c" href="../hospedaje-centro-torreon/">
+        <span class="n">1 casa · desde $1,670 + IVA</span>
+        <h3>Acacias, zona centro</h3>
+        <p>Sanatorio Español a 3 min · Plaza Cuatro Caminos a 4 min</p>
+        <span class="cs">Casa Acacias</span>
+      </a>
+      <a class="zona-c" href="../zonas/">
+        <span class="n">1 casa · desde $1,340 + IVA</span>
+        <h3>La Cantera</h3>
+        <p>Costco a 6 min · Universidad Iberoamericana a 7 min</p>
+        <span class="cs">Casa Cantera</span>
+      </a>
+      <a class="zona-c" href="../casas-en-renta-senderos-la-rosita-torreon/">
+        <span class="n">1 casa · desde $2,300 + IVA</span>
+        <h3>Ampliación La Rosita</h3>
+        <p>UA de C, Ciudad Universitaria a 6 min · Hospital Centro Médico de la Mujer a 10 min</p>
+        <span class="cs">Casa La Rosita</span>
+      </a>
+      <a class="zona-c" href="../casas-en-renta-senderos-la-rosita-torreon/">
+        <span class="n">1 casa · desde $1,900 + IVA</span>
+        <h3>Residencial Senderos</h3>
+        <p>Costco a 3 min · Universidad Iberoamericana a 3 min</p>
+        <span class="cs">Casa Senderos</span>
+      </a>
+      <a class="zona-c" href="../hospedaje-centro-torreon/">
+        <span class="n">1 casa · desde $1,150 + IVA</span>
+        <h3>Ampliación Los Ángeles</h3>
+        <p>Sanatorio Español a 3 min · Plaza Cuatro Caminos a 5 min</p>
+        <span class="cs">Depa Los Ángeles</span>
+      </a>
+      <a class="zona-c" href="../hospedaje-cerca-tec-de-monterrey-torreon/">
+        <span class="n">1 casa · desde $650 + IVA</span>
+        <h3>Zona Tec de Monterrey</h3>
+        <p>Intermall a 3 min · Tec de Monterrey Campus Laguna a 3 min</p>
+        <span class="cs">Loft Tec</span>
+      </a>
+      <a class="zona-c" href="../hospedaje-gomez-palacio/">
+        <span class="n">2 casas · desde $1,450 + IVA</span>
+        <h3>Límite Torreón – Gómez Palacio</h3>
+        <p>Plaza Cuatro Caminos a 10 min · Centro de Salud a 10 min</p>
+        <span class="cs">Casa Gómez 11 · Casa Gómez 10</span>
+      </a>
+      <a class="zona-c" href="../zonas/">
+        <span class="n">4 casas · desde $1,150 + IVA</span>
+        <h3>Torreón</h3>
+        <p>AR emergencias a 3 min · Plaza Cuatro Caminos a 5 min</p>
+        <span class="cs">Casa Familiar 10 · Depa Siete · Casa Jardín 14 · Casa Grande 14</span>
+      </a>
+    </div>
     
     <h2 id="zonas" style="font-size:clamp(24px,3vw,34px);margin-top:34px">Zonas y colonias de Torreón</h2>
     <p style="color:var(--gris);margin-bottom:18px">Cerca del Tec, de la UA de C, del centro, de Los Viñedos, Senderos, Provitec y la zona industrial.</p>
@@ -548,7 +677,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
     </div>
     <div class="pie-bajo">
       <span>© 2026 Hostalia</span>
-      <span>Actualizado el 7 de noviembre de 2026</span>
+      <span>Actualizado el 8 de noviembre de 2026</span>
     </div>
   </div>
 </footer>
