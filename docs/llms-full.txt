@@ -92,7 +92,7 @@ Hostalia (antes Home Express) renta 18 casas y departamentos propios en Torreón
 - Anuncio en Airbnb: https://www.airbnb.mx/rooms/1441448938432888814
 - Descripción: La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.
 
-### Casa Acacias (Acacias, Torreón)
+### Casa Acacias (Los Viñedos, Torreón)
 - URL: https://hostalia.com.mx/casas/acacia/
 - Tipo: casa completa
 - Capacidad: hasta 11 personas
@@ -103,11 +103,11 @@ Hostalia (antes Home Express) renta 18 casas y departamentos propios en Torreón
 - Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
 - Amenidades destacadas: Alberca privada, Ubicación céntrica, Zona privada, Clima
 - Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
-- Zona: Acacias, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Zona: Los Viñedos, Torreón, Coahuila (la dirección exacta se da al apartar)
 - Anuncio en Airbnb: https://www.airbnb.mx/rooms/1717009568372459813
 - Descripción: La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.
 
-### Casa Cantera (Cantera, Torreón)
+### Casa Cantera (Senderos, Torreón)
 - URL: https://hostalia.com.mx/casas/cantera/
 - Tipo: casa completa
 - Capacidad: hasta 10 personas
@@ -118,7 +118,7 @@ Hostalia (antes Home Express) renta 18 casas y departamentos propios en Torreón
 - Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
 - Amenidades destacadas: Palapa, Asador, Barra, Clima en toda la casa
 - Incluye siempre: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
-- Zona: Cantera, Torreón, Coahuila (la dirección exacta se da al apartar)
+- Zona: Senderos, Torreón, Coahuila (la dirección exacta se da al apartar)
 - Anuncio en Airbnb: https://www.airbnb.mx/rooms/1717013979926833974
 - Descripción: Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.
 
@@ -319,7 +319,7 @@ Hostalia (antes Home Express) renta 18 casas y departamentos propios en Torreón
 - P: ¿Reciben grupos de trabajo o cuadrillas?
   R: Sí, es buena parte de lo que hacemos. Tenemos casas de 4 a 16 personas con camas individuales, y trabajamos con empresas que traen personal por proyecto a La Laguna. Manejamos contrato y factura.
 - P: ¿Dónde están ubicadas?
-  R: Todas están en Torreón, Coahuila: Viñedos, Los Viñedos, Provitec, Almendros, Acacias, Cantera, Ampliación La Rosita, Los Viñedos, Los Viñedos, Senderos, Límite Torreón-Gómez Palacio, Cerca de Gómez Palacio, Torreón, Torreón, Torreón, Torreón, Cerca del Tec y Ampliación Los Ángeles. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.
+  R: Todas están en Torreón, Coahuila: Viñedos, Los Viñedos, Provitec, Almendros, Los Viñedos, Senderos, Ampliación La Rosita, Los Viñedos, Los Viñedos, Senderos, Límite Torreón-Gómez Palacio, Cerca de Gómez Palacio, Torreón, Torreón, Torreón, Torreón, Cerca del Tec y Ampliación Los Ángeles. Todas en fraccionamientos con acceso controlado y a corta distancia de la zona industrial, el aeropuerto y el centro.
 - P: ¿Se puede ver la casa antes de reservar?
   R: Sí. Si estás en Torreón te la mostramos sin compromiso. Y si vienes de fuera, te mandamos video por WhatsApp de la casa que te interese, del recorrido completo.
 
