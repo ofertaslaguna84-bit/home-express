@@ -361,6 +361,29 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
 .quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
 .posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
+/* tarjetas editoriales + filtro (como barriomexico.travel) */
+.filtro{margin:-10px 0 30px}
+.filtro-tabs{display:flex;align-items:center;gap:22px;margin-bottom:18px;border-bottom:1px solid var(--linea)}
+.filtro-tabs em{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:19px;color:var(--marino);padding-bottom:12px}
+.filtro-tabs button{background:none;border:0;cursor:pointer;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);padding:0 2px 12px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.filtro-tabs button.on{color:var(--marino);border-color:var(--marino)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips[hidden]{display:none}
+.chips button{background:#fff;border:1px solid var(--linea);padding:13px 22px;font-size:14px;color:var(--marino);cursor:pointer;transition:border-color .15s,background .15s}
+.chips button:hover{border-color:var(--marino)}
+.chips button.on{background:var(--marino);color:#fff;border-color:var(--marino)}
+.casas-ed{display:grid;gap:26px;grid-template-columns:1fr}@media(min-width:720px){.casas-ed{grid-template-columns:1fr 1fr}}@media(min-width:1060px){.casas-ed{grid-template-columns:repeat(3,1fr)}}
+.card-ed{background:#FBF9F5;border:1px solid var(--linea);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card-ed:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(20,33,61,.1)}
+.card-ed[hidden]{display:none}
+.card-foto{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--crema);display:block}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card-ed:hover .card-foto img{transform:scale(1.04)}
+.card-foto .tag{position:absolute;top:14px;left:14px;background:var(--marino);color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px}
+.card-cuerpo{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.card-cuerpo .col{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:6px}
+.card-cuerpo h3{font-size:27px;font-weight:500;margin-bottom:8px;line-height:1.1}
+.card-cuerpo p{font-size:14.5px;color:var(--gris);line-height:1.55;margin:0 0 22px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.card-pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--gris);border-top:1px solid var(--linea);padding-top:14px}
+.card-pie b{color:var(--marino);font-weight:600}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["Accommodation","Apartment"],"@id":"https://hostalia.com.mx/casas/loft-tec/#casa","name":"Loft Tec","description":"Loft para 1 a 4 personas a minutos del Tec de Monterrey: cama queen y sofá cama, 2 baños, cocina, WiFi, minisplit y estacionamiento. La opción económica para técnicos, médicos o estudiantes.","url":"https://hostalia.com.mx/casas/loft-tec/","image":["https://hostalia.com.mx/img/loft-tec-01.jpg","https://hostalia.com.mx/img/loft-tec-02.jpg","https://hostalia.com.mx/img/loft-tec-03.jpg","https://hostalia.com.mx/img/loft-tec-04.jpg","https://hostalia.com.mx/img/loft-tec-05.jpg"],"occupancy":{"@type":"QuantitativeValue","minValue":1,"maxValue":4,"unitText":"personas"},"numberOfRooms":1,"numberOfBedrooms":1,"numberOfBathroomsTotal":2,"numberOfBeds":2,"address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"containedInPlace":{"@type":"Place","name":"Cerca del Tec, Torreón","address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"geo":{"@type":"GeoCoordinates","latitude":25.5428,"longitude":-103.4068}},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Cerca del Tec","value":true},{"@type":"LocationFeatureSpecification","name":"2 baños","value":true},{"@type":"LocationFeatureSpecification","name":"Cocina y WiFi","value":true},{"@type":"LocationFeatureSpecification","name":"Minisplit","value":true},{"@type":"LocationFeatureSpecification","name":"Estacionamiento","value":true},{"@type":"LocationFeatureSpecification","name":"Aire acondicionado","value":true},{"@type":"LocationFeatureSpecification","name":"Ropa de cama y toallas","value":true}],"provider":{"@id":"https://hostalia.com.mx/#organizacion"},"potentialAction":{"@type":"ReserveAction","target":"https://wa.me/528712638082?text=Hola%20Hostalia%2C%20quiero%20reservar%20Loft%20Tec"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Offer","itemOffered":{"@id":"https://hostalia.com.mx/casas/loft-tec/#casa"},"price":650,"priceCurrency":"MXN","url":"https://hostalia.com.mx/casas/loft-tec/","availability":"https://schema.org/InStock","areaServed":{"@type":"City","name":"Torreón"},"description":"Renta por noche de Loft Tec, reservando directo + IVA. Limpieza aparte $550 + IVA por semana."}</script>
@@ -518,89 +541,44 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
       <div><span class="ed-k">Otras casas</span><h2 class="ed-h2">También te van <em>a gustar.</em></h2></div>
       <p class="ed-sub">Para un grupo parecido, en otras zonas de Torreón.</p>
     </div>
-    <div class="casas">
+    <div class="casas-ed">
       
-  <article class="casa">
-    <a href="../depa-7/" class="casa-foto">
-      <img src="../../img/depa-7-01.jpg" alt="Depa Siete, Torreón, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/depa-7-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/depa-7-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/depa-7-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">7 personas</span>
+  <article class="card-ed" data-zona="torreon" data-viajes="pocos">
+    <a href="../../casas/depa-7/" class="card-foto">
+      <img src="../../img/depa-7-01.jpg" alt="Depa Siete, Torreón, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">Departamento</span>
     </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../depa-7/">Depa Siete</a></h3>
-      <div class="casa-specs">
-        <span class="spec">3 recámaras</span>
-        <span class="spec">7 camas</span>
-        <span class="spec">2 baños</span>
-      </div>
+    <div class="card-cuerpo">
+      <span class="col">Torreón</span>
+      <h3><a href="../../casas/depa-7/">Depa Siete</a></h3>
       <p>Departamento con 3 recámaras y 7 camas individuales: cada quien duerme en la suya. Cocina, lavadora, clima, WiFi y estacionamiento. Pensado para personal de empresa, con factura.</p>
-      <div class="precio-box">
-        
-        <div class="p-fila directo"><span>Por noche</span><b>$1,150 + IVA</b></div>
-        
-        
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../depa-7/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Depa%20Siete%20(7%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
+      <div class="card-pie"><span>7 personas · 3 recámaras · 2 baños</span><b>Desde $1,150 + IVA / noche</b></div>
     </div>
   </article>
 
-  <article class="casa">
-    <a href="../vinedos-moderna/" class="casa-foto">
-      <img src="../../img/moderna-cocina.jpg" alt="Casa Viñedos Moderna, Los Viñedos, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/moderna-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/moderna-comedor.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/moderna-estancia.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">8 personas</span>
+  <article class="card-ed" data-zona="vinedos" data-viajes="familia pocos">
+    <a href="../../casas/vinedos-moderna/" class="card-foto">
+      <img src="../../img/moderna-cocina.jpg" alt="Casa Viñedos Moderna, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">Casa completa</span>
     </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../vinedos-moderna/">Casa Viñedos Moderna</a></h3>
-      <div class="casa-specs">
-        <span class="spec">3 recámaras</span>
-        <span class="spec">7 camas</span>
-        <span class="spec">2.5 baños</span>
-      </div>
+    <div class="card-cuerpo">
+      <span class="col">Los Viñedos</span>
+      <h3><a href="../../casas/vinedos-moderna/">Casa Viñedos Moderna</a></h3>
       <p>Moderna y espaciosa, en privada cerrada en Los Viñedos. 7 camas: cada quien duerme en la suya. Pensada para estancias de trabajo.</p>
-      <div class="precio-box">
-        
-        <div class="p-fila directo"><span>Por noche</span><b>$1,550 + IVA</b></div>
-        
-        
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../vinedos-moderna/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20Vi%C3%B1edos%20Moderna%20(8%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
+      <div class="card-pie"><span>8 personas · 3 recámaras · 2.5 baños</span><b>Desde $1,550 + IVA / noche</b></div>
     </div>
   </article>
 
-  <article class="casa">
-    <a href="../senderos/" class="casa-foto">
-      <img src="../../img/senderos-recamara_02.jpg" alt="Casa Senderos, Senderos, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/senderos-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/senderos-sala.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/senderos-patio.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">8 personas</span>
+  <article class="card-ed" data-zona="senderos" data-viajes="familia pocos">
+    <a href="../../casas/senderos/" class="card-foto">
+      <img src="../../img/senderos-recamara_02.jpg" alt="Casa Senderos, Senderos, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">Casa completa</span>
     </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../senderos/">Casa Senderos</a></h3>
-      <div class="casa-specs">
-        <span class="spec">3 recámaras</span>
-        <span class="spec">5 camas</span>
-        <span class="spec">2.5 baños</span>
-      </div>
+    <div class="card-cuerpo">
+      <span class="col">Residencial Senderos</span>
+      <h3><a href="../../casas/senderos/">Casa Senderos</a></h3>
       <p>En Residencial Senderos: sala amplia, patio con comedor exterior y 3 recámaras. Cocina, WiFi, lavadora y estacionamiento.</p>
-      <div class="precio-box">
-        
-        <div class="p-fila directo"><span>Por noche</span><b>$1,900 + IVA</b></div>
-        
-        
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../senderos/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20Senderos%20(8%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
+      <div class="card-pie"><span>8 personas · 3 recámaras · 2.5 baños</span><b>Desde $1,900 + IVA / noche</b></div>
     </div>
   </article>
     </div>

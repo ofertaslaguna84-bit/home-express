@@ -360,6 +360,29 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
 .quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
 .posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
+/* tarjetas editoriales + filtro (como barriomexico.travel) */
+.filtro{margin:-10px 0 30px}
+.filtro-tabs{display:flex;align-items:center;gap:22px;margin-bottom:18px;border-bottom:1px solid var(--linea)}
+.filtro-tabs em{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:19px;color:var(--marino);padding-bottom:12px}
+.filtro-tabs button{background:none;border:0;cursor:pointer;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);padding:0 2px 12px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.filtro-tabs button.on{color:var(--marino);border-color:var(--marino)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips[hidden]{display:none}
+.chips button{background:#fff;border:1px solid var(--linea);padding:13px 22px;font-size:14px;color:var(--marino);cursor:pointer;transition:border-color .15s,background .15s}
+.chips button:hover{border-color:var(--marino)}
+.chips button.on{background:var(--marino);color:#fff;border-color:var(--marino)}
+.casas-ed{display:grid;gap:26px;grid-template-columns:1fr}@media(min-width:720px){.casas-ed{grid-template-columns:1fr 1fr}}@media(min-width:1060px){.casas-ed{grid-template-columns:repeat(3,1fr)}}
+.card-ed{background:#FBF9F5;border:1px solid var(--linea);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card-ed:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(20,33,61,.1)}
+.card-ed[hidden]{display:none}
+.card-foto{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--crema);display:block}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card-ed:hover .card-foto img{transform:scale(1.04)}
+.card-foto .tag{position:absolute;top:14px;left:14px;background:var(--marino);color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px}
+.card-cuerpo{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.card-cuerpo .col{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:6px}
+.card-cuerpo h3{font-size:27px;font-weight:500;margin-bottom:8px;line-height:1.1}
+.card-cuerpo p{font-size:14.5px;color:var(--gris);line-height:1.55;margin:0 0 22px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.card-pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--gris);border-top:1px solid var(--linea);padding-top:14px}
+.card-pie b{color:var(--marino);font-weight:600}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://hostalia.com.mx/hospedaje-medicos-residentes-torreon/","name":"Hospedaje para médicos residentes e internos en Torreón, por mes y con factura | Hostalia","description":"Lofts, departamentos y casas amuebladas en Torreón para médicos residentes, internos de pregrado y personal de salud que llega por meses a rotaciones: desde $650 + IVA la noche, casas compartidas con cada quien su cama, zona céntrica y cerca del Tec. Sin aval.","inLanguage":"es-MX","isPartOf":{"@id":"https://hostalia.com.mx/#website"},"about":{"@id":"https://hostalia.com.mx/#organizacion"},"dateModified":"2026-11-03","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lead"]},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://hostalia.com.mx/casas/loft-tec/","name":"Loft Tec — Loft para 4 personas cerca del Tec de Monterrey"},{"@type":"ListItem","position":2,"url":"https://hostalia.com.mx/casas/depa-7/","name":"Depa Siete — Departamento para 7 personas con 7 camas, con factura"},{"@type":"ListItem","position":3,"url":"https://hostalia.com.mx/casas/depa-los-angeles/","name":"Depa Los Ángeles — Departamento para 8 personas en Ampliación Los Ángeles, a 5 min del centro"},{"@type":"ListItem","position":4,"url":"https://hostalia.com.mx/casas/acacia/","name":"Casa Acacias — Casa céntrica con alberca privada para 11 personas"},{"@type":"ListItem","position":5,"url":"https://hostalia.com.mx/casas/almendros/","name":"Casa Almendros — Casa para 12 personas con recámara en planta baja"},{"@type":"ListItem","position":6,"url":"https://hostalia.com.mx/casas/vinedos-moderna/","name":"Casa Viñedos Moderna — Casa moderna para 8 personas con 7 camas en Los Viñedos"}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hostalia.com.mx/"},{"@type":"ListItem","position":2,"name":"Zonas y ocasiones","item":"https://hostalia.com.mx/zonas/"},{"@type":"ListItem","position":3,"name":"Hospedaje para médicos residentes e internos en Torreón","item":"https://hostalia.com.mx/hospedaje-medicos-residentes-torreon/"}]}</script>

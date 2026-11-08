@@ -446,6 +446,29 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
 .quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
 .posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
+/* tarjetas editoriales + filtro (como barriomexico.travel) */
+.filtro{margin:-10px 0 30px}
+.filtro-tabs{display:flex;align-items:center;gap:22px;margin-bottom:18px;border-bottom:1px solid var(--linea)}
+.filtro-tabs em{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:19px;color:var(--marino);padding-bottom:12px}
+.filtro-tabs button{background:none;border:0;cursor:pointer;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);padding:0 2px 12px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.filtro-tabs button.on{color:var(--marino);border-color:var(--marino)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips[hidden]{display:none}
+.chips button{background:#fff;border:1px solid var(--linea);padding:13px 22px;font-size:14px;color:var(--marino);cursor:pointer;transition:border-color .15s,background .15s}
+.chips button:hover{border-color:var(--marino)}
+.chips button.on{background:var(--marino);color:#fff;border-color:var(--marino)}
+.casas-ed{display:grid;gap:26px;grid-template-columns:1fr}@media(min-width:720px){.casas-ed{grid-template-columns:1fr 1fr}}@media(min-width:1060px){.casas-ed{grid-template-columns:repeat(3,1fr)}}
+.card-ed{background:#FBF9F5;border:1px solid var(--linea);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card-ed:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(20,33,61,.1)}
+.card-ed[hidden]{display:none}
+.card-foto{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--crema);display:block}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card-ed:hover .card-foto img{transform:scale(1.04)}
+.card-foto .tag{position:absolute;top:14px;left:14px;background:var(--marino);color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px}
+.card-cuerpo{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.card-cuerpo .col{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:6px}
+.card-cuerpo h3{font-size:27px;font-weight:500;margin-bottom:8px;line-height:1.1}
+.card-cuerpo p{font-size:14.5px;color:var(--gris);line-height:1.55;margin:0 0 22px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.card-pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--gris);border-top:1px solid var(--linea);padding-top:14px}
+.card-pie b{color:var(--marino);font-weight:600}
 `;
 
 // ─────────────────────────────────────────────────────────── piezas
@@ -605,6 +628,42 @@ function tarjeta(c, p = '') {
     </div>
   </article>`;
 }
+
+/** Etiqueta de la tarjeta editorial (lo que es la propiedad) y los "tipos de viaje" para el filtro del inicio. */
+const tipoDe = (c) => (/^depa/.test(c.slug) ? 'Departamento' : /^loft/.test(c.slug) ? 'Loft' : c.destacados.some((d) => /alberca/i.test(d)) ? 'Casa con alberca' : 'Casa completa');
+const VIAJES = [
+  ['trabajo', 'Trabajo y cuadrillas', (c) => c.huespedes >= 10],
+  ['familia', 'Familia y grupos', (c) => c.huespedes >= 8],
+  ['alberca', 'Con alberca', (c) => c.destacados.some((d) => /alberca/i.test(d))],
+  ['mes', 'Por mes', (c) => Boolean(c.precioMesSinServicios)],
+  ['pocos', 'De 1 a 8 personas', (c) => c.huespedes <= 8],
+];
+const viajesDe = (c) => VIAJES.filter(([, , f]) => f(c)).map(([k]) => k);
+/** Tarjeta editorial (nov 2026, formato Barrio México): foto grande, colonia, nombre, dos líneas y la fila de datos. */
+function tarjetaEd(c, p = '') {
+  const dir = noche(c);
+  return `
+  <article class="card-ed" data-zona="${zonaKey(c)}" data-viajes="${viajesDe(c).join(' ')}">
+    <a href="${p}casas/${c.slug}/" class="card-foto">
+      <img src="${p}img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)}, ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">${esc(tipoDe(c))}</span>
+    </a>
+    <div class="card-cuerpo">
+      <span class="col">${esc(zonaDe(c).nombre)}</span>
+      <h3><a href="${p}casas/${c.slug}/">${esc(c.nombre)}</a></h3>
+      <p>${esc(c.resumen)}</p>
+      <div class="card-pie"><span>${c.huespedes} personas · ${c.recamaras} recámaras${c.banos ? ` · ${c.banos} baños` : ''}</span><b>Desde ${mxn(dir)}${IVA_NOTA} / noche</b></div>
+    </div>
+  </article>`;
+}
+/** Filtro por colonia y por tipo de viaje, como en barriomexico.travel. Solo JS del navegador, sin recargar. */
+const filtroCasas = () => `
+    <div class="filtro" id="filtro-casas">
+      <div class="filtro-tabs"><em>Filtrar por</em><button type="button" class="on" data-tab="zona">Colonia</button><button type="button" data-tab="viaje">Tipo de viaje</button></div>
+      <div class="chips" data-grupo="zona"><button type="button" class="on" data-v="">Todas</button>${ZONAS_CON_CASAS.map((z) => `<button type="button" data-v="${z.key}">${esc(z.nombre)}</button>`).join('')}</div>
+      <div class="chips" data-grupo="viaje" hidden><button type="button" class="on" data-v="">Todos</button>${VIAJES.map(([k, t]) => `<button type="button" data-v="${k}">${esc(t)}</button>`).join('')}</div>
+    </div>
+    <script>(function(){var f=document.getElementById('filtro-casas');if(!f)return;var sel={zona:'',viaje:''};function aplica(){var n=0;[].slice.call(document.querySelectorAll('#casas .card-ed')).forEach(function(c){var ok=(!sel.zona||c.dataset.zona===sel.zona)&&(!sel.viaje||(' '+c.dataset.viajes+' ').indexOf(' '+sel.viaje+' ')>-1);c.hidden=!ok;if(ok)n++});var v=document.getElementById('casas-vacio');if(v)v.hidden=n>0}f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.tab){f.querySelectorAll('.filtro-tabs button').forEach(function(x){x.classList.toggle('on',x===b)});f.querySelectorAll('.chips').forEach(function(g){g.hidden=g.dataset.grupo!==b.dataset.tab});return}var g=b.closest('.chips');g.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});sel[g.dataset.grupo]=b.dataset.v;aplica()})})();</script>`;
 
 // ─────────────────────────────────────────────────────────── FAQ (fuente única)
 
@@ -897,12 +956,14 @@ ${barraConfianza()}
 <section id="casas" class="sec-ed">
   <div class="w">
     <div class="cab-ed">
-      <div><span class="ed-k">Las casas</span><h2 class="ed-h2">Elige la casa, <em>no el cuarto.</em></h2></div>
-      <p class="ed-sub">${casas.length} casas completas en Torreón, todas equipadas y con clima, con el precio a la vista. El de Airbnb está al lado a propósito: queremos que compares.</p>
+      <div><span class="ed-k">Cómo te quedas</span><h2 class="ed-h2">Elige la casa, <em>no el cuarto.</em></h2></div>
+      <p class="ed-sub">Cada colonia tiene su propio ritmo: elige en cuál quieres quedarte y te mostramos las casas que viven ahí. ${casas.length} casas completas, todas equipadas, con clima y factura.</p>
     </div>
-    <div class="casas">
-      ${casas.map((c) => tarjeta(c)).join('\n')}
+    ${filtroCasas()}
+    <div class="casas-ed">
+      ${casas.map((c) => tarjetaEd(c)).join('\n')}
     </div>
+    <p id="casas-vacio" class="ed-sub" hidden style="margin-top:18px">No hay casas con esa combinación. Prueba otra colonia u otro tipo de viaje.</p>
   </div>
 </section>
 
@@ -1217,8 +1278,8 @@ ${seccionCerca(c, '../../')}
       <div><span class="ed-k">Otras casas</span><h2 class="ed-h2">También te van <em>a gustar.</em></h2></div>
       <p class="ed-sub">${parecidas.length && zonaKey(parecidas[0]) === zonaKey(c) ? `En la misma zona o para un grupo parecido.` : `Para un grupo parecido, en otras zonas de Torreón.`}</p>
     </div>
-    <div class="casas">
-      ${parecidas.map((o) => tarjeta(o).replace(/href="casas\//g, 'href="../').replace(/src="img\//g, 'src="../../img/')).join('\n')}
+    <div class="casas-ed">
+      ${parecidas.map((o) => tarjetaEd(o, '../../')).join('\n')}
     </div>
   </div>
 </section>

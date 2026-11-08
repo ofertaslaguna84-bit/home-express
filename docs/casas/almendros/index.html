@@ -361,6 +361,29 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,38px);line-height:1.2;font-weight:500;max-width:860px;margin:0 auto;text-align:center}
 .quote small{display:block;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--azul);margin-top:18px}
 .posts.tres{grid-template-columns:1fr}@media(min-width:900px){.posts.tres{grid-template-columns:repeat(3,1fr)}}
+/* tarjetas editoriales + filtro (como barriomexico.travel) */
+.filtro{margin:-10px 0 30px}
+.filtro-tabs{display:flex;align-items:center;gap:22px;margin-bottom:18px;border-bottom:1px solid var(--linea)}
+.filtro-tabs em{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:19px;color:var(--marino);padding-bottom:12px}
+.filtro-tabs button{background:none;border:0;cursor:pointer;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);padding:0 2px 12px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.filtro-tabs button.on{color:var(--marino);border-color:var(--marino)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips[hidden]{display:none}
+.chips button{background:#fff;border:1px solid var(--linea);padding:13px 22px;font-size:14px;color:var(--marino);cursor:pointer;transition:border-color .15s,background .15s}
+.chips button:hover{border-color:var(--marino)}
+.chips button.on{background:var(--marino);color:#fff;border-color:var(--marino)}
+.casas-ed{display:grid;gap:26px;grid-template-columns:1fr}@media(min-width:720px){.casas-ed{grid-template-columns:1fr 1fr}}@media(min-width:1060px){.casas-ed{grid-template-columns:repeat(3,1fr)}}
+.card-ed{background:#FBF9F5;border:1px solid var(--linea);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card-ed:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(20,33,61,.1)}
+.card-ed[hidden]{display:none}
+.card-foto{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--crema);display:block}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card-ed:hover .card-foto img{transform:scale(1.04)}
+.card-foto .tag{position:absolute;top:14px;left:14px;background:var(--marino);color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px}
+.card-cuerpo{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.card-cuerpo .col{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:6px}
+.card-cuerpo h3{font-size:27px;font-weight:500;margin-bottom:8px;line-height:1.1}
+.card-cuerpo p{font-size:14.5px;color:var(--gris);line-height:1.55;margin:0 0 22px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.card-pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--gris);border-top:1px solid var(--linea);padding-top:14px}
+.card-pie b{color:var(--marino);font-weight:600}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["Accommodation","House"],"@id":"https://hostalia.com.mx/casas/almendros/#casa","name":"Casa Almendros","description":"La de mayor capacidad y la única con recámara en planta baja, sin escaleras. Dos baños y medio, que con grupo grande se agradece por la mañana.","url":"https://hostalia.com.mx/casas/almendros/","image":["https://hostalia.com.mx/img/almendros-recamara_02.jpg","https://hostalia.com.mx/img/almendros-comedor.jpg","https://hostalia.com.mx/img/almendros-portada.jpg","https://hostalia.com.mx/img/almendros-sala.jpg","https://hostalia.com.mx/img/almendros-fachada.jpg","https://hostalia.com.mx/img/almendros-cocina.jpg","https://hostalia.com.mx/img/almendros-recamara_pb.jpg","https://hostalia.com.mx/img/almendros-patio.jpg","https://hostalia.com.mx/img/almendros-recamara_03.jpg"],"occupancy":{"@type":"QuantitativeValue","minValue":1,"maxValue":12,"unitText":"personas"},"numberOfRooms":3,"numberOfBedrooms":3,"numberOfBathroomsTotal":2.5,"numberOfBeds":8,"floorSize":{"@type":"QuantitativeValue","value":180,"unitCode":"MTK","unitText":"m²"},"address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"containedInPlace":{"@type":"Place","name":"Almendros, Torreón","address":{"@type":"PostalAddress","addressLocality":"Torreón","addressRegion":"Coahuila","addressCountry":"MX"},"geo":{"@type":"GeoCoordinates","latitude":25.5428,"longitude":-103.4068}},"sameAs":"https://www.airbnb.mx/rooms/1441448938432888814","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"12 personas","value":true},{"@type":"LocationFeatureSpecification","name":"Recámara en planta baja","value":true},{"@type":"LocationFeatureSpecification","name":"2 baños y medio","value":true},{"@type":"LocationFeatureSpecification","name":"Alberca","value":true},{"@type":"LocationFeatureSpecification","name":"Cocina equipada","value":true},{"@type":"LocationFeatureSpecification","name":"Wifi","value":true},{"@type":"LocationFeatureSpecification","name":"Aire acondicionado","value":true},{"@type":"LocationFeatureSpecification","name":"Estacionamiento","value":true},{"@type":"LocationFeatureSpecification","name":"Ropa de cama y toallas","value":true}],"provider":{"@id":"https://hostalia.com.mx/#organizacion"},"potentialAction":{"@type":"ReserveAction","target":"https://wa.me/528712638082?text=Hola%20Hostalia%2C%20quiero%20reservar%20Casa%20Almendros"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Offer","itemOffered":{"@id":"https://hostalia.com.mx/casas/almendros/#casa"},"price":1710,"priceCurrency":"MXN","url":"https://hostalia.com.mx/casas/almendros/","availability":"https://schema.org/InStock","areaServed":{"@type":"City","name":"Torreón"},"description":"Renta por noche de Casa Almendros, reservando directo + IVA. Limpieza aparte $550 + IVA por semana."}</script>
@@ -525,89 +548,44 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
       <div><span class="ed-k">Otras casas</span><h2 class="ed-h2">También te van <em>a gustar.</em></h2></div>
       <p class="ed-sub">Para un grupo parecido, en otras zonas de Torreón.</p>
     </div>
-    <div class="casas">
+    <div class="casas-ed">
       
-  <article class="casa">
-    <a href="../provitec/" class="casa-foto">
-      <img src="../../img/provitec-sala.jpg" alt="Casa Provitec, Provitec, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/provitec-recamara_01.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/provitec-cocina.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/provitec-recamara_02.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">12 personas</span>
+  <article class="card-ed" data-zona="provitec" data-viajes="trabajo familia mes">
+    <a href="../../casas/provitec/" class="card-foto">
+      <img src="../../img/provitec-sala.jpg" alt="Casa Provitec, Provitec, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">Casa completa</span>
     </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../provitec/">Casa Provitec</a></h3>
-      <div class="casa-specs">
-        <span class="spec">4 recámaras</span>
-        <span class="spec">7 camas</span>
-        
-      </div>
+    <div class="card-cuerpo">
+      <span class="col">Provitec</span>
+      <h3><a href="../../casas/provitec/">Casa Provitec</a></h3>
       <p>Para cuadrillas y personal de planta: 12 personas en 4 recámaras con 7 camas, una de ellas en planta baja. En Provitec, junto al Blvd. Revolución, con salida directa a la carretera a Mieleras y cerca de la zona industrial de Montebello. Facturamos.</p>
-      <div class="precio-box">
-        
-        <div class="p-fila directo"><span>Por noche</span><b>$1,750 + IVA</b></div>
-        
-        <p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">$40,000</strong> sin servicios · <strong style="color:var(--marino)">$43,000</strong> con servicios + IVA</p>
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../provitec/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20Provitec%20(12%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
+      <div class="card-pie"><span>12 personas · 4 recámaras</span><b>Desde $1,750 + IVA / noche</b></div>
     </div>
   </article>
 
-  <article class="casa">
-    <a href="../acacia/" class="casa-foto">
-      <img src="../../img/acacia-comedor.jpg" alt="Casa Acacias, Acacias, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/acacia-alberca.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/acacia-portada.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/acacia-fachada.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">11 personas</span>
+  <article class="card-ed" data-zona="acacias" data-viajes="trabajo familia alberca mes">
+    <a href="../../casas/acacia/" class="card-foto">
+      <img src="../../img/acacia-comedor.jpg" alt="Casa Acacias, Acacias, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">Casa con alberca</span>
     </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../acacia/">Casa Acacias</a></h3>
-      <div class="casa-specs">
-        <span class="spec">3 recámaras</span>
-        <span class="spec">6 camas</span>
-        <span class="spec">2.5 baños</span>
-      </div>
+    <div class="card-cuerpo">
+      <span class="col">Acacias, zona centro</span>
+      <h3><a href="../../casas/acacia/">Casa Acacias</a></h3>
       <p>La mejor ubicada, con alberca privada. Zona privada y céntrica, cerca de todo. La que más piden quienes vienen por trabajo a oficinas del centro y quieren moverse rápido.</p>
-      <div class="precio-box">
-        <div class="p-fila tachado"><span>En Airbnb</span><b>$1,850</b></div>
-        <div class="p-fila directo"><span>Directo aquí</span><b>$1,670 + IVA</b></div>
-        <span class="ahorro">Ahorras $180 por noche</span>
-        <p style="font-size:12.5px;color:var(--gris);margin-top:9px">Por mes: <strong style="color:var(--marino)">$45,000</strong> sin servicios · <strong style="color:var(--marino)">$48,000</strong> con servicios + IVA</p>
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../acacia/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20Acacias%20(11%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
+      <div class="card-pie"><span>11 personas · 3 recámaras · 2.5 baños</span><b>Desde $1,670 + IVA / noche</b></div>
     </div>
   </article>
 
-  <article class="casa">
-    <a href="../gomez-11/" class="casa-foto">
-      <img src="../../img/gomez-norte-01.jpg" alt="Casa Gómez 11, Límite Torreón-Gómez Palacio, Torreón" loading="lazy" width="900" height="900">
-      <img src="../../img/gomez-norte-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="900"><img src="../../img/gomez-norte-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="900"><img src="../../img/gomez-norte-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="900">
-      <span class="badge">11 personas</span>
+  <article class="card-ed" data-zona="gomez" data-viajes="trabajo familia">
+    <a href="../../casas/gomez-11/" class="card-foto">
+      <img src="../../img/gomez-norte-01.jpg" alt="Casa Gómez 11, Límite Torreón-Gómez Palacio, Torreón" loading="lazy" width="900" height="600">
+      <span class="tag">Casa completa</span>
     </a>
-    <div class="casa-cuerpo">
-      <h3><a href="../gomez-11/">Casa Gómez 11</a></h3>
-      <div class="casa-specs">
-        <span class="spec">2 recámaras</span>
-        <span class="spec">6 camas</span>
-        <span class="spec">2 baños</span>
-      </div>
+    <div class="card-cuerpo">
+      <span class="col">Límite Torreón – Gómez Palacio</span>
+      <h3><a href="../../casas/gomez-11/">Casa Gómez 11</a></h3>
       <p>Justo en el límite de Torreón y Gómez Palacio: ideal si tu trabajo está en el Parque Industrial Lagunero o cruzas a diario. 2 recámaras con 6 camas, cocina, lavadora, clima, WiFi y estacionamiento. 4.75 de calificación en Airbnb.</p>
-      <div class="precio-box">
-        
-        <div class="p-fila directo"><span>Por noche</span><b>$1,450 + IVA</b></div>
-        
-        
-        <p style="font-size:12px;color:var(--gris);margin-top:6px">Limpieza obligatoria aparte: $550 + IVA por semana</p>
-        <div class="casa-btns">
-          <a href="../gomez-11/" class="btn btn-out">Ver casa</a>
-          <a href="https://wa.me/528712638082?text=Hola%20Hostalia%2C%20me%20interesa%20Casa%20G%C3%B3mez%2011%20(11%20personas).%20%C2%BFEst%C3%A1%20disponible%3F" class="btn btn-nar">Reservar</a>
-        </div>
-      </div>
+      <div class="card-pie"><span>11 personas · 2 recámaras · 2 baños</span><b>Desde $1,450 + IVA / noche</b></div>
     </div>
   </article>
     </div>
