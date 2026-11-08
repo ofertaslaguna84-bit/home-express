@@ -23,6 +23,11 @@ const USA_DOMINIO_PROPIO = !SITE.includes('github.io');
 
 const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
 const { marca, casas, clientes = [] } = data;
+/** Pedro (8 nov 2026): en las casas con alberca, la foto de la alberca va primero (tarjeta, hero y galería). */
+for (const c of casas) {
+  const i = c.fotos.findIndex((f) => /alberca|piscina/i.test(f));
+  if (i > 0) c.fotos.unshift(...c.fotos.splice(i, 1));
+}
 /** Páginas de aterrizaje por intención de búsqueda (empresas, zonas industriales, alberca). */
 const landings = existsSync(join(ROOT, 'landings.json')) ? JSON.parse(readFileSync(join(ROOT, 'landings.json'), 'utf8')) : [];
 
@@ -462,6 +467,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .card-ed[hidden]{display:none}
 .card-foto{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--crema);display:block}
 .card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card-ed:hover .card-foto img{transform:scale(1.04)}
+.card-foto .rota{position:absolute;inset:0;opacity:0;animation:rota 16s infinite backwards}.card-foto .r1{animation-delay:4s}.card-foto .r2{animation-delay:8s}.card-foto .r3{animation-delay:12s}@media(prefers-reduced-motion:reduce){.card-foto .rota{display:none}}
 .card-foto .tag{position:absolute;top:14px;left:14px;background:var(--marino);color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px}
 .card-cuerpo{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
 .card-cuerpo .col{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:6px}
@@ -646,6 +652,7 @@ function tarjetaEd(c, p = '') {
   <article class="card-ed" data-zona="${zonaKey(c)}" data-viajes="${viajesDe(c).join(' ')}">
     <a href="${p}casas/${c.slug}/" class="card-foto">
       <img src="${p}img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)}, ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="600">
+      ${c.fotos.slice(1, 4).map((f, i) => `<img src="${p}img/${f}.jpg" alt="" class="rota r${i + 1}" loading="lazy" width="900" height="600">`).join('')}
       <span class="tag">${esc(tipoDe(c))}</span>
     </a>
     <div class="card-cuerpo">

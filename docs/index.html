@@ -377,6 +377,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 .card-ed[hidden]{display:none}
 .card-foto{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--crema);display:block}
 .card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card-ed:hover .card-foto img{transform:scale(1.04)}
+.card-foto .rota{position:absolute;inset:0;opacity:0;animation:rota 16s infinite backwards}.card-foto .r1{animation-delay:4s}.card-foto .r2{animation-delay:8s}.card-foto .r3{animation-delay:12s}@media(prefers-reduced-motion:reduce){.card-foto .rota{display:none}}
 .card-foto .tag{position:absolute;top:14px;left:14px;background:var(--marino);color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px}
 .card-cuerpo{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
 .card-cuerpo .col{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:6px}
@@ -479,6 +480,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="vinedos" data-viajes="trabajo familia alberca mes">
     <a href="casas/leones/" class="card-foto">
       <img src="img/leones-portada.jpg" alt="Casa Leones, Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/leones-cocina.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/leones-sala.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/leones-comedor.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa con alberca</span>
     </a>
     <div class="card-cuerpo">
@@ -491,7 +493,8 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 
   <article class="card-ed" data-zona="vinedos" data-viajes="trabajo familia alberca mes">
     <a href="casas/linces/" class="card-foto">
-      <img src="img/linces-cocina.jpg" alt="Casa Linces, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/linces-alberca.jpg" alt="Casa Linces, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/linces-cocina.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/linces-portada.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/linces-sala.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa con alberca</span>
     </a>
     <div class="card-cuerpo">
@@ -505,6 +508,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="provitec" data-viajes="trabajo familia mes">
     <a href="casas/provitec/" class="card-foto">
       <img src="img/provitec-sala.jpg" alt="Casa Provitec, Provitec, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/provitec-recamara_01.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/provitec-cocina.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/provitec-recamara_02.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -518,6 +522,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="almendros" data-viajes="trabajo familia alberca mes">
     <a href="casas/almendros/" class="card-foto">
       <img src="img/almendros-recamara_02.jpg" alt="Casa Almendros, Almendros, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/almendros-comedor.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/almendros-portada.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/almendros-sala.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa con alberca</span>
     </a>
     <div class="card-cuerpo">
@@ -530,7 +535,8 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 
   <article class="card-ed" data-zona="vinedos" data-viajes="trabajo familia alberca mes">
     <a href="casas/acacia/" class="card-foto">
-      <img src="img/acacia-comedor.jpg" alt="Casa Acacias, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/acacia-alberca.jpg" alt="Casa Acacias, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/acacia-comedor.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/acacia-portada.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/acacia-fachada.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa con alberca</span>
     </a>
     <div class="card-cuerpo">
@@ -544,6 +550,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="senderos" data-viajes="trabajo familia mes">
     <a href="casas/cantera/" class="card-foto">
       <img src="img/cantera-recamara_01.jpg" alt="Casa Cantera, Senderos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/cantera-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/cantera-asador.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/cantera-fachada.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -557,6 +564,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="rosita" data-viajes="trabajo familia mes">
     <a href="casas/rosita/" class="card-foto">
       <img src="img/rosita-recamara_02.jpg" alt="Casa La Rosita, Ampliación La Rosita, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/rosita-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/rosita-comedor.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/rosita-recamara_01.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -570,6 +578,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="vinedos" data-viajes="trabajo familia">
     <a href="casas/vinedos/" class="card-foto">
       <img src="img/vinedos-comedor.jpg" alt="Casa Viñedos, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/vinedos-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/vinedos-recamara_01.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/vinedos-bano.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -583,6 +592,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="vinedos" data-viajes="familia pocos">
     <a href="casas/vinedos-moderna/" class="card-foto">
       <img src="img/moderna-cocina.jpg" alt="Casa Viñedos Moderna, Los Viñedos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/moderna-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/moderna-comedor.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/moderna-estancia.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -596,6 +606,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="senderos" data-viajes="familia pocos">
     <a href="casas/senderos/" class="card-foto">
       <img src="img/senderos-recamara_02.jpg" alt="Casa Senderos, Senderos, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/senderos-portada.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/senderos-sala.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/senderos-patio.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -609,6 +620,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="gomez" data-viajes="trabajo familia">
     <a href="casas/gomez-11/" class="card-foto">
       <img src="img/gomez-norte-01.jpg" alt="Casa Gómez 11, Límite Torreón-Gómez Palacio, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/gomez-norte-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/gomez-norte-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/gomez-norte-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -622,6 +634,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="gomez" data-viajes="trabajo familia">
     <a href="casas/gomez-10/" class="card-foto">
       <img src="img/gomez-centro-01.jpg" alt="Casa Gómez 10, Cerca de Gómez Palacio, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/gomez-centro-03.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/gomez-centro-05.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/gomez-centro-06.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -635,6 +648,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="torreon" data-viajes="trabajo familia">
     <a href="casas/familiar-10/" class="card-foto">
       <img src="img/familiar-10-01.jpg" alt="Casa Familiar 10, Torreón, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/familiar-10-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/familiar-10-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/familiar-10-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -648,6 +662,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="torreon" data-viajes="pocos">
     <a href="casas/depa-7/" class="card-foto">
       <img src="img/depa-7-01.jpg" alt="Depa Siete, Torreón, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/depa-7-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/depa-7-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/depa-7-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Departamento</span>
     </a>
     <div class="card-cuerpo">
@@ -661,6 +676,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="torreon" data-viajes="trabajo familia">
     <a href="casas/jardin-14/" class="card-foto">
       <img src="img/jardin-14-01.jpg" alt="Casa Jardín 14, Torreón, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/jardin-14-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/jardin-14-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/jardin-14-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -674,6 +690,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="torreon" data-viajes="trabajo familia">
     <a href="casas/grande-14/" class="card-foto">
       <img src="img/grande-14-01.jpg" alt="Casa Grande 14, Torreón, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/grande-14-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/grande-14-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/grande-14-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Casa completa</span>
     </a>
     <div class="card-cuerpo">
@@ -687,6 +704,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="tec" data-viajes="pocos">
     <a href="casas/loft-tec/" class="card-foto">
       <img src="img/loft-tec-01.jpg" alt="Loft Tec, Cerca del Tec, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/loft-tec-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/loft-tec-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/loft-tec-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Loft</span>
     </a>
     <div class="card-cuerpo">
@@ -700,6 +718,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
   <article class="card-ed" data-zona="los-angeles" data-viajes="familia pocos">
     <a href="casas/depa-los-angeles/" class="card-foto">
       <img src="img/depa-los-angeles-01.jpg" alt="Depa Los Ángeles, Ampliación Los Ángeles, Torreón" loading="lazy" width="900" height="600">
+      <img src="img/depa-los-angeles-02.jpg" alt="" class="rota r1" loading="lazy" width="900" height="600"><img src="img/depa-los-angeles-03.jpg" alt="" class="rota r2" loading="lazy" width="900" height="600"><img src="img/depa-los-angeles-04.jpg" alt="" class="rota r3" loading="lazy" width="900" height="600">
       <span class="tag">Departamento</span>
     </a>
     <div class="card-cuerpo">
