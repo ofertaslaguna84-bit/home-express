@@ -25,7 +25,10 @@ const data = JSON.parse(readFileSync(join(ROOT, 'casas.json'), 'utf8'));
 const { marca, casas, clientes = [] } = data;
 /** Pedro (8 nov 2026): en las casas con alberca, la foto de la alberca va primero (tarjeta, hero y galería). */
 for (const c of casas) {
-  const i = c.fotos.findIndex((f) => /alberca|piscina/i.test(f));
+  const conAlberca = c.destacados.some((d) => /alberca/i.test(d)) || /alberca/i.test(c.resumen);
+  let i = c.fotos.findIndex((f) => /alberca|piscina/i.test(f));
+  /** Sin foto llamada "alberca" (Almendros, Leones) la portada es la de la alberca. */
+  if (i < 0 && conAlberca) i = c.fotos.indexOf(`${c.slug}-portada`);
   if (i > 0) c.fotos.unshift(...c.fotos.splice(i, 1));
 }
 /** Páginas de aterrizaje por intención de búsqueda (empresas, zonas industriales, alberca). */
