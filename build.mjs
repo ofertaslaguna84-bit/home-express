@@ -840,7 +840,7 @@ const ZONAS_CON_CASAS = Object.entries(lugares.zonas)
 /** A qué guía manda cada zona. */
 const LANDING_ZONA = {
   vinedos: 'casas-en-renta-los-vinedos-torreon', provitec: 'casas-en-renta-provitec-torreon', senderos: 'casas-en-renta-senderos-la-rosita-torreon',
-  rosita: 'casas-en-renta-senderos-la-rosita-torreon', acacias: 'hospedaje-centro-torreon', 'los-angeles': 'hospedaje-centro-torreon',
+  rosita: 'casas-en-renta-senderos-la-rosita-torreon', acacias: 'casas-en-renta-los-vinedos-torreon', 'los-angeles': 'hospedaje-centro-torreon',
   tec: 'hospedaje-cerca-tec-de-monterrey-torreon', gomez: 'hospedaje-gomez-palacio', almendros: 'hospedaje-parque-industrial-oriente',
 };
 const linkZona = (z, p = '') => (LANDING_ZONA[z.key] && landings.some((l) => l.slug === LANDING_ZONA[z.key]) ? `${p}${LANDING_ZONA[z.key]}/` : `${p}zonas/`);
@@ -2159,7 +2159,8 @@ ${casas.map(casa).join('\n\n')}
 
 - Zona industrial de Torreón (Mieleras, Ferropuerto, Parque Industrial Oriente, Montebello): Casa Provitec y las casas de Los Viñedos (Leones, Linces, Viñedos, Viñedos Moderna).
 - Gómez Palacio y Lerdo: las casas de Los Viñedos salen al Periférico y cruzan a Gómez Palacio en 15 a 20 minutos (Puente Plateado o Solidaridad); a Lerdo unos 25 minutos. Casa Gómez 11 está en el límite de Torreón y Gómez Palacio.
-- Centro, hospitales, UA de C: Casa Acacias (céntrica, alberca privada), Casa Almendros (recámara en planta baja), Casa Cantera y Depa Los Ángeles (a 5 minutos del centro).
+- Centro y hospitales: Depa Los Ángeles (a 3 minutos del Paseo Morelos y del Sanatorio Español), Casa Provitec (a 5 del Paseo Morelos y 4 del Sanatorio Español) y Loft Tec (a 3 del Hospital Ángeles). UA de C, Ciudad Universitaria: Casa Almendros (a 5 minutos, recámara en planta baja) y Casa La Rosita (a 6).
+- Alberca privada: Casa Acacias, en Los Viñedos, junto al Periférico y a unos 7 minutos del aeropuerto.
 - Tec de Monterrey Campus Laguna y lado oriente (Estadio Corona / TSM): Loft Tec (a minutos del Tec), Casa Senderos, Los Viñedos.
 - Grupos de 14 a 16: Casa La Rosita (16), Casa Jardín 14 y Casa Grande 14 (6 recámaras).
 - Quien no puede subir escaleras: Casa Almendros y Casa Provitec tienen recámara en planta baja.

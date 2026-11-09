@@ -10,7 +10,7 @@ zonas={
  'vinedos':   {'nombre':'Los Viñedos','lat':25.5738,'lng':-103.3828,'radio':700},
  'provitec':  {'nombre':'Provitec','lat':25.5300,'lng':-103.4330,'radio':600},
  'almendros': {'nombre':'Los Almendros','lat':25.5446,'lng':-103.3407,'radio':600},
- 'acacias':   {'nombre':'Acacias, zona centro','lat':25.5450,'lng':-103.4300,'radio':900},
+ 'acacias':   {'nombre':'Los Viñedos (Casa Acacias)','lat':25.5738,'lng':-103.3828,'radio':700},  # Pedro, 8 nov 2026: Acacias está en Los Viñedos, no es céntrica
  'cantera':   {'nombre':'La Cantera','lat':25.6190,'lng':-103.3770,'radio':700},
  'rosita':    {'nombre':'Ampliación La Rosita','lat':25.5200,'lng':-103.3500,'radio':800},
  'senderos':  {'nombre':'Residencial Senderos','lat':25.6100,'lng':-103.3900,'radio':700},

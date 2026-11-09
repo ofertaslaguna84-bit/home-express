@@ -224,7 +224,7 @@
     "secciones": [
       {
         "h2": "Alberca privada o del fraccionamiento",
-        "html": "<ul><li><strong>Casa Acacias</strong>: alberca privada en la casa, 11 personas, la mejor ubicada.</li><li><strong>Casa Almendros</strong>: alberca, 12 personas y recámara en planta baja.</li><li><strong>Casa Leones</strong> (Viñedos): alberca y asador del fraccionamiento, 10 personas.</li><li><strong>Casa Linces</strong> (Los Viñedos): alberca del fraccionamiento en privada con seguridad, 10 personas.</li></ul><p>Las albercas no son climatizadas. Si vas en una fecha específica, pregúntanos si está en operación.</p>"
+        "html": "<ul><li><strong>Casa Acacias</strong>: alberca privada en la casa, 11 personas, en Los Viñedos.</li><li><strong>Casa Almendros</strong>: alberca, 12 personas y recámara en planta baja.</li><li><strong>Casa Leones</strong> (Viñedos): alberca y asador del fraccionamiento, 10 personas.</li><li><strong>Casa Linces</strong> (Los Viñedos): alberca del fraccionamiento en privada con seguridad, 10 personas.</li></ul><p>Las albercas no son climatizadas. Si vas en una fecha específica, pregúntanos si está en operación.</p>"
       }
     ],
     "faqs": [
@@ -242,7 +242,7 @@
       }
     ],
     "grupo": "motivo",
-    "actualizado": "2026-10-21"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "casas-amuebladas-la-laguna",
@@ -277,7 +277,7 @@
       },
       {
         "h2": "Cómo elegir casa según dónde vas a estar",
-        "html": "<p><strong>Si tu trabajo es en Gómez Palacio o Lerdo:</strong> Leones, Linces, Viñedos y Viñedos Moderna, en Los Viñedos, salen directo al Periférico. <strong>Si es en la zona industrial de Torreón (Mieleras, Ferropuerto, Oriente):</strong> Provitec y Los Viñedos están a 5 o 10 minutos. <strong>Si quieres estar cerca de todo:</strong> Acacias y Almendros, en zona céntrica. <strong>Si son 14 a 16 personas:</strong> La Rosita, con 10 camas. Si no sabes cuál, nos dices dónde vas a estar y te decimos cuál conviene.</p>"
+        "html": "<p><strong>Si tu trabajo es en Gómez Palacio o Lerdo:</strong> Leones, Linces, Viñedos y Viñedos Moderna, en Los Viñedos, salen directo al Periférico. <strong>Si es en la zona industrial de Torreón (Mieleras, Ferropuerto, Oriente):</strong> Provitec y Los Viñedos están a 5 o 10 minutos. <strong>Si quieres estar cerca del centro:</strong> el Depa Los Ángeles, a 3 minutos del Paseo Morelos, o Provitec, a 5. <strong>Si son 14 a 16 personas:</strong> La Rosita, con 10 camas. Si no sabes cuál, nos dices dónde vas a estar y te decimos cuál conviene.</p>"
       }
     ],
     "faqs": [
@@ -299,7 +299,7 @@
       }
     ],
     "grupo": "laguna",
-    "actualizado": "2026-10-21"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-gomez-palacio",
@@ -514,7 +514,7 @@
     "secciones": [
       {
         "h2": "Por qué una casa y no cuartos de hotel",
-        "html": "<p>Para 10 invitados necesitas 5 cuartos de hotel y nadie convive. En una casa están <strong>todos bajo el mismo techo</strong>: cocina para el desayuno del día siguiente, sala para esperar a la novia, patio o alberca para la resaca del domingo, y estacionamiento para todos. <strong>Casa Acacias</strong> tiene alberca privada y es céntrica; <strong>Almendros</strong> es la más grande con una recámara en planta baja para los abuelos; <strong>Cantera</strong> tiene palapa y asador para la carne asada de la tornaboda.</p>"
+        "html": "<p>Para 10 invitados necesitas 5 cuartos de hotel y nadie convive. En una casa están <strong>todos bajo el mismo techo</strong>: cocina para el desayuno del día siguiente, sala para esperar a la novia, patio o alberca para la resaca del domingo, y estacionamiento para todos. <strong>Casa Acacias</strong> tiene alberca privada y está en Los Viñedos, a unos 7 minutos del aeropuerto; <strong>Almendros</strong> es la más grande con una recámara en planta baja para los abuelos; <strong>Cantera</strong> tiene palapa y asador para la carne asada de la tornaboda.</p>"
       },
       {
         "h2": "Cerca de los salones y jardines",
@@ -540,7 +540,7 @@
       }
     ],
     "grupo": "motivo",
-    "actualizado": "2026-10-21"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-equipos-deportivos-torneos-torreon",
@@ -598,14 +598,14 @@
     "desc": "Casas amuebladas cerca de los hospitales de Torreón para familias que acompañan a un paciente, médicos residentes y personal de salud. Por semana o por mes, con cocina, clima y factura.",
     "eyebrow": "Pacientes, familias y personal de salud",
     "h1": "Hospedaje cerca de los <em>hospitales de Torreón</em>, por semana o por mes.",
-    "lead": "Cuando un familiar está internado o viene a tratamiento, un hotel por semanas sale carísimo y no tiene cocina. Nuestras casas céntricas, Acacias y Almendros, están a 10 o 15 minutos de los principales hospitales de Torreón, con recámara en planta baja, clima y lavadora. También para médicos residentes y equipos de salud por meses.",
+    "lead": "Cuando un familiar está internado o viene a tratamiento, un hotel por semanas sale carísimo y no tiene cocina. El Depa Los Ángeles queda a 3 minutos del Sanatorio Español y del Centro Médico, Provitec a 4 del Sanatorio Español y el Loft Tec a 3 del Hospital Ángeles; Almendros tiene recámara y baño en planta baja para quien se recupera. También para médicos residentes y equipos de salud por meses.",
     "wa": "Hola Hostalia, necesito hospedaje cerca de un hospital en Torreón por varias semanas. ¿Qué tienen?",
     "casas": [
+      "depa-los-angeles",
+      "provitec",
+      "loft-tec",
       "almendros",
-      "acacia",
-      "cantera",
-      "senderos",
-      "vinedos"
+      "depa-7"
     ],
     "clientes": false,
     "secciones": [
@@ -615,7 +615,7 @@
       },
       {
         "h2": "Qué tan cerca",
-        "html": "<p>Acacias y Almendros están en zona céntrica, a 10 o 15 minutos de los hospitales y clínicas del centro y del poniente de Torreón, y a 20 de los de Gómez Palacio. Farmacias y supermercados a menos de 5 minutos. Por mes, de $35,000 a $45,000 sin servicios para casas completas de 10 a 12 personas; si son menos personas, pregunta por tarifa.</p>"
+        "html": "<p>Las más cercanas a hospitales: el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a>, a 3 minutos del Sanatorio Español y del Centro Médico; <a href=\"../casas/provitec/\">Casa Provitec</a>, a 4 del Sanatorio Español; y el <a href=\"../casas/loft-tec/\">Loft Tec</a>, a 3 del Hospital Ángeles. <a href=\"../casas/almendros/\">Casa Almendros</a> queda más retirada (unos 15 minutos del Hospital Centro Médico de la Mujer y 17 del Hospital Ángeles), pero es la opción sin escaleras para quien se recupera. Por mes, Provitec cuesta $40,000 y Almendros $45,000 + IVA sin servicios; los departamentos se cotizan por WhatsApp.</p>"
       }
     ],
     "faqs": [
@@ -637,7 +637,7 @@
       }
     ],
     "grupo": "motivo",
-    "actualizado": "2026-10-21"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-cuadrillas-construccion-torreon",
@@ -741,49 +741,47 @@
   {
     "slug": "hospedaje-centro-torreon",
     "menu": "Zona centro",
-    "titulo": "Casas amuebladas céntricas en Torreón: Acacias, Almendros, Cantera y Senderos",
-    "desc": "Casas completas en zonas céntricas y residenciales de Torreón para quien quiere estar cerca de todo: oficinas, hospitales, restaurantes y el centro histórico. De 8 a 12 personas, alberca privada en Acacias.",
-    "eyebrow": "Zona céntrica y residencial",
-    "h1": "Casas amuebladas <em>cerca de todo</em> en Torreón.",
-    "lead": "Si tu plan es oficina, hospital, trámites o salir a comer, estas cuatro casas quedan a 10 minutos del centro y de los corredores de restaurantes. Acacias tiene alberca privada; Almendros es la más grande y sin escaleras; Cantera tiene palapa y asador; Senderos es la más nueva, en residencial cerrado.",
-    "wa": "Hola Hostalia, busco casa céntrica en Torreón. ¿Cuáles tienen y en cuánto?",
+    "titulo": "Hospedaje cerca del centro de Torreón: Depa Los Ángeles y Casa Provitec",
+    "desc": "Opciones amuebladas a 3 y 5 minutos del Paseo Morelos, en Torreón: Depa Los Ángeles (8 personas) y Casa Provitec (12 personas), cerca del Sanatorio Español y del Bosque Venustiano Carranza. Por noche, semana o mes, con factura.",
+    "eyebrow": "Cerca del centro de Torreón",
+    "h1": "Hospedaje <em>cerca del centro</em> de Torreón.",
+    "lead": "Si tu plan es oficina, hospital, trámites o salir a comer al centro, estas son las opciones que de verdad quedan cerca: el Depa Los Ángeles, a 3 minutos del Paseo Morelos, y Casa Provitec, a 5. Las demás casas están en zonas residenciales a 15 o 30 minutos del centro.",
+    "wa": "Hola Hostalia, busco hospedaje cerca del centro de Torreón. ¿Qué tienen y en cuánto?",
     "casas": [
-      "acacia",
-      "almendros",
-      "cantera",
-      "senderos"
+      "depa-los-angeles",
+      "provitec"
     ],
     "clientes": false,
     "secciones": [
       {
         "h2": "Qué hay cerca",
-        "html": "<p>Centro histórico, Plaza Mayor y la Alameda a 10 minutos; corredor de restaurantes del Blvd. Independencia y Paseo de la Rosita a 5 u 8; hospitales y clínicas a 10 o 15; Galerías Laguna a 12. Para trabajo de oficina, trámites de gobierno o citas médicas es la zona que conviene.</p>"
+        "html": "<p>Desde el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a>: Paseo Morelos a 3 minutos, Bosque Venustiano Carranza a 5, Museo Arocena a 5, Sanatorio Español y Centro Médico a 3, Plaza Cuatro Caminos a 5. Desde <a href=\"../casas/provitec/\">Casa Provitec</a>: Bosque Venustiano Carranza a 3, Paseo Morelos a 5, Sanatorio Español a 4, Instituto Tecnológico de La Laguna a 3 y Peñoles a 3.</p>"
       },
       {
-        "h2": "Las cuatro casas",
-        "html": "<ul><li><strong>Casa Acacias:</strong> 11 personas, alberca privada, la mejor ubicada.</li><li><strong>Casa Almendros:</strong> 12 personas, 8 camas, recámara en planta baja, alberca.</li><li><strong>Casa Cantera:</strong> 10 personas, palapa, asador y barra; la más económica.</li><li><strong>Casa Senderos:</strong> 8 personas, residencial cerrado, patio con comedor exterior.</li></ul>"
+        "h2": "Las opciones",
+        "html": "<ul><li><strong>Depa Los Ángeles:</strong> 8 personas, 6 camas, área para trabajar, lavadora y secadora.</li><li><strong>Casa Provitec:</strong> 12 personas, 4 recámaras con 7 camas, una recámara en planta baja.</li></ul><p>Si buscas casa con alberca, Casa Acacias está en Los Viñedos, junto al Periférico, a unos 20 minutos del Paseo Morelos.</p>"
       }
     ],
     "faqs": [
       {
-        "q": "¿Cuál es la casa más céntrica?",
-        "a": "Casa Acacias, en zona privada y céntrica, con alberca propia."
+        "q": "¿Qué opción queda más cerca del centro?",
+        "a": "El Depa Los Ángeles, a unos 3 minutos del Paseo Morelos. Casa Provitec queda a unos 5."
       },
       {
-        "q": "¿Tienen casa económica en el centro?",
-        "a": "Casa Cantera es la más económica de todas, con palapa y asador."
+        "q": "¿Tienen casa grande cerca del centro?",
+        "a": "Casa Provitec, para 12 personas con 7 camas, a unos 5 minutos del Paseo Morelos y a 4 del Sanatorio Español."
       },
       {
         "q": "¿Se puede caminar a restaurantes?",
-        "a": "Desde Acacias y Almendros hay cafés y restaurantes a pocas cuadras; para el centro histórico conviene coche o taxi (10 minutos)."
+        "a": "Desde el Depa Los Ángeles hay cafés y restaurantes a unos 3 minutos; desde Provitec, taquerías y restaurantes a unos 3."
       },
       {
         "q": "¿Rentan por mes?",
-        "a": "Sí, de 1 a 6 meses, con o sin servicios."
+        "a": "Sí, de 1 a 6 meses. Provitec cuesta $40,000 + IVA al mes sin servicios; el Depa Los Ángeles se cotiza por WhatsApp."
       }
     ],
     "grupo": "zonas",
-    "actualizado": "2026-10-21"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "casas-en-renta-por-noche-torreon",
@@ -872,7 +870,7 @@
       },
       {
         "h2": "Para quién es la renta semanal",
-        "html": "<ul><li><strong>Técnicos y supervisores</strong> que vienen 1 a 3 semanas a un arranque, un paro de mantenimiento o una auditoría. <a href=\"../casas/vinedos-moderna/\">Viñedos Moderna</a> y <a href=\"../casas/depa-7/\">Depa Siete</a> tienen 7 camas: cada quien duerme en la suya.</li><li><strong>Familias que acompañan a un paciente</strong> en tratamiento. <a href=\"../casas/almendros/\">Casa Almendros</a> tiene recámara en planta baja y <a href=\"../casas/acacia/\">Casa Acacias</a> es céntrica.</li><li><strong>Vacaciones o visitas largas</strong>: <a href=\"../casas/cantera/\">Casa Cantera</a>, con palapa y asador, es la más económica para 10 personas.</li><li><strong>Equipos grandes</strong>: <a href=\"../casas/grande-14/\">Casa Grande 14</a> tiene 6 recámaras y 4 baños, con área para trabajar.</li></ul>"
+        "html": "<ul><li><strong>Técnicos y supervisores</strong> que vienen 1 a 3 semanas a un arranque, un paro de mantenimiento o una auditoría. <a href=\"../casas/vinedos-moderna/\">Viñedos Moderna</a> y <a href=\"../casas/depa-7/\">Depa Siete</a> tienen 7 camas: cada quien duerme en la suya.</li><li><strong>Familias que acompañan a un paciente</strong> en tratamiento. <a href=\"../casas/almendros/\">Casa Almendros</a> tiene recámara en planta baja y el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a> queda a 3 minutos del Sanatorio Español.</li><li><strong>Vacaciones o visitas largas</strong>: <a href=\"../casas/cantera/\">Casa Cantera</a>, con palapa y asador, es la más económica para 10 personas.</li><li><strong>Equipos grandes</strong>: <a href=\"../casas/grande-14/\">Casa Grande 14</a> tiene 6 recámaras y 4 baños, con área para trabajar.</li></ul>"
       },
       {
         "h2": "Qué llevar y qué no",
@@ -901,7 +899,7 @@
         "a": "Sí, CFDI por el total a nombre de la persona o empresa que paga, con el IVA desglosado."
       }
     ],
-    "actualizado": "2026-11-03"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "renta-temporal-torreon-familias",
@@ -1029,21 +1027,21 @@
     "desc": "Casas y departamentos amueblados cerca de las facultades de la UA de C en Torreón, en zona céntrica: para médicos internos, profesores visitantes, familias en graduaciones y estudiantes por semestre. Desde $1,150 + IVA la noche. Facturamos.",
     "eyebrow": "Zona céntrica de Torreón",
     "h1": "Hospedaje cerca de la <em>UA de C</em> en Torreón.",
-    "lead": "La Universidad Autónoma de Coahuila tiene sus facultades repartidas por Torreón, varias de ellas en el centro y sus alrededores. Nuestras casas céntricas —Acacias, Almendros, Cantera— y el Depa Los Ángeles, a 5 minutos del centro, son la base más práctica para quien viene a la universidad por días, semanas o un semestre.",
+    "lead": "La Universidad Autónoma de Coahuila tiene facultades repartidas por Torreón. Para Ciudad Universitaria, Casa Almendros queda a unos 5 minutos y Casa La Rosita a 6; para las facultades del centro, el Depa Los Ángeles está a 3 minutos del Paseo Morelos. Son la base más práctica para quien viene a la universidad por días, semanas o un semestre.",
     "wa": "Hola Hostalia, busco hospedaje cerca de la UA de C en Torreón. Fechas y personas:",
     "casas": [
-      "acacia",
+      "almendros",
+      "rosita",
       "depa-los-angeles",
       "depa-7",
-      "almendros",
-      "cantera",
+      "provitec",
       "loft-tec"
     ],
     "clientes": false,
     "secciones": [
       {
         "h2": "Qué casas quedan mejor para la UA de C",
-        "html": "<p>Si tu facultad está en el centro o cerca de él, lo más práctico es quedarse del lado céntrico. <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a> está a 5 minutos del centro, recibe 8 personas en 6 camas y tiene área para trabajar, lavadora y secadora, a $1,150 + IVA la noche. <a href=\"../casas/acacia/\">Casa Acacias</a> es la mejor ubicada de nuestras casas grandes, con alberca privada, para 11 personas a $1,670 + IVA la noche o $45,000 + IVA al mes. <a href=\"../casas/almendros/\">Casa Almendros</a> (12 personas) y <a href=\"../casas/cantera/\">Casa Cantera</a> (10 personas, la más económica) también están en zona céntrica. Para grupos de 7 con cada quien su cama, el <a href=\"../casas/depa-7/\">Depa Siete</a>.</p><p>La UA de C se menciona como referencia de ubicación; no es cliente ni tiene convenio con nosotros. La distancia a tu facultad depende de cuál sea: dinos a cuál vienes y te decimos qué casa queda más cerca.</p>"
+        "html": "<p>Para Ciudad Universitaria, lo más cerca es <a href=\"../casas/almendros/\">Casa Almendros</a> (12 personas, a unos 5 minutos, $1,710 + IVA la noche o $45,000 + IVA al mes) y <a href=\"../casas/rosita/\">Casa La Rosita</a> (16 personas, a unos 6). Si tu facultad está en el centro, el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a> está a 3 minutos del Paseo Morelos, recibe 8 personas en 6 camas y tiene área para trabajar, lavadora y secadora, a $1,150 + IVA la noche; <a href=\"../casas/provitec/\">Casa Provitec</a> (12 personas) queda a 5 del Paseo Morelos. Para grupos de 7 con cada quien su cama, el <a href=\"../casas/depa-7/\">Depa Siete</a>.</p><p>La UA de C se menciona como referencia de ubicación; no es cliente ni tiene convenio con nosotros. La distancia a tu facultad depende de cuál sea: dinos a cuál vienes y te decimos qué casa queda más cerca.</p>"
       },
       {
         "h2": "Quién nos busca por la universidad",
@@ -1057,7 +1055,7 @@
     "faqs": [
       {
         "q": "¿Tienen hospedaje cerca de la Facultad de Medicina de la UA de C?",
-        "a": "Nuestras casas céntricas (Acacias, Almendros, Cantera) y el Depa Los Ángeles, a 5 minutos del centro, son las que quedan más cerca de las facultades del centro de Torreón. Dinos a cuál vienes y te confirmamos la distancia por WhatsApp."
+        "a": "Para Ciudad Universitaria, Casa Almendros (unos 5 minutos) y Casa La Rosita (unos 6). Para las facultades del centro, el Depa Los Ángeles (3 minutos del Paseo Morelos) y Casa Provitec (5). Dinos a cuál vienes y te decimos cuál queda mejor."
       },
       {
         "q": "¿Rentan a estudiantes por semestre?",
@@ -1076,7 +1074,7 @@
         "a": "Sí, CFDI a nombre de la institución, empresa o persona que pague."
       }
     ],
-    "actualizado": "2026-11-03"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-cerca-estadio-corona-tsm-torreon",
@@ -1146,18 +1144,18 @@
     "lead": "El Cristo de las Noas, en el cerro que domina el centro de Torreón, recibe cada Semana Santa a grupos que vienen de toda la región al viacrucis y a las celebraciones. Nuestras casas céntricas reciben grupos de parroquias, familias y coros con cocina para preparar los alimentos y precio por casa, no por persona.",
     "wa": "Hola Hostalia, somos un grupo de peregrinos y buscamos casa en Torreón. Fechas y número de personas:",
     "casas": [
-      "acacia",
       "depa-los-angeles",
-      "cantera",
+      "provitec",
+      "rosita",
       "almendros",
       "familiar-10",
-      "rosita"
+      "cantera"
     ],
     "clientes": false,
     "secciones": [
       {
         "h2": "Las casas más cercanas al centro y al cerro de las Noas",
-        "html": "<p>El Cristo de las Noas está al sur del centro de Torreón. Las casas que mejor quedan son las céntricas: <a href=\"../casas/acacia/\">Casa Acacias</a> (11 personas, $1,670 + IVA la noche), <a href=\"../casas/almendros/\">Casa Almendros</a> (12 personas, con recámara y baño en planta baja para personas mayores, $1,710 + IVA) y <a href=\"../casas/cantera/\">Casa Cantera</a> (10 personas, la más económica, $1,340 + IVA). El <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a> está a 5 minutos del centro y recibe 8 personas por $1,150 + IVA la noche. Para grupos grandes, <a href=\"../casas/rosita/\">Casa La Rosita</a> recibe 16 personas con 8 camas y 3 baños.</p>"
+        "html": "<p>El Cristo de las Noas está al sur del centro de Torreón. Lo que mejor queda son el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a> (8 personas, $1,150 + IVA la noche) y <a href=\"../casas/provitec/\">Casa Provitec</a> (12 personas, con recámara en planta baja para personas mayores, $1,750 + IVA), ambas a unos 7 minutos del Cristo de las Noas. Para grupos grandes, <a href=\"../casas/rosita/\">Casa La Rosita</a> recibe 16 personas con 8 camas y 3 baños, y <a href=\"../casas/almendros/\">Casa Almendros</a> 12 personas con recámara y baño en planta baja, las dos en el oriente de la ciudad.</p>"
       },
       {
         "h2": "Pensado para grupos de parroquia y familias",
@@ -1171,7 +1169,7 @@
     "faqs": [
       {
         "q": "¿Tienen hospedaje cerca del Cristo de las Noas?",
-        "a": "Nuestras casas céntricas, Acacias, Almendros y Cantera, y el Depa Los Ángeles a 5 minutos del centro, son las más cercanas al cerro de las Noas. La distancia exacta la confirmamos por WhatsApp según la casa."
+        "a": "El Depa Los Ángeles y Casa Provitec, las dos a unos 7 minutos del Cristo de las Noas. La distancia exacta la confirmamos por WhatsApp."
       },
       {
         "q": "¿Cuánto cuesta hospedar a un grupo de peregrinos en Torreón?",
@@ -1190,7 +1188,7 @@
         "a": "Sí, CFDI a nombre de la parroquia, asociación civil o persona que pague."
       }
     ],
-    "actualizado": "2026-11-03"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "casas-en-renta-senderos-la-rosita-torreon",
@@ -1205,7 +1203,7 @@
     "casas": [
       "senderos",
       "rosita",
-      "acacia",
+      "provitec",
       "depa-los-angeles"
     ],
     "clientes": false,
@@ -1220,7 +1218,7 @@
       },
       {
         "h2": "Si buscabas en Campestre La Rosita, Torreón Jardín u otra colonia",
-        "html": "<p>Seamos claros: <strong>no tenemos casas en Campestre La Rosita ni en Torreón Jardín</strong>. Lo que sí tenemos es la casa más cercana a cada una:</p><ul><li><strong>Campestre La Rosita:</strong> las más cercanas son Casa La Rosita (en Ampliación La Rosita) y Casa Senderos, ambas del lado oriente.</li><li><strong>Torreón Jardín y colonias del centro-sur:</strong> la más cercana es <a href=\"../casas/acacia/\">Casa Acacias</a>, céntrica y con alberca privada para 11 personas ($1,670 + IVA la noche), y el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a>, a 5 minutos del centro ($1,150 + IVA). Más opciones en la guía de <a href=\"../hospedaje-centro-torreon/\">casas céntricas</a>.</li><li><strong>Los Viñedos y zona industrial:</strong> tenemos cuatro casas ahí; revisa la guía de <a href=\"../casas-en-renta-los-vinedos-torreon/\">Los Viñedos</a>.</li></ul><p>Dinos en qué colonia necesitas estar y para qué, y te decimos sin rodeos cuál queda mejor y a cuánto tiempo está. La dirección exacta de cada casa se comparte al apartar.</p>"
+        "html": "<p>Seamos claros: <strong>no tenemos casas en Campestre La Rosita ni en Torreón Jardín</strong>. Lo que sí tenemos es la casa más cercana a cada una:</p><ul><li><strong>Campestre La Rosita:</strong> las más cercanas son Casa La Rosita (en Ampliación La Rosita) y Casa Senderos, ambas del lado oriente.</li><li><strong>Torreón Jardín y colonias del centro-sur:</strong> lo más cercano es el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a>, a 3 minutos del Paseo Morelos ($1,150 + IVA la noche), y <a href=\"../casas/provitec/\">Casa Provitec</a>, a 5 ($1,750 + IVA). Más en la guía de <a href=\"../hospedaje-centro-torreon/\">hospedaje cerca del centro</a>.</li><li><strong>Los Viñedos y zona industrial:</strong> ahí están Leones, Linces, Viñedos, Viñedos Moderna y Acacias; revisa la guía de <a href=\"../casas-en-renta-los-vinedos-torreon/\">Los Viñedos</a>.</li></ul><p>Dinos en qué colonia necesitas estar y para qué, y te decimos sin rodeos cuál queda mejor y a cuánto tiempo está. La dirección exacta de cada casa se comparte al apartar.</p>"
       }
     ],
     "faqs": [
@@ -1234,7 +1232,7 @@
       },
       {
         "q": "¿Y en Torreón Jardín?",
-        "a": "Tampoco. La más cercana es Casa Acacias, céntrica, con alberca privada para 11 personas, y el Depa Los Ángeles a 5 minutos del centro."
+        "a": "Tampoco. Lo más cercano es el Depa Los Ángeles, a 3 minutos del Paseo Morelos, y Casa Provitec, a 5."
       },
       {
         "q": "¿Cuánto cuesta Casa La Rosita por mes?",
@@ -1245,7 +1243,7 @@
         "a": "Por noche desde 2 noches, por semana y por mes hasta 6 meses. Facturamos en todos los casos."
       }
     ],
-    "actualizado": "2026-11-03"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-medicos-residentes-torreon",
@@ -1261,7 +1259,7 @@
       "loft-tec",
       "depa-7",
       "depa-los-angeles",
-      "acacia",
+      "provitec",
       "almendros",
       "vinedos-moderna"
     ],
@@ -1269,7 +1267,7 @@
     "secciones": [
       {
         "h2": "Según cuántos sean",
-        "html": "<ul><li><strong>Uno o una pareja:</strong> el <a href=\"../casas/loft-tec/\">Loft Tec</a>, a minutos del Tec de Monterrey, para 1 a 4 personas, con dos baños, cocina, minisplit y estacionamiento, desde $650 + IVA la noche; por mes se cotiza.</li><li><strong>Tres a siete compañeros:</strong> el <a href=\"../casas/depa-7/\">Depa Siete</a> tiene 7 camas individuales en 3 recámaras —cada quien la suya, importante cuando las guardias no coinciden— por $1,150 + IVA la noche. <a href=\"../casas/vinedos-moderna/\">Viñedos Moderna</a>, 7 camas para 8, en privada cerrada.</li><li><strong>Cerca del centro:</strong> el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a>, a 5 minutos del centro, con área para trabajar, lavadora y secadora, 8 personas por $1,150 + IVA.</li><li><strong>Grupo grande de residentes:</strong> <a href=\"../casas/acacia/\">Casa Acacias</a> (11 personas, céntrica) o <a href=\"../casas/almendros/\">Casa Almendros</a> (12, con recámara en planta baja), $45,000 + IVA al mes sin servicios: entre 10 compañeros son $4,500 + IVA cada uno.</li></ul>"
+        "html": "<ul><li><strong>Uno o una pareja:</strong> el <a href=\"../casas/loft-tec/\">Loft Tec</a>, a minutos del Tec de Monterrey, para 1 a 4 personas, con dos baños, cocina, minisplit y estacionamiento, desde $650 + IVA la noche; por mes se cotiza.</li><li><strong>Tres a siete compañeros:</strong> el <a href=\"../casas/depa-7/\">Depa Siete</a> tiene 7 camas individuales en 3 recámaras —cada quien la suya, importante cuando las guardias no coinciden— por $1,150 + IVA la noche. <a href=\"../casas/vinedos-moderna/\">Viñedos Moderna</a>, 7 camas para 8, en privada cerrada.</li><li><strong>Cerca del centro:</strong> el <a href=\"../casas/depa-los-angeles/\">Depa Los Ángeles</a>, a 5 minutos del centro, con área para trabajar, lavadora y secadora, 8 personas por $1,150 + IVA.</li><li><strong>Grupo grande de residentes:</strong> <a href=\"../casas/provitec/\">Casa Provitec</a> (12 personas, a 4 minutos del Sanatorio Español, $40,000 + IVA al mes sin servicios) o <a href=\"../casas/almendros/\">Casa Almendros</a> (12, con recámara en planta baja, $45,000 + IVA): entre 10 compañeros son $4,000 o $4,500 + IVA cada uno.</li></ul>"
       },
       {
         "h2": "Lo que importa en una residencia médica",
@@ -1303,10 +1301,10 @@
       },
       {
         "q": "¿Qué casa queda más cerca de mi hospital?",
-        "a": "Dinos a cuál vas a rotar y te decimos cuál queda mejor. Acacias, Almendros y Depa Los Ángeles están en zona céntrica; Loft Tec y Viñedos Moderna del lado oriente."
+        "a": "Dinos a cuál vas a rotar y te decimos cuál queda mejor. El Depa Los Ángeles queda a 3 minutos del Sanatorio Español y del Centro Médico, Provitec a 4 del Sanatorio Español y el Loft Tec a 3 del Hospital Ángeles; Almendros y Viñedos Moderna quedan más retirados de los hospitales."
       }
     ],
-    "actualizado": "2026-11-03"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-ingenieros-tecnicos-planta-torreon",
@@ -1389,7 +1387,7 @@
     "secciones": [
       {
         "h2": "Qué casa tiene qué",
-        "html": "<ul><li><strong><a href=\"../casas/cantera/\">Casa Cantera</a></strong>: palapa, asador y barra en el patio. 10 personas, $1,340 + IVA la noche: la más económica y la que mejor funciona para convivencias.</li><li><strong><a href=\"../casas/leones/\">Casa Leones</a></strong>: asador y alberca en el fraccionamiento, patio con pasto. 10 personas, $1,750 + IVA.</li><li><strong><a href=\"../casas/acacia/\">Casa Acacias</a></strong>: alberca privada, céntrica. 11 personas, $1,670 + IVA.</li><li><strong><a href=\"../casas/almendros/\">Casa Almendros</a></strong>: alberca y recámara en planta baja para los abuelos. 12 personas, $1,710 + IVA.</li><li><strong><a href=\"../casas/linces/\">Casa Linces</a></strong>: alberca del fraccionamiento, cochera para 2 autos. 10 personas, $1,750 + IVA.</li><li><strong><a href=\"../casas/jardin-14/\">Casa Jardín 14</a></strong>: jardín y 3 baños completos. 14 personas, $2,000 + IVA.</li><li><strong><a href=\"../casas/rosita/\">Casa La Rosita</a></strong>: la más grande, 16 personas con 8 camas, $2,300 + IVA.</li></ul><p>Sobre la alberca en diciembre: pregúntanos por WhatsApp si la de la casa que te interesa está en uso en invierno antes de apartar, para que no haya sorpresas.</p>"
+        "html": "<ul><li><strong><a href=\"../casas/cantera/\">Casa Cantera</a></strong>: palapa, asador y barra en el patio. 10 personas, $1,340 + IVA la noche: la más económica y la que mejor funciona para convivencias.</li><li><strong><a href=\"../casas/leones/\">Casa Leones</a></strong>: asador y alberca en el fraccionamiento, patio con pasto. 10 personas, $1,750 + IVA.</li><li><strong><a href=\"../casas/acacia/\">Casa Acacias</a></strong>: alberca privada, en Los Viñedos. 11 personas, $1,670 + IVA.</li><li><strong><a href=\"../casas/almendros/\">Casa Almendros</a></strong>: alberca y recámara en planta baja para los abuelos. 12 personas, $1,710 + IVA.</li><li><strong><a href=\"../casas/linces/\">Casa Linces</a></strong>: alberca del fraccionamiento, cochera para 2 autos. 10 personas, $1,750 + IVA.</li><li><strong><a href=\"../casas/jardin-14/\">Casa Jardín 14</a></strong>: jardín y 3 baños completos. 14 personas, $2,000 + IVA.</li><li><strong><a href=\"../casas/rosita/\">Casa La Rosita</a></strong>: la más grande, 16 personas con 8 camas, $2,300 + IVA.</li></ul><p>Sobre la alberca en diciembre: pregúntanos por WhatsApp si la de la casa que te interesa está en uso en invierno antes de apartar, para que no haya sorpresas.</p>"
       },
       {
         "h2": "Posada de empresa: con factura y sin salón",
@@ -1426,7 +1424,7 @@
         "a": "Lo antes posible: los fines de semana de diciembre y del 24 al 1 se llenan con semanas de anticipación. Se aparta con anticipo por transferencia."
       }
     ],
-    "actualizado": "2026-11-03"
+    "actualizado": "2026-11-08"
   },
   {
     "slug": "hospedaje-gomez-palacio-lerdo-quedarse-en-torreon",

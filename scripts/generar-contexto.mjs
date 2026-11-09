@@ -71,7 +71,8 @@ ${casas
 - **Más económica** → ${casas.reduce((a, b) => (noche(a) < noche(b) ? a : b)).zona}
 - **Quien no puede subir escaleras** → Almendros (recámara en planta baja)
 - **Convivencia / fin de semana** → Cantera (palapa, asador, barra) o Almendros (alberca)
-- **Viaje de trabajo al centro** → Acacias (céntrica)
+- **Viaje de trabajo al centro** → Depa Los Ángeles (a 3 min del Paseo Morelos) o Provitec (a 5)
+- **Casa con alberca privada** → Acacias (Los Viñedos, junto al Periférico, ~7 min del aeropuerto)
 
 ---
 
