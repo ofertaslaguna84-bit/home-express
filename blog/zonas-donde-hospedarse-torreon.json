@@ -27,5 +27,10 @@
   ],
   "busqueda": "casas en renta en torreon",
   "fecha": "2026-08-26",
-  "modelo": "deepseek/deepseek-chat"
+  "modelo": "deepseek/deepseek-chat",
+  "landings": [
+    "hospedaje-centro-torreon",
+    "hospedaje-por-ciudad-de-origen"
+  ],
+  "casa": "linces"
 }

@@ -27,5 +27,10 @@
   ],
   "busqueda": "hospedaje gomez palacio",
   "fecha": "2026-10-20",
-  "modelo": "claude-fable-5-1"
+  "modelo": "claude-fable-5-1",
+  "landings": [
+    "hospedaje-gomez-palacio-lerdo-quedarse-en-torreon",
+    "casas-en-renta-los-vinedos-torreon"
+  ],
+  "casa": "gomez-11"
 }

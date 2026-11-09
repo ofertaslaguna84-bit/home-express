@@ -1,0 +1,430 @@
+{
+  "_nota": "Ciudades desde donde se viaja a Torreón. km y horaMax salen de OSRM (router.project-osrm.org, ruta por carretera al centro de Torreón, consultado el 8 nov 2026). horaMin = km/100, ritmo de autopista sin paradas. Los textos son descriptivos; no hay cifras de ocupación ni clientes.",
+  "origenes": [
+    {
+      "slug": "monterrey",
+      "nombre": "Monterrey",
+      "estado": "Nuevo León",
+      "km": 339,
+      "horaMax": 4.5,
+      "llegada": "oriente",
+      "ruta": "Se toma la autopista a Saltillo y de ahí la 40D de cuota hasta Torreón. Es autopista de cuatro carriles casi todo el camino.",
+      "porque": "De Monterrey vienen sobre todo proveedores industriales, constructoras que ganan obra en La Laguna, despachos que mandan auditores y equipos de ventas que cubren la región norte. También familias que vienen a eventos y equipos que juegan torneos.",
+      "consejo": "Si salen temprano de Monterrey llegan a Torreón antes de la hora de entrada a la casa; conviene avisarnos la hora estimada para tenerla lista.",
+      "vuelo": null
+    },
+    {
+      "slug": "saltillo",
+      "nombre": "Saltillo",
+      "estado": "Coahuila",
+      "km": 255,
+      "horaMax": 3.5,
+      "llegada": "oriente",
+      "ruta": "Es tramo directo por la autopista 40D, sin entrar a otras ciudades. Se llega a Torreón por el lado oriente.",
+      "porque": "Saltillo y Ramos Arizpe mandan a La Laguna personal de la industria automotriz y de autopartes, técnicos de mantenimiento, instaladores y supervisores de obra. Al ser el mismo estado, muchas empresas mueven gente entre las dos ciudades por semanas.",
+      "consejo": "Es distancia de ida y vuelta en el día, pero manejar de cinco a siete horas diarias cansa y sale caro en casetas y gasolina: para estancias de más de tres días casi siempre conviene quedarse.",
+      "vuelo": null
+    },
+    {
+      "slug": "monclova",
+      "nombre": "Monclova",
+      "estado": "Coahuila",
+      "km": 369,
+      "horaMax": 5.3,
+      "llegada": "oriente",
+      "ruta": "Son unos 369 km por carretera; el trayecto más corto cruza el centro de Coahuila y llega a Torreón por el oriente.",
+      "porque": "De Monclova y la región centro de Coahuila viene personal de la industria del acero y metalmecánica, soldadores, paileros y cuadrillas de mantenimiento industrial.",
+      "consejo": "Si la cuadrilla va a llegar tarde, avísennos la hora estimada para coordinar la entrega de la casa.",
+      "vuelo": null,
+      "casas": [
+        "grande-14",
+        "provitec",
+        "rosita",
+        "almendros",
+        "depa-7"
+      ]
+    },
+    {
+      "slug": "chihuahua",
+      "nombre": "Chihuahua",
+      "estado": "Chihuahua",
+      "km": 471,
+      "horaMax": 6.3,
+      "llegada": "norte",
+      "ruta": "Se baja por la carretera 45 hacia Delicias y Jiménez, y de Jiménez se toma la 49 hasta La Laguna. Se entra por Gómez Palacio y se cruza a Torreón por el Periférico.",
+      "porque": "De Chihuahua vienen técnicos de maquiladora y de mantenimiento industrial, personal de constructoras, médicos y familias que vienen a consultas, y equipos deportivos a torneos regionales.",
+      "consejo": "Son más de seis horas de manejo: si es grupo, conviene llegar, descansar y empezar a trabajar al día siguiente. Una casa con cocina ahorra salir a cenar después del viaje.",
+      "vuelo": null
+    },
+    {
+      "slug": "ciudad-juarez",
+      "nombre": "Ciudad Juárez",
+      "estado": "Chihuahua",
+      "km": 834,
+      "horaMax": 11,
+      "llegada": "norte",
+      "ruta": "Es el mismo corredor que desde Chihuahua: carretera 45 al sur hasta Jiménez y luego la 49 a La Laguna. Son unos 834 km, casi siempre con una parada larga en Chihuahua.",
+      "porque": "Ciudad Juárez manda a La Laguna personal de maquiladora: ingenieros de arranque, técnicos de línea y supervisores que vienen por semanas a una planta de la región.",
+      "consejo": "Por la distancia, la mayoría de las estancias desde Juárez son largas (semanas o meses), y ahí la tarifa mensual es la que conviene.",
+      "vuelo": null,
+      "casas": [
+        "linces",
+        "vinedos-moderna",
+        "provitec",
+        "cantera",
+        "grande-14"
+      ]
+    },
+    {
+      "slug": "delicias",
+      "nombre": "Delicias",
+      "estado": "Chihuahua",
+      "km": 384,
+      "horaMax": 5.1,
+      "llegada": "norte",
+      "ruta": "Se toma la 45 al sur hacia Camargo y Jiménez, y de ahí la 49 hasta Gómez Palacio y Torreón.",
+      "porque": "De Delicias y la región centro-sur de Chihuahua vienen productores y técnicos del sector agrícola y lechero, que comparte cadena con La Laguna, además de familias que vienen a consultas médicas.",
+      "consejo": "Si vienen por una consulta o un trámite de varios días, una casa con cocina sale mejor que comer fuera todos los días.",
+      "vuelo": null,
+      "casas": [
+        "gomez-11",
+        "familiar-10",
+        "cantera",
+        "linces",
+        "acacia"
+      ]
+    },
+    {
+      "slug": "parral",
+      "nombre": "Hidalgo del Parral",
+      "estado": "Chihuahua",
+      "km": 325,
+      "horaMax": 4.4,
+      "llegada": "norte",
+      "ruta": "Se sale hacia Jiménez y de ahí por la carretera 49 hasta La Laguna, entrando por Gómez Palacio.",
+      "porque": "De Parral y el sur de Chihuahua vienen trabajadores y técnicos ligados a la minería, familias que vienen a especialistas médicos y equipos a torneos.",
+      "consejo": "Desde Parral Torreón es la ciudad grande más cercana para hospitales y especialistas; si el tratamiento dura días, convienen casas cerca del centro médico.",
+      "vuelo": null,
+      "casas": [
+        "loft-tec",
+        "depa-los-angeles",
+        "gomez-11",
+        "almendros",
+        "provitec"
+      ]
+    },
+    {
+      "slug": "durango",
+      "nombre": "Durango",
+      "estado": "Durango",
+      "km": 248,
+      "horaMax": 2.9,
+      "llegada": "poniente",
+      "ruta": "Es autopista 40D directa, pasando por Cuencamé. Se entra a La Laguna por Lerdo y Gómez Palacio, y de ahí a Torreón.",
+      "porque": "Es el origen más cercano después de Saltillo. De Durango vienen cuadrillas de construcción, personal de minería, médicos residentes y familias que vienen a hospitales de Torreón, y equipos que juegan en La Laguna.",
+      "consejo": "Con menos de tres horas de camino, mucha gente intenta ir y venir; para obra o tratamiento de varios días, quedarse sale más barato que la gasolina y las casetas diarias.",
+      "vuelo": null
+    },
+    {
+      "slug": "zacatecas",
+      "nombre": "Zacatecas",
+      "estado": "Zacatecas",
+      "km": 391,
+      "horaMax": 4.9,
+      "llegada": "poniente",
+      "ruta": "Se sube por la carretera 49 pasando por Fresnillo, y se llega a La Laguna por el lado de Gómez Palacio y Lerdo.",
+      "porque": "De Zacatecas vienen trabajadores y técnicos de minería, médicos y estudiantes que hacen rotaciones, y familias que vienen a especialistas.",
+      "consejo": "Si vienen por varias semanas, pregunten por la tarifa mensual: es mucho más baja que sumar noches.",
+      "vuelo": null
+    },
+    {
+      "slug": "fresnillo",
+      "nombre": "Fresnillo",
+      "estado": "Zacatecas",
+      "km": 331,
+      "horaMax": 4.2,
+      "llegada": "poniente",
+      "ruta": "Se toma la carretera 49 al norte hasta La Laguna; se entra por Gómez Palacio y Lerdo.",
+      "porque": "Fresnillo es zona minera: de ahí viene personal de mina y de contratistas que da servicio en las dos regiones, además de familias que vienen a consultas.",
+      "consejo": "Para cuadrillas que rotan por turnos, conviene una casa fija por mes y que entren y salgan sin volver a reservar.",
+      "vuelo": null,
+      "casas": [
+        "gomez-10",
+        "provitec",
+        "grande-14",
+        "rosita",
+        "gomez-11"
+      ]
+    },
+    {
+      "slug": "cdmx",
+      "nombre": "Ciudad de México",
+      "estado": "CDMX",
+      "km": 1001,
+      "horaMax": 12.4,
+      "llegada": "avion",
+      "ruta": "Por carretera son unos 1,000 km (vía Querétaro, San Luis Potosí y Zacatecas), así que casi todos llegan en avión al Aeropuerto Internacional de Torreón.",
+      "porque": "De la Ciudad de México vienen corporativos, auditores, consultores, equipos de implementación de sistemas y personal de proyectos que se queda semanas en La Laguna.",
+      "consejo": "Desde el aeropuerto, las casas de Los Viñedos (Linces, Leones, Acacias) quedan a unos 7 minutos. Si el equipo no trae coche, conviene una casa cerca de donde van a trabajar.",
+      "vuelo": "Hay vuelos directos entre la Ciudad de México y Torreón."
+    },
+    {
+      "slug": "guadalajara",
+      "nombre": "Guadalajara",
+      "estado": "Jalisco",
+      "km": 723,
+      "horaMax": 9.1,
+      "llegada": "avion",
+      "ruta": "Por carretera son unos 723 km, subiendo por Zacatecas. La mayoría de las empresas mandan a su gente en avión.",
+      "porque": "De Guadalajara vienen empresas de alimentos, tecnología y servicios industriales, además de equipos deportivos que juegan contra equipos de La Laguna.",
+      "consejo": "Si viajan en coche son más de siete horas: cuenten la noche de llegada en la reserva.",
+      "vuelo": "Revisa vuelo directo Guadalajara–Torreón según la temporada; si no hay, la conexión suele ser por Ciudad de México.",
+      "casas": [
+        "acacia",
+        "linces",
+        "loft-tec",
+        "rosita",
+        "jardin-14"
+      ]
+    },
+    {
+      "slug": "queretaro",
+      "nombre": "Querétaro",
+      "estado": "Querétaro",
+      "km": 790,
+      "horaMax": 9.8,
+      "llegada": "avion",
+      "ruta": "Por carretera son unos 790 km, por San Luis Potosí y Zacatecas. En avión normalmente se conecta por Ciudad de México.",
+      "porque": "De Querétaro vienen ingenieros y técnicos de la industria automotriz, aeroespacial y de automatización que hacen arranques e instalaciones en plantas de La Laguna.",
+      "consejo": "Los arranques de planta suelen alargarse: conviene apartar por semana o por mes y extender si hace falta.",
+      "vuelo": null,
+      "casas": [
+        "grande-14",
+        "linces",
+        "vinedos-moderna",
+        "depa-los-angeles",
+        "provitec"
+      ]
+    },
+    {
+      "slug": "san-luis-potosi",
+      "nombre": "San Luis Potosí",
+      "estado": "San Luis Potosí",
+      "km": 577,
+      "horaMax": 7.7,
+      "llegada": "poniente",
+      "ruta": "Son unos 577 km por carretera, subiendo por Zacatecas y entrando a La Laguna por el poniente.",
+      "porque": "De San Luis Potosí vienen técnicos e ingenieros de la industria automotriz y de logística, y contratistas de instalaciones industriales.",
+      "consejo": "Es un viaje de un día completo: reserven desde la noche de llegada.",
+      "vuelo": null,
+      "casas": [
+        "provitec",
+        "cantera",
+        "grande-14",
+        "linces",
+        "gomez-10"
+      ]
+    },
+    {
+      "slug": "aguascalientes",
+      "nombre": "Aguascalientes",
+      "estado": "Aguascalientes",
+      "km": 505,
+      "horaMax": 6.4,
+      "llegada": "poniente",
+      "ruta": "Son unos 505 km: se sube a Zacatecas y de ahí por la carretera 49 a La Laguna.",
+      "porque": "De Aguascalientes viene personal de la industria automotriz y de manufactura, y equipos de instalación que dan servicio a plantas del norte.",
+      "consejo": "Si es un equipo de instalación que trae herramienta, pidan casa con cochera; varias de las nuestras tienen estacionamiento para dos autos.",
+      "vuelo": null,
+      "casas": [
+        "provitec",
+        "grande-14",
+        "linces",
+        "vinedos-moderna",
+        "gomez-11"
+      ]
+    },
+    {
+      "slug": "mazatlan",
+      "nombre": "Mazatlán",
+      "estado": "Sinaloa",
+      "km": 492,
+      "horaMax": 6.1,
+      "llegada": "poniente",
+      "ruta": "Se sube por la autopista Mazatlán–Durango y de Durango por la 40D a La Laguna. Se entra por Lerdo y Gómez Palacio.",
+      "porque": "De Mazatlán y Sinaloa vienen familias a eventos y a consultas, equipos deportivos y personal de empresas que operan en las dos costas del norte.",
+      "consejo": "La autopista tiene tramos de montaña: mejor viajar de día y llegar con luz.",
+      "vuelo": null,
+      "casas": [
+        "acacia",
+        "leones",
+        "cantera",
+        "almendros",
+        "jardin-14"
+      ]
+    }
+  ],
+  "segmentos": [
+    {
+      "key": "cuadrillas",
+      "padre": "hospedaje-cuadrillas-construccion-torreon",
+      "menu": "Cuadrillas",
+      "slugBase": "hospedaje-cuadrillas-torreon-desde",
+      "nombre": "cuadrillas de construcción",
+      "titulo": "Hospedaje en Torreón para cuadrillas que vienen de {o}",
+      "casas": [
+        "rosita",
+        "provitec",
+        "almendros",
+        "jardin-14",
+        "grande-14",
+        "gomez-10",
+        "depa-7"
+      ],
+      "origenes": [
+        "monterrey",
+        "saltillo",
+        "durango",
+        "chihuahua",
+        "zacatecas",
+        "monclova"
+      ],
+      "necesidad": "Una cuadrilla necesita camas, no recámaras bonitas: que cada quien tenga dónde dormir, cocina para no gastar en fondas tres veces al día, lavadora para la ropa de trabajo y cochera para la camioneta y la herramienta.",
+      "zona": "Para obra en el oriente de Torreón (Parque Industrial Oriente, Mieleras, Ferropuerto) conviene Almendros, La Rosita o Provitec; para obra al norte o cerca del Periférico, las casas de Los Viñedos."
+    },
+    {
+      "key": "ingenieros",
+      "padre": "hospedaje-ingenieros-tecnicos-planta-torreon",
+      "menu": "Ingenieros",
+      "slugBase": "hospedaje-ingenieros-torreon-desde",
+      "nombre": "ingenieros y técnicos de planta",
+      "titulo": "Hospedaje en Torreón para ingenieros y técnicos que vienen de {o}",
+      "casas": [
+        "linces",
+        "provitec",
+        "grande-14",
+        "vinedos-moderna",
+        "depa-los-angeles",
+        "almendros",
+        "loft-tec"
+      ],
+      "origenes": [
+        "monterrey",
+        "saltillo",
+        "cdmx",
+        "queretaro",
+        "chihuahua",
+        "guadalajara",
+        "san-luis-potosi"
+      ],
+      "necesidad": "Un equipo técnico trabaja turnos largos y a veces nocturnos: necesita silencio para dormir de día, WiFi para reportes, un lugar para trabajar en la laptop y estar cerca de la planta para no perder tiempo en tráfico.",
+      "zona": "Provitec queda a 3 minutos de Peñoles y cerca de la salida a Mieleras; Los Viñedos a 4 minutos de Lala y a 9 del Parque Industrial Lajat; Almendros a 3 del Parque Industrial Oriente."
+    },
+    {
+      "key": "medicos",
+      "padre": "hospedaje-medicos-residentes-torreon",
+      "menu": "Médicos residentes",
+      "slugBase": "hospedaje-medicos-residentes-torreon-desde",
+      "nombre": "médicos residentes y en rotación",
+      "titulo": "Hospedaje en Torreón para médicos residentes que vienen de {o}",
+      "casas": [
+        "loft-tec",
+        "depa-los-angeles",
+        "depa-7",
+        "provitec"
+      ],
+      "origenes": [
+        "durango",
+        "zacatecas",
+        "chihuahua",
+        "cdmx"
+      ],
+      "necesidad": "Un residente necesita dormir cerca del hospital después de una guardia, cocina para no vivir de comida rápida, y un contrato flexible que se ajuste a la rotación, no a un año de renta con aval.",
+      "zona": "El Loft Tec queda a 3 minutos del Hospital Ángeles; el Depa Los Ángeles a 3 del Sanatorio Español y del Centro Médico; Provitec a 4 del Sanatorio Español."
+    },
+    {
+      "key": "pacientes",
+      "padre": "hospedaje-cerca-de-hospitales-torreon",
+      "menu": "Familiares de pacientes",
+      "slugBase": "hospedaje-familiares-pacientes-torreon-desde",
+      "nombre": "familiares de pacientes",
+      "titulo": "Dónde quedarse en Torreón si vienes de {o} a un hospital",
+      "casas": [
+        "depa-los-angeles",
+        "loft-tec",
+        "provitec",
+        "almendros",
+        "rosita"
+      ],
+      "origenes": [
+        "durango",
+        "zacatecas",
+        "chihuahua"
+      ],
+      "necesidad": "Cuando un familiar está internado o en tratamiento, la familia rota para acompañarlo: se necesita una casa cerca del hospital, cocina para no gastar en comida fuera, lavadora y la posibilidad de alargar la estancia si el alta se retrasa.",
+      "zona": "El Depa Los Ángeles queda a 3 minutos del Sanatorio Español y del Centro Médico; el Loft Tec a 3 del Hospital Ángeles; Provitec a 4 del Sanatorio Español; Almendros tiene recámara en planta baja para quien no puede subir escaleras."
+    },
+    {
+      "key": "deportivos",
+      "padre": "hospedaje-equipos-deportivos-torneos-torreon",
+      "menu": "Equipos deportivos",
+      "slugBase": "hospedaje-equipos-deportivos-torreon-desde",
+      "nombre": "equipos deportivos",
+      "titulo": "Hospedaje en Torreón para equipos que vienen de {o} a un torneo",
+      "casas": [
+        "rosita",
+        "jardin-14",
+        "grande-14",
+        "almendros",
+        "provitec",
+        "acacia"
+      ],
+      "origenes": [
+        "monterrey",
+        "saltillo",
+        "chihuahua",
+        "durango",
+        "guadalajara"
+      ],
+      "necesidad": "Un equipo necesita que todos duerman juntos, con camas suficientes, cocina para controlar la comida antes del partido y espacio para que entrenadores y padres no se dispersen por la ciudad.",
+      "zona": "La Rosita y Almendros quedan a 6 minutos del Estadio Corona TSM; Provitec a 3 minutos del Bosque Venustiano Carranza, en el centro."
+    }
+  ],
+  "extras": [
+    {
+      "slug": "casa-amueblada-por-mes-torreon-trabajadores-foraneos",
+      "tipo": "mes"
+    },
+    {
+      "slug": "hospedaje-torreon-personal-que-rota-por-semana",
+      "tipo": "rotacion"
+    }
+  ],
+  "combos": {
+    "cuadrillas:monterrey": "Cuando una constructora de Monterrey gana obra en La Laguna, normalmente manda a la cuadrilla con un residente de obra. Conviene una casa donde el residente tenga recámara aparte (Casa Grande 14 tiene 6 recámaras) y que la cuadrilla salga en la mañana sin cruzar la ciudad: si la obra está al oriente, Almendros o La Rosita; si está rumbo a Mieleras, Provitec.",
+    "cuadrillas:saltillo": "Si la cuadrilla viene de Saltillo de lunes a viernes y regresa el fin de semana, conviene apartar la casa por mes: queda a su nombre, pueden dejar herramienta y ropa el fin de semana y no hay que entregar y recibir cada lunes.",
+    "cuadrillas:durango": "Desde Durango es común traer cuadrillas para trabajos de pocas semanas: colados, acabados, instalaciones. Para eso se cotiza por semana, y si la obra pasa de tres semanas, por mes. De las casas para 10 o más, la más económica por cama es Casa Gómez 10 ({noche:gomez-10} la noche, 7 camas), con salida rápida hacia el poniente.",
+    "cuadrillas:chihuahua": "Una cuadrilla que viene de Chihuahua trae más de seis horas de carretera: el día de llegada casi no se trabaja, así que conviene contar esa noche en la reserva. Como las estancias desde tan lejos suelen ser largas, pide casa con lavadora: la ropa de trabajo se lava en casa y no en lavandería.",
+    "cuadrillas:zacatecas": "De Zacatecas y Fresnillo vienen cuadrillas de obra industrial y de mantenimiento que trabajan en La Laguna por temporadas. Entrando por el poniente, las casas cercanas al Periférico ahorran tiempo para moverse a obras del norte de Torreón; para obras al oriente, Almendros o Provitec.",
+    "cuadrillas:monclova": "Si la cuadrilla de Monclova es de soldadores, paileros o montadores de estructura, son turnos largos y pesados: que cada quien tenga su cama y que haya dónde dejar la máquina de soldar o el remolque. Casa Grande 14 tiene 6 recámaras y Provitec 4 recámaras con 7 camas, una en planta baja.",
+    "ingenieros:monterrey": "Si el equipo de Monterrey es de dos a cinco personas (arranque de línea, servicio a maquinaria, supervisión), no hace falta la casa más grande: Casa Viñedos Moderna (8 personas, 7 camas, privada con acceso controlado, {noche:vinedos-moderna} la noche) o el Depa Los Ángeles (8 personas, área para trabajar, {noche:depa-los-angeles}) salen mejor que varios cuartos de hotel.",
+    "ingenieros:saltillo": "Si son técnicos de autopartes de Saltillo o Ramos Arizpe que vienen a dar soporte a una planta de La Laguna, el horario va atado a los turnos. Para quien duerme de día conviene una casa tranquila en privada: Casa Linces está en privada con seguridad y Viñedos Moderna en privada con acceso controlado.",
+    "ingenieros:cdmx": "Desde la Ciudad de México casi todos llegan en avión y sin coche, así que la ubicación pesa más que el tamaño: Los Viñedos queda a unos 7 minutos del aeropuerto y a 4 de Lala; el Depa Los Ángeles, a 3 minutos del Paseo Morelos, deja el centro a pie. Para auditorías o implementaciones de varias semanas, una sola factura por el periodo simplifica la comprobación de gastos.",
+    "ingenieros:queretaro": "Los arranques de planta con personal de Querétaro (automatización, robótica, aeroespacial) se alargan con facilidad. Conviene apartar por semana con opción a extender y elegir casa con área para trabajar: Casa Grande 14 tiene 6 recámaras, 4 baños y espacio para laptop, útil cuando el equipo mezcla ingenieros y técnicos.",
+    "ingenieros:chihuahua": "Para ingenieros de maquiladora que vienen de Chihuahua por varias semanas, entrando por Gómez Palacio y el Periférico, Casa Linces y Viñedos Moderna quedan a minutos del Parque Industrial Lajat y de Lala; si la planta está al oriente, Almendros queda a 3 minutos del Parque Industrial Oriente.",
+    "ingenieros:guadalajara": "Si tu empresa de Guadalajara manda técnicos en avión y renta auto en Torreón, conviene casa con cochera: Casa Linces tiene cochera techada para 2 autos. Si viene una o dos personas, el Loft Tec ({noche:loft-tec} la noche) es lo más económico, a 3 minutos de Intermall y del Hospital Ángeles.",
+    "ingenieros:san-luis-potosi": "De San Luis Potosí son más de siete horas de carretera: el equipo pierde el día de llegada. Para instaladores y técnicos que vienen por una o dos semanas, casa con lavadora y cochera; si la estancia pasa de un mes, las tarifas mensuales más bajas entre las casas grandes son Cantera ({mes:cantera}) y Provitec ({mes:provitec}) sin servicios.",
+    "medicos:durango": "Si rotas en Torreón y regresas a Durango en tus días libres (son menos de tres horas), te conviene un contrato por todo el periodo de la rotación, con la casa siempre lista, en lugar de reservar cada semana. Si se juntan dos o tres residentes, el Depa Siete (7 camas, cada quien la suya, {noche:depa-7} la noche) baja mucho el costo por persona.",
+    "medicos:zacatecas": "Si vienes de Zacatecas a una residencia o a una rotación, lo normal es quedarte meses. El Loft Tec ({noche:loft-tec} la noche, hasta 4 personas) queda a 3 minutos del Hospital Ángeles; para estancias largas pide la tarifa mensual por WhatsApp, que es mucho más baja que sumar noches.",
+    "medicos:chihuahua": "Desde Chihuahua no se puede ir y venir: son más de seis horas. Si vienes solo o en pareja, el Loft Tec o el Depa Los Ángeles; si se juntan varios residentes, una casa compartida como Provitec (12 personas, a 4 minutos del Sanatorio Español, {mes:provitec} al mes sin servicios) reparte el costo.",
+    "medicos:cdmx": "Si vienes de la Ciudad de México a rotar en Torreón, probablemente llegues en avión y sin coche. Elige por cercanía al hospital: el Depa Los Ángeles queda a 3 minutos del Sanatorio Español y del Centro Médico, y el Loft Tec a 3 del Hospital Ángeles y de Intermall, así que se resuelve casi todo sin auto.",
+    "pacientes:durango": "De Durango a Torreón son menos de tres horas, así que es común que la familia se turne: unos vienen entre semana y otros el fin de semana. Con una casa por varias noches llegan y se van sin pagar cuartos por separado. El Depa Los Ángeles (8 personas, 6 camas, {noche:depa-los-angeles} la noche) queda a 3 minutos del Sanatorio Español.",
+    "pacientes:zacatecas": "Si vienes de Zacatecas porque un familiar se va a operar o a tratar en Torreón, pregunta al hospital cuántos días calculan y súmale uno o dos de margen. Si el tratamiento es en el Hospital Ángeles, el Loft Tec ({noche:loft-tec} la noche, hasta 4 personas) queda a 3 minutos; si es en el Sanatorio Español, Provitec queda a 4 y recibe hasta 12.",
+    "pacientes:chihuahua": "Para una familia de Chihuahua, con más de seis horas de camino, lo práctico es quedarse toda la estancia del paciente. Si al salir del hospital necesita reposo antes de viajar, Almendros tiene recámara en planta baja, sin escaleras, y Provitec también tiene una recámara abajo.",
+    "deportivos:monterrey": "Si el equipo de Monterrey viaja en camión o en varios coches con papás, lo importante es que no se dispersen: La Rosita recibe a 16 personas, y con Almendros al lado oriente de la ciudad (las dos a unos 6 minutos del Estadio Corona TSM) caben dos grupos cerca uno del otro.",
+    "deportivos:saltillo": "Desde Saltillo un equipo puede llegar la mañana del partido, pero en torneos de dos o tres días cansa ir y venir. Una casa para todo el fin de semana sale mejor que cuartos sueltos: Casa Jardín 14 (14 personas, jardín) o Casa Grande 14 (6 recámaras, 4 baños).",
+    "deportivos:chihuahua": "Para un equipo de Chihuahua conviene llegar un día antes del primer partido: son más de seis horas de carretera. Con cocina en la casa se controla la cena de la noche anterior y el desayuno del día del juego, sin depender de restaurantes.",
+    "deportivos:durango": "De Durango son menos de tres horas, pero en torneos de varias jornadas el equipo prefiere quedarse a regresar cada noche. La Rosita, Jardín 14 y Grande 14 reciben de 14 a 16 personas; para plantillas más grandes se rentan dos casas para las mismas fechas.",
+    "deportivos:guadalajara": "Un equipo de Guadalajara vuela o hace más de siete horas en camión. Si llegan en avión, las casas de Los Viñedos quedan a unos 7 minutos del aeropuerto, y Acacias tiene alberca privada; si llegan en camión, pregúntanos antes dónde se puede estacionar."
+  }
+}

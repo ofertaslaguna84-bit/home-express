@@ -35,5 +35,10 @@
   ],
   "busqueda": "que incluye una casa amueblada",
   "fecha": "2026-11-03",
-  "modelo": "claude-fable-5.1 (redactado a mano desde casas.json)"
+  "modelo": "claude-fable-5.1 (redactado a mano desde casas.json)",
+  "landings": [
+    "casas-amuebladas-renta-por-mes-torreon",
+    "hospedaje-por-ciudad-de-origen"
+  ],
+  "casa": "almendros"
 }

@@ -8,6 +8,7 @@
  * el precio que se ve en la tarjeta, el del schema y el del llms.txt son el mismo.
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { generarOrigenes, HUB_ORIGEN } from './origenes.mjs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
@@ -58,7 +59,8 @@ const articulos = existsSync(BLOG_DIR)
       .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
   : [];
 
-const HOY = new Date().toISOString().slice(0, 10);
+/** Fecha de Torreón (UTC-6 fijo), no la UTC del servidor: si no, después de las 6 pm sale "mañana". */
+const HOY = new Date(Date.now() - 6 * 3600 * 1000).toISOString().slice(0, 10);
 const HOY_LARGO = new Date().toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
 const fechaLarga = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -119,6 +121,8 @@ const PERSONAS = `${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...
 
 /** API de reservas directas (Vercel, carpeta reservas/). El widget y la página /reserva/ le pegan desde el navegador. */
 const API_RESERVAS = process.env.API_RESERVAS || 'https://reservas.hostalia.com.mx';
+/** Frase de posicionamiento: se repite IGUAL en schema, inicio y llms.txt para que buscadores e IA la asocien con la marca. */
+const POSICIONAMIENTO = 'Casas amuebladas por noche, semana o mes en Torreón para empresas, cuadrillas y familias; reserva directa sin comisión.';
 const wa = (texto) => `https://wa.me/${marca.whatsapp}?text=${encodeURIComponent(texto)}`;
 
 // ─────────────────────────────────────────────────────────── estilos
@@ -575,7 +579,7 @@ const pie = (prefijo = '') => `
     <div class="pie-in">
       <div>
         <img src="${prefijo}img/logo.png?v=a" alt="${esc(marca.nombre)}" style="height:56px;background:#fff;border-radius:10px;padding:6px;margin-bottom:14px">
-        <p style="max-width:340px">Casas completas, equipadas y listas para entrar en ${esc(marca.ciudad)}, ${esc(marca.estado)}. Por noche, por semana o por mes. Con factura.</p>
+        <p style="max-width:340px">${esc(POSICIONAMIENTO)} Con factura.</p>
       </div>
       <div>
         <h4>Casas</h4>
@@ -583,7 +587,7 @@ const pie = (prefijo = '') => `
       </div>
       ${landings.length ? `<div>
         <h4><a href="${prefijo}zonas/">Hospedaje por zona y ocasión</a></h4>
-        <ul>${landings.map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}<li><a href="${prefijo}zonas/"><strong>Ver todas →</strong></a></li></ul>
+        <ul>${landings.filter((l) => l.grupo !== 'origen' || l.slug === HUB_ORIGEN).map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}<li><a href="${prefijo}zonas/"><strong>Ver todas →</strong></a></li></ul>
       </div>` : ''}
       <div>
         <h4>Contacto</h4>
@@ -743,7 +747,8 @@ const orgSchema = () => ({
   url: SITE,
   logo: `${SITE}/img/logo.png`,
   image: `${SITE}/img/${casas[0].fotos[0]}.jpg`,
-  description: `Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}. Por noche, semana o mes, con factura. De ${PERSONAS} personas.`,
+  description: `${POSICIONAMIENTO} ${casas.length} casas completas de ${PERSONAS} personas, con factura.`,
+  slogan: POSICIONAMIENTO,
   telephone: `+${marca.whatsapp}`,
   contactPoint: { '@type': 'ContactPoint', telephone: `+${marca.whatsapp}`, contactType: 'reservations', availableLanguage: 'es', url: wa('Hola Hostalia, quiero información') },
   /** Rango real por noche entre la casa más barata y la más cara (sin IVA). */
@@ -780,6 +785,10 @@ const orgSchema = () => ({
   numberOfRooms: casas.reduce((s, c) => s + c.recamaras, 0),
 });
 
+// ─────────────────────────────────────────────────────────── páginas por ciudad de origen (origenes.mjs)
+const ORIGENES = existsSync(join(ROOT, 'origenes.json')) ? JSON.parse(readFileSync(join(ROOT, 'origenes.json'), 'utf8')) : null;
+if (ORIGENES) landings.push(...generarOrigenes({ datos: ORIGENES, casas, noche, mxn, IVA_NOTA, cercaDe, LIMPIEZA }));
+
 // ─────────────────────────────────────────────────────────── landings: grupos y utilidades
 
 /** Cómo se agrupan las páginas de aterrizaje en el hub /zonas/ y en el inicio. `grupo` viene de landings.json. */
@@ -789,6 +798,7 @@ const GRUPOS = [
   ['estancia', 'Por noche, por semana o por mes', 'Qué cambia en precio y condiciones según cuánto tiempo te quedas.'],
   ['motivo', 'Por motivo del viaje', 'Familias, bodas, torneos, feria, hospitales, peregrinos, posadas y fin de año.'],
   ['empresas', 'Empresas e industria', 'Cuadrillas, técnicos de planta e ingenieros, con factura CFDI.'],
+  ['origen', 'Hospedaje por ciudad de origen', 'Si vienes a Torreón desde Monterrey, Saltillo, Chihuahua, Durango, Zacatecas, CDMX u otra ciudad: distancia, zona que conviene y casas.'],
 ];
 const landingsDe = (g) => landings.filter((l) => (l.grupo || 'motivo') === g);
 const casasDe = (l) => l.casas.map((slug) => casas.find((c) => c.slug === slug)).filter(Boolean);
@@ -805,7 +815,7 @@ const bloqueZonas = (p = '', conDesc = false) =>
       ([g, titulo, desc]) => `<div style="margin-bottom:26px">
       <h3 style="margin-bottom:${conDesc ? 4 : 10}px">${esc(titulo)}</h3>
       ${conDesc ? `<p style="color:var(--gris);font-size:15px;margin-bottom:12px">${esc(desc)}</p>` : ''}
-      <p>${landingsDe(g).map((l) => `<a href="${p}${l.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0;text-transform:none;letter-spacing:0;font-size:13.5px;padding:10px 16px">${esc(l.menu)}</a>`).join('')}</p>
+      <p>${landingsDe(g).filter((l) => !l.segmento).map((l) => `<a href="${p}${l.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0;text-transform:none;letter-spacing:0;font-size:13.5px;padding:10px 16px">${esc(l.menu)}</a>`).join('')}</p>
     </div>`
     )
     .join('\n');
@@ -954,7 +964,8 @@ function paginaInicio() {
       <a href="#casas" class="btn btn-claro">Ver las ${casas.length} casas</a>
       <a href="${wa('Hola Hostalia, quiero información de las casas')}" class="btn btn-claro">Escríbenos</a>
     </div>
-    <p class="nota">★ ${marca.calificacion} · ${marca.resenas} reseñas en Airbnb</p>
+    <p class="nota">${esc(POSICIONAMIENTO)}</p>
+    <p class="nota">★ ${marca.calificacion} · ${marca.resenas} reseñas en Airbnb · <a href="${HUB_ORIGEN}/" style="color:inherit;text-decoration:underline">¿Vienes de otra ciudad?</a></p>
     <a href="#casas" class="bajar" aria-label="Ver las casas"></a>
   </div>
 </section>
@@ -1564,8 +1575,12 @@ function paginaLanding(l) {
   const h1Texto = l.h1.replace(/<[^>]+>/g, '').replace(/\.$/, '');
   const modificado = fechaLanding(l);
   const grupo = GRUPOS.find(([g]) => g === (l.grupo || 'motivo'));
-  const hermanas = landingsDe(l.grupo || 'motivo').filter((o) => o.slug !== l.slug);
-  const otras = landings.filter((o) => o.slug !== l.slug && !hermanas.includes(o)).slice(0, 6);
+  const hermanas = l.relacionadas
+    ? l.relacionadas.map((s) => landings.find((o) => o.slug === s)).filter(Boolean)
+    : landingsDe(l.grupo || 'motivo').filter((o) => o.slug !== l.slug && !o.segmento);
+  const otras = landings.filter((o) => o.slug !== l.slug && !hermanas.includes(o) && o.grupo !== 'origen').slice(0, 6);
+  /** Guías "si vienes de otra ciudad" que cuelgan de esta landing (p. ej. cuadrillas → cuadrillas desde Monterrey). */
+  const hijas = landings.filter((o) => o.padre === l.slug);
   return (
     cabeza({
       titulo,
@@ -1582,6 +1597,7 @@ function paginaLanding(l) {
           inLanguage: 'es-MX',
           isPartOf: { '@id': `${SITE}/#website` },
           about: { '@id': `${SITE}/#organizacion` },
+          ...(l.publicado ? { datePublished: l.publicado } : {}),
           dateModified: modificado,
           speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.lead'] },
           mainEntity: {
@@ -1641,6 +1657,14 @@ ${l.clientes ? seccionClientes('../') : ''}
   </div></div>
 </section>
 
+${hijas.length ? `<section>
+  <div class="w">
+    <span class="eyebrow">Si vienes de otra ciudad</span>
+    <h2 style="font-size:clamp(24px,3vw,34px)">Guías por ciudad de origen</h2>
+    <p style="margin-top:14px">${hijas.map((o) => `<a href="../${o.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0;text-transform:none;letter-spacing:0;font-size:13.5px;padding:10px 16px">${esc(o.menu)}</a>`).join('')}</p>
+  </div>
+</section>` : ''}
+
 <section id="casas" class="sec-crema">
   <div class="w">
     <span class="eyebrow">Casas disponibles</span>
@@ -1662,10 +1686,10 @@ ${l.clientes ? seccionClientes('../') : ''}
 <section class="sec-crema">
   <div class="w">
     <span class="eyebrow">También te puede servir</span>
-    <h2 style="font-size:clamp(24px,3vw,34px)">${esc(grupo ? grupo[1] : 'Más guías')}</h2>
+    <h2 style="font-size:clamp(24px,3vw,34px)">${esc(l.relacionadas ? 'Guías relacionadas' : grupo ? grupo[1] : 'Más guías')}</h2>
     <p style="margin-top:14px">${hermanas.map((o) => `<a href="../${o.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0;text-transform:none;letter-spacing:0;font-size:13.5px;padding:10px 16px">${esc(o.menu)}</a>`).join('')}</p>
     ${otras.length ? `<h3 style="margin-top:22px">Otras guías</h3><p style="margin-top:10px">${otras.map((o) => `<a href="../${o.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0;text-transform:none;letter-spacing:0;font-size:13.5px;padding:10px 16px">${esc(o.menu)}</a>`).join('')}</p>` : ''}
-    <p style="margin-top:18px"><a href="../zonas/" class="btn btn-nar">Todas las zonas y ocasiones</a> <a href="../blog/" class="btn btn-out">Guías del blog</a></p>
+    <p style="margin-top:18px"><a href="../zonas/" class="btn btn-nar">Todas las zonas y ocasiones</a> ${l.slug !== HUB_ORIGEN ? `<a href="../${HUB_ORIGEN}/" class="btn btn-out">Hospedaje por ciudad de origen</a> ` : ''}<a href="../blog/" class="btn btn-out">Guías del blog</a></p>
   </div>
 </section>
 
@@ -1836,6 +1860,17 @@ function paginaBlogIndice() {
   );
 }
 
+/** Guías y casa relacionadas al pie del artículo (campos landings/casa del JSON). Enlaces internos que no dependen de la IA. */
+function enlacesArticulo(a) {
+  const ls = (a.landings || []).map((s) => landings.find((l) => l.slug === s)).filter(Boolean);
+  const c = casas.find((x) => x.slug === a.casa);
+  if (!ls.length && !c) return '';
+  return `<div style="margin-top:34px">
+        <h2 style="font-size:22px">Guías relacionadas</h2>
+        <ul>${ls.map((l) => `<li><a href="../../${l.slug}/">${esc(l.titulo)}</a></li>`).join('')}${c ? `<li><a href="../../casas/${c.slug}/">${esc(c.nombre)}</a>: ${c.huespedes} personas, ${c.camas} camas, ${esc(c.zona)}, desde ${mxn(noche(c))}${IVA_NOTA} la noche</li>` : ''}</ul>
+      </div>`;
+}
+
 function paginaArticulo(a) {
   const titulo = `${a.titulo} | ${marca.nombre}`;
   const modificado = a.actualizado || a.fecha;
@@ -1904,6 +1939,7 @@ function paginaArticulo(a) {
               .join('')}`
           : ''
       }
+      ${enlacesArticulo(a)}
       <div style="border:1px solid var(--linea);border-radius:var(--radio);padding:26px;margin-top:38px;background:var(--crema)">
         <h3 style="margin-bottom:8px">¿Buscas casa en ${esc(marca.ciudad)}?</h3>
         <p style="font-size:15.5px;color:var(--gris);margin-bottom:16px">Tenemos ${casas.length} casas completas de ${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))} personas, con clima y factura. Por noche, semana o mes.</p>
@@ -1969,7 +2005,9 @@ function paginaReserva() {
 function llms() {
   return `# ${marca.nombre}
 
-> Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}, México. Por noche, por semana y por mes. De ${PERSONAS} personas. Con factura (CFDI).
+> ${POSICIONAMIENTO}
+
+Renta de casas completas amuebladas en ${marca.ciudad}, ${marca.estado}, México. Por noche, por semana y por mes. De ${PERSONAS} personas. Con factura (CFDI).
 
 ${marca.nombre} renta ${casas.length} casas propias en ${marca.ciudad}. No es un portal ni una agencia: son casas del mismo dueño, que también las publica en Airbnb con ${marca.resenas} reseñas y ${marca.calificacion} de calificación. Reservando directo el precio es menor porque no hay comisión de plataforma.
 
@@ -2010,7 +2048,13 @@ Trabajamos con empresas que traen personal a La Laguna por proyecto: cuadrillas 
 
 ${landings.length ? `## Páginas por necesidad
 
-${landings.map((l) => `- [${l.titulo}](${SITE}/${l.slug}/): ${l.desc}`).join('\n')}
+${landings.filter((l) => l.grupo !== 'origen').map((l) => `- [${l.titulo}](${SITE}/${l.slug}/): ${l.desc}`).join('\n')}
+
+## Hospedaje en Torreón por ciudad de origen
+
+Para quien viaja a Torreón desde otra ciudad (por trabajo, obra, hospital o torneo): distancia real por carretera, por dónde se entra a Torreón, qué zona conviene y casas con precio.
+
+${landingsDe('origen').map((l) => `- [${l.titulo}](${SITE}/${l.slug}/): ${l.desc}`).join('\n')}
 
 ` : ''}## Preguntas frecuentes
 
@@ -2073,6 +2117,7 @@ ${(a.faqs || []).map((f) => `- P: ${f.q}\n  R: ${f.a}`).join('\n')}`;
 
   return `# ${marca.nombre} — contenido completo para asistentes de IA
 
+> ${POSICIONAMIENTO}
 > Renta de casas completas amuebladas en Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo). Por noche, por semana y por mes. De ${PERSONAS} personas por casa. Con factura CFDI. Reservas por WhatsApp ${marca.whatsappVisible}.
 > Versión corta: ${SITE}/llms.txt · Sitemap: ${SITE}/sitemap.xml · Generado el ${HOY}.
 

@@ -28,5 +28,10 @@
   ],
   "busqueda": "casa amueblada torreon",
   "fecha": "2026-08-26",
-  "modelo": "deepseek/deepseek-chat"
+  "modelo": "deepseek/deepseek-chat",
+  "landings": [
+    "hospedaje-por-ciudad-de-origen",
+    "casas-amuebladas-renta-por-mes-torreon"
+  ],
+  "casa": "linces"
 }

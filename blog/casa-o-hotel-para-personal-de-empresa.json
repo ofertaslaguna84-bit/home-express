@@ -28,5 +28,10 @@
   ],
   "busqueda": "hospedaje para trabajadores",
   "fecha": "2026-08-26",
-  "modelo": "claude-opus-5"
+  "modelo": "claude-opus-5",
+  "landings": [
+    "hospedaje-para-empresas-torreon",
+    "hospedaje-cuadrillas-construccion-torreon"
+  ],
+  "casa": "provitec"
 }

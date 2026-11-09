@@ -35,5 +35,10 @@
   ],
   "busqueda": "airbnb torreon por mes",
   "fecha": "2026-11-03",
-  "modelo": "claude-fable-5.1 (redactado a mano desde casas.json)"
+  "modelo": "claude-fable-5.1 (redactado a mano desde casas.json)",
+  "landings": [
+    "casas-amuebladas-renta-por-mes-torreon",
+    "casa-amueblada-por-mes-torreon-trabajadores-foraneos"
+  ],
+  "casa": "acacia"
 }

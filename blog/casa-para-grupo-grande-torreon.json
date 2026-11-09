@@ -27,5 +27,10 @@
   ],
   "busqueda": "airbnb torreon alberca",
   "fecha": "2026-08-26",
-  "modelo": "claude-opus-5"
+  "modelo": "claude-opus-5",
+  "landings": [
+    "hospedaje-equipos-deportivos-torneos-torreon",
+    "casas-con-alberca-torreon"
+  ],
+  "casa": "rosita"
 }

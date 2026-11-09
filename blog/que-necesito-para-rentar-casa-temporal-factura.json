@@ -27,5 +27,10 @@
   ],
   "busqueda": "renta casa amueblada torreon factura",
   "fecha": "2026-08-26",
-  "modelo": "claude-opus-5"
+  "modelo": "claude-opus-5",
+  "landings": [
+    "hospedaje-para-empresas-torreon",
+    "casa-amueblada-por-mes-torreon-trabajadores-foraneos"
+  ],
+  "casa": "provitec"
 }

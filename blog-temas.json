@@ -1,5 +1,5 @@
 {
-  "_nota": "Temas sacados de búsquedas reales de Google (autocompletar, agosto 2026). Los que NO traen demanda —'hospedaje corporativo', 'renta corporativa', 'alojamiento empresas'— se dejaron fuera a propósito: nadie los busca así.",
+  "_nota": "Temas sacados de búsquedas reales de Google (autocompletar, agosto 2026). Los que NO traen demanda —'hospedaje corporativo', 'renta corporativa', 'alojamiento empresas'— se dejaron fuera a propósito: nadie los busca así. Nov 2026: +48 temas de intención real (empresas, cuadrillas, ingenieros, médicos, pacientes, torneos, por ciudad de origen), todos con destino Torreón. Cada tema trae 'landings' y 'casa' para que el artículo enlace a 2 guías y a una casa.",
   "temas": [
     {
       "slug": "cuanto-cuesta-rentar-casa-amueblada-torreon",
@@ -56,6 +56,570 @@
       "busqueda": "casa amueblada torreon",
       "intencion": "Alguien que ya casi decide pero tiene miedo de que le vean la cara.",
       "angulo": "Lista práctica: contrato por escrito, qué incluye exactamente, depósito y cómo se devuelve, quién paga los servicios, política de cancelación, y cómo confirmar que el anfitrión es real."
+    },
+    {
+      "slug": "hospedaje-cuadrillas-construccion-torreon-cuanto-cuesta",
+      "titulo": "¿Cuánto cuesta hospedar una cuadrilla de construcción en Torreón?",
+      "busqueda": "hospedaje para trabajadores torreon",
+      "intencion": "Residente de obra o compras de una constructora que trae gente de fuera.",
+      "angulo": "Costo por cama y por persona con precios reales, noche vs semana vs mes, qué pedir (camas, lavadora, cochera) y cómo se factura.",
+      "landings": [
+        "hospedaje-cuadrillas-construccion-torreon",
+        "hospedaje-torreon-personal-que-rota-por-semana"
+      ],
+      "casa": "provitec"
+    },
+    {
+      "slug": "casa-o-hotel-cuadrilla-10-personas-torreon",
+      "titulo": "Casa o hotel para una cuadrilla de 10 personas en Torreón",
+      "busqueda": "hotel para trabajadores torreon",
+      "intencion": "Encargado que decide entre cuartos de hotel y una casa para su cuadrilla.",
+      "angulo": "Comparar con números de la casa (precio por casa, por persona) y qué pedirle al hotel para comparar parejo; ventajas y desventajas honestas de cada uno.",
+      "landings": [
+        "hospedaje-para-empresas-torreon",
+        "hospedaje-cuadrillas-construccion-torreon"
+      ],
+      "casa": "almendros"
+    },
+    {
+      "slug": "hospedaje-ingenieros-arranque-de-planta-torreon",
+      "titulo": "Hospedaje para ingenieros en un arranque de planta en Torreón",
+      "busqueda": "hospedaje ingenieros torreon",
+      "intencion": "Coordinador de proyecto que manda técnicos por semanas a una planta de La Laguna.",
+      "angulo": "Qué necesita un equipo técnico (silencio, WiFi, cercanía), cómo cotizar si el arranque se alarga, una sola factura.",
+      "landings": [
+        "hospedaje-ingenieros-tecnicos-planta-torreon",
+        "hospedaje-cerca-de-mieleras"
+      ],
+      "casa": "linces"
+    },
+    {
+      "slug": "donde-hospedarse-cerca-parque-industrial-oriente-torreon",
+      "titulo": "Dónde hospedarse cerca del Parque Industrial Oriente de Torreón",
+      "busqueda": "hospedaje parque industrial oriente torreon",
+      "intencion": "Técnico o supervisor que va a trabajar en el oriente de Torreón.",
+      "angulo": "Qué casas quedan más cerca y cuánto cuestan; ventajas de quedarse del lado oriente.",
+      "landings": [
+        "hospedaje-parque-industrial-oriente",
+        "hospedaje-torreon-desde-saltillo"
+      ],
+      "casa": "almendros"
+    },
+    {
+      "slug": "donde-hospedarse-cerca-de-mieleras-torreon",
+      "titulo": "Dónde hospedarse cerca de Mieleras y la zona industrial de Torreón",
+      "busqueda": "hospedaje cerca de mieleras torreon",
+      "intencion": "Personal que trabaja rumbo a Mieleras, Ferropuerto o Montebello.",
+      "angulo": "Opciones cercanas, precios por noche y por mes, qué considerar de tráfico y horarios de turno.",
+      "landings": [
+        "hospedaje-cerca-de-mieleras",
+        "casas-en-renta-provitec-torreon"
+      ],
+      "casa": "provitec"
+    },
+    {
+      "slug": "medicos-residentes-torreon-renta-sin-aval",
+      "titulo": "Renta para médicos residentes en Torreón sin aval",
+      "busqueda": "renta para residentes medicos torreon",
+      "intencion": "Médico residente que llega a Torreón a una rotación o residencia.",
+      "angulo": "Opciones cerca de hospitales, contrato por el periodo sin aval, compartir casa para bajar costo.",
+      "landings": [
+        "hospedaje-medicos-residentes-torreon",
+        "hospedaje-medicos-residentes-torreon-desde-durango"
+      ],
+      "casa": "loft-tec"
+    },
+    {
+      "slug": "donde-quedarse-familiar-hospitalizado-torreon",
+      "titulo": "Dónde quedarse en Torreón si tu familiar está hospitalizado",
+      "busqueda": "hospedaje cerca de hospitales torreon",
+      "intencion": "Familia que viene de fuera a acompañar a un paciente.",
+      "angulo": "Cercanía a hospitales, alargar estancia si el alta se retrasa, cocina y lavadora, recámara en planta baja.",
+      "landings": [
+        "hospedaje-cerca-de-hospitales-torreon",
+        "hospedaje-familiares-pacientes-torreon-desde-durango"
+      ],
+      "casa": "depa-los-angeles"
+    },
+    {
+      "slug": "hospedaje-equipo-deportivo-torneo-torreon",
+      "titulo": "Cómo organizar el hospedaje de un equipo para un torneo en Torreón",
+      "busqueda": "hospedaje para equipos deportivos torreon",
+      "intencion": "Entrenador o papá que organiza el viaje de un equipo.",
+      "angulo": "Cuántas personas por casa, dos casas cercanas, comida antes del partido, factura al club.",
+      "landings": [
+        "hospedaje-equipos-deportivos-torneos-torreon",
+        "hospedaje-equipos-deportivos-torreon-desde-monterrey"
+      ],
+      "casa": "rosita"
+    },
+    {
+      "slug": "donde-hospedarse-cerca-estadio-corona-torreon",
+      "titulo": "Dónde hospedarse cerca del Estadio Corona en Torreón",
+      "busqueda": "hospedaje cerca estadio corona torreon",
+      "intencion": "Aficionados o grupos que vienen a un partido o concierto.",
+      "angulo": "Casas a pocos minutos del estadio, precio por casa para grupos, qué reservar con tiempo.",
+      "landings": [
+        "hospedaje-cerca-estadio-corona-tsm-torreon",
+        "casas-en-renta-senderos-la-rosita-torreon"
+      ],
+      "casa": "rosita"
+    },
+    {
+      "slug": "casa-para-invitados-de-boda-torreon",
+      "titulo": "Casa para hospedar a los invitados de una boda en Torreón",
+      "busqueda": "hospedaje para boda torreon",
+      "intencion": "Novios o familia que recibe invitados de fuera.",
+      "angulo": "Una casa para la familia que viene de lejos vs cuartos de hotel; reglas de la casa (no es salón de fiestas).",
+      "landings": [
+        "casas-para-bodas-y-eventos-torreon",
+        "hospedaje-por-ciudad-de-origen"
+      ],
+      "casa": "acacia"
+    },
+    {
+      "slug": "casa-con-alberca-por-noche-torreon-precios-2026",
+      "titulo": "Casas con alberca por noche en Torreón: precios 2026",
+      "busqueda": "casa con alberca torreon por noche",
+      "intencion": "Familia o grupo que busca casa con alberca para un fin de semana.",
+      "angulo": "Qué casas tienen alberca privada o del fraccionamiento, precio entre semana y fin de semana, mínimo de noches.",
+      "landings": [
+        "casas-con-alberca-torreon",
+        "renta-temporal-torreon-familias"
+      ],
+      "casa": "leones"
+    },
+    {
+      "slug": "renta-casa-por-semana-torreon-2026",
+      "titulo": "Rentar casa amueblada por semana en Torreón: cómo se cotiza en 2026",
+      "busqueda": "renta casa por semana torreon",
+      "intencion": "Quien viene 5 a 15 días por trabajo o familia.",
+      "angulo": "Por qué la tarifa semanal se cotiza y no se publica, qué incluye, limpieza semanal, cuándo conviene pasar a mes.",
+      "landings": [
+        "casas-amuebladas-por-semana-torreon",
+        "hospedaje-torreon-personal-que-rota-por-semana"
+      ],
+      "casa": "cantera"
+    },
+    {
+      "slug": "costo-hospedar-personal-foraneo-un-mes-torreon-2026",
+      "titulo": "Cuánto cuesta hospedar personal foráneo un mes en Torreón (2026)",
+      "busqueda": "casa amueblada por mes torreon",
+      "intencion": "Recursos humanos o administración que presupuesta la estancia de personal de fuera.",
+      "angulo": "Precios mensuales reales con y sin servicios, costo por persona, limpieza, depósito, factura mensual.",
+      "landings": [
+        "casa-amueblada-por-mes-torreon-trabajadores-foraneos",
+        "casas-amuebladas-renta-por-mes-torreon"
+      ],
+      "casa": "provitec"
+    },
+    {
+      "slug": "presupuesto-viaticos-hospedaje-obra-torreon",
+      "titulo": "Cómo presupuestar los viáticos de hospedaje para una obra en Torreón",
+      "busqueda": "viaticos hospedaje trabajadores",
+      "intencion": "Administrador de obra que arma el presupuesto de viáticos.",
+      "angulo": "Partidas a considerar (hospedaje, limpieza, servicios, comida), cómo bajar el costo con casa y cocina, sin inventar precios de terceros.",
+      "landings": [
+        "hospedaje-para-empresas-torreon",
+        "hospedaje-cuadrillas-construccion-torreon"
+      ],
+      "casa": "grande-14"
+    },
+    {
+      "slug": "factura-hospedaje-empresa-que-pedir-torreon",
+      "titulo": "Factura de hospedaje para tu empresa: qué pedir al rentar en Torreón",
+      "busqueda": "renta casa amueblada torreon factura",
+      "intencion": "Quien necesita comprobar el gasto de hospedaje del personal.",
+      "angulo": "Datos fiscales que se piden, IVA desglosado, una factura por varias casas o por mes; sin citar leyes.",
+      "landings": [
+        "hospedaje-para-empresas-torreon",
+        "casa-amueblada-por-mes-torreon-trabajadores-foraneos"
+      ],
+      "casa": "linces"
+    },
+    {
+      "slug": "de-monterrey-a-torreon-por-trabajo-donde-quedarse",
+      "titulo": "De Monterrey a Torreón por trabajo: dónde quedarte",
+      "busqueda": "monterrey a torreon hospedaje",
+      "intencion": "Profesional o equipo de Monterrey que viene por días o semanas.",
+      "angulo": "Distancia (339 km por carretera), por dónde se entra (oriente), zonas que convienen y precios.",
+      "landings": [
+        "hospedaje-torreon-desde-monterrey",
+        "hospedaje-ingenieros-torreon-desde-monterrey"
+      ],
+      "casa": "almendros"
+    },
+    {
+      "slug": "de-saltillo-a-torreon-ir-y-venir-o-quedarse",
+      "titulo": "De Saltillo a Torreón: ¿ir y venir o quedarse?",
+      "busqueda": "saltillo a torreon",
+      "intencion": "Personal de Saltillo o Ramos Arizpe con trabajo en La Laguna.",
+      "angulo": "255 km por la 40D; cuándo conviene regresar diario y cuándo quedarse; casa por mes para quien viene de lunes a viernes.",
+      "landings": [
+        "hospedaje-torreon-desde-saltillo",
+        "hospedaje-cuadrillas-torreon-desde-saltillo"
+      ],
+      "casa": "rosita"
+    },
+    {
+      "slug": "de-chihuahua-a-torreon-hospedaje-estancias-largas",
+      "titulo": "De Chihuahua a Torreón: hospedaje para estancias largas",
+      "busqueda": "chihuahua a torreon",
+      "intencion": "Personal o familias de Chihuahua que vienen por semanas.",
+      "angulo": "471 km por la 45 y la 49, se entra por Gómez Palacio; zonas de Torreón cerca del Periférico; tarifa mensual.",
+      "landings": [
+        "hospedaje-torreon-desde-chihuahua",
+        "hospedaje-ingenieros-torreon-desde-chihuahua"
+      ],
+      "casa": "linces"
+    },
+    {
+      "slug": "de-durango-a-torreon-tratamiento-medico-hospedaje",
+      "titulo": "De Durango a Torreón por un tratamiento médico: dónde hospedarse",
+      "busqueda": "hospedaje torreon para pacientes de durango",
+      "intencion": "Familia de Durango que viene a hospitales de Torreón.",
+      "angulo": "248 km por la 40D; casas cerca de hospitales; estancias que se alargan; turnarse entre familiares.",
+      "landings": [
+        "hospedaje-familiares-pacientes-torreon-desde-durango",
+        "hospedaje-torreon-desde-durango"
+      ],
+      "casa": "depa-los-angeles"
+    },
+    {
+      "slug": "de-cdmx-a-torreon-por-trabajo-aeropuerto-zonas",
+      "titulo": "Si vuelas de la CDMX a Torreón por trabajo: zonas y hospedaje",
+      "busqueda": "vuelo cdmx torreon hospedaje",
+      "intencion": "Corporativo, auditor o consultor que llega en avión.",
+      "angulo": "Casas cercanas al aeropuerto, moverse sin coche, una sola factura por la estancia.",
+      "landings": [
+        "hospedaje-torreon-desde-cdmx",
+        "hospedaje-ingenieros-torreon-desde-cdmx"
+      ],
+      "casa": "linces"
+    },
+    {
+      "slug": "zonas-de-torreon-sin-coche",
+      "titulo": "Zonas de Torreón para hospedarte si no traes coche",
+      "busqueda": "hospedaje centro torreon",
+      "intencion": "Visitante sin auto que quiere moverse a pie o en taxi.",
+      "angulo": "Centro y Paseo Morelos, cercanía a hospitales y oficinas, qué opciones hay y a cuántos minutos.",
+      "landings": [
+        "hospedaje-centro-torreon",
+        "hospedaje-torreon-desde-cdmx"
+      ],
+      "casa": "depa-los-angeles"
+    },
+    {
+      "slug": "hospedaje-cerca-tec-de-monterrey-campus-laguna",
+      "titulo": "Hospedaje cerca del Tec de Monterrey Campus Laguna",
+      "busqueda": "hospedaje cerca tec de monterrey torreon",
+      "intencion": "Papás, estudiantes de intercambio o profesores visitantes.",
+      "angulo": "Opciones cercanas, por noche o por semestre, qué incluye.",
+      "landings": [
+        "hospedaje-cerca-tec-de-monterrey-torreon",
+        "hospedaje-medicos-residentes-torreon"
+      ],
+      "casa": "loft-tec"
+    },
+    {
+      "slug": "casa-amueblada-cerca-uadec-torreon",
+      "titulo": "Casa amueblada cerca de la UA de C en Torreón",
+      "busqueda": "renta cerca uadec torreon",
+      "intencion": "Estudiantes o familias con trámites en Ciudad Universitaria.",
+      "angulo": "Casas cercanas, compartir casa entre varios, estancias por semestre.",
+      "landings": [
+        "hospedaje-cerca-uadec-torreon",
+        "hospedaje-parque-industrial-oriente"
+      ],
+      "casa": "almendros"
+    },
+    {
+      "slug": "vivir-por-temporada-en-los-vinedos-torreon",
+      "titulo": "Vivir por temporada en Los Viñedos, Torreón",
+      "busqueda": "casas en renta los viñedos torreon",
+      "intencion": "Quien busca zona tranquila con salida al Periférico y al aeropuerto.",
+      "angulo": "Qué hay cerca (Galerías, Lala, aeropuerto), casas disponibles y precios.",
+      "landings": [
+        "casas-en-renta-los-vinedos-torreon",
+        "hospedaje-torreon-desde-chihuahua"
+      ],
+      "casa": "linces"
+    },
+    {
+      "slug": "renta-temporal-senderos-torreon",
+      "titulo": "Renta temporal en Senderos y el norte de Torreón",
+      "busqueda": "casas en renta senderos torreon",
+      "intencion": "Familias o ejecutivos que prefieren el norte de la ciudad.",
+      "angulo": "Cercanía a Costco, Iberoamericana, Lajat; casas y precios.",
+      "landings": [
+        "casas-en-renta-senderos-la-rosita-torreon",
+        "hospedaje-ingenieros-tecnicos-planta-torreon"
+      ],
+      "casa": "cantera"
+    },
+    {
+      "slug": "provitec-torreon-hospedaje-centro-y-zona-industrial",
+      "titulo": "Provitec: hospedaje entre el centro y la zona industrial de Torreón",
+      "busqueda": "casas en renta provitec torreon",
+      "intencion": "Personal que necesita centro e industria a la mano.",
+      "angulo": "Qué queda cerca (Peñoles, Tecnológico de La Laguna, Sanatorio Español), quién debería elegir esta zona.",
+      "landings": [
+        "casas-en-renta-provitec-torreon",
+        "hospedaje-cerca-de-mieleras"
+      ],
+      "casa": "provitec"
+    },
+    {
+      "slug": "fin-de-semana-en-torreon-en-familia",
+      "titulo": "Un fin de semana en Torreón en familia: dónde quedarse y qué hacer",
+      "busqueda": "que hacer en torreon en familia",
+      "intencion": "Familia que viene de fuera a pasear o a visitar parientes.",
+      "angulo": "Plan de fin de semana con lugares reales de la ciudad y casa con alberca o asador; sin inventar horarios ni precios de terceros.",
+      "landings": [
+        "renta-temporal-torreon-familias",
+        "casas-con-alberca-torreon"
+      ],
+      "casa": "acacia"
+    },
+    {
+      "slug": "hospedaje-feria-de-torreon-grupo",
+      "titulo": "Hospedaje para ir en grupo a la Feria de Torreón",
+      "busqueda": "hospedaje feria torreon",
+      "intencion": "Grupos que vienen a la feria o a conciertos.",
+      "angulo": "Reservar con anticipación, casas cerca de la feria, precio por casa vs por persona.",
+      "landings": [
+        "hospedaje-feria-torreon-y-eventos",
+        "casas-en-renta-los-vinedos-torreon"
+      ],
+      "casa": "leones"
+    },
+    {
+      "slug": "semana-santa-cristo-de-las-noas-hospedaje",
+      "titulo": "Semana Santa en Torreón: hospedaje para visitar el Cristo de las Noas",
+      "busqueda": "hospedaje semana santa torreon",
+      "intencion": "Peregrinos y familias que vienen en Semana Santa.",
+      "angulo": "Casas cercanas al centro y al cerro, reservar con tiempo, grupos.",
+      "landings": [
+        "hospedaje-peregrinos-cristo-de-las-noas-semana-santa-torreon",
+        "hospedaje-centro-torreon"
+      ],
+      "casa": "provitec"
+    },
+    {
+      "slug": "posada-de-empresa-casa-con-alberca-torreon",
+      "titulo": "Posada de la empresa en una casa con alberca y asador en Torreón",
+      "busqueda": "casa para posada torreon",
+      "intencion": "Quien organiza la posada de su equipo de trabajo.",
+      "angulo": "Reglas de la casa, capacidad, qué incluye; no es salón de eventos: ser honesto con eso.",
+      "landings": [
+        "casas-con-asador-y-alberca-posadas-fin-de-ano-torreon",
+        "casas-para-bodas-y-eventos-torreon"
+      ],
+      "casa": "cantera"
+    },
+    {
+      "slug": "navidad-fin-de-ano-casa-para-la-familia-torreon",
+      "titulo": "Navidad y fin de año en Torreón: casa para toda la familia",
+      "busqueda": "casa para navidad torreon",
+      "intencion": "Familias que se reúnen en Torreón en diciembre.",
+      "angulo": "Reservar con anticipación, casas grandes, mínimo de noches en temporada.",
+      "landings": [
+        "casas-con-asador-y-alberca-posadas-fin-de-ano-torreon",
+        "renta-temporal-torreon-familias"
+      ],
+      "casa": "jardin-14"
+    },
+    {
+      "slug": "camas-vs-recamaras-cuantas-personas-caben",
+      "titulo": "Camas vs. recámaras: cuántas personas caben de verdad en una casa amueblada",
+      "busqueda": "casa para 12 personas torreon",
+      "intencion": "Quien compara anuncios que dicen \"para 12 personas\".",
+      "angulo": "Contar camas y no huéspedes, sofás cama, baños por persona; tabla con las casas reales.",
+      "landings": [
+        "hospedaje-cuadrillas-construccion-torreon",
+        "hospedaje-equipos-deportivos-torneos-torreon"
+      ],
+      "casa": "grande-14"
+    },
+    {
+      "slug": "casa-para-16-personas-torreon",
+      "titulo": "Casa para 16 personas en Torreón: opciones y precio",
+      "busqueda": "casa para 16 personas torreon",
+      "intencion": "Grupo grande que quiere estar junto.",
+      "angulo": "La casa de 16, alternativas de 14, rentar dos casas; precio por persona.",
+      "landings": [
+        "hospedaje-equipos-deportivos-torneos-torreon",
+        "casas-para-bodas-y-eventos-torreon"
+      ],
+      "casa": "rosita"
+    },
+    {
+      "slug": "loft-o-depa-por-noche-torreon-1-a-4-personas",
+      "titulo": "Loft o departamento por noche en Torreón para 1 a 4 personas",
+      "busqueda": "departamento por noche torreon",
+      "intencion": "Viajero solo o pareja por trabajo.",
+      "angulo": "Opciones pequeñas y económicas, por noche y por mes, qué incluyen.",
+      "landings": [
+        "casas-en-renta-por-noche-torreon",
+        "hospedaje-cerca-tec-de-monterrey-torreon"
+      ],
+      "casa": "loft-tec"
+    },
+    {
+      "slug": "renta-temporal-sin-aval-torreon",
+      "titulo": "Renta temporal sin aval en Torreón: cómo funciona",
+      "busqueda": "renta sin aval torreon",
+      "intencion": "Quien necesita casa por meses y no tiene aval local.",
+      "angulo": "Contrato de hospedaje vs arrendamiento tradicional (sin citar leyes), depósito, plazos de 15 días a 6 meses.",
+      "landings": [
+        "casas-amuebladas-renta-por-mes-torreon",
+        "casa-amueblada-por-mes-torreon-trabajadores-foraneos"
+      ],
+      "casa": "cantera"
+    },
+    {
+      "slug": "hospedaje-auditores-consultores-torreon",
+      "titulo": "Hospedaje para auditores y consultores que vienen a Torreón",
+      "busqueda": "hospedaje ejecutivos torreon",
+      "intencion": "Despachos que mandan equipos por semanas.",
+      "angulo": "Espacio para trabajar, WiFi, cerca de oficinas, factura por el periodo.",
+      "landings": [
+        "hospedaje-ingenieros-torreon-desde-cdmx",
+        "hospedaje-para-empresas-torreon"
+      ],
+      "casa": "depa-los-angeles"
+    },
+    {
+      "slug": "hospedaje-tecnicos-mantenimiento-industrial-torreon",
+      "titulo": "Hospedaje para técnicos de mantenimiento industrial en Torreón",
+      "busqueda": "hospedaje tecnicos torreon",
+      "intencion": "Empresas de servicio que mandan técnicos a paros de planta.",
+      "angulo": "Paros de planta y turnos nocturnos, casas en privada, cercanía a parques industriales.",
+      "landings": [
+        "hospedaje-ingenieros-tecnicos-planta-torreon",
+        "hospedaje-ingenieros-torreon-desde-saltillo"
+      ],
+      "casa": "vinedos-moderna"
+    },
+    {
+      "slug": "personal-que-rota-por-turnos-hospedaje-torreon",
+      "titulo": "Personal que rota por turnos: casa fija en Torreón vs reservar cada semana",
+      "busqueda": "hospedaje rotativo trabajadores",
+      "intencion": "Empresas con personal que entra y sale cada semana.",
+      "angulo": "Ventajas de una casa fija, coordinación de limpieza con el cambio de grupo, factura por periodo.",
+      "landings": [
+        "hospedaje-torreon-personal-que-rota-por-semana",
+        "hospedaje-cuadrillas-torreon-desde-monclova"
+      ],
+      "casa": "provitec"
+    },
+    {
+      "slug": "que-incluye-la-limpieza-casa-amueblada-por-mes",
+      "titulo": "Limpieza en una casa amueblada por mes: qué incluye y cuánto cuesta",
+      "busqueda": "limpieza casa amueblada renta",
+      "intencion": "Quien va a rentar por mes y quiere saber los costos extra.",
+      "angulo": "Limpieza semanal obligatoria con su precio real, qué no incluye, cómo se coordina.",
+      "landings": [
+        "casas-amuebladas-renta-por-mes-torreon",
+        "casa-amueblada-por-mes-torreon-trabajadores-foraneos"
+      ],
+      "casa": "almendros"
+    },
+    {
+      "slug": "casa-amueblada-vs-departamento-por-mes-torreon",
+      "titulo": "Casa amueblada o departamento por mes en Torreón: cuál conviene",
+      "busqueda": "departamento amueblado por mes torreon",
+      "intencion": "Quien duda entre casa y depa para una estancia de meses.",
+      "angulo": "Según número de personas, presupuesto y zona; tabla con opciones reales.",
+      "landings": [
+        "casas-amuebladas-renta-por-mes-torreon",
+        "casas-en-renta-por-noche-torreon"
+      ],
+      "casa": "depa-7"
+    },
+    {
+      "slug": "hotel-o-casa-para-equipo-de-futbol-infantil-torreon",
+      "titulo": "¿Hotel o casa para un equipo de futbol infantil en Torreón?",
+      "busqueda": "hospedaje equipo futbol torreon",
+      "intencion": "Papás y entrenadores de equipos infantiles.",
+      "angulo": "Supervisión de niños, comida, convivencia de papás, presupuesto por familia.",
+      "landings": [
+        "hospedaje-equipos-deportivos-torneos-torreon",
+        "hospedaje-equipos-deportivos-torreon-desde-saltillo"
+      ],
+      "casa": "jardin-14"
+    },
+    {
+      "slug": "hospedaje-temporal-mientras-te-mudas-a-torreon",
+      "titulo": "Hospedaje temporal mientras te mudas a Torreón y buscas casa",
+      "busqueda": "renta temporal torreon",
+      "intencion": "Familias que se mudan por trabajo y aún no tienen casa.",
+      "angulo": "Quedarse por semanas o meses mientras buscan, conocer zonas antes de rentar en firme.",
+      "landings": [
+        "renta-temporal-torreon-familias",
+        "hospedaje-por-ciudad-de-origen"
+      ],
+      "casa": "familiar-10"
+    },
+    {
+      "slug": "hospedaje-temporal-mientras-remodelas-tu-casa-torreon",
+      "titulo": "Dónde vivir unas semanas mientras remodelas tu casa en Torreón",
+      "busqueda": "renta temporal mientras remodelo",
+      "intencion": "Familias de Torreón con remodelación en casa.",
+      "angulo": "Estancias de semanas a meses, mascotas o no (no prometer), cercanía a su colonia.",
+      "landings": [
+        "renta-temporal-torreon-familias",
+        "casas-amuebladas-renta-por-mes-torreon"
+      ],
+      "casa": "senderos"
+    },
+    {
+      "slug": "reservar-casa-en-torreon-desde-otra-ciudad",
+      "titulo": "Cómo reservar una casa en Torreón desde otra ciudad sin verla",
+      "busqueda": "rentar casa torreon desde otra ciudad",
+      "intencion": "Quien viene de fuera y desconfía de reservar a distancia.",
+      "angulo": "Video del recorrido, contrato de hospedaje, anticipo por transferencia, señales de alerta en anuncios falsos.",
+      "landings": [
+        "hospedaje-por-ciudad-de-origen",
+        "hospedaje-torreon-desde-monterrey"
+      ],
+      "casa": "linces"
+    },
+    {
+      "slug": "casas-cerca-del-aeropuerto-de-torreon",
+      "titulo": "Casas amuebladas cerca del aeropuerto de Torreón",
+      "busqueda": "hospedaje cerca aeropuerto torreon",
+      "intencion": "Viajeros con vuelo temprano o tripulaciones/equipos que llegan en avión.",
+      "angulo": "Casas a pocos minutos del aeropuerto, qué zonas, precios.",
+      "landings": [
+        "hospedaje-torreon-desde-cdmx",
+        "casas-en-renta-los-vinedos-torreon"
+      ],
+      "casa": "leones"
+    },
+    {
+      "slug": "hospedaje-cerca-parque-industrial-lajat-torreon",
+      "titulo": "Hospedaje cerca del Parque Industrial Lajat y el norte de Torreón",
+      "busqueda": "hospedaje parque industrial lajat",
+      "intencion": "Personal de plantas en el norte de Torreón.",
+      "angulo": "Casas a minutos de Lajat (Senderos, Los Viñedos), precios y por mes.",
+      "landings": [
+        "hospedaje-ingenieros-tecnicos-planta-torreon",
+        "casas-en-renta-senderos-la-rosita-torreon"
+      ],
+      "casa": "cantera"
+    },
+    {
+      "slug": "precio-por-persona-casa-vs-hotel-torreon-2026",
+      "titulo": "Precio por persona: casa amueblada vs. hotel en Torreón (2026)",
+      "busqueda": "hospedaje economico torreon grupos",
+      "intencion": "Grupos que comparan precio por cabeza.",
+      "angulo": "Cálculo por persona con las casas reales; cómo pedir cotización al hotel para comparar parejo; no inventar precios de hoteles.",
+      "landings": [
+        "hospedaje-para-empresas-torreon",
+        "casas-amuebladas-la-laguna"
+      ],
+      "casa": "almendros"
     }
   ]
 }

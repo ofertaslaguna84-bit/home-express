@@ -1,9 +1,9 @@
 name: Blog con IA
 
 on:
-  # Lunes y jueves a las 9:00 hora de Torreón (15:00 UTC)
+  # Diario a las 9:00 hora de Torreón (15:00 UTC), igual que ghspecialist.com
   schedule:
-    - cron: '0 15 * * 1,4'
+    - cron: '0 15 * * *'
   # Y a mano desde la pestaña Actions
   workflow_dispatch:
     inputs:
@@ -24,14 +24,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ¿Hay llave de IA?
+        id: llave
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$DEEPSEEK_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning title=Blog detenido::Falta el secret DEEPSEEK_API_KEY (o ANTHROPIC_API_KEY). Pégalo en Settings → Secrets and variables → Actions → New repository secret."
+            echo "ok=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=si" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-node@v4
+        if: steps.llave.outputs.ok == 'si'
         with:
           node-version: '20'
 
       - run: npm ci --omit=dev || npm install --omit=dev
+        if: steps.llave.outputs.ok == 'si'
 
       - name: Escribir el artículo
+        if: steps.llave.outputs.ok == 'si'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -43,18 +61,30 @@ jobs:
           fi
 
       - name: Regenerar el sitio
+        if: steps.llave.outputs.ok == 'si'
         run: |
           node build.mjs
           cp img/*.jpg img/logo.png docs/img/ 2>/dev/null || true
 
       - name: Publicar
+        id: publicar
+        if: steps.llave.outputs.ok == 'si'
         run: |
           git config user.name  "Blog Hostalia"
           git config user.email "actions@github.com"
-          if git diff --quiet; then
+          if [ -z "$(git status --porcelain blog)" ]; then
             echo "Sin cambios: no había temas pendientes."
             exit 0
           fi
-          git add -A
+          NUEVOS=$(git status --porcelain blog | sed -n 's#^?? blog/\(.*\)\.json$#/blog/\1/#p' | tr '\n' ' ')
+          echo "nuevos=$NUEVOS" >> "$GITHUB_OUTPUT"
+          git add blog docs
           git commit -m "blog: artículo nuevo ($(date +%Y-%m-%d))"
+          git pull --rebase origin main
           git push
+
+      - name: Avisar a buscadores (IndexNow)
+        if: steps.publicar.outputs.nuevos != ''
+        run: |
+          sleep 90   # que GitHub Pages termine de publicar
+          node scripts/indexnow.mjs ${{ steps.publicar.outputs.nuevos }} /blog/ /sitemap.xml || true

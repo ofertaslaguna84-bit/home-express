@@ -56,6 +56,28 @@ const { temas } = JSON.parse(readFileSync(join(ROOT, 'blog-temas.json'), 'utf8')
 const mxn = (n) => `$${Number(n).toLocaleString('es-MX')}`;
 const precioAirbnb = (b) => Math.round(b / (1 - marca.comisionAirbnb) / 10) * 10;
 const precioDirecto = (b) => Math.round((precioAirbnb(b) * (1 - marca.descuentoDirecto)) / 10) * 10;
+// Misma lógica que build.mjs: las casas en Airbnb se calculan desde baseNoche; las demás traen precioNoche fijo.
+const enAirbnb = (c) => Boolean(c.airbnbId);
+const noche = (c) => (enAirbnb(c) ? precioDirecto(c.baseNoche) : c.precioNoche);
+const IVA = marca.preciosMasIva ? ' + IVA' : '';
+const LIMPIEZA = marca.limpiezaSemanal ?? 550;
+const SITE = 'https://hostalia.com.mx';
+
+// Páginas a las que el artículo puede enlazar (landings.json + las de origenes.json, con su título)
+const paginasSitio = (() => {
+  const out = [];
+  try {
+    for (const l of JSON.parse(readFileSync(join(ROOT, 'landings.json'), 'utf8'))) out.push({ slug: l.slug, titulo: l.titulo });
+  } catch {}
+  try {
+    const sm = readFileSync(join(ROOT, 'docs', 'sitemap.xml'), 'utf8');
+    for (const m of sm.matchAll(/<loc>https:\/\/hostalia\.com\.mx\/([a-z0-9-]+)\/<\/loc>/g)) {
+      if (!out.some((x) => x.slug === m[1]) && !['zonas', 'blog', 'asesores', 'casas', 'reserva'].includes(m[1])) out.push({ slug: m[1], titulo: m[1].replace(/-/g, ' ') });
+    }
+  } catch {}
+  return out;
+})();
+const tituloDe = (slug) => paginasSitio.find((p) => p.slug === slug)?.titulo || slug.replace(/-/g, ' ');
 
 // ── contexto real del negocio, para que la IA no invente ────────────────────
 const CONTEXTO = `
@@ -63,12 +85,14 @@ NEGOCIO: ${marca.nombre}, renta de casas amuebladas en ${marca.ciudad}, ${marca.
 Son ${casas.length} casas PROPIAS (no somos portal ni intermediario). El mismo dueño las
 publica también en Airbnb, donde tiene ${marca.resenas} reseñas y ${marca.calificacion} de calificación.
 
-CASAS (datos exactos, no inventar otros):
+Todas las casas están en Torreón, Coahuila. Escribe siempre con destino Torreón.
+
+CASAS (datos exactos, no inventar otros; URL de cada una: ${SITE}/casas/{slug}/):
 ${casas
   .map(
     (c) =>
-      `- ${c.nombre} (${c.zona}): ${c.huespedes} personas, ${c.recamaras} recámaras, ${c.camas} camas, ${c.banos} baños. ` +
-      `${mxn(precioDirecto(c.baseNoche))}/noche directo (${mxn(precioAirbnb(c.baseNoche))} en Airbnb). ${c.destacados.join(', ')}.`
+      `- ${c.nombre} [slug ${c.slug}] (${c.zona}): ${c.huespedes} personas, ${c.recamaras} recámaras, ${c.camas} camas${c.banos ? `, ${c.banos} baños` : ''}. ` +
+      `${mxn(noche(c))}${IVA}/noche directo${enAirbnb(c) ? ` (${mxn(precioAirbnb(c.baseNoche))} en Airbnb)` : ''}. ${c.destacados.join(', ')}.`
   )
   .join('\n')}
 
@@ -76,13 +100,16 @@ HECHOS QUE SÍ PUEDES USAR:
 - Todas tienen clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas.
 - Estancia mínima 2 noches, sin máximo. Hay estancias de hasta 6 meses.
 - PRECIOS POR MES (usa estos, no los calcules):
-${casas.map((c) => `  ${c.nombre}: ${mxn(c.precioMes)} al mes, ${marca.serviciosIncluidos ? 'servicios incluidos' : 'sin servicios'}.`).join('\n')}
+${casas
+  .map((c) => `  ${c.nombre}: ${c.precioMesSinServicios ? `${mxn(c.precioMesSinServicios)}${IVA} al mes sin servicios, ${mxn(c.precioMesConServicios)}${IVA} con servicios (agua, luz, gas e internet)` : 'se cotiza por WhatsApp'}.`)
+  .join('\n')}
+- LIMPIEZA: obligatoria y aparte, ${mxn(LIMPIEZA)}${IVA} por servicio, una vez por semana.
 - NUNCA multipliques el precio por noche por 30 para dar un mensual: da una cifra irreal.
   El mensual es mucho más bajo que esa cuenta, y es el de la lista de arriba.
 - La tarifa por SEMANA no se publica: se cotiza por WhatsApp. No inventes porcentajes.
-- Los precios mostrados son finales, con IVA incluido. Al facturar se desglosa el IVA.
+- ${marca.preciosMasIva ? 'Los precios publicados son MÁS IVA (16%). Escríbelos con "+ IVA".' : 'Los precios mostrados son finales, con IVA incluido.'} Al facturar se desglosa el IVA.
 - Facturamos CFDI. Es un diferenciador real: la mayoría de las rentas temporales de la zona no factura.
-- Se reserva por WhatsApp (${marca.whatsappVisible}), con anticipo por transferencia. No hay motor de reservas en línea.
+- Se reserva por WhatsApp (${marca.whatsappVisible}), con anticipo por transferencia.
 - Reservar directo cuesta menos que por Airbnb porque no se paga la comisión de plataforma
   (Airbnb cobra ${Math.round(marca.comisionAirbnb * 100)}% al anfitrión desde el 15 de septiembre de 2026).
 - Precio de mercado en Torreón para casa amueblada por mes: entre $19,000 y $30,000, según si incluye servicios.
@@ -108,6 +135,10 @@ QUIÉN LO VA A LEER: ${tema.intencion}
 
 ${CONTEXTO}
 
+${(tema.landings || []).length || tema.casa ? `ENLACES OBLIGATORIOS (ponlos dentro del cuerpo como <a href="URL">texto natural</a>, en un párrafo donde vengan al caso, no en una lista al final):
+${(tema.landings || []).map((s) => `- ${SITE}/${s}/ → ${tituloDe(s)}`).join('\n')}
+${tema.casa ? `- ${SITE}/casas/${tema.casa}/ → ${casas.find((c) => c.slug === tema.casa)?.nombre || tema.casa}` : ''}
+` : ''}
 ${yaEscritos.length ? `ARTÍCULOS QUE YA EXISTEN (no repitas su contenido, puedes enlazarlos):\n${yaEscritos.map((a) => `- ${a.titulo} → /blog/${a.slug}/`).join('\n')}\n` : ''}
 CÓMO ESCRIBIR:
 - Español de México, natural, como le explicarías a un cliente por WhatsApp. Nada de lenguaje corporativo.
@@ -232,7 +263,9 @@ async function generar(tema, yaEscritos) {
     cuerpo: art.cuerpo,
     faqs: art.faqs,
     busqueda: tema.busqueda,
-    fecha: new Date().toISOString().slice(0, 10),
+    ...(tema.landings ? { landings: tema.landings } : {}),
+    ...(tema.casa ? { casa: tema.casa } : {}),
+    fecha: new Date(Date.now() - 6 * 3600 * 1000).toISOString().slice(0, 10),
     modelo,
   };
 
