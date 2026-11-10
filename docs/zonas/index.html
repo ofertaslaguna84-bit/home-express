@@ -423,7 +423,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
     <p class="sub">Cada guía trae las casas que aplican, el precio desde, cuánto se hace en coche y las preguntas que nos hacen de verdad. Todas las casas son nuestras, están en Torreón y se facturan.</p>
     <div id="mapa-zonas" class="mapa" role="img" aria-label="Mapa de ubicación"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="" defer></script>
-<script>document.addEventListener('DOMContentLoaded',function(){if(!window.L)return;var m=L.map('mapa-zonas',{scrollWheelZoom:false});L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(m);var P=[{"lat":25.5738,"lng":-103.3828,"radio":700,"nombre":"Los Viñedos · 5 casas","url":"../casas-en-renta-los-vinedos-torreon/"},{"lat":25.53,"lng":-103.433,"radio":600,"nombre":"Provitec · 1 casa","url":"../casas-en-renta-provitec-torreon/"},{"lat":25.5446,"lng":-103.3407,"radio":600,"nombre":"Los Almendros · 1 casa","url":"../hospedaje-parque-industrial-oriente/"},{"lat":25.52,"lng":-103.35,"radio":800,"nombre":"Ampliación La Rosita · 1 casa","url":"../casas-en-renta-senderos-la-rosita-torreon/"},{"lat":25.61,"lng":-103.39,"radio":700,"nombre":"Residencial Senderos · 2 casas","url":"../casas-en-renta-senderos-la-rosita-torreon/"},{"lat":25.5491,"lng":-103.4474,"radio":600,"nombre":"Ampliación Los Ángeles · 1 casa","url":"../hospedaje-centro-torreon/"},{"lat":25.516,"lng":-103.399,"radio":800,"nombre":"Zona Tec de Monterrey · 1 casa","url":"../hospedaje-cerca-tec-de-monterrey-torreon/"},{"lat":25.565,"lng":-103.47,"radio":900,"nombre":"Límite Torreón – Gómez Palacio · 2 casas","url":"../hospedaje-gomez-palacio/"},{"lat":25.55,"lng":-103.42,"radio":1500,"nombre":"Torreón · 4 casas","url":"../zonas/"}];var g=[];P.forEach(function(p){var c=L.circle([p.lat,p.lng],{radius:p.radio||600,color:'#13203A',weight:1,fillColor:'#8A6A2F',fillOpacity:.22}).addTo(m);g.push(c);var k=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'pin-wrap',html:'<div class="pin-casa">'+p.nombre+'</div>',iconSize:null,iconAnchor:[0,0]})}).addTo(m);if(p.url){k.on('click',function(){location.href=p.url});c.on('click',function(){location.href=p.url})}});m.fitBounds(L.latLngBounds(P.map(function(p){return [p.lat,p.lng]})).pad(.25));});</script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.L)return;var m=L.map('mapa-zonas',{scrollWheelZoom:false});L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(m);var P=[{"lat":25.5738,"lng":-103.3828,"radio":700,"nombre":"Los Viñedos · 5 casas","url":"../casas-en-renta-los-vinedos-torreon/"},{"lat":25.53,"lng":-103.433,"radio":600,"nombre":"Provitec · 1 casa","url":"../casas-en-renta-provitec-torreon/"},{"lat":25.5446,"lng":-103.3407,"radio":600,"nombre":"Los Almendros · 1 casa","url":"../hospedaje-parque-industrial-oriente/"},{"lat":25.52,"lng":-103.35,"radio":800,"nombre":"Ampliación La Rosita · 1 casa","url":"../casas-en-renta-senderos-la-rosita-torreon/"},{"lat":25.61,"lng":-103.39,"radio":700,"nombre":"Residencial Senderos · 2 casas","url":"../casas-en-renta-senderos-la-rosita-torreon/"},{"lat":25.5491,"lng":-103.4474,"radio":600,"nombre":"Ampliación Los Ángeles · 1 casa","url":"../hospedaje-centro-torreon/"},{"lat":25.516,"lng":-103.399,"radio":800,"nombre":"Zona Tec de Monterrey · 1 casa","url":"../hospedaje-cerca-tec-de-monterrey-torreon/"},{"lat":25.565,"lng":-103.47,"radio":900,"nombre":"Límite Torreón – Gómez Palacio · 2 casas","url":"../hospedaje-gomez-palacio/"},{"lat":25.55,"lng":-103.42,"radio":1500,"nombre":"Torreón · 4 casas","url":"../zonas/"},{"lat":25.5913,"lng":-103.4173,"radio":600,"nombre":"Villas Santorini · 1 casa","url":"../zonas/"},{"lat":25.6003,"lng":-103.3783,"radio":600,"nombre":"Alebrijes Residencial · 1 casa","url":"../zonas/"},{"lat":25.6229,"lng":-103.379,"radio":600,"nombre":"Senderos de Alicante · 1 casa","url":"../zonas/"}];var g=[];P.forEach(function(p){var c=L.circle([p.lat,p.lng],{radius:p.radio||600,color:'#13203A',weight:1,fillColor:'#8A6A2F',fillOpacity:.22}).addTo(m);g.push(c);var k=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'pin-wrap',html:'<div class="pin-casa">'+p.nombre+'</div>',iconSize:null,iconAnchor:[0,0]})}).addTo(m);if(p.url){k.on('click',function(){location.href=p.url});c.on('click',function(){location.href=p.url})}});m.fitBounds(L.latLngBounds(P.map(function(p){return [p.lat,p.lng]})).pad(.25));});</script>
     <div class="zonas-ed" style="margin-bottom:40px">
       <a class="zona-c" href="../casas-en-renta-los-vinedos-torreon/">
         <span class="n">5 casas · desde $1,550 + IVA</span>
@@ -478,6 +478,24 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
         <h3>Torreón</h3>
         <p>AR emergencias a 3 min · Plaza Cuatro Caminos a 5 min</p>
         <span class="cs">Casa Familiar 10 · Depa Siete · Casa Jardín 14 · Casa Grande 14</span>
+      </a>
+      <a class="zona-c" href="../zonas/">
+        <span class="n">1 casa · desde $1,450 + IVA</span>
+        <h3>Villas Santorini</h3>
+        <p>Galerías Laguna a 5 min · Universidad Iberoamericana a 7 min</p>
+        <span class="cs">Casa Santorini</span>
+      </a>
+      <a class="zona-c" href="../zonas/">
+        <span class="n">1 casa · desde $1,450 + IVA</span>
+        <h3>Alebrijes Residencial</h3>
+        <p>Parque Industrial Lajat a 4 min · Costco a 6 min</p>
+        <span class="cs">Casa Alebrijes</span>
+      </a>
+      <a class="zona-c" href="../zonas/">
+        <span class="n">1 casa · desde $1,450 + IVA</span>
+        <h3>Senderos de Alicante</h3>
+        <p>Costco a 6 min · Universidad Iberoamericana a 7 min</p>
+        <span class="cs">Casa Alicante</span>
       </a>
     </div>
     
@@ -883,7 +901,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
       <details class="faq"><summary>¿Desde cuánto cuesta una casa amueblada en Torreón?</summary><div class="faq-a"><p>Por noche desde $650 + IVA (un loft para 4) y desde $1,340 + IVA por una casa completa para 10 personas. Por mes, de $35,000 a $51,750 + IVA sin servicios. La limpieza se cobra aparte, $550 + IVA por semana.</p></div></details>
       <details class="faq"><summary>¿Cómo sé qué casa me conviene?</summary><div class="faq-a"><p>Nos escribes por WhatsApp y nos dices dónde vas a estar, cuántas personas son y cuánto tiempo te quedas. Con eso te decimos cuál conviene y el precio cerrado, sin compromiso.</p></div></details>
     </div>
-    <p style="margin-top:24px"><a href="../#casas" class="btn btn-nar">Ver las 18 casas</a> <a href="../blog/" class="btn btn-out">Guías del blog</a></p>
+    <p style="margin-top:24px"><a href="../#casas" class="btn btn-nar">Ver las 21 casas</a> <a href="../blog/" class="btn btn-out">Guías del blog</a></p>
   </div>
 </section>
 
@@ -896,7 +914,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
       </div>
       <div>
         <h4>Casas</h4>
-        <ul><li><a href="../casas/leones/">Casa Leones</a></li><li><a href="../casas/linces/">Casa Linces</a></li><li><a href="../casas/provitec/">Casa Provitec</a></li><li><a href="../casas/almendros/">Casa Almendros</a></li><li><a href="../casas/acacia/">Casa Acacias</a></li><li><a href="../casas/cantera/">Casa Cantera</a></li><li><a href="../casas/rosita/">Casa La Rosita</a></li><li><a href="../casas/vinedos/">Casa Viñedos</a></li><li><a href="../casas/vinedos-moderna/">Casa Viñedos Moderna</a></li><li><a href="../casas/senderos/">Casa Senderos</a></li><li><a href="../casas/gomez-11/">Casa Gómez 11</a></li><li><a href="../casas/gomez-10/">Casa Gómez 10</a></li><li><a href="../casas/familiar-10/">Casa Familiar 10</a></li><li><a href="../casas/depa-7/">Depa Siete</a></li><li><a href="../casas/jardin-14/">Casa Jardín 14</a></li><li><a href="../casas/grande-14/">Casa Grande 14</a></li><li><a href="../casas/loft-tec/">Loft Tec</a></li><li><a href="../casas/depa-los-angeles/">Depa Los Ángeles</a></li></ul>
+        <ul><li><a href="../casas/leones/">Casa Leones</a></li><li><a href="../casas/linces/">Casa Linces</a></li><li><a href="../casas/provitec/">Casa Provitec</a></li><li><a href="../casas/almendros/">Casa Almendros</a></li><li><a href="../casas/acacia/">Casa Acacias</a></li><li><a href="../casas/cantera/">Casa Cantera</a></li><li><a href="../casas/alebrijes/">Casa Alebrijes</a></li><li><a href="../casas/alicante/">Casa Alicante</a></li><li><a href="../casas/santorini/">Casa Santorini</a></li><li><a href="../casas/rosita/">Casa La Rosita</a></li><li><a href="../casas/vinedos/">Casa Viñedos</a></li><li><a href="../casas/vinedos-moderna/">Casa Viñedos Moderna</a></li><li><a href="../casas/senderos/">Casa Senderos</a></li><li><a href="../casas/gomez-11/">Casa Gómez 11</a></li><li><a href="../casas/gomez-10/">Casa Gómez 10</a></li><li><a href="../casas/familiar-10/">Casa Familiar 10</a></li><li><a href="../casas/depa-7/">Depa Siete</a></li><li><a href="../casas/jardin-14/">Casa Jardín 14</a></li><li><a href="../casas/grande-14/">Casa Grande 14</a></li><li><a href="../casas/loft-tec/">Loft Tec</a></li><li><a href="../casas/depa-los-angeles/">Depa Los Ángeles</a></li></ul>
       </div>
       <div>
         <h4><a href="../zonas/">Hospedaje por zona y ocasión</a></h4>

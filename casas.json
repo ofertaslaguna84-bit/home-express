@@ -228,6 +228,95 @@
       "m2": 150
     },
     {
+      "slug": "alebrijes",
+      "nombre": "Casa Alebrijes",
+      "titulo": "Casa amueblada para 8 personas en Alebrijes Residencial",
+      "zona": "Alebrijes Residencial",
+      "huespedes": 8,
+      "recamaras": 3,
+      "banos": 2.5,
+      "camas": 3,
+      "m2": 175,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "destacados": [
+        "Totalmente amueblada",
+        "Clima en toda la casa",
+        "Cochera techada para 2 autos",
+        "Sala de TV"
+      ],
+      "fotos": [
+        "alebrijes-portada",
+        "alebrijes-cocina",
+        "alebrijes-sala",
+        "alebrijes-comedor",
+        "alebrijes-recamara_01",
+        "alebrijes-recamara_02",
+        "alebrijes-bano",
+        "alebrijes-fachada"
+      ],
+      "resumen": "Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa."
+    },
+    {
+      "slug": "alicante",
+      "nombre": "Casa Alicante",
+      "titulo": "Casa amueblada para 8 personas en Senderos de Alicante",
+      "zona": "Senderos de Alicante",
+      "huespedes": 8,
+      "recamaras": 3,
+      "banos": 2.5,
+      "camas": 3,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "destacados": [
+        "Asador en el patio",
+        "Recámara principal con vestidor",
+        "Cochera techada para 2 autos",
+        "Cerrada con vigilancia y juegos"
+      ],
+      "fotos": [
+        "alicante-portada",
+        "alicante-cocina",
+        "alicante-comedor",
+        "alicante-recamara_01",
+        "alicante-bano",
+        "alicante-fachada"
+      ],
+      "resumen": "En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador."
+    },
+    {
+      "slug": "santorini",
+      "nombre": "Casa Santorini",
+      "titulo": "Casa amueblada para 8 personas en Villas Santorini",
+      "zona": "Villas Santorini",
+      "huespedes": 8,
+      "recamaras": 3,
+      "banos": 2.5,
+      "camas": 3,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "destacados": [
+        "Totalmente amueblada",
+        "Cocina con barra",
+        "Lavadora y secadora",
+        "A 5 minutos de Galerías Laguna"
+      ],
+      "fotos": [
+        "santorini-portada",
+        "santorini-cocina",
+        "santorini-comedor",
+        "santorini-sala",
+        "santorini-recamara_01",
+        "santorini-recamara_02",
+        "santorini-recamara_03",
+        "santorini-bano"
+      ],
+      "resumen": "En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora."
+    },
+    {
       "slug": "rosita",
       "nombre": "Casa La Rosita",
       "titulo": "Casa para 16 personas con 10 camas, con factura",

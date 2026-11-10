@@ -18,10 +18,14 @@ zonas={
  'tec':       {'nombre':'Zona Tec de Monterrey','lat':25.5160,'lng':-103.3990,'radio':800},
  'gomez':     {'nombre':'Límite Torreón – Gómez Palacio','lat':25.5650,'lng':-103.4700,'radio':900},
  'torreon':   {'nombre':'Torreón','lat':25.5500,'lng':-103.4200,'radio':2500},
+ 'santorini': {'nombre':'Villas Santorini','lat':25.5913,'lng':-103.4173,'radio':600},
+ 'alebrijes': {'nombre':'Alebrijes Residencial','lat':25.6003,'lng':-103.3783,'radio':600},
+ 'alicante':  {'nombre':'Senderos de Alicante','lat':25.6229,'lng':-103.3790,'radio':600},
 }
 casaZona={'leones':'vinedos','linces':'vinedos','vinedos':'vinedos','vinedos-moderna':'vinedos','provitec':'provitec','almendros':'almendros',
- 'acacia':'acacias','cantera':'cantera','rosita':'rosita','senderos':'senderos','depa-los-angeles':'los-angeles','loft-tec':'tec',
- 'gomez-11':'gomez','gomez-10':'gomez','familiar-10':'torreon','depa-7':'torreon','jardin-14':'torreon','grande-14':'torreon'}
+ 'acacia':'vinedos','cantera':'senderos','rosita':'rosita','senderos':'senderos','depa-los-angeles':'los-angeles','loft-tec':'tec',
+ 'gomez-11':'gomez','gomez-10':'gomez','familiar-10':'torreon','depa-7':'torreon','jardin-14':'torreon','grande-14':'torreon',
+ 'santorini':'santorini','alebrijes':'alebrijes','alicante':'alicante'}
 # landmarks manuales (coordenadas aproximadas conocidas) + los geocodificados
 manual=[('Estadio Corona TSM','salir',25.5360,-103.3620),('Parque Industrial Oriente','trabajo',25.5470,-103.3330),('Parque Industrial Ferropuerto','trabajo',25.5700,-103.2850),
  ('Parque Industrial Mieleras','trabajo',25.4950,-103.2800),('Parque Industrial Lajat','trabajo',25.6000,-103.3650),('Plaza Cuatro Caminos','compras',25.5596,-103.4331),('Galerías Laguna','compras',25.5817,-103.4030),

@@ -46,7 +46,7 @@ const zonaDe = (c) => lugares.zonas[zonaKey(c)] || { nombre: c.zona, lat: 25.542
 const cercaDe = (c) => lugares.cerca[zonaKey(c)] || {};
 /** Video hero por casa: docs/video/<slug>-hero.mp4 (los hace el Contenido Bot de Grok); si no existe, va la foto de portada. */
 const videoCasa = (c) => (existsSync(join(OUT, 'video', `${c.slug}-hero.mp4`)) ? `video/${c.slug}-hero.mp4` : null);
-const NUM = ['cero', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte'];
+const NUM = ['cero', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte', 'veintiún', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco'];
 const enLetra = (n) => NUM[n] || String(n);
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 

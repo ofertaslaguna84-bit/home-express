@@ -77,6 +77,36 @@
       "airbnbIds": []
     },
     {
+      "slug": "alebrijes",
+      "nombre": "Casa Alebrijes",
+      "huespedes": 8,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "alicante",
+      "nombre": "Casa Alicante",
+      "huespedes": 8,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "santorini",
+      "nombre": "Casa Santorini",
+      "huespedes": 8,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
       "slug": "rosita",
       "nombre": "Casa La Rosita",
       "huespedes": 16,

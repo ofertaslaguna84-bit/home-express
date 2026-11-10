@@ -1,11 +1,11 @@
 # Hostalia — contexto para responder clientes
 
-> Documento generado desde los datos reales del negocio. Última actualización: 8 de noviembre de 2026.
+> Documento generado desde los datos reales del negocio. Última actualización: 9 de noviembre de 2026.
 > Si cambian precios o casas: `node scripts/generar-contexto.mjs`
 
 ## Qué es el negocio
 
-Hostalia renta 18 casas **propias** amuebladas en Torreón, Coahuila.
+Hostalia renta 21 casas **propias** amuebladas en Torreón, Coahuila.
 No es portal ni intermediario: son casas del mismo dueño, que también las publica
 en Airbnb con 84 reseñas y 4.9 de calificación.
 Reservando directo sale más barato porque no se paga la comisión de plataforma.
@@ -30,6 +30,9 @@ Reservando directo sale más barato porque no se paga la comisión de plataforma
 | **Almendros** | 12 | 3 | 8 | 2.5 | $1,710 | $45,000 | $48,000 |
 | **Los Viñedos** | 11 | 3 | 6 | 2.5 | $1,670 | $45,000 | $48,000 |
 | **Los Viñedos** | 8 | 3 | 7 | 2.5 | $1,550 | se cotiza | se cotiza |
+| **Alebrijes Residencial** | 8 | 3 | 3 | 2.5 | $1,450 | se cotiza | se cotiza |
+| **Senderos de Alicante** | 8 | 3 | 3 | 2.5 | $1,450 | se cotiza | se cotiza |
+| **Villas Santorini** | 8 | 3 | 3 | 2.5 | $1,450 | se cotiza | se cotiza |
 | **Límite Torreón-Gómez Palacio** | 11 | 2 | 6 | 2 | $1,450 | se cotiza | se cotiza |
 | **Cerca de Gómez Palacio** | 10 | 3 | 7 | 3.5 | $1,450 | se cotiza | se cotiza |
 | **Torreón** | 10 | 4 | 6 | 2.5 | $1,450 | se cotiza | se cotiza |
@@ -116,6 +119,39 @@ En Los Viñedos, en zona privada y con alberca privada. Junto al Periférico y a
 - **Ficha:** https://hostalia.com.mx/casas/cantera/
 
 Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.
+
+### Alebrijes Residencial — Casa Alebrijes
+
+- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
+- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Totalmente amueblada, Clima en toda la casa, Cochera techada para 2 autos, Sala de TV
+- **Ficha:** https://hostalia.com.mx/casas/alebrijes/
+
+Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa.
+
+### Senderos de Alicante — Casa Alicante
+
+- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
+- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Asador en el patio, Recámara principal con vestidor, Cochera techada para 2 autos, Cerrada con vigilancia y juegos
+- **Ficha:** https://hostalia.com.mx/casas/alicante/
+
+En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador.
+
+### Villas Santorini — Casa Santorini
+
+- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
+- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Totalmente amueblada, Cocina con barra, Lavadora y secadora, A 5 minutos de Galerías Laguna
+- **Ficha:** https://hostalia.com.mx/casas/santorini/
+
+En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora.
 
 ### Ampliación La Rosita — Casa La Rosita
 
@@ -312,7 +348,7 @@ Es un sitio estático generado por `build.mjs` desde `casas.json`. Todo sale de 
 node build.mjs      genera docs/ (lo que publica GitHub Pages)
 ```
 
-**Páginas:** portada, una ficha por casa, blog y 14 artículos.
+**Páginas:** portada, una ficha por casa, blog y 16 artículos.
 
 **Cómo se calculan los precios:** en `casas.json` se guarda la tarifa base (la del
 calendario de Airbnb). El sitio calcula solo:
