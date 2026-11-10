@@ -76,6 +76,39 @@ En Viñedos, con alberca y asador en el fraccionamiento, patio con pasto, lavado
 
 En privada con seguridad, a 6 minutos de Galerías Laguna, 5 de la zona industrial y 10 del aeropuerto. Cocina con barra de granito, clima, WiFi, lavadora y secadora, cochera techada para 2 autos y acceso a la alberca del fraccionamiento.
 
+### Alebrijes Residencial — Casa Alebrijes
+
+- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
+- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Totalmente amueblada, Clima en toda la casa, Cochera techada para 2 autos, Sala de TV
+- **Ficha:** https://hostalia.com.mx/casas/alebrijes/
+
+Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa.
+
+### Senderos de Alicante — Casa Alicante
+
+- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
+- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Asador en el patio, Recámara principal con vestidor, Cochera techada para 2 autos, Cerrada con vigilancia y juegos
+- **Ficha:** https://hostalia.com.mx/casas/alicante/
+
+En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador.
+
+### Villas Santorini — Casa Santorini
+
+- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
+- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
+- **En Airbnb:** no está publicada; solo se renta directo
+- **Por mes:** se cotiza por WhatsApp
+- **Destaca por:** Totalmente amueblada, Cocina con barra, Lavadora y secadora, A 5 minutos de Galerías Laguna
+- **Ficha:** https://hostalia.com.mx/casas/santorini/
+
+En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora.
+
 ### Provitec — Casa Provitec
 
 - **Capacidad:** 12 personas · 4 recámaras · 7 camas
@@ -119,39 +152,6 @@ En Los Viñedos, en zona privada y con alberca privada. Junto al Periférico y a
 - **Ficha:** https://hostalia.com.mx/casas/cantera/
 
 Palapa, asador y barra en el patio. Es la más económica de todas y la que mejor funciona para convivencias y fines de semana en familia.
-
-### Alebrijes Residencial — Casa Alebrijes
-
-- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
-- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
-- **En Airbnb:** no está publicada; solo se renta directo
-- **Por mes:** se cotiza por WhatsApp
-- **Destaca por:** Totalmente amueblada, Clima en toda la casa, Cochera techada para 2 autos, Sala de TV
-- **Ficha:** https://hostalia.com.mx/casas/alebrijes/
-
-Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa.
-
-### Senderos de Alicante — Casa Alicante
-
-- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
-- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
-- **En Airbnb:** no está publicada; solo se renta directo
-- **Por mes:** se cotiza por WhatsApp
-- **Destaca por:** Asador en el patio, Recámara principal con vestidor, Cochera techada para 2 autos, Cerrada con vigilancia y juegos
-- **Ficha:** https://hostalia.com.mx/casas/alicante/
-
-En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador.
-
-### Villas Santorini — Casa Santorini
-
-- **Capacidad:** 8 personas · 3 recámaras · 3 camas · 2.5 baños
-- **Precio por noche:** $1,450 entre semana · $1,450 fin de semana
-- **En Airbnb:** no está publicada; solo se renta directo
-- **Por mes:** se cotiza por WhatsApp
-- **Destaca por:** Totalmente amueblada, Cocina con barra, Lavadora y secadora, A 5 minutos de Galerías Laguna
-- **Ficha:** https://hostalia.com.mx/casas/santorini/
-
-En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora.
 
 ### Ampliación La Rosita — Casa La Rosita
 

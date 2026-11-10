@@ -34,6 +34,36 @@
       ]
     },
     {
+      "slug": "alebrijes",
+      "nombre": "Casa Alebrijes",
+      "huespedes": 8,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "alicante",
+      "nombre": "Casa Alicante",
+      "huespedes": 8,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
+      "slug": "santorini",
+      "nombre": "Casa Santorini",
+      "huespedes": 8,
+      "precioNoche": 1450,
+      "precioFinde": 1450,
+      "minNoches": 2,
+      "reservaEnLinea": false,
+      "airbnbIds": []
+    },
+    {
       "slug": "provitec",
       "nombre": "Casa Provitec",
       "huespedes": 12,
@@ -72,36 +102,6 @@
       "huespedes": 10,
       "precioNoche": 1340,
       "precioFinde": 1500,
-      "minNoches": 2,
-      "reservaEnLinea": false,
-      "airbnbIds": []
-    },
-    {
-      "slug": "alebrijes",
-      "nombre": "Casa Alebrijes",
-      "huespedes": 8,
-      "precioNoche": 1450,
-      "precioFinde": 1450,
-      "minNoches": 2,
-      "reservaEnLinea": false,
-      "airbnbIds": []
-    },
-    {
-      "slug": "alicante",
-      "nombre": "Casa Alicante",
-      "huespedes": 8,
-      "precioNoche": 1450,
-      "precioFinde": 1450,
-      "minNoches": 2,
-      "reservaEnLinea": false,
-      "airbnbIds": []
-    },
-    {
-      "slug": "santorini",
-      "nombre": "Casa Santorini",
-      "huespedes": 8,
-      "precioNoche": 1450,
-      "precioFinde": 1450,
       "minNoches": 2,
       "reservaEnLinea": false,
       "airbnbIds": []
