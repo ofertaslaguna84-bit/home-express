@@ -9,6 +9,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { generarOrigenes, HUB_ORIGEN } from './origenes.mjs';
+import { generarIntenciones } from './intenciones.mjs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
@@ -486,9 +487,35 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--azul)}
 
 // ─────────────────────────────────────────────────────────── piezas
 
-function cabeza({ titulo, desc, url, imagen, schema, ogType = 'website', extraHead = '' }) {
+/** Título de 30–60 caracteres: quita el sufijo de marca si no cabe y corta en una frontera de palabra. */
+function ajustaTitulo(t) {
+  t = String(t).replace(/\s+/g, ' ').trim();
+  if (t.length <= 60) return t;
+  let s = t.replace(/\s*\|\s*Hostalia$/, '');
+  if (s.length <= 60) return s;
+  const corte = Math.max(s.lastIndexOf(': ', 58), s.lastIndexOf(' — ', 58), s.lastIndexOf(', ', 58), s.lastIndexOf(' (', 58));
+  if (corte >= 34) return s.slice(0, corte).replace(/[\s:,—(]+$/, '');
+  return s.slice(0, 58).replace(/\s+\S*$/, '');
+}
+/** Meta description de 120–160 caracteres: corta en la última frase o palabra que quepa; si es corta, agrega la promesa de marca. */
+function ajustaMeta(d) {
+  d = String(d).replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  if (d.length > 160) {
+    const s = d.slice(0, 160);
+    const fin = Math.max(s.lastIndexOf('. '), s.lastIndexOf('; '));
+    d = fin >= 110 ? s.slice(0, fin + 1) : s.slice(0, 157).replace(/\s+\S*$/, '') + '…';
+  }
+  const colas = [' Reserva directa, sin comisión.', ' Facturamos CFDI.', ' Casas completas en Torreón.'];
+  for (const c of colas) if (d.length < 120 && d.length + c.length <= 160) d += c;
+  return d;
+}
+
+function cabeza({ titulo, desc, url, imagen, schema, ogType = 'website', extraHead = '', lang = 'es-MX' }) {
+  titulo = ajustaTitulo(titulo);
+  desc = ajustaMeta(desc);
+  const og = imagen ? `${SITE}/img/${imagen}.jpg` : `${SITE}/img/og-logo.jpg`;
   return `<!DOCTYPE html>
-<html lang="es-MX">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -508,9 +535,8 @@ ${extraHead}<meta property="og:type" content="${ogType}">
 <meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/img/og-logo.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="${og}">
+<meta property="og:image:alt" content="${esc(titulo)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13203A">
 <link rel="icon" href="/favicon.png" type="image/png">
@@ -587,7 +613,7 @@ const pie = (prefijo = '') => `
       </div>
       ${landings.length ? `<div>
         <h4><a href="${prefijo}zonas/">Hospedaje por zona y ocasión</a></h4>
-        <ul>${landings.filter((l) => l.grupo !== 'origen' || l.slug === HUB_ORIGEN).map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}<li><a href="${prefijo}zonas/"><strong>Ver todas →</strong></a></li></ul>
+        <ul>${landings.filter((l) => (l.grupo !== 'origen' || l.slug === HUB_ORIGEN) && l.grupo !== 'uso').map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}<li><a href="${prefijo}zonas/"><strong>Ver todas →</strong></a></li></ul>
       </div>` : ''}
       <div>
         <h4>Contacto</h4>
@@ -596,6 +622,8 @@ const pie = (prefijo = '') => `
           <li>${esc(marca.ciudad)}, ${esc(marca.estado)}</li>
           <li><a href="${prefijo}#faq">Preguntas frecuentes</a></li>
           <li><a href="${prefijo}blog/">Blog</a></li>
+          <li><a href="${prefijo}acerca/">Quiénes somos y políticas</a></li>
+          <li><a href="${prefijo}en/">English</a></li>
         </ul>
       </div>
     </div>
@@ -788,6 +816,8 @@ const orgSchema = () => ({
 // ─────────────────────────────────────────────────────────── páginas por ciudad de origen (origenes.mjs)
 const ORIGENES = existsSync(join(ROOT, 'origenes.json')) ? JSON.parse(readFileSync(join(ROOT, 'origenes.json'), 'utf8')) : null;
 if (ORIGENES) landings.push(...generarOrigenes({ datos: ORIGENES, casas, noche, mxn, IVA_NOTA, cercaDe, LIMPIEZA }));
+/** Páginas de intención (uso × zona, zonas nuevas, temporadas y guías comparativas), ver intenciones.mjs. */
+landings.push(...generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA, LIMPIEZA, HOY }));
 
 // ─────────────────────────────────────────────────────────── landings: grupos y utilidades
 
@@ -798,6 +828,10 @@ const GRUPOS = [
   ['estancia', 'Por noche, por semana o por mes', 'Qué cambia en precio y condiciones según cuánto tiempo te quedas.'],
   ['motivo', 'Por motivo del viaje', 'Familias, bodas, torneos, feria, hospitales, peregrinos, posadas y fin de año.'],
   ['empresas', 'Empresas e industria', 'Cuadrillas, técnicos de planta e ingenieros, con factura CFDI.'],
+  ['personas', 'Por número de personas', 'Casa para 6, 8, 10, 12, 14 o 16 personas: cuál conviene, cuánto sale por persona y en qué zona está.'],
+  ['uso', 'Según a qué vienes, por zona', 'Cuadrillas, equipos de proyecto, familias, hospitales, universidades y renta por mes, zona por zona, con minutos reales.'],
+  ['temporada', 'Temporadas y fechas', 'Maratón Lala, Navidad y Año Nuevo, Buen Fin y puente de noviembre: qué casa y con cuánta anticipación.'],
+  ['guias', 'Guías con cifras', 'Casa o hotel, cuánto cuesta una cuadrilla al mes, Airbnb o directo, qué incluye una casa amueblada, en qué zona quedarse.'],
   ['origen', 'Hospedaje por ciudad de origen', 'Si vienes a Torreón desde Monterrey, Saltillo, Chihuahua, Durango, Zacatecas, CDMX u otra ciudad: distancia, zona que conviene y casas.'],
 ];
 const landingsDe = (g) => landings.filter((l) => (l.grupo || 'motivo') === g);
@@ -1091,8 +1125,8 @@ function paginaCasa(c) {
   const dir = noche(c);
   const airF = enAirbnb(c) ? precioAirbnb(c.baseFinde) : null;
   const dirF = finde(c);
-  const titulo = `Casa amueblada en renta en ${c.zona}, Torreón — ${c.nombre}, ${c.huespedes} personas | ${marca.nombre}`;
-  const desc = `${c.resumen} ${c.recamaras} recámaras, ${c.camas} camas${c.banos ? `, ${c.banos} baños` : ''}. Desde ${mxn(dir)}${IVA_NOTA} la noche reservando directo. Facturamos.`;
+  const titulo = `${c.nombre}: casa amueblada en ${c.zona === marca.ciudad ? 'Torreón' : c.zona} para ${c.huespedes}`;
+  const desc = `${c.nombre}, casa amueblada en renta en ${c.zona === marca.ciudad ? '' : `${c.zona}, `}Torreón para ${c.huespedes} personas: ${c.recamaras} recámaras, ${c.camas} camas${c.banos ? `, ${c.banos} baños` : ''}. Desde ${mxn(dir)}${IVA_NOTA} la noche directo${c.precioMesSinServicios ? ` o ${mxn(c.precioMesSinServicios)} al mes` : ''}. Facturamos.`;
   const zona = zonaDe(c);
   const video = videoCasa(c);
   /** Lista "todo lo que incluye": lo destacado de la casa más lo que traen todas, sin repetir. */
@@ -1136,8 +1170,21 @@ function paginaCasa(c) {
       q: `¿Cuántas personas caben en ${c.nombre}?`,
       a: `Hasta ${c.huespedes} personas, en ${c.recamaras} recámaras con ${c.camas} camas${c.banos ? ` y ${c.banos} baños` : ''}. Si son más, tenemos otras casas — la más grande recibe 12.`,
     },
-    ...FAQS.slice(0, 4),
+    ...(() => {
+      const cz = cercaDe(c);
+      const lin = (cat, n = 3) => (cz[cat] || []).slice(0, n).map((l) => `${l.n.replace(/ de$/, '')} a ${l.min} min`).join(', ');
+      return [
+        ...(cz['Trabajo e industria'] ? [{ q: `¿A cuánto está ${c.nombre} de la zona industrial y del aeropuerto?`, a: `Desde ${zona.nombre}: ${lin('Trabajo e industria', 4)}. Minutos en coche medidos desde el centro de la colonia.` }] : []),
+        ...(cz['Salud'] ? [{ q: `¿Qué hospitales quedan cerca de ${c.nombre}?`, a: `${lin('Salud', 3)}.` }] : []),
+        ...(cz['Súper y compras'] ? [{ q: `¿Dónde hacer el súper cerca de ${c.nombre}?`, a: `${lin('Súper y compras', 3)}. Para comer cerca: ${lin('Comer y café', 3)}.` }] : []),
+        { q: `¿Tiene estacionamiento ${c.nombre}?`, a: `Sí, dentro de la privada o en cochera${c.destacados.some((d) => /2 autos|dos autos/i.test(d)) ? ' techada para dos autos' : ''}. Si traen camioneta grande o remolque avísanos al reservar.` },
+        { q: `¿Cómo reservo ${c.nombre}?`, a: c.reservaEnLinea ? `En esta misma página ves el calendario con las fechas libres y apartas en línea con tarjeta o transferencia; te llega la confirmación al momento. También por WhatsApp.` : `Por WhatsApp al ${marca.whatsappVisible}: nos dices fechas y personas, confirmamos disponibilidad y apartas con un anticipo por transferencia. Te mandamos contrato de hospedaje y, si la necesitas, factura CFDI.` },
+      ];
+    })(),
+    ...FAQS.slice(1, 4),
   ];
+  /** Guías en las que aparece esta casa: por zona, uso y temporada. Enlazado interno real, no relleno. */
+  const guiasCasa = landings.filter((l) => l.casas.includes(c.slug) && l.grupo !== 'origen').slice(0, 10);
 
   return (
     cabeza({
@@ -1150,7 +1197,15 @@ function paginaCasa(c) {
         {
           '@context': 'https://schema.org',
           /** Casas y departamentos/lofts se distinguen por el slug; Accommodation queda como tipo base. */
-          '@type': ['Accommodation', /^(depa|loft)/.test(c.slug) ? 'Apartment' : 'House'],
+          '@type': ['VacationRental', 'Accommodation', /^(depa|loft)/.test(c.slug) ? 'Apartment' : 'House'],
+          identifier: c.slug,
+          brand: { '@id': `${SITE}/#organizacion` },
+          latitude: zona.lat,
+          longitude: zona.lng,
+          checkinTime: '15:00',
+          checkoutTime: '11:00',
+          containsPlace: Array.from({ length: c.recamaras }, (_, i) => ({ '@type': 'Accommodation', name: `Recámara ${i + 1}` })),
+          tourBookingPage: `${SITE}/casas/${c.slug}/`,
           '@id': `${SITE}/casas/${c.slug}/#casa`,
           name: c.nombre,
           description: c.resumen,
@@ -1168,7 +1223,7 @@ function paginaCasa(c) {
             '@type': 'Place',
             name: c.zona === marca.ciudad ? marca.ciudad : `${c.zona}, ${marca.ciudad}`,
             address: { '@type': 'PostalAddress', addressLocality: marca.ciudad, addressRegion: marca.estado, addressCountry: 'MX' },
-            geo: { '@type': 'GeoCoordinates', latitude: GEO.lat, longitude: GEO.lng },
+            geo: { '@type': 'GeoCoordinates', latitude: zona.lat, longitude: zona.lng },
           },
           ...(enAirbnb(c) ? { sameAs: `https://www.airbnb.mx/rooms/${c.airbnbId}` } : {}),
           amenityFeature: [
@@ -1183,17 +1238,24 @@ function paginaCasa(c) {
             target: wa(`Hola Hostalia, quiero reservar ${c.nombre}`),
           },
         },
-        {
+        ...[
+          { price: dir, name: 'Por noche entre semana', unitText: 'noche' },
+          { price: dirF, name: 'Por noche en fin de semana (viernes y sábado)', unitText: 'noche' },
+          ...(c.precioMesSinServicios ? [{ price: c.precioMesSinServicios, name: 'Por mes sin servicios', unitText: 'mes' }, { price: c.precioMesConServicios, name: 'Por mes con agua, luz, gas e internet', unitText: 'mes' }] : []),
+        ].map((o) => ({
           '@context': 'https://schema.org',
           '@type': 'Offer',
+          name: `${c.nombre} · ${o.name}`,
           itemOffered: { '@id': `${SITE}/casas/${c.slug}/#casa` },
-          price: dir,
+          price: o.price,
           priceCurrency: 'MXN',
+          priceSpecification: { '@type': 'UnitPriceSpecification', price: o.price, priceCurrency: 'MXN', unitText: o.unitText, valueAddedTaxIncluded: !marca.preciosMasIva },
           url: `${SITE}/casas/${c.slug}/`,
           availability: 'https://schema.org/InStock',
           areaServed: { '@type': 'City', name: marca.ciudad },
-          description: `Renta por noche de ${c.nombre}, reservando directo${IVA_NOTA}. Limpieza aparte ${mxn(LIMPIEZA)}${IVA_NOTA} por semana.`,
-        },
+          seller: { '@id': `${SITE}/#organizacion` },
+          description: `${o.name} de ${c.nombre}, reservando directo${IVA_NOTA}. Limpieza aparte ${mxn(LIMPIEZA)}${IVA_NOTA} por semana. Factura CFDI.`,
+        })),
         {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
@@ -1292,6 +1354,14 @@ function paginaCasa(c) {
 </section>
 
 ${seccionCerca(c, '../../')}
+
+${guiasCasa.length ? `<section class="sec-crema">
+  <div class="w">
+    <span class="eyebrow">¿A qué vienes a Torreón?</span>
+    <h2 style="font-size:clamp(24px,3vw,34px)">Guías en las que ${esc(c.nombre)} es buena opción</h2>
+    <p style="margin-top:14px">${guiasCasa.map((l) => `<a href="../../${l.slug}/" class="btn btn-out" style="margin:4px 6px 4px 0;text-transform:none;letter-spacing:0;font-size:13.5px;padding:10px 16px">${esc(l.menu)}</a>`).join('')}<a href="../../zonas/" class="btn btn-nar" style="margin:4px 6px 4px 0;font-size:13.5px;padding:10px 16px">Todas las guías</a></p>
+  </div>
+</section>` : ''}
 
 <section class="sec-ed">
   <div class="w">
@@ -2000,6 +2070,123 @@ function paginaReserva() {
   );
 }
 
+// ─────────────────────────────────────────────────────────── /acerca/ (quiénes somos y políticas, citable)
+const POLITICAS = [
+  { q: '¿Qué es Hostalia?', a: `Hostalia renta ${casas.length} casas completas y amuebladas en Torreón, Coahuila, por noche, semana o mes, para empresas, cuadrillas y familias. No es un portal ni una agencia: son casas operadas por el mismo anfitrión, con ${marca.resenas} reseñas y ${marca.calificacion} de calificación en Airbnb. Atiende por WhatsApp al ${marca.whatsappVisible}.` },
+  { q: '¿Cómo se reserva?', a: 'En las casas con reserva en línea, desde la ficha: eliges fechas en el calendario, ves el precio y pagas con tarjeta o transferencia; la confirmación llega al momento y la casa se bloquea también en Airbnb. En las demás, por WhatsApp: fechas y personas, confirmación de disponibilidad y anticipo por transferencia para apartar.' },
+  { q: '¿Cómo se paga?', a: 'Tarjeta o transferencia en la reserva en línea; transferencia bancaria para anticipos y para empresas. En estancias por noche o semana se aparta con anticipo y se liquida al llegar. En estancias por mes se paga el mes por adelantado.' },
+  { q: '¿Facturan?', a: 'Sí. CFDI por el total del hospedaje a nombre de la empresa o de la persona que paga, con el IVA desglosado. Los precios publicados son más IVA.' },
+  { q: '¿Qué incluye el precio?', a: 'La casa completa amueblada y equipada: cocina, ropa de cama y toallas, clima, wifi, lavadora, estacionamiento y agua caliente. Por noche y por semana los servicios están incluidos.' },
+  { q: '¿Qué se cobra aparte?', a: `Limpieza obligatoria de ${mxn(LIMPIEZA)}${IVA_NOTA} por servicio, una vez por semana, con cambio de sábanas y toallas. En renta por mes, los servicios (agua, luz, gas e internet) van incluidos por ${mxn(3000)} más al mes o se pagan por consumo.` },
+  { q: '¿Piden depósito?', a: 'En estancias por mes, un depósito en garantía equivalente a un mes de renta, que se devuelve al entregar la casa en orden. En estancias por noche o semana no se pide depósito, salvo grupos grandes o eventos, que se acuerda al reservar.' },
+  { q: '¿Cuál es la estancia mínima y la máxima?', a: 'Mínima 2 noches. Máxima sin límite: hay estancias de hasta 6 meses con contrato mes por mes.' },
+  { q: '¿A qué hora se entra y se sale?', a: 'Entrada a partir de las 3 de la tarde y salida antes de las 11 de la mañana. Si necesitas otro horario, se coordina por WhatsApp sujeto a que la casa no tenga entrada o salida ese mismo día.' },
+  { q: '¿Cómo funciona la cancelación?', a: 'Avísanos por WhatsApp lo antes posible. En reservas cortas buscamos primero cambiar fechas; si no es posible, la devolución del anticipo depende de la anticipación con la que avises. En estancias por mes las condiciones de cancelación y salida anticipada van por escrito en el contrato.' },
+  { q: '¿Hay contrato?', a: 'Sí, contrato de hospedaje por escrito con fechas, monto, qué incluye y reglas de la casa. Para empresas se firma a nombre de la razón social.' },
+  { q: '¿Cuántas personas pueden quedarse?', a: 'Las que indica la ficha de cada casa (de ' + PERSONAS + ' según la casa). Si vienen visitas a comer y no a dormir, avísanos; no se permiten fiestas ni más personas de las reservadas durmiendo en la casa.' },
+  { q: '¿Aceptan mascotas?', a: 'Depende de la casa y del tamaño de la mascota. Pregúntanos antes de reservar.' },
+  { q: '¿Dónde están las casas?', a: `Todas en Torreón, Coahuila, en fraccionamientos con acceso controlado: ${[...new Set(casas.map((c) => c.zona))].join(', ')}. La calle exacta se comparte al confirmar la reserva, nunca en el sitio.` },
+  { q: '¿Qué pasa si algo falla en la casa?', a: 'Hay un número de WhatsApp de atención durante la estancia; fallas de clima, agua caliente o internet se atienden el mismo día.' },
+];
+function paginaAcerca() {
+  const url = `${SITE}/acerca/`;
+  const titulo = `Quiénes somos y políticas de reserva | Hostalia Torreón`;
+  const desc = `Hostalia: ${casas.length} casas amuebladas en Torreón operadas por el mismo anfitrión. Cómo se reserva y se paga, factura CFDI, limpieza, depósito, entrada y salida, cancelación y contrato, explicado en una página.`;
+  return (
+    cabeza({
+      titulo,
+      desc,
+      url,
+      imagen: casas[0].fotos[0],
+      schema: [
+        orgSchema(),
+        { '@context': 'https://schema.org', '@type': 'AboutPage', url, name: titulo, description: desc, inLanguage: 'es-MX', isPartOf: { '@id': `${SITE}/#website` }, about: { '@id': `${SITE}/#organizacion` }, dateModified: ultimoCambio('build.mjs') },
+        { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: POLITICAS.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+        { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: 'Quiénes somos y políticas', item: url }] },
+      ],
+    }) +
+    encabezado('../') +
+    `
+<div class="w"><nav class="crumbs"><a href="../">Inicio</a> › Quiénes somos y políticas</nav></div>
+<section><div class="w"><div class="art">
+<span class="eyebrow">Hostalia · Torreón, Coahuila</span>
+<h1>Quiénes somos y <em>cómo funciona</em> quedarse con nosotros</h1>
+<p class="lead">${esc(POSICIONAMIENTO)} Esta página junta, en un solo lugar, todo lo que normalmente se pregunta por WhatsApp antes de reservar.</p>
+<h2>Los datos</h2>
+<ul>
+<li><strong>Casas:</strong> ${casas.length}, todas completas y amuebladas, de ${PERSONAS} personas.</li>
+<li><strong>Dónde:</strong> Torreón, Coahuila; zonas ${esc([...new Set(casas.map((c) => c.zona))].join(', '))}. Atendemos también a quien trabaja o tiene familia en Gómez Palacio y Lerdo.</li>
+<li><strong>Precios:</strong> por casa completa, desde ${mxn(Math.min(...casas.map(noche)))} hasta ${mxn(Math.max(...casas.map(noche)))}${IVA_NOTA} la noche; por mes desde ${mxn(Math.min(...conMes.map((c) => c.precioMesSinServicios)))}${IVA_NOTA}.</li>
+<li><strong>Reseñas:</strong> ${marca.resenas} en Airbnb, calificación ${marca.calificacion}, donde varias de las casas también están publicadas.</li>
+<li><strong>Contacto:</strong> WhatsApp ${esc(marca.whatsappVisible)}.</li>
+</ul>
+${POLITICAS.map((f) => `<h2>${esc(f.q)}</h2><p>${esc(f.a)}</p>`).join('\n')}
+<h2>Cómo citar esta información</h2>
+<p>Los precios y políticas de esta página se generan desde la misma base que las fichas de las casas y que <a href="../llms.txt">llms.txt</a>, y se actualizan cuando cambia algo. Última actualización: ${fechaLarga(ultimoCambio('build.mjs'))}.</p>
+<p><a href="../#casas" class="btn btn-nar">Ver las casas</a> <a href="../zonas/" class="btn btn-out">Guías por zona y ocasión</a> <a href="${wa('Hola Hostalia, tengo una duda sobre las políticas de reserva')}" class="btn btn-out">WhatsApp</a></p>
+</div></div></section>
+` +
+    pie('../')
+  );
+}
+
+// ─────────────────────────────────────────────────────────── /en/ (resumen en inglés para visitantes de EUA)
+function paginaEn() {
+  const url = `${SITE}/en/`;
+  const titulo = 'Furnished house rentals in Torreón, Mexico · Hostalia';
+  const desc = `${casas.length} fully furnished houses in Torreón, Coahuila, for ${PERSONAS} guests: nightly, weekly or monthly, with A/C, kitchen, Wi‑Fi and parking. Direct booking, no platform fee, invoice available.`;
+  const amen = (c) => c.destacados.slice(0, 3).join(' · ');
+  const faqsEn = [
+    { q: 'Where are the houses?', a: `All in Torreón, Coahuila (La Laguna metro area, next to Gómez Palacio and Lerdo), in gated neighborhoods: ${[...new Set(casas.map((c) => c.zona))].join(', ')}.` },
+    { q: 'How do I book?', a: 'Some houses can be booked online from their page (live calendar, card or bank transfer). For the others, message us on WhatsApp with your dates and group size; we confirm availability and you secure the house with a deposit by transfer.' },
+    { q: 'Do prices include tax?', a: `Published prices are per house, per night, before 16% VAT. A mandatory weekly cleaning (${mxn(LIMPIEZA)} + VAT) is charged separately. Monthly rates are available with or without utilities.` },
+    { q: 'Minimum stay?', a: 'Two nights. There is no maximum: companies keep houses for up to six months on month‑to‑month contracts.' },
+    { q: 'Can I get an invoice (CFDI)?', a: 'Yes, Mexican CFDI invoices for companies or individuals.' },
+    { q: 'Check‑in and check‑out?', a: 'Check‑in from 3 pm, check‑out by 11 am; other times can be arranged on WhatsApp if the house is free.' },
+  ];
+  return (
+    cabeza({
+      titulo,
+      desc,
+      url,
+      imagen: casas[0].fotos[0],
+      lang: 'en',
+      extraHead: `<link rel="alternate" hreflang="es-MX" href="${SITE}/">\n<link rel="alternate" hreflang="en" href="${url}">\n<link rel="alternate" hreflang="x-default" href="${SITE}/">\n`,
+      schema: [
+        { ...orgSchema(), description: desc, slogan: 'Furnished houses in Torreón for companies, crews and families; book direct, no platform fee.' },
+        { '@context': 'https://schema.org', '@type': 'WebPage', url, name: titulo, description: desc, inLanguage: 'en', isPartOf: { '@id': `${SITE}/#website` }, about: { '@id': `${SITE}/#organizacion` }, dateModified: ultimoCambio('build.mjs') },
+        { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Furnished houses for rent in Torreón', numberOfItems: casas.length, itemListElement: casas.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/casas/${c.slug}/`, name: c.nombre })) },
+        { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqsEn.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+      ],
+    }) +
+    encabezado('../') +
+    `
+<div class="w"><nav class="crumbs"><a href="../">Inicio (español)</a> › English</nav></div>
+<section><div class="w"><div class="art">
+<span class="eyebrow">Torreón, Coahuila, Mexico</span>
+<h1>Furnished houses for rent in Torreón: <em>nightly, weekly or monthly</em></h1>
+<p class="lead">Hostalia rents ${casas.length} complete, furnished houses in Torreón for ${PERSONAS} guests: families visiting relatives, engineers and crews working at the industrial parks, medical stays and events. Every house has air conditioning in every room, an equipped kitchen, Wi‑Fi, washer and parking inside a gated community. Book direct and skip the platform fee; invoices available.</p>
+<h2>The houses</h2>
+<table><thead><tr><th>House</th><th>Area</th><th>Guests</th><th>Bedrooms</th><th>Per night</th><th>Highlights</th></tr></thead><tbody>
+${casas.map((c) => `<tr><td><a href="../casas/${c.slug}/">${esc(c.nombre)}</a></td><td>${esc(c.zona)}</td><td>${c.huespedes}</td><td>${c.recamaras}${c.banos ? ` · ${c.banos} baths` : ''}</td><td>MXN ${Number(noche(c)).toLocaleString('en-US')} + VAT</td><td>${esc(amen(c))}</td></tr>`).join('\n')}
+</tbody></table>
+<p style="font-size:13px;color:var(--gris)">Prices per whole house per night, before 16% VAT. Weekend nights (Friday and Saturday) may differ. Mandatory weekly cleaning ${mxn(LIMPIEZA)} + VAT. Weekly and monthly rates on request.</p>
+<h2>Who stays with us</h2>
+<ul>
+<li><strong>Families from the US visiting Torreón:</strong> one house for grandparents, parents and kids, with a kitchen and a pool in several of them.</li>
+<li><strong>Companies and contractors:</strong> crews and project engineers working at Lajat, Oriente and Mieleras industrial parks or at the plants north of the city; one contract, one invoice.</li>
+<li><strong>Medical stays:</strong> houses minutes from Hospital Ángeles and Sanatorio Español.</li>
+<li><strong>Events:</strong> weddings, the Lala Marathon (March 7, 2027), Christmas and New Year.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+${faqsEn.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join('\n')}
+<p><a href="${wa('Hi Hostalia, I would like to book a house in Torreón. We are __ guests, from __ to __.')}" class="btn btn-nar">Message us on WhatsApp</a> <a href="../" class="btn btn-out">Sitio en español</a></p>
+</div></div></section>
+` +
+    pie('../')
+  );
+}
+
 // ─────────────────────────────────────────────────────────── llms.txt / sitemap / robots
 
 function llms() {
@@ -2021,7 +2208,9 @@ ${marca.nombre} renta ${casas.length} casas propias en ${marca.ciudad}. No es un
 - Factura: sí, CFDI a nombre de la empresa
 - Todas con: clima, cocina equipada, wifi, estacionamiento, ropa de cama y toallas
 - Contacto: WhatsApp ${marca.whatsappVisible}
-- Reservas: por WhatsApp, con anticipo por transferencia. No hay motor de reservas en línea.
+- Reservas: en línea en la ficha de las casas que lo tienen habilitado (calendario en vivo, pago con tarjeta o transferencia, confirmación al momento) o por WhatsApp con anticipo por transferencia.
+- Políticas completas (reserva, pago, factura, limpieza, depósito, cancelación, entrada y salida): ${SITE}/acerca/
+- Versión en inglés: ${SITE}/en/
 
 ## Las casas y sus precios
 
@@ -2205,6 +2394,8 @@ function urlsSitio() {
     { loc: `${SITE}/zonas/`, pri: '0.9', mod: fLandings },
     ...landings.map((l) => ({ loc: `${SITE}/${l.slug}/`, pri: '0.9', mod: fechaLanding(l) })),
     { loc: `${SITE}/asesores/`, pri: '0.8', mod: ultimoCambio('build.mjs') },
+    { loc: `${SITE}/acerca/`, pri: '0.8', mod: ultimoCambio('build.mjs') },
+    { loc: `${SITE}/en/`, pri: '0.7', mod: ultimoCambio('build.mjs') },
     ...(articulos.length ? [{ loc: `${SITE}/blog/`, pri: '0.8', mod: fBlog }] : []),
     ...articulos.map((a) => ({ loc: `${SITE}/blog/${a.slug}/`, pri: '0.7', mod: a.actualizado || a.fecha })),
   ];
@@ -2269,6 +2460,8 @@ escribir('index.html', paginaInicio());
 for (const c of casas) escribir(`casas/${c.slug}/index.html`, paginaCasa(c));
 escribir('asesores/index.html', paginaAsesores());
 escribir('reserva/index.html', paginaReserva());
+escribir('acerca/index.html', paginaAcerca());
+escribir('en/index.html', paginaEn());
 /** Copia mínima de casas.json para el API de reservas (carpeta reservas/, se despliega aparte en Vercel): una sola fuente de precios. */
 writeFileSync(join(ROOT, 'reservas', 'casas-api.json'), JSON.stringify({
   marca: { nombre: marca.nombre, whatsapp: marca.whatsapp, iva: marca.iva, limpiezaSemanal: LIMPIEZA, descuentoSemana: marca.descuentoSemana },
