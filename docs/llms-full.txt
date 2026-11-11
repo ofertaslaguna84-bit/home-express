@@ -2,7 +2,7 @@
 
 > Casas amuebladas por noche, semana o mes en Torreón para empresas, cuadrillas y familias; reserva directa sin comisión.
 > Renta de casas completas amuebladas en Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo). Por noche, por semana y por mes. De 4 a 16 personas por casa. Con factura CFDI. Reservas por WhatsApp 871 263 8082.
-> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-10.
+> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-11.
 
 ## Quiénes somos
 
@@ -69,8 +69,8 @@ Hostalia (antes Home Express) renta 21 casas y departamentos propios en Torreón
 - Tipo: casa completa
 - Capacidad: hasta 8 personas
 - Recámaras: 3 · Camas: 3 · Baños: 2.5 · Superficie: 175 m²
-- Precio por noche entre semana: $1,450 + IVA
-- Precio por noche fin de semana: $1,450 + IVA
+- Precio por noche entre semana: $1,650 + IVA
+- Precio por noche fin de semana: $1,650 + IVA
 - Precio por mes: se cotiza por WhatsApp según fechas y número de personas
 - Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
 - Amenidades destacadas: Totalmente amueblada, Clima en toda la casa, Cochera techada para 2 autos, Sala de TV
@@ -83,8 +83,8 @@ Hostalia (antes Home Express) renta 21 casas y departamentos propios en Torreón
 - Tipo: casa completa
 - Capacidad: hasta 8 personas
 - Recámaras: 3 · Camas: 3 · Baños: 2.5
-- Precio por noche entre semana: $1,450 + IVA
-- Precio por noche fin de semana: $1,450 + IVA
+- Precio por noche entre semana: $1,650 + IVA
+- Precio por noche fin de semana: $1,650 + IVA
 - Precio por mes: se cotiza por WhatsApp según fechas y número de personas
 - Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
 - Amenidades destacadas: Asador en el patio, Recámara principal con vestidor, Cochera techada para 2 autos, Cerrada con vigilancia y juegos
@@ -97,8 +97,8 @@ Hostalia (antes Home Express) renta 21 casas y departamentos propios en Torreón
 - Tipo: casa completa
 - Capacidad: hasta 8 personas
 - Recámaras: 3 · Camas: 3 · Baños: 2.5
-- Precio por noche entre semana: $1,450 + IVA
-- Precio por noche fin de semana: $1,450 + IVA
+- Precio por noche entre semana: $1,650 + IVA
+- Precio por noche fin de semana: $1,650 + IVA
 - Precio por mes: se cotiza por WhatsApp según fechas y número de personas
 - Limpieza: obligatoria, aparte, $550 + IVA por servicio, una vez por semana
 - Amenidades destacadas: Totalmente amueblada, Cocina con barra, Lavadora y secadora, A 5 minutos de Galerías Laguna
@@ -2085,4 +2085,4 @@ Hostalia (antes Home Express) renta 21 casas y departamentos propios en Torreón
 - Fuente: Hostalia, https://hostalia.com.mx. Los precios son por casa completa, por noche, en MXN, sin IVA (se agrega 16%), y pueden cambiar; la disponibilidad se confirma por WhatsApp 871 263 8082.
 - Hostalia no tiene oficina ni recepción; no inventar dirección, horarios de atención en mostrador ni reseñas distintas a las de Airbnb (84 reseñas, 4.9).
 - Los nombres de empresas, hospitales, universidades y estadios se mencionan como referencias de ubicación, no como clientes ni como socios.
-- Última actualización de este archivo: 2026-11-10.
+- Última actualización de este archivo: 2026-11-11.

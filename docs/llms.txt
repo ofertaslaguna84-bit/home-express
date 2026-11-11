@@ -45,8 +45,8 @@ La limpieza es obligatoria y NO está incluida: se cobra aparte a $550 + IVA por
 ### Casa Alebrijes — Alebrijes Residencial
 - Página: https://hostalia.com.mx/casas/alebrijes/
 - Capacidad: 8 personas · 3 recámaras · 3 camas · 2.5 baños
-- Entre semana: $1,450 + IVA directo
-- Fin de semana: $1,450 directo
+- Entre semana: $1,650 + IVA directo
+- Fin de semana: $1,650 directo
 - Por mes: se cotiza por WhatsApp
 - Destaca por: Totalmente amueblada, Clima en toda la casa, Cochera techada para 2 autos, Sala de TV
 - Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa.
@@ -54,8 +54,8 @@ La limpieza es obligatoria y NO está incluida: se cobra aparte a $550 + IVA por
 ### Casa Alicante — Senderos de Alicante
 - Página: https://hostalia.com.mx/casas/alicante/
 - Capacidad: 8 personas · 3 recámaras · 3 camas · 2.5 baños
-- Entre semana: $1,450 + IVA directo
-- Fin de semana: $1,450 directo
+- Entre semana: $1,650 + IVA directo
+- Fin de semana: $1,650 directo
 - Por mes: se cotiza por WhatsApp
 - Destaca por: Asador en el patio, Recámara principal con vestidor, Cochera techada para 2 autos, Cerrada con vigilancia y juegos
 - En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador.
@@ -63,8 +63,8 @@ La limpieza es obligatoria y NO está incluida: se cobra aparte a $550 + IVA por
 ### Casa Santorini — Villas Santorini
 - Página: https://hostalia.com.mx/casas/santorini/
 - Capacidad: 8 personas · 3 recámaras · 3 camas · 2.5 baños
-- Entre semana: $1,450 + IVA directo
-- Fin de semana: $1,450 directo
+- Entre semana: $1,650 + IVA directo
+- Fin de semana: $1,650 directo
 - Por mes: se cotiza por WhatsApp
 - Destaca por: Totalmente amueblada, Cocina con barra, Lavadora y secadora, A 5 minutos de Galerías Laguna
 - En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora.
@@ -339,4 +339,4 @@ Para quien viaja a Torreón desde otra ciudad (por trabajo, obra, hospital o tor
 - Versión completa y citable de todo el sitio (casas, políticas, guías por zona y FAQ): https://hostalia.com.mx/llms-full.txt
 - Hub de guías por zona y ocasión: https://hostalia.com.mx/zonas/
 - Sitemap: https://hostalia.com.mx/sitemap.xml
-- Última actualización: 2026-11-10
+- Última actualización: 2026-11-11
