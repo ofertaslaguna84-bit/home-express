@@ -121,7 +121,11 @@
         "alebrijes-bano",
         "alebrijes-fachada"
       ],
-      "resumen": "Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa."
+      "resumen": "Casa nueva de dos pisos en fraccionamiento cerrado, rumbo a la antigua carretera a San Pedro. Abajo cocina integral, sala-comedor, medio baño y jardín; arriba 3 recámaras, 2 baños completos y sala de TV. Clima en toda la casa.",
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816462996482971474"
+      ]
     },
     {
       "slug": "alicante",
@@ -149,7 +153,11 @@
         "alicante-bano",
         "alicante-fachada"
       ],
-      "resumen": "En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador."
+      "resumen": "En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador.",
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816466840226125571"
+      ]
     },
     {
       "slug": "santorini",
@@ -179,7 +187,11 @@
         "santorini-recamara_03",
         "santorini-bano"
       ],
-      "resumen": "En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora."
+      "resumen": "En Villas Santorini, a cinco minutos de Galerías Laguna. Sala amplia, cocina equipada con barra, comedor, 3 recámaras con clóset y lavadora y secadora.",
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816469637050353682"
+      ]
     },
     {
       "slug": "provitec",

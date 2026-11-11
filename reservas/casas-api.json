@@ -40,8 +40,10 @@
       "precioNoche": 1650,
       "precioFinde": 1650,
       "minNoches": 2,
-      "reservaEnLinea": false,
-      "airbnbIds": []
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816462996482971474"
+      ]
     },
     {
       "slug": "alicante",
@@ -50,8 +52,10 @@
       "precioNoche": 1650,
       "precioFinde": 1650,
       "minNoches": 2,
-      "reservaEnLinea": false,
-      "airbnbIds": []
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816466840226125571"
+      ]
     },
     {
       "slug": "santorini",
@@ -60,8 +64,10 @@
       "precioNoche": 1650,
       "precioFinde": 1650,
       "minNoches": 2,
-      "reservaEnLinea": false,
-      "airbnbIds": []
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816469637050353682"
+      ]
     },
     {
       "slug": "provitec",
