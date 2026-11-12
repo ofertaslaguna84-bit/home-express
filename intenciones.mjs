@@ -361,11 +361,11 @@ export function generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA
 
   const COMBOS = {
     cuadrillas: ['vinedos', 'senderos', 'provitec', 'almendros', 'gomez', 'rosita'],
-    ingenieros: ['vinedos', 'alebrijes', 'alicante', 'santorini', 'provitec', 'almendros'],
+    ingenieros: ['vinedos', 'alebrijes', 'santorini', 'provitec', 'almendros'],
     familias: ['vinedos', 'senderos', 'alebrijes', 'santorini', 'provitec', 'torreon'],
     pacientes: ['provitec', 'tec', 'torreon', 'almendros', 'rosita'],
     estudiantes: ['tec', 'provitec', 'almendros', 'senderos', 'vinedos'],
-    mes: ['vinedos', 'provitec', 'alebrijes', 'alicante', 'santorini', 'almendros'],
+    mes: ['vinedos', 'provitec', 'alebrijes', 'santorini', 'almendros'],
   };
 
   const slugCombo = (u, z) => `${USOS[u].slug}-${ZONAS[z].slug}-torreon`;
@@ -400,7 +400,7 @@ export function generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA
   }
 
   // ── Zonas nuevas (las tres casas nuevas y Los Almendros) ─────────────────────────────
-  for (const z of ['alebrijes', 'alicante', 'santorini', 'almendros']) {
+  for (const z of ['alebrijes', 'santorini', 'almendros']) {
     const Z = { key: z, ...ZONAS[z] };
     const { dentro, lista: cs } = casasPara(z, () => true, 1, 5);
     const c0 = dentro[0] || cs[0];
@@ -706,7 +706,7 @@ export function generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA
       wa: 'Hola Hostalia, vengo a Torreón a __ (planta / hospital / universidad / evento). ¿En qué zona me conviene quedarme y qué casa tienen ahí?',
       casas: ['leones', 'provitec', 'almendros', 'alebrijes', 'santorini', 'gomez-11'].map((s) => casas.find((c) => c.slug === s)).filter(Boolean),
       secciones: (cs) => [
-        { h2: 'Si vienes a la zona industrial del norte (Lajat, Lala, aeropuerto)', html: `<p>Quédate en ${y(['vinedos', 'alebrijes', 'senderos', 'santorini', 'alicante'].map((z) => `${ZONAS[z].nombre} (Lajat a ${minZona(z, 'Parque Industrial Lajat')} min, Lala a ${minZona(z, 'Lala')} min)`))}. Casas: ${y(['vinedos', 'alebrijes', 'senderos', 'santorini', 'alicante'].flatMap((z) => casasZona(z)).slice(0, 6).map(ficha))}.</p>` },
+        { h2: 'Si vienes a la zona industrial del norte (Lajat, Lala, aeropuerto)', html: `<p>Quédate en ${y(['vinedos', 'alebrijes', 'senderos', 'santorini'].map((z) => `${ZONAS[z].nombre} (Lajat a ${minZona(z, 'Parque Industrial Lajat')} min, Lala a ${minZona(z, 'Lala')} min)`))}. Casas: ${y(['vinedos', 'alebrijes', 'senderos', 'santorini'].flatMap((z) => casasZona(z)).slice(0, 6).map(ficha))}.</p>` },
         { h2: 'Si vienes a Peñoles, al centro o al Tec de La Laguna', html: `<p>Provitec: Peñoles a ${minZona('provitec', 'Peñoles')} min, el centro a ${minZona('provitec', 'Paseo Morelos')} min, el Tecnológico de La Laguna a ${minZona('provitec', 'Instituto Tecnológico')} min. Casa: ${ficha(casas.find((c) => c.slug === 'provitec'))} para 12. También las casas del centro-poniente: ${y(casasZona('torreon').slice(0, 3).map(ficha))}.</p>` },
         { h2: 'Si vienes al Tec de Monterrey o al Hospital Ángeles', html: `<p>Zona Tec: Hospital Ángeles a ${minZona('tec', 'Hospital Ángeles')} min, Tec a ${minZona('tec', 'Tec de Monterrey')} min, Intermall a ${minZona('tec', 'Intermall')} min. Casa: ${y(casasZona('tec').map(ficha))}. Para familias grandes, Provitec queda a ${minZona('provitec', 'Tec de Monterrey')} min del Tec.</p>` },
         { h2: 'Si vienes al Parque Industrial Oriente, a la UA de C o al Estadio', html: `<p>Los Almendros: Parque Industrial Oriente a ${minZona('almendros', 'Parque Industrial Oriente')} min, Ciudad Universitaria a ${minZona('almendros', 'UA de C')} min, Estadio Corona a ${minZona('almendros', 'Estadio')} min. Casas: ${y([...casasZona('almendros'), ...casasZona('rosita')].map(ficha))}.</p>` },

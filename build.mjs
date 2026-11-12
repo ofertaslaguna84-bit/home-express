@@ -680,11 +680,14 @@ const VIAJES = [
   ['pocos', 'De 1 a 8 personas', (c) => c.huespedes <= 8],
 ];
 const viajesDe = (c) => VIAJES.filter(([, , f]) => f(c)).map(([k]) => k);
+/** Tipo de propiedad para el filtro: casa / departamento / loft (lo que la gente pregunta primero). */
+const TIPOS = [['casa', 'Casa'], ['departamento', 'Departamento'], ['loft', 'Loft']];
+const tipoKey = (c) => (/^depa/.test(c.slug) ? 'departamento' : /^loft/.test(c.slug) ? 'loft' : 'casa');
 /** Tarjeta editorial (nov 2026, formato Barrio México): foto grande, colonia, nombre, dos líneas y la fila de datos. */
 function tarjetaEd(c, p = '') {
   const dir = noche(c);
   return `
-  <article class="card-ed" data-zona="${zonaKey(c)}" data-viajes="${viajesDe(c).join(' ')}">
+  <article class="card-ed" data-zona="${zonaKey(c)}" data-viajes="${viajesDe(c).join(' ')}" data-tipo="${tipoKey(c)}">
     <a href="${p}casas/${c.slug}/" class="card-foto">
       <img src="${p}img/${c.fotos[0]}.jpg" alt="${esc(c.nombre)}, ${esc(c.zona)}, Torreón" loading="lazy" width="900" height="600">
       ${c.fotos.slice(1, 4).map((f, i) => `<img src="${p}img/${f}.jpg" alt="" class="rota r${i + 1}" loading="lazy" width="900" height="600">`).join('')}
@@ -701,11 +704,12 @@ function tarjetaEd(c, p = '') {
 /** Filtro por colonia y por tipo de viaje, como en barriomexico.travel. Solo JS del navegador, sin recargar. */
 const filtroCasas = () => `
     <div class="filtro" id="filtro-casas">
-      <div class="filtro-tabs"><em>Filtrar por</em><button type="button" class="on" data-tab="zona">Colonia</button><button type="button" data-tab="viaje">Tipo de viaje</button></div>
-      <div class="chips" data-grupo="zona"><button type="button" class="on" data-v="">Todas</button>${ZONAS_CON_CASAS.map((z) => `<button type="button" data-v="${z.key}">${esc(z.nombre)}</button>`).join('')}</div>
+      <div class="filtro-tabs"><em>Filtrar por</em><button type="button" class="on" data-tab="tipo">Casa o departamento</button><button type="button" data-tab="zona">Colonia</button><button type="button" data-tab="viaje">Tipo de viaje</button></div>
+      <div class="chips" data-grupo="tipo"><button type="button" class="on" data-v="">Todas</button>${TIPOS.map(([k, t]) => `<button type="button" data-v="${k}">${esc(t)} (${casas.filter((c) => tipoKey(c) === k).length})</button>`).join('')}</div>
+      <div class="chips" data-grupo="zona" hidden><button type="button" class="on" data-v="">Todas</button>${ZONAS_CON_CASAS.map((z) => `<button type="button" data-v="${z.key}">${esc(z.nombre)}</button>`).join('')}</div>
       <div class="chips" data-grupo="viaje" hidden><button type="button" class="on" data-v="">Todos</button>${VIAJES.map(([k, t]) => `<button type="button" data-v="${k}">${esc(t)}</button>`).join('')}</div>
     </div>
-    <script>(function(){var f=document.getElementById('filtro-casas');if(!f)return;var sel={zona:'',viaje:''};function aplica(){var n=0;[].slice.call(document.querySelectorAll('#casas .card-ed')).forEach(function(c){var ok=(!sel.zona||c.dataset.zona===sel.zona)&&(!sel.viaje||(' '+c.dataset.viajes+' ').indexOf(' '+sel.viaje+' ')>-1);c.hidden=!ok;if(ok)n++});var v=document.getElementById('casas-vacio');if(v)v.hidden=n>0}f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.tab){f.querySelectorAll('.filtro-tabs button').forEach(function(x){x.classList.toggle('on',x===b)});f.querySelectorAll('.chips').forEach(function(g){g.hidden=g.dataset.grupo!==b.dataset.tab});return}var g=b.closest('.chips');g.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});sel[g.dataset.grupo]=b.dataset.v;aplica()})})();</script>`;
+    <script>(function(){var f=document.getElementById('filtro-casas');if(!f)return;var sel={tipo:'',zona:'',viaje:''};function aplica(){var n=0;[].slice.call(document.querySelectorAll('#casas .card-ed')).forEach(function(c){var ok=(!sel.tipo||c.dataset.tipo===sel.tipo)&&(!sel.zona||c.dataset.zona===sel.zona)&&(!sel.viaje||(' '+c.dataset.viajes+' ').indexOf(' '+sel.viaje+' ')>-1);c.hidden=!ok;if(ok)n++});var v=document.getElementById('casas-vacio');if(v)v.hidden=n>0}f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.tab){f.querySelectorAll('.filtro-tabs button').forEach(function(x){x.classList.toggle('on',x===b)});f.querySelectorAll('.chips').forEach(function(g){g.hidden=g.dataset.grupo!==b.dataset.tab});return}var g=b.closest('.chips');g.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});sel[g.dataset.grupo]=b.dataset.v;aplica()})})();</script>`;
 
 // ─────────────────────────────────────────────────────────── FAQ (fuente única)
 

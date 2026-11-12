@@ -1,0 +1,39 @@
+{
+  "_nota": "Casas retiradas del sitio; se conservan por si regresan.",
+  "casas": [
+    {
+      "slug": "alicante",
+      "nombre": "Casa Alicante",
+      "titulo": "Casa amueblada para 8 personas en Senderos de Alicante",
+      "zona": "Senderos de Alicante",
+      "huespedes": 8,
+      "recamaras": 3,
+      "banos": 2.5,
+      "camas": 3,
+      "precioNoche": 1650,
+      "precioFinde": 1650,
+      "minNoches": 2,
+      "destacados": [
+        "Asador en el patio",
+        "Recámara principal con vestidor",
+        "Cochera techada para 2 autos",
+        "Cerrada con vigilancia y juegos"
+      ],
+      "fotos": [
+        "alicante-portada",
+        "alicante-cocina",
+        "alicante-comedor",
+        "alicante-recamara_01",
+        "alicante-bano",
+        "alicante-fachada"
+      ],
+      "resumen": "En cerrada con caseta de vigilancia, área verde y juegos infantiles, en Ampliación Senderos. Recámara principal con vestidor y baño, dos recámaras más con baño compartido, sala de TV, minisplit, boiler automático y patio con asador.",
+      "reservaEnLinea": true,
+      "airbnbIds": [
+        "1816466840226125571"
+      ],
+      "retirada": "2026-11-12",
+      "motivo": "Pedro: sácala de todos lados"
+    }
+  ]
+}
