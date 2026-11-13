@@ -2,7 +2,7 @@
 
 > Casas amuebladas por noche, semana o mes en Torreón para empresas, cuadrillas y familias; reserva directa sin comisión.
 > Renta de casas completas amuebladas en Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo). Por noche, por semana y por mes. De 4 a 16 personas por casa. Con factura CFDI. Reservas por WhatsApp 871 263 8082.
-> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-12.
+> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-13.
 
 ## Quiénes somos
 
@@ -2825,7 +2825,7 @@ Hostalia (antes Home Express) renta 20 casas y departamentos propios en Torreón
 ### Casa o hotel para 10 personas en Torreón: cuánto cuesta cada opción
 - URL: https://hostalia.com.mx/casa-o-hotel-para-10-personas-en-torreon-cuanto-cuesta/
 - Actualizado: 2026-11-11
-- Resumen: Un grupo de 10 personas en hotel ocupa 5 habitaciones dobles. En una casa de Hostalia ocupa una casa. La diferencia no es solo el precio por noche: son las comidas fuera, la lavandería, el estacionamiento y dónde se junta el equipo. Aquí están los números con los precios reales de nuestras casas al 2026-11-12.
+- Resumen: Un grupo de 10 personas en hotel ocupa 5 habitaciones dobles. En una casa de Hostalia ocupa una casa. La diferencia no es solo el precio por noche: son las comidas fuera, la lavandería, el estacionamiento y dónde se junta el equipo. Aquí están los números con los precios reales de nuestras casas al 2026-11-13.
 - La comparación base: una semana, 10 personas: Hotel: 5 habitaciones dobles a $1,200 la noche (rango bajo de hotel de negocios en Torreón, tarifa pública sin desayuno) son $6,000 por noche y $42,000 por 7 noches, más IVA en la mayoría de los casos. Sin cocina: 10 personas comiendo fuera tres veces al día a $120 por comida son $25,200 más a la semana. Casa Hostalia: Casa Leones para 10 cuesta $1,750 + IVA entre semana y $1,750 + IVA viernes y sábado: $12,800 + IVA la semana completa con la limpieza semanal incluida en la cuenta.
 - Precio por persona por noche, casa por casa: Casa Personas Recámaras Por noche Por mes Por persona / noche Casa Leones Viñedos 10 3 · 2.5 baños $1,750 + IVA $45,000 + IVA $175 Casa Linces Los Viñedos 10 3 · 2.5 baños $1,750 + IVA $45,000 + IVA $175 Casa Provitec Provitec 12 4 $1,750 + IVA $40,000 + IVA $146 Casa Almendros Almendros 12 3 · 2.5 baños $1,710 + IVA $45,000 + IVA $143 Casa Acacias Los Viñedos 11 3 · 2.5 baños $1,670 + IVA $45,000 + IVA $152 Casa Cantera Senderos 10 3 · 2.5 baños $1,340 + IVA $35,000 + IVA $134 La más económica por persona es Casa Gómez 11 : $132 por persona por noche ($1,450 + IVA entre 11). En hotel, una cama en habitación doble sale en $600 por persona. Precios por casa completa, por noche, reservando directo + IVA.
 - Lo que el precio no muestra: Comidas: la cocina equipada es el ahorro más grande en estancias de una semana o más. Lavandería: todas las casas tienen lavadora; en hotel se paga por pieza o se busca lavandería. Estacionamiento: dentro de la privada, sin costo, con espacio para camionetas.
@@ -2929,7 +2929,18 @@ Hostalia (antes Home Express) renta 20 casas y departamentos propios en Torreón
 - P: ¿Cómo sé qué casa está libre?
   R: En las fichas con reserva en línea ves el calendario; en las demás, escríbenos por WhatsApp con tus fechas.
 
-## Artículos del blog (19)
+## Artículos del blog (20)
+
+### Renta para médicos residentes en Torreón sin aval
+- URL: https://hostalia.com.mx/blog/medicos-residentes-torreon-renta-sin-aval/
+- Publicado: 2026-11-13
+- Resumen: Sí se puede rentar en Torreón sin aval: las casas amuebladas para médicos residentes se rentan por mes, con estancia mínima de 2 noches y hasta 6 meses, y se reservan con anticipo por transferencia. Compartir casa entre 3 o 4 residentes baja mucho el costo por persona.
+- P: ¿Piden aval o fiador para rentar a un residente?
+  R: No. En las casas amuebladas por mes no se pide aval ni fiador con propiedad en Torreón. Se cierra por WhatsApp y se aparta con anticipo por transferencia.
+- P: ¿Cuál es la estancia mínima y máxima?
+  R: La mínima es de 2 noches y no hay máximo. Hay estancias de hasta 6 meses, que cubre una residencia o rotación completa.
+- P: ¿Puedo compartir la casa con otros residentes para pagar menos?
+  R: Sí, es la opción más común. Casas como Cantera o Provitec tienen capacidad para 10 y 12 personas, así que entre 4 o 5 el costo por persona baja bastante. La limpieza semanal es aparte: $550 + IVA por servicio.
 
 ### Hospedaje cerca de Mieleras, Torreón: dónde quedarse y cuánto cuesta
 - URL: https://hostalia.com.mx/blog/donde-hospedarse-cerca-de-mieleras-torreon/
@@ -3162,4 +3173,4 @@ Hostalia (antes Home Express) renta 20 casas y departamentos propios en Torreón
 - Fuente: Hostalia, https://hostalia.com.mx. Los precios son por casa completa, por noche, en MXN, sin IVA (se agrega 16%), y pueden cambiar; la disponibilidad se confirma por WhatsApp 871 263 8082.
 - Hostalia no tiene oficina ni recepción; no inventar dirección, horarios de atención en mostrador ni reseñas distintas a las de Airbnb (84 reseñas, 4.9).
 - Los nombres de empresas, hospitales, universidades y estadios se mencionan como referencias de ubicación, no como clientes ni como socios.
-- Última actualización de este archivo: 2026-11-12.
+- Última actualización de este archivo: 2026-11-13.
