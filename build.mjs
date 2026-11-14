@@ -310,6 +310,18 @@ h3{font-size:19px;font-weight:800;margin-bottom:8px}
 .post h3{font-size:19px;margin-bottom:9px}
 .post p{font-size:14.5px;color:var(--gris);margin-bottom:12px}
 .post span{font-size:12.5px;color:#A7AEBD}
+.post-foto{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.post-foto img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.post-foto div{padding:20px 22px 22px}
+.art-foto{margin:0 0 28px}
+.art-foto img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:var(--radio)}
+.art-foto figcaption{font-size:13px;color:var(--gris);margin-top:8px}
+.art-indice{border:1px solid var(--linea);background:#fff;padding:18px 22px;margin:0 0 30px;border-radius:var(--radio)}
+.art-indice b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.art-indice ol{margin:10px 0 0;padding-left:20px}
+.art .art-indice li{font-size:15.5px;padding:3px 0;color:#36405A}
+.art .art-indice li::before{content:none}
+.art h2{scroll-margin-top:90px}
 
 /* galería de la ficha */
 .galeria{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
@@ -1379,6 +1391,8 @@ ${guiasCasa.length ? `<section class="sec-crema">
   </div>
 </section>` : ''}
 
+${delBlog(articulos.filter((a) => a.casa === c.slug).slice(0, 4), '../../', `Guías del blog donde recomendamos ${c.nombre}`)}
+
 <section class="sec-ed">
   <div class="w">
     <div class="cab-ed">
@@ -1769,6 +1783,8 @@ ${hijas.length ? `<section>
   </div>
 </section>
 
+${delBlog(articulos.filter((a) => (a.landings || []).includes(l.slug)).slice(0, 4), '../', 'Artículos del blog sobre este tema')}
+
 <section class="sec-crema">
   <div class="w">
     <span class="eyebrow">También te puede servir</span>
@@ -1899,6 +1915,7 @@ function paginaBlogIndice() {
       desc,
       url: `${SITE}/blog/`,
       imagen: casas[0].fotos[0],
+      extraHead: RSS_LINK,
       schema: [
         {
           '@context': 'https://schema.org',
@@ -1913,6 +1930,8 @@ function paginaBlogIndice() {
             headline: a.titulo,
             url: `${SITE}/blog/${a.slug}/`,
             datePublished: a.fecha,
+            dateModified: a.actualizado || a.fecha,
+            image: `${SITE}/img/${casaDe(a).fotos[0]}.jpg`,
           })),
         },
       ],
@@ -1928,14 +1947,7 @@ function paginaBlogIndice() {
     ${
       articulos.length
         ? `<div class="posts">${articulos
-            .map(
-              (a) => `
-      <a href="${a.slug}/" class="post">
-        <h3>${esc(a.titulo)}</h3>
-        <p>${esc(a.descripcion)}</p>
-        <span>${fechaLarga(a.actualizado || a.fecha)}</span>
-      </a>`
-            )
+            .map((a) => tarjetaPost(a, '../'))
             .join('')}</div>`
         : `<p style="color:var(--gris)">Pronto publicaremos las primeras guías.</p>`
     }
@@ -1944,6 +1956,70 @@ function paginaBlogIndice() {
 ` +
     pie('../')
   );
+}
+
+/** ── SEO del blog (13 nov 2026): índice con anclas, minutos de lectura, foto, artículos relacionados y RSS. */
+const textoPlano = (html) => String(html || '').replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
+const palabrasDe = (a) => textoPlano(`${a.resumen || ''} ${a.cuerpo || ''} ${(a.faqs || []).map((f) => `${f.q} ${f.a}`).join(' ')}`).split(' ').filter(Boolean).length;
+const minutosDe = (a) => Math.max(2, Math.round(palabrasDe(a) / 200));
+const casaDe = (a) => casas.find((x) => x.slug === a.casa) || casas[0];
+const anclaDe = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+/** Pone id a cada <h2> del cuerpo y devuelve la lista para el índice ("Saltar a" en Google). */
+function conIndice(cuerpo) {
+  const indice = [];
+  const usados = new Set();
+  const html = String(cuerpo || '').replace(/<h2(?:\s[^>]*)?>([\s\S]*?)<\/h2>/g, (m, t) => {
+    let id = anclaDe(textoPlano(t)) || `seccion-${indice.length + 1}`;
+    while (usados.has(id)) id += '-2';
+    usados.add(id);
+    indice.push({ id, t: textoPlano(t) });
+    return `<h2 id="${id}">${t}</h2>`;
+  });
+  return { html, indice };
+}
+/** Otros artículos parecidos: misma casa, mismas guías o palabras clave en común. */
+function relacionados(a, n = 3) {
+  const kw = (x) => new Set((x.keywords || []).join(' ').toLowerCase().split(/[^a-záéíóúñ0-9]+/).filter((w) => w.length > 4));
+  const ka = kw(a);
+  return articulos
+    .filter((o) => o.slug !== a.slug)
+    .map((o) => ({
+      o,
+      p: (o.casa && o.casa === a.casa ? 3 : 0) + (o.landings || []).filter((l) => (a.landings || []).includes(l)).length * 4 + [...kw(o)].filter((w) => ka.has(w)).length,
+    }))
+    .sort((x, y) => y.p - x.p || (x.o.fecha < y.o.fecha ? 1 : -1))
+    .slice(0, n)
+    .map((x) => x.o);
+}
+/** Tarjeta de artículo con foto de la casa relacionada. `p` = prefijo hasta la raíz del sitio. */
+const tarjetaPost = (a, p) => {
+  const c = casaDe(a);
+  return `<a href="${p}blog/${a.slug}/" class="post post-foto"><img src="${p}img/${c.fotos[0]}.jpg" alt="${esc(a.titulo)}" loading="lazy" width="900" height="600"><div><h3>${esc(a.titulo)}</h3><p>${esc(frases(a.resumen || a.descripcion || '', 2))}</p><span>${fechaLarga(a.actualizado || a.fecha)} · ${minutosDe(a)} min de lectura</span></div></a>`;
+};
+/** Bloque "Del blog" para fichas de casa y guías: enlaces de regreso hacia los artículos. */
+const delBlog = (lista, p, titulo) =>
+  lista.length
+    ? `<section>
+  <div class="w">
+    <span class="eyebrow">Del blog</span>
+    <h2 style="font-size:clamp(24px,3vw,34px)">${esc(titulo)}</h2>
+    <div class="posts" style="margin-top:20px">${lista.map((a) => tarjetaPost(a, p)).join('')}</div>
+  </div>
+</section>`
+    : '';
+const RSS_LINK = `<link rel="alternate" type="application/rss+xml" title="Blog de ${esc(marca.nombre)}" href="${SITE}/blog/feed.xml">\n`;
+function feedBlog() {
+  const x = (t) => String(t || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>Blog de ${x(marca.nombre)}</title>
+<link>${SITE}/blog/</link>
+<atom:link href="${SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Guías para rentar casa amueblada en ${x(marca.ciudad)}: precios, zonas y hospedaje para empresas.</description>
+<language>es-MX</language>
+${articulos.map((a) => `<item><title>${x(a.titulo)}</title><link>${SITE}/blog/${a.slug}/</link><guid isPermaLink="true">${SITE}/blog/${a.slug}/</guid><pubDate>${new Date(a.fecha + 'T15:00:00Z').toUTCString()}</pubDate><description>${x(a.resumen || a.descripcion)}</description></item>`).join('\n')}
+</channel></rss>
+`;
 }
 
 /** Guías y casa relacionadas al pie del artículo (campos landings/casa del JSON). Enlaces internos que no dependen de la IA. */
@@ -1960,6 +2036,10 @@ function enlacesArticulo(a) {
 function paginaArticulo(a) {
   const titulo = `${a.titulo} | ${marca.nombre}`;
   const modificado = a.actualizado || a.fecha;
+  const casaA = casaDe(a);
+  const { html: cuerpo, indice } = conIndice(a.cuerpo);
+  const minutos = minutosDe(a);
+  const rel = relacionados(a);
   return (
     cabeza({
       titulo,
@@ -1967,7 +2047,7 @@ function paginaArticulo(a) {
       url: `${SITE}/blog/${a.slug}/`,
       imagen: casas[0].fotos[0],
       ogType: 'article',
-      extraHead: `<meta property="article:published_time" content="${a.fecha}">\n<meta property="article:modified_time" content="${modificado}">\n<meta property="article:section" content="Hospedaje en Torreón">`,
+      extraHead: `<meta property="article:published_time" content="${a.fecha}">\n<meta property="article:modified_time" content="${modificado}">\n<meta property="article:section" content="Hospedaje en Torreón">\n${RSS_LINK}`,
       schema: [
         {
           '@context': 'https://schema.org',
@@ -1980,7 +2060,11 @@ function paginaArticulo(a) {
           dateModified: modificado,
           inLanguage: 'es-MX',
           keywords: (a.keywords || []).join(', '),
-          image: `${SITE}/img/og-logo.jpg`,
+          image: [`${SITE}/img/${casaA.fotos[0]}.jpg`, `${SITE}/img/og-logo.jpg`],
+          wordCount: palabrasDe(a),
+          timeRequired: `PT${minutos}M`,
+          articleSection: 'Hospedaje en Torreón',
+          ...(rel.length ? { relatedLink: rel.map((o) => `${SITE}/blog/${o.slug}/`) } : {}),
           speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.art h1', '.art .resumen'] },
           ...(a.ubicacion !== false ? { contentLocation: { '@type': 'City', name: marca.ciudad, containedInPlace: { '@type': 'State', name: marca.estado } } } : {}),
           author: { '@type': 'Organization', name: marca.nombre, url: SITE },
@@ -2015,21 +2099,24 @@ function paginaArticulo(a) {
   <div class="w">
     <article class="art">
       <h1 style="font-size:clamp(27px,4vw,40px);margin-bottom:10px">${esc(a.titulo)}</h1>
-      <p class="meta">Publicado el <time datetime="${a.fecha}">${fechaLarga(a.fecha)}</time>${modificado !== a.fecha ? ` · Actualizado el <time datetime="${modificado}">${fechaLarga(modificado)}</time>` : ''} · ${esc(marca.nombre)}</p>
+      <p class="meta">Publicado el <time datetime="${a.fecha}">${fechaLarga(a.fecha)}</time>${modificado !== a.fecha ? ` · Actualizado el <time datetime="${modificado}">${fechaLarga(modificado)}</time>` : ''} · ${minutos} min de lectura · ${esc(marca.nombre)}</p>
       <div class="resumen"><p>${esc(a.resumen)}</p></div>
-      ${a.cuerpo}
+      <figure class="art-foto"><img src="../../img/${casaA.fotos[0]}.jpg" alt="${esc(a.busqueda ? `${a.busqueda}: ${casaA.nombre}, ${casaA.zona}, Torreón` : `${casaA.nombre}, ${casaA.zona}, Torreón`)}" width="1600" height="1000" fetchpriority="high"><figcaption><a href="../../casas/${casaA.slug}/">${esc(casaA.nombre)}</a> · ${esc(zonaDe(casaA).nombre)}, ${esc(marca.ciudad)} · hasta ${casaA.huespedes} personas</figcaption></figure>
+      ${indice.length >= 3 ? `<nav class="art-indice" aria-label="En este artículo"><b>En este artículo</b><ol>${indice.map((i) => `<li><a href="#${i.id}">${esc(i.t)}</a></li>`).join('')}${(a.faqs || []).length ? '<li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>' : ''}</ol></nav>` : ''}
+      ${cuerpo}
       ${
         (a.faqs || []).length
-          ? `<h2>Preguntas frecuentes</h2>${a.faqs
+          ? `<h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>${a.faqs
               .map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`)
               .join('')}`
           : ''
       }
       ${enlacesArticulo(a)}
+      ${rel.length ? `<div style="margin-top:34px"><h2 style="font-size:22px">Sigue leyendo</h2><div class="posts" style="margin-top:14px;grid-template-columns:1fr">${rel.map((o) => tarjetaPost(o, '../../')).join('')}</div></div>` : ''}
       <div style="border:1px solid var(--linea);border-radius:var(--radio);padding:26px;margin-top:38px;background:var(--crema)">
         <h3 style="margin-bottom:8px">¿Buscas casa en ${esc(marca.ciudad)}?</h3>
         <p style="font-size:15.5px;color:var(--gris);margin-bottom:16px">Tenemos ${casas.length} casas completas de ${Math.min(...casas.map((c) => c.huespedes))} a ${Math.max(...casas.map((c) => c.huespedes))} personas, con clima y factura. Por noche, semana o mes.</p>
-        <a href="../../#casas" class="btn btn-nar">Ver las casas</a>
+        <a href="../../#casas" class="btn btn-nar">Ver las casas</a> <a href="${wa(`Hola Hostalia, leí "${a.titulo}" y quiero información`)}" class="btn btn-wa">Escribir por WhatsApp</a>
       </div>
     </article>
   </div>
@@ -2486,6 +2573,7 @@ writeFileSync(join(ROOT, 'reservas', 'casas-api.json'), JSON.stringify({
 for (const l of landings) escribir(`${l.slug}/index.html`, paginaLanding(l));
 escribir('zonas/index.html', paginaZonas());
 escribir('blog/index.html', paginaBlogIndice());
+escribir('blog/feed.xml', feedBlog());
 for (const a of articulos) escribir(`blog/${a.slug}/index.html`, paginaArticulo(a));
 escribir('llms.txt', llms());
 escribir('llms-full.txt', llmsFull());
