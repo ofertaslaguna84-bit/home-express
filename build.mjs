@@ -651,6 +651,7 @@ const pie = (prefijo = '') => `
     <div class="pie-bajo">
       <span>© ${new Date().getFullYear()} ${esc(marca.nombre)}</span>
       <span>Actualizado el ${HOY_LARGO}</span>
+      <span>Posicionamiento web por <a href="https://somosindexa.com.mx/" target="_blank" rel="noopener">Somos Indexa</a></span>
     </div>
   </div>
 </footer>
