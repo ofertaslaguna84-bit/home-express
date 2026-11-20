@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { generarOrigenes, HUB_ORIGEN } from './origenes.mjs';
 import { generarIntenciones } from './intenciones.mjs';
+import { generarLocales } from './locales.mjs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
@@ -634,7 +635,7 @@ const pie = (prefijo = '') => `
       </div>
       ${landings.length ? `<div>
         <h4><a href="${prefijo}zonas/">Hospedaje por zona y ocasión</a></h4>
-        <ul>${landings.filter((l) => (l.grupo !== 'origen' || l.slug === HUB_ORIGEN) && l.grupo !== 'uso').map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}<li><a href="${prefijo}zonas/"><strong>Ver todas →</strong></a></li></ul>
+        <ul>${landings.filter((l) => (l.grupo !== 'origen' || l.slug === HUB_ORIGEN) && l.grupo !== 'uso' && l.pie !== false).map((l) => `<li><a href="${prefijo}${l.slug}/">${esc(l.menu)}</a></li>`).join('')}<li><a href="${prefijo}zonas/"><strong>Ver todas →</strong></a></li></ul>
       </div>` : ''}
       <div>
         <h4>Contacto</h4>
@@ -846,6 +847,8 @@ const ORIGENES = existsSync(join(ROOT, 'origenes.json')) ? JSON.parse(readFileSy
 if (ORIGENES) landings.push(...generarOrigenes({ datos: ORIGENES, casas, noche, mxn, IVA_NOTA, cercaDe, LIMPIEZA }));
 /** Páginas de intención (uso × zona, zonas nuevas, temporadas y guías comparativas), ver intenciones.mjs. */
 landings.push(...generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA, LIMPIEZA, HOY }));
+/** SEO local de Torreón: cerca de un punto concreto, por rumbo, por tipo de casa y por forma de contratar, ver locales.mjs. */
+landings.push(...generarLocales({ casas, lugares, noche, finde, mxn, IVA_NOTA, LIMPIEZA }));
 
 // ─────────────────────────────────────────────────────────── landings: grupos y utilidades
 
@@ -854,6 +857,7 @@ const GRUPOS = [
   ['zonas', 'Zonas y colonias de Torreón', 'Cerca del Tec, de la UA de C, del centro, de Los Viñedos, Senderos, Provitec y la zona industrial.'],
   ['laguna', 'Gómez Palacio, Lerdo y La Laguna', 'Si tu trabajo o tu evento está cruzando el río: cuánto se hace en coche y qué casa conviene.'],
   ['estancia', 'Por noche, por semana o por mes', 'Qué cambia en precio y condiciones según cuánto tiempo te quedas.'],
+  ['tipo', 'Por tipo de casa', 'Departamentos y loft, casas con recámara en planta baja y casas en privada o fraccionamiento cerrado.'],
   ['motivo', 'Por motivo del viaje', 'Familias, bodas, torneos, feria, hospitales, peregrinos, posadas y fin de año.'],
   ['empresas', 'Empresas e industria', 'Cuadrillas, técnicos de planta e ingenieros, con factura CFDI.'],
   ['personas', 'Por número de personas', 'Casa para 6, 8, 10, 12, 14 o 16 personas: cuál conviene, cuánto sale por persona y en qué zona está.'],

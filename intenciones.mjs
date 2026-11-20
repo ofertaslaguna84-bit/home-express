@@ -360,12 +360,12 @@ export function generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA
   };
 
   const COMBOS = {
-    cuadrillas: ['vinedos', 'senderos', 'provitec', 'almendros', 'gomez', 'rosita'],
-    ingenieros: ['vinedos', 'alebrijes', 'santorini', 'provitec', 'almendros'],
-    familias: ['vinedos', 'senderos', 'alebrijes', 'santorini', 'provitec', 'torreon'],
+    cuadrillas: ['vinedos', 'senderos', 'provitec', 'almendros', 'gomez', 'rosita', 'alebrijes', 'santorini'],
+    ingenieros: ['vinedos', 'alebrijes', 'santorini', 'provitec', 'almendros', 'senderos'],
+    familias: ['vinedos', 'senderos', 'alebrijes', 'santorini', 'provitec', 'torreon', 'almendros', 'rosita'],
     pacientes: ['provitec', 'tec', 'torreon', 'almendros', 'rosita'],
-    estudiantes: ['tec', 'provitec', 'almendros', 'senderos', 'vinedos'],
-    mes: ['vinedos', 'provitec', 'alebrijes', 'santorini', 'almendros'],
+    estudiantes: ['tec', 'provitec', 'almendros', 'senderos', 'vinedos', 'rosita'],
+    mes: ['vinedos', 'provitec', 'alebrijes', 'santorini', 'almendros', 'senderos', 'rosita'],
   };
 
   const slugCombo = (u, z) => `${USOS[u].slug}-${ZONAS[z].slug}-torreon`;
@@ -377,14 +377,19 @@ export function generarIntenciones({ casas, lugares, noche, finde, mxn, IVA_NOTA
       const { dentro, lista: cs } = casasPara(z, U.filtro, U.minPax);
       if (!cs.length) continue;
       const hermanas = zonas.filter((o) => o !== z).slice(0, 3).map((o) => slugCombo(u, o));
+      /** Título: si el nombre largo de la zona no cabe en 60 caracteres se usa el corto, para que no quede cortado a media zona. */
+      const tituloLargo = U.titulo(Z);
+      const titulo = tituloLargo.split(', Torreón:')[0].length > 58 ? U.titulo({ ...Z, nombre: Z.corto }) : tituloLargo;
+      /** Descripción: uso y zona al principio, para que cada combinación tenga una meta distinta aunque se recorte. */
+      const lugar = /Torreón/.test(Z.nombre) ? Z.nombre : `${Z.nombre}, Torreón`;
       paginas.push({
         slug: slugCombo(u, z),
         menu: `${U.menu} · ${Z.corto}`,
         grupo: 'uso',
         uso: u,
         zonaKey: z,
-        titulo: U.titulo(Z),
-        desc: `${U.lead(Z, cs).replace(/<[^>]+>/g, '')}`.slice(0, 300),
+        titulo,
+        desc: `${U.menu} en ${lugar}. ${U.lead(Z, cs).replace(/<[^>]+>/g, '')}`.slice(0, 300),
         eyebrow: U.eyebrow(Z),
         h1: U.h1(Z),
         lead: U.lead(Z, cs),
