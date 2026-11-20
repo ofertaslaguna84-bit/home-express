@@ -1685,13 +1685,15 @@ function paginaLanding(l) {
     : landingsDe(l.grupo || 'motivo').filter((o) => o.slug !== l.slug && !o.segmento);
   const otras = landings.filter((o) => o.slug !== l.slug && !hermanas.includes(o) && o.grupo !== 'origen').slice(0, 6);
   /** Guías "si vienes de otra ciudad" que cuelgan de esta landing (p. ej. cuadrillas → cuadrillas desde Monterrey). */
+  /** Portada: la foto de alberca de Acacias sale con herramienta en la mesa; se usa la siguiente casa de la lista. */
+  const heroC = lista.find((c) => c.slug !== 'acacia') || lista[0];
   const hijas = landings.filter((o) => o.padre === l.slug);
   return (
     cabeza({
       titulo,
       desc: l.desc,
       url,
-      imagen: lista[0].fotos[0],
+      imagen: heroC.fotos[0],
       schema: [
         {
           '@context': 'https://schema.org',
@@ -1737,7 +1739,7 @@ function paginaLanding(l) {
 <section class="hero-video">
   <div class="hero-in">
     <div class="hero-media">
-      <img src="../img/${lista[0].fotos[0]}.jpg" alt="${esc(lista[0].nombre)}, ${esc(lista[0].zona)}, Torreón" style="width:100%;height:100%;object-fit:cover">
+      <img src="../img/${heroC.fotos[0]}.jpg" alt="${esc(heroC.nombre)}, ${esc(heroC.zona)}, Torreón" style="width:100%;height:100%;object-fit:cover">
     </div>
     <div class="cont">
       <span class="kicker">● ${esc(l.eyebrow)}</span>
