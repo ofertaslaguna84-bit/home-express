@@ -2,7 +2,7 @@
 
 > Casas amuebladas por noche, semana o mes en Torreón para empresas, cuadrillas y familias; reserva directa sin comisión.
 > Renta de casas completas amuebladas en Torreón, Coahuila, México (zona metropolitana de La Laguna: Torreón, Gómez Palacio y Lerdo). Por noche, por semana y por mes. De 4 a 16 personas por casa. Con factura CFDI. Reservas por WhatsApp 871 263 8082.
-> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-19.
+> Versión corta: https://hostalia.com.mx/llms.txt · Sitemap: https://hostalia.com.mx/sitemap.xml · Generado el 2026-11-20.
 
 ## Quiénes somos
 
@@ -2825,7 +2825,7 @@ Hostalia (antes Home Express) renta 20 casas y departamentos propios en Torreón
 ### Casa o hotel para 10 personas en Torreón: cuánto cuesta cada opción
 - URL: https://hostalia.com.mx/casa-o-hotel-para-10-personas-en-torreon-cuanto-cuesta/
 - Actualizado: 2026-11-11
-- Resumen: Un grupo de 10 personas en hotel ocupa 5 habitaciones dobles. En una casa de Hostalia ocupa una casa. La diferencia no es solo el precio por noche: son las comidas fuera, la lavandería, el estacionamiento y dónde se junta el equipo. Aquí están los números con los precios reales de nuestras casas al 2026-11-19.
+- Resumen: Un grupo de 10 personas en hotel ocupa 5 habitaciones dobles. En una casa de Hostalia ocupa una casa. La diferencia no es solo el precio por noche: son las comidas fuera, la lavandería, el estacionamiento y dónde se junta el equipo. Aquí están los números con los precios reales de nuestras casas al 2026-11-20.
 - La comparación base: una semana, 10 personas: Hotel: 5 habitaciones dobles a $1,200 la noche (rango bajo de hotel de negocios en Torreón, tarifa pública sin desayuno) son $6,000 por noche y $42,000 por 7 noches, más IVA en la mayoría de los casos. Sin cocina: 10 personas comiendo fuera tres veces al día a $120 por comida son $25,200 más a la semana. Casa Hostalia: Casa Leones para 10 cuesta $1,560 + IVA entre semana y $2,740 + IVA viernes y sábado: $13,830 + IVA la semana completa con la limpieza semanal incluida en la cuenta.
 - Precio por persona por noche, casa por casa: Casa Personas Recámaras Por noche Por mes Por persona / noche Casa Leones Viñedos 10 3 · 2.5 baños $1,560 + IVA $45,000 + IVA $156 Casa Linces Los Viñedos 10 3 · 2.5 baños $1,560 + IVA $45,000 + IVA $156 Casa Provitec Provitec 12 4 $1,560 + IVA $40,000 + IVA $130 Casa Almendros Almendros 12 3 · 2.5 baños $1,710 + IVA $45,000 + IVA $143 Casa Acacias Los Viñedos 11 3 · 2.5 baños $1,670 + IVA $45,000 + IVA $152 Casa Cantera Senderos 10 3 · 2.5 baños $1,340 + IVA $35,000 + IVA $134 La más económica por persona es Casa Provitec : $130 por persona por noche ($1,560 + IVA entre 12). En hotel, una cama en habitación doble sale en $600 por persona. Precios por casa completa, por noche, reservando directo + IVA.
 - Lo que el precio no muestra: Comidas: la cocina equipada es el ahorro más grande en estancias de una semana o más. Lavandería: todas las casas tienen lavadora; en hotel se paga por pieza o se busca lavandería. Estacionamiento: dentro de la privada, sin costo, con espacio para camionetas.
@@ -2929,7 +2929,18 @@ Hostalia (antes Home Express) renta 20 casas y departamentos propios en Torreón
 - P: ¿Cómo sé qué casa está libre?
   R: En las fichas con reserva en línea ves el calendario; en las demás, escríbenos por WhatsApp con tus fechas.
 
-## Artículos del blog (26)
+## Artículos del blog (27)
+
+### Hospedar personal foráneo un mes en Torreón: cuánto cuesta 2026
+- URL: https://hostalia.com.mx/blog/costo-hospedar-personal-foraneo-un-mes-torreon-2026/
+- Publicado: 2026-11-20
+- Resumen: Hospedar a una cuadrilla un mes en Torreón cuesta entre $35,000 y $54,750 + IVA en casa amueblada completa, según el tamaño y si incluye agua, luz, gas e internet. La limpieza semanal se cobra aparte: $550 + IVA por servicio, y se factura con CFDI.
+- P: ¿Cuánto cuesta al mes hospedar a 10 personas en Torreón?
+  R: Con las tarifas publicadas, entre $38,000 y $48,000 + IVA al mes según la casa, ya con agua, luz, gas e internet incluidos. Sin servicios baja alrededor de $3,000 + IVA. La limpieza semanal se cobra aparte: $550 + IVA por servicio.
+- P: ¿La limpieza está incluida en el precio mensual?
+  R: No. Es obligatoria y se cobra aparte, $550 + IVA por servicio, una vez por semana. En un mes son cuatro servicios. Se reparte entre el número de personas y queda en unos cientos de pesos por cabeza.
+- P: ¿Puedo facturar la estancia de mi personal?
+  R: Sí, emitimos CFDI y el IVA se desglosa al facturar. Es uno de los puntos a confirmar con cualquier proveedor: buena parte de las rentas temporales en Torreón no factura, y eso deja el gasto sin comprobar.
 
 ### Renta casa por semana en Torreón: cómo se cotiza en 2026
 - URL: https://hostalia.com.mx/blog/renta-casa-por-semana-torreon-2026/
@@ -3239,4 +3250,4 @@ Hostalia (antes Home Express) renta 20 casas y departamentos propios en Torreón
 - Fuente: Hostalia, https://hostalia.com.mx. Los precios son por casa completa, por noche, en MXN, sin IVA (se agrega 16%), y pueden cambiar; la disponibilidad se confirma por WhatsApp 871 263 8082.
 - Hostalia no tiene oficina ni recepción; no inventar dirección, horarios de atención en mostrador ni reseñas distintas a las de Airbnb (84 reseñas, 4.9).
 - Los nombres de empresas, hospitales, universidades y estadios se mencionan como referencias de ubicación, no como clientes ni como socios.
-- Última actualización de este archivo: 2026-11-19.
+- Última actualización de este archivo: 2026-11-20.
